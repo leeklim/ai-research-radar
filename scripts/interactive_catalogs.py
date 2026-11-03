@@ -1,8 +1,8 @@
-"""Read the publication archives used by DeepSeek, Qwen, Cohere and ByteDance Seed."""
+"""Read the publication archives used by Cohere and ByteDance Seed."""
 import json
 import re
 from datetime import datetime, timedelta, timezone
-from urllib.parse import urlencode, urljoin
+from urllib.parse import urljoin
 
 import requests
 from bs4 import BeautifulSoup
@@ -31,24 +31,6 @@ def _embedded_list(url, key):
         if match:
             return json.JSONDecoder().raw_decode(chunk[1][match.end():])[0]
     raise ValueError("공식 목록의 더보기 데이터를 읽지 못함")
-
-
-def _qwen(url):
-    # Both feeds are displayed in the same research archive; the second is
-    # required for articles added after the older page_config sequence.
-    prior = _get("https://qwen.ai/api/page_config", params={
-        "code": "research.research-list", "language": "en"}).json()
-    current = _get("https://qwen.ai/api/v2/article/retrieval", params={
-        "type": "qwen_ai", "language": "en-US"}).json()["data"]["articles"]
-    rows = {post["id"]: (post["title"],post.get("date")) for post in prior if post.get("id")}
-    for post in current:
-        rows[post["path"]] = (post["title"],post["extra"].get("date"))
-    for slug,(title,date) in rows.items():
-        if re.fullmatch(r"[\w.-]+", slug) and title:
-            # Qwen renders timestamps in the reader's browser time zone.
-            stamp = datetime.fromisoformat(date.replace("Z","+00:00")) if date else None
-            shown = stamp.astimezone(timezone(timedelta(hours=9))).date().isoformat() if stamp and stamp.tzinfo else (date or "")[:10] or None
-            yield urljoin(url,"/blog?"+urlencode({"id":slug})),title,shown
 
 
 def _seed(s):
@@ -82,14 +64,7 @@ def _seed(s):
 
 def entries(s):
     url = s["url"]
-    if s["id"] == "12":
-        for post in _embedded_list(url,"posts"):
-            tags = set(post.get("tags",[]))
-            if post.get("locale") == "en" and "release" in tags and tags.intersection({"model","reasoning"}):
-                yield urljoin(url,post["slug"]+"/"),post["title"],post.get("date")
-    elif s["id"] == "14":
-        yield from _qwen(url)
-    elif s["id"] == "15":
+    if s["id"] == "15":
         for post in _embedded_list(url,"papersList"):
             slug = (post.get("slug") or {}).get("current")
             if post.get("_type") == "researchPaper" and slug and post.get("heading"):

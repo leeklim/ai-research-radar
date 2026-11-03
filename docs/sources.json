@@ -102,22 +102,12 @@
     "row": "a.index-item[href^='/research/']",
     "title": "h2,h3",
     "date": ".index-meta span:last-child",
-    "additional": [
-      {
-        "team": "Language",
-        "url": "https://www.goodfire.com/language",
-        "link": "a[href^='/research/']",
-        "title": "h3",
-        "row": ".example-text:has(a[href^='/research/'])"
-      },
-      {
-        "team": "Life Sciences",
-        "url": "https://www.goodfire.com/life-sciences",
-        "link": "a[href^='/research/']",
-        "title": "h3",
-        "row": ".example-text:has(a[href^='/research/'])"
-      }
-    ]
+    "paper_links": {
+      "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+      "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+      "already-clean.goodfire.com": "/"
+    },
+    "paper_section": "Goodfire 공식 Research 목록"
   },
   {
     "id": "4",
@@ -129,15 +119,32 @@
         "team": "FAIR · June 2024",
         "url": "https://ai.meta.com/blog/meta-fair-research-new-releases/",
         "adapter": "lab_publications",
-        "lab_data": "fair"
+        "lab_data": "fair",
+        "paper_links": {
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?"
+        },
+        "paper_section": "FAIR 공식 연구 발표의 명시적 논문 링크"
       },
       {
         "team": "FAIR · October 2024",
         "url": "https://ai.meta.com/blog/fair-news-segment-anything-2-1-meta-spirit-lm-layer-skip-salsa-lingua/",
         "adapter": "lab_publications",
-        "lab_data": "fair"
+        "lab_data": "fair",
+        "paper_links": {
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?"
+        },
+        "paper_section": "FAIR 공식 연구 발표의 명시적 논문 링크"
       }
-    ]
+    ],
+    "adapter": "lab_publications",
+    "lab_data": "fair",
+    "paper_links": {
+      "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+      "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?"
+    },
+    "paper_section": "FAIR 공식 연구 발표의 명시적 논문 링크"
   },
   {
     "id": "5",
@@ -165,11 +172,6 @@
         "row": "h3 a[href*='/research/publication/']"
       },
       {
-        "team": "Catalyst Lab",
-        "url": "https://www.microsoft.com/en-us/research/lab/catalyst-lab/",
-        "row": "main article h3 a[href*='/en-us/research/blog/']"
-      },
-      {
         "team": "India",
         "url": "https://www.microsoft.com/en-us/research/lab/microsoft-research-india/publications/",
         "next_selector": "a[aria-label='Next page']",
@@ -192,11 +194,6 @@
         "url": "https://www.microsoft.com/en-us/research/lab/microsoft-research-new-york/publications/",
         "next_selector": "a[aria-label='Next page']",
         "row": "h3 a[href*='/research/publication/']"
-      },
-      {
-        "team": "Redmond",
-        "url": "https://www.microsoft.com/en-us/research/lab/microsoft-research-redmond/",
-        "row": "main article h3 a[href*='/en-us/research/blog/']"
       }
     ]
   },
@@ -210,75 +207,279 @@
       {
         "team": "Autonomous Systems and Physical AI",
         "url": "https://research.nvidia.com/labs/aspire/",
-        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']"
+        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']",
+        "paper_links": {
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "openaccess.thecvf.com": "/content/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.mlr.press": "/v\\d+/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.iclr.cc": "/paper_files/paper/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "papers.nips.cc": "/paper(?:_files/paper)?/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "www.isca-archive.org": "/[\\w.-]+/[\\w.-]+\\.(?:html|pdf)",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[\\w.%-]+",
+          "research.nvidia.com": "/labs/[\\w./%-]+\\.pdf"
+        },
+        "paper_section": "NVIDIA 연구팀 공식 Publications·연구 프로젝트 카드",
+        "adapter": "lab_publications",
+        "lab_data": "nvidia_cards"
       },
       {
         "team": "Dynamic Vision and Learning",
         "url": "https://research.nvidia.com/labs/dvl/",
-        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']"
+        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']",
+        "paper_links": {
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "openaccess.thecvf.com": "/content/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.mlr.press": "/v\\d+/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.iclr.cc": "/paper_files/paper/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "papers.nips.cc": "/paper(?:_files/paper)?/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "www.isca-archive.org": "/[\\w.-]+/[\\w.-]+\\.(?:html|pdf)",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[\\w.%-]+",
+          "research.nvidia.com": "/labs/[\\w./%-]+\\.pdf"
+        },
+        "paper_section": "NVIDIA 연구팀 공식 Publications·연구 프로젝트 카드",
+        "adapter": "lab_publications",
+        "lab_data": "nvidia_cards"
       },
       {
         "team": "Electronic Design Automation",
         "url": "https://research.nvidia.com/labs/electronic-design-automation/",
-        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']"
+        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']",
+        "paper_links": {
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "openaccess.thecvf.com": "/content/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.mlr.press": "/v\\d+/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.iclr.cc": "/paper_files/paper/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "papers.nips.cc": "/paper(?:_files/paper)?/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "www.isca-archive.org": "/[\\w.-]+/[\\w.-]+\\.(?:html|pdf)",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[\\w.%-]+",
+          "research.nvidia.com": "/labs/[\\w./%-]+\\.pdf"
+        },
+        "paper_section": "NVIDIA 연구팀 공식 Publications·연구 프로젝트 카드",
+        "adapter": "lab_publications",
+        "lab_data": "nvidia_cards"
       },
       {
         "team": "Fundamental Generative AI Research",
         "url": "https://research.nvidia.com/labs/genair/",
-        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']"
+        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']",
+        "paper_links": {
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "openaccess.thecvf.com": "/content/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.mlr.press": "/v\\d+/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.iclr.cc": "/paper_files/paper/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "papers.nips.cc": "/paper(?:_files/paper)?/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "www.isca-archive.org": "/[\\w.-]+/[\\w.-]+\\.(?:html|pdf)",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[\\w.%-]+",
+          "research.nvidia.com": "/labs/[\\w./%-]+\\.pdf"
+        },
+        "paper_section": "NVIDIA 연구팀 공식 Publications·연구 프로젝트 카드",
+        "adapter": "lab_publications",
+        "lab_data": "nvidia_cards"
       },
       {
         "team": "Perception, Action and Reasoning",
         "url": "https://research.nvidia.com/labs/par/",
-        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']"
+        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']",
+        "paper_links": {
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "openaccess.thecvf.com": "/content/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.mlr.press": "/v\\d+/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.iclr.cc": "/paper_files/paper/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "papers.nips.cc": "/paper(?:_files/paper)?/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "www.isca-archive.org": "/[\\w.-]+/[\\w.-]+\\.(?:html|pdf)",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[\\w.%-]+",
+          "research.nvidia.com": "/labs/[\\w./%-]+\\.pdf"
+        },
+        "paper_section": "NVIDIA 연구팀 공식 Publications·연구 프로젝트 카드",
+        "adapter": "lab_publications",
+        "lab_data": "nvidia_cards"
       },
       {
         "team": "High-Fidelity Physics",
         "url": "https://research.nvidia.com/labs/prl/",
-        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']"
+        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']",
+        "paper_links": {
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "openaccess.thecvf.com": "/content/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.mlr.press": "/v\\d+/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.iclr.cc": "/paper_files/paper/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "papers.nips.cc": "/paper(?:_files/paper)?/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "www.isca-archive.org": "/[\\w.-]+/[\\w.-]+\\.(?:html|pdf)",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[\\w.%-]+",
+          "research.nvidia.com": "/labs/[\\w./%-]+\\.pdf"
+        },
+        "paper_section": "NVIDIA 연구팀 공식 Publications·연구 프로젝트 카드",
+        "adapter": "lab_publications",
+        "lab_data": "nvidia_cards"
       },
       {
         "team": "Real-Time Graphics",
         "url": "https://research.nvidia.com/labs/rtr/",
-        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']"
+        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']",
+        "paper_links": {
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "openaccess.thecvf.com": "/content/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.mlr.press": "/v\\d+/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.iclr.cc": "/paper_files/paper/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "papers.nips.cc": "/paper(?:_files/paper)?/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "www.isca-archive.org": "/[\\w.-]+/[\\w.-]+\\.(?:html|pdf)",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[\\w.%-]+",
+          "research.nvidia.com": "/labs/[\\w./%-]+\\.pdf"
+        },
+        "paper_section": "NVIDIA 연구팀 공식 Publications·연구 프로젝트 카드",
+        "adapter": "lab_publications",
+        "lab_data": "nvidia_cards"
       },
       {
         "team": "Taiwan Research Lab",
         "url": "https://research.nvidia.com/labs/twn/",
-        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']"
+        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']",
+        "paper_links": {
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "openaccess.thecvf.com": "/content/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.mlr.press": "/v\\d+/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.iclr.cc": "/paper_files/paper/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "papers.nips.cc": "/paper(?:_files/paper)?/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "www.isca-archive.org": "/[\\w.-]+/[\\w.-]+\\.(?:html|pdf)",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[\\w.%-]+",
+          "research.nvidia.com": "/labs/[\\w./%-]+\\.pdf"
+        },
+        "paper_section": "NVIDIA 연구팀 공식 Publications·연구 프로젝트 카드",
+        "adapter": "lab_publications",
+        "lab_data": "nvidia_cards"
       },
       {
         "team": "AI-Mediated Reality and Interaction",
         "url": "https://research.nvidia.com/labs/amri/",
-        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']"
+        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']",
+        "paper_links": {
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "openaccess.thecvf.com": "/content/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.mlr.press": "/v\\d+/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.iclr.cc": "/paper_files/paper/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "papers.nips.cc": "/paper(?:_files/paper)?/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "www.isca-archive.org": "/[\\w.-]+/[\\w.-]+\\.(?:html|pdf)",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[\\w.%-]+",
+          "research.nvidia.com": "/labs/[\\w./%-]+\\.pdf"
+        },
+        "paper_section": "NVIDIA 연구팀 공식 Publications·연구 프로젝트 카드",
+        "adapter": "lab_publications",
+        "lab_data": "nvidia_cards"
       },
       {
         "team": "Applied Research in Autonomous Vehicles",
         "url": "https://research.nvidia.com/labs/av-applied-research/",
-        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']"
+        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']",
+        "paper_links": {
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "openaccess.thecvf.com": "/content/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.mlr.press": "/v\\d+/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.iclr.cc": "/paper_files/paper/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "papers.nips.cc": "/paper(?:_files/paper)?/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "www.isca-archive.org": "/[\\w.-]+/[\\w.-]+\\.(?:html|pdf)",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[\\w.%-]+",
+          "research.nvidia.com": "/labs/[\\w./%-]+\\.pdf"
+        },
+        "paper_section": "NVIDIA 연구팀 공식 Publications·연구 프로젝트 카드",
+        "adapter": "lab_publications",
+        "lab_data": "nvidia_cards"
       },
       {
         "team": "Applied Deep Learning Research",
         "url": "https://research.nvidia.com/labs/adlr/projects/",
-        "row": "h2.archive__item-title a[href]"
+        "row": "h2.archive__item-title a[href]",
+        "paper_links": {
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "openaccess.thecvf.com": "/content/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.mlr.press": "/v\\d+/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.iclr.cc": "/paper_files/paper/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "papers.nips.cc": "/paper(?:_files/paper)?/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "www.isca-archive.org": "/[\\w.-]+/[\\w.-]+\\.(?:html|pdf)",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[\\w.%-]+",
+          "research.nvidia.com": "/labs/[\\w./%-]+\\.pdf"
+        },
+        "paper_section": "NVIDIA 연구팀 공식 Publications·연구 프로젝트 카드",
+        "adapter": "lab_publications",
+        "lab_data": "nvidia_cards"
       },
       {
         "team": "Cosmos Lab",
         "url": "https://research.nvidia.com/labs/cosmos-lab/",
         "adapter": "lab_publications",
-        "lab_data": "cosmos"
+        "lab_data": "cosmos",
+        "paper_links": {
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "openaccess.thecvf.com": "/content/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.mlr.press": "/v\\d+/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.iclr.cc": "/paper_files/paper/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "papers.nips.cc": "/paper(?:_files/paper)?/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "www.isca-archive.org": "/[\\w.-]+/[\\w.-]+\\.(?:html|pdf)",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[\\w.%-]+",
+          "research.nvidia.com": "/labs/[\\w./%-]+\\.pdf"
+        },
+        "paper_section": "NVIDIA 연구팀 공식 Publications·연구 프로젝트 카드"
       },
       {
         "team": "Spatial Intelligence",
         "url": "https://research.nvidia.com/labs/sil/publications/",
         "adapter": "lab_publications",
-        "lab_data": "sil"
+        "lab_data": "sil",
+        "paper_links": {
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "openaccess.thecvf.com": "/content/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.mlr.press": "/v\\d+/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.iclr.cc": "/paper_files/paper/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "papers.nips.cc": "/paper(?:_files/paper)?/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "www.isca-archive.org": "/[\\w.-]+/[\\w.-]+\\.(?:html|pdf)",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[\\w.%-]+",
+          "research.nvidia.com": "/labs/[\\w./%-]+\\.pdf"
+        },
+        "paper_section": "NVIDIA 연구팀 공식 Publications·연구 프로젝트 카드"
       },
       {
         "team": "Generalist Embodied Agents",
         "url": "https://research.nvidia.com/labs/gear/publications/",
         "adapter": "lab_publications",
-        "lab_data": "gear"
+        "lab_data": "gear",
+        "paper_links": {
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "openaccess.thecvf.com": "/content/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.mlr.press": "/v\\d+/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.iclr.cc": "/paper_files/paper/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "papers.nips.cc": "/paper(?:_files/paper)?/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "www.isca-archive.org": "/[\\w.-]+/[\\w.-]+\\.(?:html|pdf)",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[\\w.%-]+",
+          "research.nvidia.com": "/labs/[\\w./%-]+\\.pdf"
+        },
+        "paper_section": "NVIDIA 연구팀 공식 Publications·연구 프로젝트 카드"
       }
     ]
   },
@@ -305,141 +506,230 @@
     "name": "IBM Research",
     "url": "https://research.ibm.com/publications",
     "row": "a[href^='/publications/']",
-    "next_selector": "a[aria-label='Next page']",
-    "additional": [
-      {
-        "team": "Africa Lab",
-        "url": "https://research.ibm.com/labs/africa",
-        "row": "main h3 a[href^='/publications/'],main h3 a[href^='https://research.ibm.com/publications/'],main h3 a[href^='/blog/'],main h3 a[href^='https://research.ibm.com/blog/']"
-      },
-      {
-        "team": "Albany Lab",
-        "url": "https://research.ibm.com/labs/albany",
-        "row": "main h3 a[href^='/publications/'],main h3 a[href^='https://research.ibm.com/publications/'],main h3 a[href^='/blog/'],main h3 a[href^='https://research.ibm.com/blog/']"
-      },
-      {
-        "team": "Cambridge Lab",
-        "url": "https://research.ibm.com/labs/cambridge",
-        "row": "main h3 a[href^='/publications/'],main h3 a[href^='https://research.ibm.com/publications/'],main h3 a[href^='/blog/'],main h3 a[href^='https://research.ibm.com/blog/']"
-      },
-      {
-        "team": "India Lab",
-        "url": "https://research.ibm.com/labs/india",
-        "row": "main h3 a[href^='/publications/'],main h3 a[href^='https://research.ibm.com/publications/'],main h3 a[href^='/blog/'],main h3 a[href^='https://research.ibm.com/blog/']"
-      },
-      {
-        "team": "Ireland Lab",
-        "url": "https://research.ibm.com/labs/ireland",
-        "row": "main h3 a[href^='/publications/'],main h3 a[href^='https://research.ibm.com/publications/'],main h3 a[href^='/blog/'],main h3 a[href^='https://research.ibm.com/blog/']"
-      },
-      {
-        "team": "Israel Lab",
-        "url": "https://research.ibm.com/labs/israel",
-        "row": "main h3 a[href^='/publications/'],main h3 a[href^='https://research.ibm.com/publications/'],main h3 a[href^='/blog/'],main h3 a[href^='https://research.ibm.com/blog/']"
-      },
-      {
-        "team": "Japan Lab",
-        "url": "https://research.ibm.com/labs/japan",
-        "row": "main h3 a[href^='/publications/'],main h3 a[href^='https://research.ibm.com/publications/'],main h3 a[href^='/blog/'],main h3 a[href^='https://research.ibm.com/blog/']"
-      },
-      {
-        "team": "Silicon Valley Lab",
-        "url": "https://research.ibm.com/labs/silicon-valley",
-        "row": "main h3 a[href^='/publications/'],main h3 a[href^='https://research.ibm.com/publications/'],main h3 a[href^='/blog/'],main h3 a[href^='https://research.ibm.com/blog/']"
-      },
-      {
-        "team": "United Kingdom Lab",
-        "url": "https://research.ibm.com/labs/uk",
-        "row": "main h3 a[href^='/publications/'],main h3 a[href^='https://research.ibm.com/publications/'],main h3 a[href^='/blog/'],main h3 a[href^='https://research.ibm.com/blog/']"
-      },
-      {
-        "team": "Yorktown Heights Lab",
-        "url": "https://research.ibm.com/labs/yorktown-heights",
-        "row": "main h3 a[href^='/publications/'],main h3 a[href^='https://research.ibm.com/publications/'],main h3 a[href^='/blog/'],main h3 a[href^='https://research.ibm.com/blog/']"
-      },
-      {
-        "team": "Zurich Lab",
-        "url": "https://research.ibm.com/labs/zurich",
-        "row": "main h3 a[href^='/publications/'],main h3 a[href^='https://research.ibm.com/publications/'],main h3 a[href^='/blog/'],main h3 a[href^='https://research.ibm.com/blog/']"
-      }
-    ]
-  },
-  {
-    "id": "9",
-    "name": "Salesforce AI Research",
-    "url": "https://www.salesforce.com/blog/category/ai-research/",
-    "row": "main .card__title a[href*=\"/blog/\"]",
-    "additional": [
-      {
-        "team": "AI Research archive",
-        "url": "https://www.salesforce.com/blog/category/ai-research/?archive=true",
-        "link": ".card__title a",
-        "title": ".card__title",
-        "next_selector": "link[rel~=next]",
-        "row": "main article.card:has(a[href*='/blog/category/ai-research'])"
-      }
-    ]
+    "next_selector": "a[aria-label='Next page']"
   },
   {
     "id": "10",
     "name": "Ai2",
-    "url": "https://allenai.org/blog",
-    "row": "main a[href^='/blog/']",
-    "next_selector": "a[href*='/research?o=']:-soup-contains('Next')",
+    "url": "https://allenai.org/papers",
+    "row": "main div:has(> h2)",
+    "link": "h2 a[href]",
+    "title": "h2",
+    "date": "div.grid-tc_min-content_1fr > div:first-child",
+    "next_selector": "main a[href*='/papers?o=']:-soup-contains('Next')",
+    "papers_only": true,
+    "paper_section": "Ai2 Papers",
+    "paper_links": {
+      "www.semanticscholar.org": "/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?",
+      "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+      "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+      "openreview.net": "/(?:forum|pdf)",
+      "doi.org": "/10\\.\\d{4,9}/[^\\s]+"
+    },
     "additional": [
       {
-        "team": "AI for science",
-        "url": "https://allenai.org/ai-for-science",
-        "adapter": "lab_publications",
-        "lab_data": "ai2"
-      },
-      {
-        "team": "Embodied AI",
-        "url": "https://allenai.org/embodied-ai",
-        "adapter": "lab_publications",
-        "lab_data": "ai2"
-      },
-      {
-        "team": "Language models",
-        "url": "https://allenai.org/language-models",
-        "adapter": "lab_publications",
-        "lab_data": "ai2"
-      },
-      {
-        "team": "Multimodal models",
-        "url": "https://allenai.org/multimodal-models",
-        "adapter": "lab_publications",
-        "lab_data": "ai2"
-      },
-      {
-        "team": "Evaluation frameworks",
-        "url": "https://allenai.org/evaluation-frameworks",
-        "adapter": "lab_publications",
-        "lab_data": "ai2"
+        "url": "https://allenai.org/research",
+        "row": "main a[href^='/blog/']:has(h2)",
+        "title": "h2",
+        "next_selector": "main a[href*='/research?o=']:-soup-contains('Next')",
+        "team": "Latest research"
       },
       {
         "team": "Olmo",
-        "url": "https://allenai.org/olmo",
-        "adapter": "lab_publications",
-        "lab_data": "ai2"
+        "url": "https://allenai.org/research?tags=olmo",
+        "row": "main a[href^='/blog/']:has(h2)",
+        "title": "h2",
+        "next_selector": "main a[href*='/research?o=']:-soup-contains('Next')"
       },
       {
         "team": "Molmo",
-        "url": "https://allenai.org/molmo",
-        "adapter": "lab_publications",
-        "lab_data": "ai2"
+        "url": "https://allenai.org/research?tags=molmo",
+        "row": "main a[href^='/blog/']:has(h2)",
+        "title": "h2",
+        "next_selector": "main a[href*='/research?o=']:-soup-contains('Next')"
       },
       {
         "team": "Asta",
-        "url": "https://allenai.org/asta",
-        "adapter": "lab_publications",
-        "lab_data": "ai2"
+        "url": "https://allenai.org/research?tags=asta",
+        "row": "main a[href^='/blog/']:has(h2)",
+        "title": "h2",
+        "next_selector": "main a[href*='/research?o=']:-soup-contains('Next')"
       },
       {
         "team": "OlmoEarth",
-        "url": "https://allenai.org/olmoearth",
-        "adapter": "lab_publications",
-        "lab_data": "ai2"
+        "url": "https://allenai.org/research?tags=olmoearth",
+        "row": "main a[href^='/blog/']:has(h2)",
+        "title": "h2",
+        "next_selector": "main a[href*='/research?o=']:-soup-contains('Next')"
+      },
+      {
+        "team": "Climate Modeling",
+        "url": "https://allenai.org/research?tags=climate-modeling",
+        "row": "main a[href^='/blog/']:has(h2)",
+        "title": "h2",
+        "next_selector": "main a[href*='/research?o=']:-soup-contains('Next')"
+      },
+      {
+        "row": "main div:has(> h2)",
+        "link": "h2 a[href]",
+        "title": "h2",
+        "date": "div.grid-tc_min-content_1fr > div:first-child",
+        "next_selector": "main a[href*='/papers?o=']:-soup-contains('Next')",
+        "papers_only": true,
+        "paper_section": "Ai2 Papers",
+        "paper_links": {
+          "www.semanticscholar.org": "/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?",
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "doi.org": "/10\\.\\d{4,9}/[^\\s]+"
+        },
+        "team": "Papers · AllenNLP",
+        "url": "https://allenai.org/papers?tags=AllenNLP"
+      },
+      {
+        "row": "main div:has(> h2)",
+        "link": "h2 a[href]",
+        "title": "h2",
+        "date": "div.grid-tc_min-content_1fr > div:first-child",
+        "next_selector": "main a[href*='/papers?o=']:-soup-contains('Next')",
+        "papers_only": true,
+        "paper_section": "Ai2 Papers",
+        "paper_links": {
+          "www.semanticscholar.org": "/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?",
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "doi.org": "/10\\.\\d{4,9}/[^\\s]+"
+        },
+        "team": "Papers · Aristo",
+        "url": "https://allenai.org/papers?tags=Aristo"
+      },
+      {
+        "row": "main div:has(> h2)",
+        "link": "h2 a[href]",
+        "title": "h2",
+        "date": "div.grid-tc_min-content_1fr > div:first-child",
+        "next_selector": "main a[href*='/papers?o=']:-soup-contains('Next')",
+        "papers_only": true,
+        "paper_section": "Ai2 Papers",
+        "paper_links": {
+          "www.semanticscholar.org": "/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?",
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "doi.org": "/10\\.\\d{4,9}/[^\\s]+"
+        },
+        "team": "Papers · Asta",
+        "url": "https://allenai.org/papers?tags=Asta"
+      },
+      {
+        "row": "main div:has(> h2)",
+        "link": "h2 a[href]",
+        "title": "h2",
+        "date": "div.grid-tc_min-content_1fr > div:first-child",
+        "next_selector": "main a[href*='/papers?o=']:-soup-contains('Next')",
+        "papers_only": true,
+        "paper_section": "Ai2 Papers",
+        "paper_links": {
+          "www.semanticscholar.org": "/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?",
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "doi.org": "/10\\.\\d{4,9}/[^\\s]+"
+        },
+        "team": "Papers · Climate Modeling",
+        "url": "https://allenai.org/papers?tags=Climate+Modeling"
+      },
+      {
+        "row": "main div:has(> h2)",
+        "link": "h2 a[href]",
+        "title": "h2",
+        "date": "div.grid-tc_min-content_1fr > div:first-child",
+        "next_selector": "main a[href*='/papers?o=']:-soup-contains('Next')",
+        "papers_only": true,
+        "paper_section": "Ai2 Papers",
+        "paper_links": {
+          "www.semanticscholar.org": "/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?",
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "doi.org": "/10\\.\\d{4,9}/[^\\s]+"
+        },
+        "team": "Papers · EarthRanger",
+        "url": "https://allenai.org/papers?tags=EarthRanger"
+      },
+      {
+        "row": "main div:has(> h2)",
+        "link": "h2 a[href]",
+        "title": "h2",
+        "date": "div.grid-tc_min-content_1fr > div:first-child",
+        "next_selector": "main a[href*='/papers?o=']:-soup-contains('Next')",
+        "papers_only": true,
+        "paper_section": "Ai2 Papers",
+        "paper_links": {
+          "www.semanticscholar.org": "/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?",
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "doi.org": "/10\\.\\d{4,9}/[^\\s]+"
+        },
+        "team": "Papers · PRIOR",
+        "url": "https://allenai.org/papers?tags=PRIOR"
+      },
+      {
+        "row": "main div:has(> h2)",
+        "link": "h2 a[href]",
+        "title": "h2",
+        "date": "div.grid-tc_min-content_1fr > div:first-child",
+        "next_selector": "main a[href*='/papers?o=']:-soup-contains('Next')",
+        "papers_only": true,
+        "paper_section": "Ai2 Papers",
+        "paper_links": {
+          "www.semanticscholar.org": "/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?",
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "doi.org": "/10\\.\\d{4,9}/[^\\s]+"
+        },
+        "team": "Papers · Semantic Scholar",
+        "url": "https://allenai.org/papers?tags=Semantic+Scholar"
+      },
+      {
+        "row": "main div:has(> h2)",
+        "link": "h2 a[href]",
+        "title": "h2",
+        "date": "div.grid-tc_min-content_1fr > div:first-child",
+        "next_selector": "main a[href*='/papers?o=']:-soup-contains('Next')",
+        "papers_only": true,
+        "paper_section": "Ai2 Papers",
+        "paper_links": {
+          "www.semanticscholar.org": "/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?",
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "doi.org": "/10\\.\\d{4,9}/[^\\s]+"
+        },
+        "team": "Papers · Skylight",
+        "url": "https://allenai.org/papers?tags=Skylight"
+      },
+      {
+        "row": "main div:has(> h2)",
+        "link": "h2 a[href]",
+        "title": "h2",
+        "date": "div.grid-tc_min-content_1fr > div:first-child",
+        "next_selector": "main a[href*='/papers?o=']:-soup-contains('Next')",
+        "papers_only": true,
+        "paper_section": "Ai2 Papers",
+        "paper_links": {
+          "www.semanticscholar.org": "/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?",
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "doi.org": "/10\\.\\d{4,9}/[^\\s]+"
+        },
+        "team": "Papers · Wildlands",
+        "url": "https://allenai.org/papers?tags=Wildlands"
       }
     ]
   },
@@ -521,55 +811,41 @@
     "id": "12",
     "name": "DeepSeek",
     "url": "https://www.deepseek.com/en/news/",
-    "adapter": "interactive_catalogs"
+    "adapter": "official_paper_sections",
+    "paper_section": "Research Papers · Research Index",
+    "papers_only": true,
+    "paper_links": {
+      "arxiv.org": "/abs/\\d{4}\\.\\d{4,5}(?:v\\d+)?/?",
+      "github.com": "/deepseek-ai/(?:LPLB|open-infra-index)/?"
+    }
   },
   {
     "id": "13",
     "name": "Mistral AI",
     "url": "https://mistral.ai/research/",
-    "row": "a[href^='/news/']:-soup-contains('Research')",
-    "additional": [
-      {
-        "team": "Research news",
-        "url": "https://mistral.ai/news/",
-        "row": "[data-categories~=\"research\"] a[href^=\"/news/\"]",
-        "title": "h2",
-        "date": "footer p:first-child"
-      }
-    ]
+    "adapter": "official_paper_sections",
+    "paper_section": "Publications",
+    "papers_only": true,
+    "paper_links": {
+      "arxiv.org": "/abs/\\d{4}\\.\\d{4,5}(?:v\\d+)?/?",
+      "huggingface.co": "/mistralai/[^/]+/blob/main/(?:assets/)?technical_report\\.pdf"
+    }
   },
   {
     "id": "14",
     "name": "Alibaba Qwen",
     "url": "https://qwen.ai/research",
-    "adapter": "interactive_catalogs"
+    "adapter": "official_paper_sections",
+    "paper_section": "Research Index · Research",
+    "papers_only": false,
+    "scope_key": "qwen_research_filter"
   },
   {
     "id": "15",
     "name": "Cohere",
     "url": "https://cohere.com/research/papers",
     "adapter": "interactive_catalogs",
-    "additional": [
-      {
-        "team": "Aya",
-        "url": "https://cohere.com/research/aya",
-        "row": "a[href^=\"/research/papers/\"]"
-      },
-      {
-        "team": "Research blog",
-        "url": "https://cohere.com/blog/tag/research",
-        "row": "a[href^=\"/blog/\"]:has(.font-eyebrow)",
-        "next_selector": "a[aria-label=\"Go to next page\"]",
-        "title": "p.font-body",
-        "date": "p.font-eyebrow"
-      }
-    ]
-  },
-  {
-    "id": "16",
-    "name": "xAI",
-    "url": "https://x.ai/news",
-    "row": "a[href*=\"/news/\"]:-soup-contains(\"Research\")"
+    "paper_section": "Research Papers"
   },
   {
     "id": "17",
@@ -578,7 +854,8 @@
     "row": "a.research__link",
     "title": ".research__title",
     "date": ".research__date",
-    "next_selector": "a.next.page-numbers"
+    "next_selector": "a.next.page-numbers",
+    "paper_section": "Research"
   },
   {
     "id": "18",
@@ -592,36 +869,6 @@
         "row": "a[href^='/en/public_papers/']",
         "title": "span span",
         "date": ":scope > span:first-child"
-      },
-      {
-        "team": "Blog · Foundation models",
-        "url": "https://seed.bytedance.com/en/blog_list/foundation",
-        "adapter": "interactive_catalogs",
-        "area_id": 100
-      },
-      {
-        "team": "Blog · Visual",
-        "url": "https://seed.bytedance.com/en/blog_list/visual",
-        "adapter": "interactive_catalogs",
-        "area_id": 101
-      },
-      {
-        "team": "Blog · Audio",
-        "url": "https://seed.bytedance.com/en/blog_list/audio",
-        "adapter": "interactive_catalogs",
-        "area_id": 102
-      },
-      {
-        "team": "Blog · AI Infra",
-        "url": "https://seed.bytedance.com/en/blog_list/ai-infra",
-        "adapter": "interactive_catalogs",
-        "area_id": 103
-      },
-      {
-        "team": "Blog · Frontier research",
-        "url": "https://seed.bytedance.com/en/blog_list/frontier-research",
-        "adapter": "interactive_catalogs",
-        "area_id": 104
       }
     ]
   },
@@ -629,17 +876,15 @@
     "id": "19",
     "name": "Liquid AI",
     "url": "https://www.liquid.ai/research",
-    "row": "li:has(a[href^='/blog/'])",
-    "link": "a[href^='/blog/']",
-    "title": "span.font-serif",
-    "date": "time",
-    "additional": [
-      {
-        "team": "Engineering",
-        "url": "https://www.liquid.ai/engineering",
-        "row": "main a[href^=\"/blog/\"]"
-      }
-    ]
+    "adapter": "official_paper_sections",
+    "paper_section": "Publications",
+    "papers_only": true,
+    "paper_links": {
+      "arxiv.org": "/abs/\\d{4}\\.\\d{4,5}(?:v\\d+)?/?",
+      "openreview.net": "/forum/?",
+      "icml.cc": "/virtual/\\d{4}/\\d+/?",
+      "www.cell.com": "/cell/fulltext/[^/]+"
+    }
   },
   {
     "id": "20",
@@ -650,6 +895,12 @@
     "title": "header h1",
     "date": "header time",
     "additional": [
+      {
+        "label": "Featured research",
+        "url": "https://sakana.ai/#research",
+        "row": "#research a.hp-paper",
+        "title": ".hp-paper__title"
+      },
       {
         "team": "Recursive Self-Improvement Lab",
         "url": "https://sakana.ai/rsi-lab/",
@@ -680,16 +931,14 @@
     "id": "22",
     "name": "Redwood Research",
     "url": "https://www.redwoodresearch.org/research",
-    "row": "main a[href^='/research/']",
-    "additional": [
-      {
-        "team": "Research blog",
-        "url": "https://www.redwoodresearch.org/blog",
-        "row": "main a[href^=\"/blog/\"]:has(article)",
-        "title": "h3",
-        "date": "span.ml-auto"
-      }
-    ]
+    "adapter": "strict_publications",
+    "paper_section": "Our Research · Highlighted Research / Other Research",
+    "paper_links": {
+      "arxiv.org": "/(?:abs|pdf)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+      "openreview.net": "/(?:forum|pdf)",
+      "www.anthropic.com": "/research/alignment-faking/?"
+    },
+    "papers_only": false
   },
   {
     "id": "23",
@@ -724,65 +973,106 @@
   {
     "id": "24",
     "name": "EleutherAI",
-    "url": "https://blog.eleuther.ai/",
-    "row": "main article:has(h3)",
-    "link": "a[href^=\"/\"]",
-    "title": "h3",
-    "next_selector": "nav.blog-pagination a[href]:-soup-contains(\"Older posts\")"
+    "url": "https://eleuther.ai/papers/",
+    "adapter": "strict_publications",
+    "paper_section": "Research Library",
+    "paper_links": {
+      "arxiv.org": "/(?:abs|pdf)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+      "openreview.net": "/(?:forum|pdf)",
+      "aclanthology.org": "/[\\w.-]+(?:\\.pdf|/)?",
+      "nips.cc": "/virtual/\\d{4}/\\d+",
+      "neurips.cc": "/virtual/\\d{4}/(?:workshop/)?\\d+",
+      "ieeexplore.ieee.org": "/abstract/document/\\d+",
+      "joss.theoj.org": "/papers/10\\.21105/joss\\.\\d+",
+      "www.biorxiv.org": "/content/10\\.1101/[\\w.]+",
+      "pubmed.ncbi.nlm.nih.gov": "/\\d+/?",
+      "pubs.aip.org": "/asa/jasa/article/[^?#]+",
+      "carnegieendowment.org": "/research/2024/07/beyond-open-vs-closed-emerging-consensus-and-key-questions-for-foundation-ai-model-governance",
+      "openfuture.eu": "/wp-content/uploads/2024/05/240517Democratic_Governance_of_AI_Systems\\.pdf",
+      "www.alexander-spangher.com": "/papers/aria_amt\\.pdf",
+      "www.linuxfoundation.org": "/research/2023-generative-ai-study"
+    },
+    "papers_only": true
   },
   {
     "id": "25",
     "name": "Hugging Face",
-    "url": "https://huggingface.co/blog",
-    "row": "article a[href^='/blog/huggingface/']",
-    "title": "h4",
-    "additional": [
-      {
-        "team": "Research editorial",
-        "url": "https://huggingface.co/blog?tag=research",
-        "adapter": "newsroom_catalogs"
-      }
-    ],
-    "next_selector": "a[href^=\"/blog?p=\"]:-soup-contains(\"Next\")"
+    "url": "https://huggingface.co/collections/science/papers",
+    "adapter": "strict_publications",
+    "paper_section": "Hugging Face Science team papers",
+    "paper_links": {
+      "huggingface.co": "/papers/\\d{4}\\.\\d{4,5}/?"
+    },
+    "papers_only": true
   },
   {
     "id": "26",
     "name": "Jina AI",
     "url": "https://jina.ai/news/",
-    "row": "a[href^='/news/jina-']",
-    "adapter": "newsroom_catalogs"
+    "row": "main .row.text-h5:-soup-contains(\"Academic Publications\") + .row a:has(.pubcard)",
+    "title": ".text-weight-light",
+    "date": ".text-caption",
+    "papers_only": true,
+    "paper_section": "Academic Publications",
+    "paper_links": {
+      "arxiv.org": "/abs/\\d{4}\\.\\d{4,5}(?:v\\d+)?",
+      "jina.ai": "/[^?#]+\\.pdf"
+    }
   },
   {
     "id": "27",
     "name": "Stanford CRFM",
-    "url": "https://crfm.stanford.edu/blog.html",
-    "row": "a[href*='/20'][href$='.html']"
+    "url": "https://crfm.stanford.edu/research.html",
+    "adapter": "strict_publications",
+    "paper_section": "Research · year-grouped papers",
+    "paper_links": {
+      "arxiv.org": "/(?:abs|pdf)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+      "www.roboticsproceedings.org": "/rss\\d+/p\\d+\\.pdf",
+      "stanford.edu": "/~eadeli/publication/MEDIA_LSSL\\.pdf",
+      "www.nature.com": "/articles/[\\w.-]+",
+      "jmlr.org": "/papers/volume\\d+/[\\w-]+/[\\w-]+\\.pdf"
+    },
+    "papers_only": true
   },
   {
     "id": "28",
     "name": "Berkeley BAIR",
-    "url": "https://bair.berkeley.edu/blog/",
-    "row": "a.post-link",
-    "next_selector": "a.pagination-item:-soup-contains(\"Older\")"
+    "url": "https://bair.berkeley.edu/blog/archive/",
+    "adapter": "bair_archive",
+    "paper_section": "BAIR Archive"
   },
   {
     "id": "29",
     "name": "MIT CSAIL",
-    "url": "https://www.csail.mit.edu/news",
-    "row": ".news-card a[href^=\"/news/\"]",
-    "adapter": "newsroom_catalogs"
+    "url": "https://dspace.mit.edu/handle/1721.1/5458",
+    "adapter": "strict_publications",
+    "paper_section": "MIT CSAIL Publications → DSpace CSAIL community",
+    "paper_links": {
+      "dspace.mit.edu": "/handle/1721\\.1/\\d+"
+    },
+    "papers_only": true
   },
   {
     "id": "30",
     "name": "CMU ML",
-    "url": "https://blog.ml.cmu.edu/category/research/",
-    "row": ".post-header h3 a",
-    "next_selector": "a[href]:-soup-contains(\"Older Posts\")"
+    "url": "https://ml.cmu.edu/research/phd-dissertations",
+    "adapter": "strict_publications",
+    "paper_section": "Machine Learning Department · Ph.D. Dissertations",
+    "paper_links": {
+      "ml.cmu.edu": "/research/(?:phd-dissertation-pdfs/|joint_phd_dissertations/)?[^/]+\\.[pP][dD][fF]",
+      "reports-archive.adm.cs.cmu.edu": "/anon/[^?#]+\\.[pP][dD][fF]"
+    },
+    "papers_only": true
   },
   {
     "id": "31",
     "name": "Mila",
     "url": "https://mila.quebec/en/research/publications",
-    "next_selector": "li.pager__item--next a[rel=next]"
+    "next_selector": "li.pager__item--next a[rel=next]",
+    "papers_only": true,
+    "paper_section": "Mila Publications",
+    "paper_links": {
+      "openreview.net": "/(?:forum|pdf)"
+    }
   }
 ]

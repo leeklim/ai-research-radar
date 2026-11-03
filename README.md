@@ -1,6 +1,6 @@
 # AI Research Radar
 
-32개 AI 연구조직의 공개 연구 페이지를 정기 확인하고 GitHub Pages에서 보여주는 개인 연구 모니터링 대시보드입니다.
+30개 AI 연구조직의 공개 연구 페이지를 정기 확인하고 GitHub Pages에서 보여주는 개인 연구 모니터링 대시보드입니다.
 
 ## 빠른 시작
 
@@ -30,7 +30,7 @@ python -m http.server 8000
 
 ## 중요한 한계
 
-- 기관 목록과 게시글의 최종 주소가 같은 기관 호스트이고, 게시글이 HTML로 열리는 항목만 수록합니다. 외부 논문 저장소, PDF, 단축 링크는 제외합니다. Mila는 예외로 공식 Publications 카드에 연결된 OpenReview forum·PDF만 수록하며, 날짜도 Mila 목록의 표기를 사용합니다.
+- 공식 Research·Publications 및 명시된 연구팀 목록에서 제목과 날짜를 읽습니다. 기관 자체 HTML 글이나 해당 목록에서 직접 지정한 논문 원문만 등록합니다. 카드가 연결하는 외부 원문은 출처별 허용 주소와 대조하고, 뉴스 피드·소속 검색·논문 본문의 참고문헌으로 보충하지 않습니다.
 - 긴 페이지 목록에서는 매 회차 첫 페이지를 다시 읽고, 저장된 위치부터 과거 페이지도 확인합니다. 일반 기관은 회차당 새 주소를 최대 120개까지 실제로 열어 보며, Anthropic은 팀 목록 전체를 확인합니다.
 - `discovered`는 최초 발견일입니다. `published`에는 상세 글에 표시된 날짜를 기록하며, 상세 글에 날짜가 없으면 공식 목록에 표시된 날짜를 사용합니다.
 - 외부 사이트의 이용약관 및 robots 정책을 확인하고 필요한 기관별 수집기를 보완해야 합니다.
@@ -41,7 +41,7 @@ python -m http.server 8000
 ## 구조
 
 ```
-config/sources.json        # 추적할 32개 공식 사이트
+config/sources.json        # 추적할 30개 공식 사이트
 scripts/collect.py        # RSS / HTML 수집, 기존 데이터 병합
 .github/workflows/update.yml  # 하루 2회 수집
  docs/index.html           # 대시보드

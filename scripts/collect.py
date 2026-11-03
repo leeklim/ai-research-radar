@@ -15,6 +15,8 @@ ROOT = Path(__file__).resolve().parents[1]
 NOW = datetime.now(timezone.utc).isoformat(timespec="seconds")
 HEADERS = {"User-Agent": "AIResearchRadar/1.0 (https://github.com/leeklim/ai-research-radar)"}
 MILA_PUBLICATIONS = "https://mila.quebec/en/research/publications"
+JINA_NEWS = "https://jina.ai/news/"
+
 
 
 def fetch(url):
@@ -126,16 +128,34 @@ def openreview_id(url):
     return None
 
 
-def mila_paper(url,listing):
-    return listing==MILA_PUBLICATIONS and openreview_id(url) is not None
+def paper_target(url,listing):
+    dest=urlsplit(url)
+    pattern=listing.get("paper_links",{}).get(dest.netloc)
+    if not pattern or dest.scheme not in ("https","http") or not re.fullmatch(pattern,dest.path):
+        return False
+    if dest.netloc=="openreview.net":
+        return openreview_id(url) is not None
+    return True
 
 
-def verify_html(url,listing):
+def eligible_link(url,listing):
+    return paper_target(url,listing) or (not listing.get("papers_only") and official_post(url,listing["url"]))
+
+
+def verify_destination(url,listing):
     try:
-        with requests.get(url, headers=HEADERS, timeout=8, stream=True) as response:
-            if (response.ok and official_post(response.url,listing)
-                    and "text/html" in response.headers.get("Content-Type","").lower()):
-                return response.url
+        for _ in range(5):
+            if paper_target(url,listing):
+                return url
+            if not official_post(url,listing["url"]):
+                break
+            with requests.get(url,headers=HEADERS,timeout=8,stream=True,allow_redirects=False) as response:
+                if response.is_redirect:
+                    url=urljoin(url,response.headers["Location"])
+                    continue
+                if response.ok and not listing.get("papers_only") and "text/html" in response.headers.get("Content-Type","").lower():
+                    return response.url
+                break
     except requests.RequestException:
         pass
     return None
@@ -155,6 +175,14 @@ def article_id(source_id,url):
 
 
 def catalog(s):
+    if s.get("adapter")=="strict_publications":
+        from strict_publications import entries
+        yield from entries(s)
+        return
+    if s.get("adapter")=="official_paper_sections":
+        from official_paper_sections import section_catalog
+        yield from section_catalog(s)
+        return
     if s.get("adapter")=="lab_publications":
         from lab_publications import entries
         yield from entries(s)
@@ -163,8 +191,8 @@ def catalog(s):
         from interactive_catalogs import entries
         yield from entries(s)
         return
-    if s.get("adapter")=="newsroom_catalogs":
-        from newsroom_catalogs import entries
+    if s.get("adapter")=="bair_archive":
+        from bair_archive import entries
         yield from entries(s)
         return
     if s.get("next_selector") or s.get("pages"):
@@ -214,12 +242,6 @@ def catalog(s):
                 break
             page+=1
         return
-    if s["id"]=="14" and urlsplit(s["url"]).hostname=="qwen.ai" and s["url"].rstrip("/")=="https://qwen.ai/research":
-        # This is the first-party content response used by the Qwen research page.
-        for post in fetch("https://qwen.ai/api/page_config?code=research.research-list&language=en").json():
-            if re.fullmatch(r"[\w.-]+",post["id"]):
-                yield s["url"]+"/"+post["id"],post["title"],day(post.get("date",""))
-        return
     page = fetch(s["url"])
     yield from catalog_page(s,page,BeautifulSoup(page.content,"html.parser"))
 
@@ -253,8 +275,6 @@ def catalog_page(s,page,soup):
                 yield href,entry.findtext("title"),next((date for text in anchor.stripped_strings if (date:=day(text))),None)
         return
     for row in soup.select(s["row"]):
-        if s["id"]=="16" and not re.match(r"^Research\s*·",row.get_text(" ",strip=True),re.I):
-            continue
         link = row.select_one(s["link"]) if "link" in s else row
         if not link or not link.has_attr("href"):
             continue
@@ -271,21 +291,10 @@ def catalog_page(s,page,soup):
             continue
         date_tag = row.select_one(s["date"]) if s.get("date") else None
         published = day(date_tag.get_text(" ",strip=True)) if date_tag else None
-        if s["id"]=="13":
-            published = next((date for t in row.select("footer *") if (date:=day(t.get_text(" ",strip=True)))),None)
         if s["id"]=="27":
             card=row.find_parent("div",class_="item")
             if card:
                 published=next((date for text in card.stripped_strings if (date:=day(text))),None)
-        if s["id"]=="28":
-            # The BAIR Blog also carries events. Require a paper link in the post itself.
-            body = BeautifulSoup(fetch(href).content,"html.parser")
-            article = body.select_one(".post-content, article")
-            if not article or not any(re.search(r"\b(?:paper|preprint|publication)\b",a.get_text(" ",strip=True),re.I)
-                                      and re.search(r"arxiv\.org|openreview\.net|aclanthology\.org|proceedings\.mlr\.press",a["href"])
-                                      for a in article.select("a[href]")):
-                continue
-
         yield href,title,published
 
 
@@ -296,13 +305,14 @@ def collect(s, old, previous_status):
     rows = {}
     errors = []
     memberships = {}
+    listed_by_url = {l["url"]:l for l in listings(s)}
     origins = {}
     for listing in listings(s):
         scan = dict(listing,id=s["id"],resume=previous_pages.get(listing["url"]))
         try:
             count = 0
             for url,title,published in catalog(scan):
-                if official_post(url,listing["url"]) or (s["id"]=="31" and mila_paper(url,listing["url"])):
+                if eligible_link(url,listing):
                     if listing.get("team"):
                         memberships.setdefault(url,{})[listing["team"]]=listing["url"]
                     if url not in rows or (published and not rows[url][1]):
@@ -321,11 +331,12 @@ def collect(s, old, previous_status):
     for url,(title,published,listing) in rows.items():
         key = article_id(s["id"],url)
         previous = old.get(key,{})
-        if s["id"]=="31" and mila_paper(url,listing):
-            # Keep the exact link supplied by Mila, including PDF links. OpenReview
-            # can require a visitor challenge, so the evidence is Mila's own card.
+        if paper_target(url,listed_by_url[listing]):
+            # The publisher's own paper card is the evidence for the outbound link.
             verified[url]=(title,published,listing,url)
-        elif previous.get("official_html") and previous.get("listed_on")==listing and not obsolete_url(previous):
+        elif previous.get("listed_on")==listing and not obsolete_url(previous) and (
+                previous.get("official_html") and not listed_by_url[listing].get("papers_only")
+                or previous.get("academic_paper") and paper_target(previous["url"],listed_by_url[listing])):
             verified[url]=(title,published,listing,previous["url"])
         else:
             queue.append((url,title,published,listing))
@@ -334,7 +345,7 @@ def collect(s, old, previous_status):
         start = next((i for i,r in enumerate(queue) if r[0]==cursor),0)
         pending = queue[start:]+queue[:start]
         batch = pending if s["id"]=="1" else pending[:120]
-        for row,destination in zip(batch,checks.map(lambda r:verify_html(r[0],r[3]),batch)):
+        for row,destination in zip(batch,checks.map(lambda r:verify_destination(r[0],listed_by_url[r[3]]),batch)):
             if destination:
                 url,title,published,listing=row
                 verified[url]=(title,published,listing,destination)
@@ -350,7 +361,9 @@ def listings(s):
 
 def obsolete_url(item):
     url=urlsplit(item["url"])
-    return item.get("source")=="14" and url.hostname=="qwen.ai" and url.path.startswith("/research/")
+    return item.get("source")=="14" and (
+        item.get("collection")!="research_archive"
+        or url.hostname=="qwen.ai" and url.path.startswith("/research/"))
 
 
 def unique_destinations(items):
@@ -379,10 +392,21 @@ def main():
     snapshot = json.loads(output.read_text("utf8"))
     old = {x["id"]:x for x in snapshot["items"]}
     lists = {s["id"]:{v["url"] for v in listings(s)} for s in sources}
-    # Keep historical listings only if the official page was recorded as evidence.
-    items = {k:v for k,v in old.items() if v.get("listed_on") in lists.get(v["source"],set()) and not obsolete_url(v)
-             and (v.get("official_html") and official_post(v["url"],v["listed_on"])
-                  or v["source"]=="31" and v.get("openreview") and mila_paper(v["url"],v["listed_on"]))}
+    policies={s["id"]:{v["url"]:v for v in listings(s)} for s in sources}
+    # Retain historical records only under a still-configured, qualifying listing.
+    items={}
+    for key,item in old.items():
+        listing=policies.get(item["source"],{}).get(item.get("listed_on"))
+        if not listing or obsolete_url(item) or (listing.get("scope_key") and item.get("scope_key")!=listing["scope_key"]):
+            continue
+        if ((item.get("academic_paper") or item.get("openreview")) and paper_target(item["url"],listing)
+                or item.get("official_html") and not listing.get("papers_only") and official_post(item["url"],listing["url"])):
+            items[key]=item
+    for item in items.values():
+        if "teams" in item:
+            item["teams"]={team:page for team,page in item["teams"].items() if page in lists[item["source"]]}
+            if not item["teams"]:
+                del item["teams"]
     status = {}
     with ThreadPoolExecutor(max_workers=6) as pool:
         for s, rows, error, cursor, memberships, pages, origins in pool.map(lambda s:collect(s,old,snapshot["status"].get(s["id"],{})),sources):
@@ -391,8 +415,14 @@ def main():
                 previous = old.get(key,{})
                 items[key] = dict(previous,id=key,source=s["id"],url=destination,title=title,discovered=previous.get("discovered",NOW),
                                   listing_date=published or previous.get("listing_date"),published=previous.get("published"),listed_on=listing,found_on=origins[url],official_html=True,kind="공식 연구 게시글")
-                if s["id"]=="31" and mila_paper(destination,listing):
-                    items[key].update(openreview=True,official_html=False,kind="Mila Publications · OpenReview",
+                items[key].pop("openreview",None)
+                items[key].pop("academic_paper",None)
+                if policies[s["id"]][listing].get("scope_key"):
+                    items[key]["scope_key"]=policies[s["id"]][listing]["scope_key"]
+                if s["id"]=="14":
+                    items[key]["collection"]="research_archive"
+                if paper_target(destination,policies[s["id"]][listing]):
+                    items[key].update(academic_paper=True,openreview=bool(openreview_id(destination)),official_html=False,kind=policies[s["id"]][listing].get("paper_section","공식 논문 목록"),
                                       published=published,date_basis="공식 목록" if published else None)
                 if url in memberships:
                     previous_teams={team:page for team,page in previous.get("teams",{}).items() if page in lists[s["id"]]}
@@ -404,7 +434,7 @@ def main():
     for item in articles:
         if item.get("date_basis")!="상세 글" and item.get("listing_date"):
             item.update(published=item["listing_date"],date_basis="공식 목록")
-    pending=[item for item in articles if item.get("date_basis")!="상세 글" and not item.get("openreview")
+    pending=[item for item in articles if item.get("date_basis")!="상세 글" and not item.get("openreview") and not item.get("academic_paper")
              and item.get("date_checked","")<=retry_before]
     with ThreadPoolExecutor(max_workers=6) as pool:
         for item,date in zip(pending,pool.map(lookup_date,pending)):
