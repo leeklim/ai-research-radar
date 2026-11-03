@@ -2,209 +2,231 @@
   {
     "id": "0",
     "name": "OpenAI",
-    "url": "https://api.openalex.org/works?filter=raw_affiliation_strings.search%3A%22OpenAI%22%2Ctype%3Aarticle%7Cpreprint%7Cdissertation&sort=publication_date%3Adesc",
-    "affiliation": "OpenAI"
+    "url": "https://openai.com/research/index/",
+    "row": "main a[href^='/index/']"
   },
   {
     "id": "1",
     "name": "Anthropic",
-    "url": "https://api.openalex.org/works?filter=raw_affiliation_strings.search%3A%22Anthropic%22%2Ctype%3Aarticle%7Cpreprint%7Cdissertation&sort=publication_date%3Adesc",
-    "affiliation": "Anthropic"
+    "url": "https://www.anthropic.com/research",
+    "row": "main h3 a[href^='/research/'], main [class*='publication'] a[href^='/research/']"
   },
   {
     "id": "2",
     "name": "Google DeepMind",
-    "url": "https://api.openalex.org/works?filter=raw_affiliation_strings.search%3A%22Google+DeepMind%22%2Ctype%3Aarticle%7Cpreprint%7Cdissertation&sort=publication_date%3Adesc",
-    "affiliation": "Google DeepMind"
+    "url": "https://deepmind.google/research/publications/",
+    "row": "a.list-group__link[href*='/research/publications/']",
+    "title": ".list-group__description",
+    "date": ".list-group__date"
   },
   {
     "id": "3",
     "name": "Goodfire",
-    "url": "https://www.goodfire.ai/research",
-    "affiliation": "Goodfire",
-    "path": "/research/(?!(?:tag|category|team|page)/)[a-z0-9-]+/?",
-    "catalog": true
+    "url": "https://www.goodfire.com/research",
+    "row": "a.index-item[href^='/research/']",
+    "title": "h2,h3",
+    "date": ".index-meta span:last-child"
   },
   {
     "id": "4",
     "name": "Meta FAIR",
-    "url": "https://api.openalex.org/works?filter=raw_affiliation_strings.search%3A%22Facebook+AI+Research%22%2Ctype%3Aarticle%7Cpreprint%7Cdissertation&sort=publication_date%3Adesc",
-    "affiliation": "Facebook AI Research"
+    "url": "https://ai.meta.com/blog/meta-fair-updates-agents-robustness-safety-architecture/",
+    "row": "a[href*=\"/research/publications/\"]"
   },
   {
     "id": "5",
     "name": "Microsoft Research",
     "url": "https://www.microsoft.com/en-us/research/publications/",
-    "affiliation": "Microsoft Research",
-    "path": "/en-us/research/publication/[\\w-]+/?",
-    "catalog": true
+    "row": "h3 a[href*='/research/publication/']"
   },
   {
     "id": "6",
     "name": "NVIDIA Research",
     "url": "https://research.nvidia.com/publications",
-    "affiliation": "NVIDIA",
-    "path": "/publication/[^/]+/?",
-    "catalog": true
+    "row": "a[href^='/publication/']"
   },
   {
     "id": "7",
     "name": "Apple ML Research",
-    "url": "https://api.openalex.org/works?filter=raw_affiliation_strings.search%3A%22Apple%22%2Ctype%3Aarticle%7Cpreprint%7Cdissertation&sort=publication_date%3Adesc",
-    "affiliation": "Apple"
+    "url": "https://machinelearning.apple.com/research",
+    "row": "li.post-row",
+    "link": "a[href^='/research/']",
+    "title": ".post-title"
   },
   {
     "id": "8",
     "name": "IBM Research",
     "url": "https://research.ibm.com/publications",
-    "affiliation": "IBM Research",
-    "path": "/publications/[^/]+/?",
-    "catalog": true
+    "row": "a[href^='/publications/']"
   },
   {
     "id": "9",
     "name": "Salesforce AI Research",
-    "url": "https://api.openalex.org/works?filter=raw_affiliation_strings.search%3A%22Salesforce+Research%22%2Ctype%3Aarticle%7Cpreprint%7Cdissertation&sort=publication_date%3Adesc",
-    "affiliation": "Salesforce Research"
+    "url": "https://www.salesforceairesearch.com/publications",
+    "row": "main a[href*='arxiv.org/abs/'],main a[href*='openreview.net/forum']",
+    "additional": [
+      {
+        "url": "https://www.salesforce.com/blog/salesforce-iclr-2026/",
+        "row": "article h4:has(a[href])",
+        "link": "a[href]",
+        "title": "self"
+      }
+    ]
   },
   {
     "id": "10",
     "name": "Ai2",
-    "url": "https://api.openalex.org/works?filter=raw_affiliation_strings.search%3A%22Allen+Institute+for+AI%22%2Ctype%3Aarticle%7Cpreprint%7Cdissertation&sort=publication_date%3Adesc",
-    "affiliation": "Allen Institute for AI"
+    "url": "https://allenai.org/papers",
+    "row": "h2 a[href*='semanticscholar.org/paper/']"
   },
   {
     "id": "11",
     "name": "Amazon Science",
     "url": "https://www.amazon.science/publications",
-    "affiliation": "Amazon",
-    "path": "/publications/[^/]+/?",
-    "catalog": true
+    "row": "a[href*='/publications/']"
   },
   {
     "id": "12",
     "name": "DeepSeek",
-    "url": "https://huggingface.co/deepseek-ai/papers",
-    "catalog": true
+    "url": "https://www.deepseek.com/en/transparency/",
+    "row": "div.border-b:has(.ds-text-title)",
+    "link": "a[href*='huggingface.co/deepseek-ai/'][href$='.pdf']",
+    "title": ".ds-text-title"
   },
   {
     "id": "13",
     "name": "Mistral AI",
-    "url": "https://huggingface.co/mistralai/papers",
-    "catalog": true
+    "url": "https://mistral.ai/research",
+    "row": "a[href*='arxiv.org/abs/'],a[href*='technical_report']"
   },
   {
     "id": "14",
     "name": "Alibaba Qwen",
-    "url": "https://huggingface.co/Qwen/papers",
-    "catalog": true
+    "url": "https://qwen.ai/research",
+    "row": "qwen"
   },
   {
     "id": "15",
     "name": "Cohere",
-    "url": "https://api.openalex.org/works?filter=raw_affiliation_strings.search%3A%22Cohere%22%2Ctype%3Aarticle%7Cpreprint%7Cdissertation&sort=publication_date%3Adesc",
-    "affiliation": "Cohere"
+    "url": "https://cohere.com/research/papers",
+    "row": "a[href^='/research/papers/']"
   },
   {
     "id": "16",
     "name": "xAI",
-    "url": "https://api.openalex.org/works?filter=raw_affiliation_strings.search%3A%22xAI%22%2Ctype%3Aarticle%7Cpreprint%7Cdissertation&sort=publication_date%3Adesc",
-    "affiliation": "xAI"
+    "url": "https://x.ai/safety",
+    "row": "a[href*='media.x.ai'][href$='.pdf']:-soup-contains('Grok'), a[href*='data.x.ai'][href$='.pdf']:-soup-contains('Grok')"
   },
   {
     "id": "17",
     "name": "AI21 Labs",
-    "url": "https://api.openalex.org/works?filter=raw_affiliation_strings.search%3A%22AI21+Labs%22%2Ctype%3Aarticle%7Cpreprint%7Cdissertation&sort=publication_date%3Adesc",
-    "affiliation": "AI21 Labs"
+    "url": "https://www.ai21.com/research/",
+    "row": "a.research__link",
+    "title": ".research__title",
+    "date": ".research__date"
   },
   {
     "id": "18",
     "name": "ByteDance Seed",
-    "url": "https://huggingface.co/ByteDance-Seed/papers",
-    "catalog": true
+    "url": "https://seed.bytedance.com/en/research",
+    "row": "a[href^='/en/public_papers/']",
+    "title": "span span",
+    "date": ":scope > span:first-child"
   },
   {
     "id": "19",
     "name": "Liquid AI",
-    "url": "https://huggingface.co/LiquidAI/papers",
-    "catalog": true
+    "url": "https://www.liquid.ai/research",
+    "row": "li:has(a[href])",
+    "link": "a:-soup-contains('View publication')",
+    "title": "span.font-serif",
+    "date": "time"
   },
   {
     "id": "20",
     "name": "Sakana AI",
-    "url": "https://huggingface.co/SakanaAI/papers",
-    "catalog": true
+    "url": "https://sakana.ai/blog/?label=research",
+    "row": "article[data-labels='research']:not(:has(a[href='/frontier-intelligence-group/']))",
+    "link": "header h1 a",
+    "title": "header h1",
+    "date": "header time"
   },
   {
     "id": "21",
     "name": "Thinking Machines Lab",
-    "url": "https://api.openalex.org/works?filter=raw_affiliation_strings.search%3A%22Thinking+Machines+Lab%22%2Ctype%3Aarticle%7Cpreprint%7Cdissertation&sort=publication_date%3Adesc",
-    "affiliation": "Thinking Machines Lab"
+    "url": "https://thinkingmachines.ai/blog/",
+    "row": "main .post-item-link:not([href*='the-future-worth-building']):not([href*='a-safe-path-to-open-weights'])",
+    "title": "h2",
+    "date": "time"
   },
   {
     "id": "22",
     "name": "Redwood Research",
-    "url": "https://api.openalex.org/works?filter=raw_affiliation_strings.search%3A%22Redwood+Research%22%2Ctype%3Aarticle%7Cpreprint%7Cdissertation&sort=publication_date%3Adesc",
-    "affiliation": "Redwood Research"
+    "url": "https://www.redwoodresearch.org/research",
+    "row": "article:has(a[href*='arxiv.org'])",
+    "link": "a[href*='arxiv.org']",
+    "title": "h2,h3"
   },
   {
     "id": "23",
     "name": "Apollo Research",
-    "url": "https://api.openalex.org/works?filter=raw_affiliation_strings.search%3A%22Apollo+Research%22%2Ctype%3Aarticle%7Cpreprint%7Cdissertation&sort=publication_date%3Adesc",
-    "affiliation": "Apollo Research"
+    "url": "https://www.apolloresearch.ai/science",
+    "row": ".hilight_card",
+    "link": "a[href^='/science/']",
+    "title": "p.text-size-large",
+    "date": "p.text-color-blue"
   },
   {
     "id": "24",
     "name": "EleutherAI",
-    "url": "https://huggingface.co/EleutherAI/papers",
-    "catalog": true
+    "url": "https://eleuther.ai/papers/",
+    "row": ".library-year-group a[href]",
+    "title": "h3"
   },
   {
     "id": "25",
     "name": "Hugging Face",
-    "url": "https://huggingface.co/huggingface/papers",
-    "catalog": true
+    "url": "https://huggingface.co/collections/science/papers",
+    "row": "a[href^='/papers/']"
   },
   {
     "id": "26",
     "name": "Jina AI",
-    "url": "https://huggingface.co/jinaai/papers",
-    "catalog": true
+    "url": "https://jina.ai/#research",
+    "row": "#research a:has(.pubcard)",
+    "title": ".text-weight-light",
+    "date": ".text-caption"
   },
   {
     "id": "27",
     "name": "Stanford CRFM",
-    "affiliation": "Center for Research on Foundation Models",
     "url": "https://crfm.stanford.edu/research.html",
-    "catalog": true
+    "row": "a[href*='arxiv.org/'],a[href*='aclanthology.org/'],a[href*='proceedings.mlr.press/']"
   },
   {
     "id": "28",
     "name": "Berkeley BAIR",
-    "affiliation": "Berkeley Artificial Intelligence Research",
-    "url": "https://api.openalex.org/works?filter=raw_affiliation_strings.search%3A%22Berkeley+Artificial+Intelligence+Research%22%2Ctype%3Aarticle%7Cpreprint%7Cdissertation&sort=publication_date%3Adesc"
+    "url": "https://bair.berkeley.edu/blog/",
+    "row": "a.post-link"
   },
   {
     "id": "29",
     "name": "MIT CSAIL",
-    "affiliation": "Computer Science and Artificial Intelligence Laboratory",
-    "also": "massachusetts institute of technology|mit|csail",
     "url": "https://lis.csail.mit.edu/publications/",
-    "catalog": true
+    "row": "a[href*='arxiv.org/'],a[href$='.pdf']"
   },
   {
     "id": "30",
     "name": "CMU ML",
-    "affiliation": "Machine Learning Department",
-    "also": "carnegie mellon",
     "url": "https://ml.cmu.edu/research/phd-dissertations",
-    "path": "/research/(?:phd-dissertation-pdfs|joint_phd_dissertations)/[^/]+\\.pdf",
-    "catalog": true
+    "row": "a[href*='/research/'][href$='.pdf']"
   },
   {
     "id": "31",
     "name": "Mila",
-    "affiliation": "Quebec Artificial Intelligence Institute",
-    "url": "https://api.openalex.org/works?filter=raw_affiliation_strings.search%3A%22Quebec+Artificial+Intelligence+Institute%22%2Ctype%3Aarticle%7Cpreprint%7Cdissertation&sort=publication_date%3Adesc"
+    "url": "https://mila.quebec/en/research/publications",
+    "row": ".mila-publication",
+    "link": ".publication-url a[href^='http']",
+    "title": ".field-name-title"
   }
 ]

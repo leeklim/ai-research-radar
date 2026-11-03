@@ -1,4 +1,4 @@
-"""Collect individual research outputs from publication catalogs and author affiliations."""
+"""Index research items listed by each institution on its own website."""
 import hashlib
 import json
 import re
@@ -12,119 +12,109 @@ from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[1]
 NOW = datetime.now(timezone.utc).isoformat(timespec="seconds")
-TYPES = "article|preprint|dissertation"
-ARXIV = re.compile(r"/(?:pdf|abs|papers)/(\d{4}\.\d{4,5})(?:v\d+)?(?:\.pdf)?/?$")
 HEADERS = {"User-Agent": "AIResearchRadar/1.0 (https://github.com/leeklim/ai-research-radar)"}
 
 
-def get(url, **params):
-    response = requests.get(url, params=params, headers=HEADERS, timeout=18)
-    response.raise_for_status()
-    return response
+def fetch(url):
+    r = requests.get(url, headers=HEADERS, timeout=15)
+    r.raise_for_status()
+    return r
 
 
-def match_affiliation(source, affiliation):
-    term = source["affiliation"]
-    normalized = re.sub(r"[^\w]+", " ", affiliation.casefold()).strip()
-    words = re.sub(r"[^\w]+", " ", term.casefold()).strip()
-    if term in ("Apple", "Amazon", "xAI"):
-        company = r"(?: inc| llc| ai| research| robotics| com| web services| science| development center)?"
-        place = r"(?: (?:cupertino|seattle|california|usa|united states|palo alto|ca|wa|\d+))*"
-        return bool(re.fullmatch(re.escape(words) + company + place, normalized))
-    return (bool(re.search(r"\b" + re.escape(words) + r"\b", normalized))
-            and (not source.get("also") or re.search(r"\b(?:"+source["also"]+r")\b", normalized)))
-
-
-def indexed(source):
-    term = source["affiliation"]
-    result = get("https://api.openalex.org/works", filter=f'raw_affiliation_strings.search:"{term}",type:{TYPES},to_publication_date:{NOW[:10]}',
-                 sort="publication_date:desc", per_page=50, select="title,doi,publication_date,primary_location,authorships").json()
-    for work in result["results"]:
-        if not any(match_affiliation(source, a) for author in work["authorships"]
-                   for a in author.get("raw_affiliation_strings", [])):
+def day(raw):
+    raw = raw.strip()
+    for fmt in ("%Y-%m-%d", "%B %d, %Y", "%b %d, %Y", "%d %B %Y"):
+        try:
+            return datetime.strptime(raw[:10] if fmt=="%Y-%m-%d" else raw, fmt).date().isoformat()
+        except ValueError:
             continue
-        link = work.get("doi") or (work.get("primary_location") or {}).get("landing_page_url")
-        if link and "10.5281/zenodo." not in link.lower() and urlsplit(link).scheme in ("https","http"):
-            yield link, work["title"], work["publication_date"], "논문 · 소속 확인"
+    return None
 
 
-def catalog(source):
-    base = source["url"]
-    soup = BeautifulSoup(get(base).content, "html.parser")
-    for noise in soup.select("header,footer,nav,aside,script,style"):
-        noise.decompose()
-    for anchor in soup.select("a[href]"):
-        href = urljoin(base, anchor["href"])
-        u = urlsplit(href)
-        paper = ARXIV.fullmatch(u.path)
-        if paper and u.hostname in ("arxiv.org","www.arxiv.org","huggingface.co"):
-            href = "https://arxiv.org/abs/"+paper[1]
-        elif not (source.get("path") and u.hostname == urlsplit(base).hostname and not u.query
-                  and not u.fragment and re.fullmatch(source["path"], u.path, re.I)):
+def catalog(s):
+    if s["id"]=="14":
+        # This is the first-party content response used by the Qwen research page.
+        for post in fetch("https://qwen.ai/api/page_config?code=research.research-list&language=en").json():
+            if re.fullmatch(r"[\w.-]+",post["id"]):
+                yield s["url"]+"/"+post["id"],post["title"],day(post.get("date",""))
+        return
+    page = fetch(s["url"])
+    if urlsplit(page.url).hostname.removeprefix("www.") != urlsplit(s["url"]).hostname.removeprefix("www."):
+        raise ValueError("등록된 기관 도메인 밖으로 이동")
+    soup = BeautifulSoup(page.content,"html.parser")
+    for row in soup.select(s["row"]):
+        link = row.select_one(s["link"]) if "link" in s else row
+        if not link or not link.has_attr("href"):
             continue
-        label = anchor.select_one("h2,h3,h4") or anchor
-        title = " ".join(label.get_text(" ",strip=True).split())
-        if u.fragment or re.fullmatch(r"[\W\d]*(?:authors?|comments?|upvotes?|paper|pdf|full text|read paper)[\W\d]*",title,re.I):
+        href = urljoin(page.url,link["href"])
+        if urlsplit(href).scheme not in ("https","http") or href.rstrip("/")==page.url.rstrip("/"):
             continue
-        if len(title) < 9 or len(title) > 350 or title.lower().startswith(("view all","see all","browse all")):
+        label = row if s.get("title")=="self" else row.select_one(s["title"]) if s.get("title") else (link.select_one("h2,h3,h4") or link)
+        if not label:
             continue
-        published = None
-        if source["id"] == "3":
-            date_label = anchor.select_one(".index-meta span:last-child")
-            if date_label:
-                try:
-                    published = datetime.strptime(date_label.get_text(strip=True), "%B %d, %Y").date().isoformat()
-                except ValueError:
-                    pass
-        yield href, title, published, "연구 결과" if source["id"]=="3" else "논문 · 기관 목록"
+        title = " ".join(label.stripped_strings)
+        if s["id"]=="4" and title.lower()=="read the paper":
+            title = urlsplit(href).path.rstrip("/").rsplit("/",1)[-1].replace("-"," ").capitalize()
+        if len(title)<5 or len(title)>400 or re.fullmatch(r"[\W\d]*(?:authors?|comments?|paper|pdf|read more|view all|publication|research|publications)[\W\d]*",title,re.I):
+            continue
+        if s["id"]=="12":
+            title += " Technical Report"
+        date_tag = row.select_one(s["date"]) if s.get("date") else None
+        published = day(date_tag.get("datetime") or date_tag.get_text(strip=True)) if date_tag else None
+        if s["id"]=="15":
+            published = day(href.rstrip("/")[-10:])
+        if s["id"]=="28":
+            # The BAIR Blog also carries events. Require a paper link in the post itself.
+            body = BeautifulSoup(fetch(href).content,"html.parser")
+            article = body.select_one(".post-content, article")
+            if not article or not any(re.search(r"\b(?:paper|preprint|publication)\b",a.get_text(" ",strip=True),re.I)
+                                      and re.search(r"arxiv\.org|openreview\.net|aclanthology\.org|proceedings\.mlr\.press",a["href"])
+                                      for a in article.select("a[href]")):
+                continue
+            m = re.search(r"/blog/(\d{4})/(\d\d)/(\d\d)/",href)
+            published = "-".join(m.groups()) if m else None
+        yield href,title,published
 
 
-def collect(source):
-    results, errors = [], []
-    for enabled, method in [(source.get("catalog"),catalog),(source.get("affiliation"),indexed)]:
-        if enabled:
-            try:
-                results.extend(method(source))
-            except (requests.RequestException, ValueError) as exc:
-                errors.append(f"{method.__name__}: {exc}"[:160])
-    return source, results, errors
+def collect(s):
+    rows = {}
+    errors = []
+    for listing in [s]+s.get("additional",[]):
+        try:
+            count = 0
+            for url,title,published in catalog(dict(listing,id=s["id"])):
+                rows.setdefault(url,(title,published,listing["url"]))
+                count += 1
+            if not count:
+                errors.append("공식 목록에서 연구 링크를 확인하지 못함")
+        except (requests.RequestException, ValueError) as exc:
+            errors.append(str(exc)[:180])
+    return s,rows," / ".join(errors)
 
 
 def main():
     sources = json.loads((ROOT/"config/sources.json").read_text("utf8"))
     output = ROOT/"docs/data.json"
     old = {x["id"]:x for x in json.loads(output.read_text("utf8"))["items"]}
-    # Carry over only previously verified outputs. Reuse discovery dates for revalidated legacy URLs.
-    items = {k:v for k,v in old.items() if v.get("kind")}
+    lists = {s["id"]:{v["url"] for v in [s]+s.get("additional",[])} for s in sources}
+    # Keep historical listings only if the official page was recorded as evidence.
+    items = {k:v for k,v in old.items() if v.get("listed_on") in lists.get(v["source"],set())}
     status = {}
-    with ThreadPoolExecutor(max_workers=4) as pool:
-        for source, results, errors in pool.map(collect, sources):
-            seen = set()
-            for url,title,date,kind in results:
-                if not title: continue
-                url = re.sub(r"^https://doi.org/10\.48550/arxiv\.(\d{4}\.\d{4,5})$",r"https://arxiv.org/abs/\1",url,flags=re.I)
-                key = hashlib.sha256((source["id"]+"|"+url.rstrip("/")).encode()).hexdigest()[:20]
-                seen.add(key)
-                prev = items.get(key) or old.get(key) or {}
-                items[key] = dict(id=key, source=source["id"], title=title, url=url, kind=kind,
-                                  discovered=prev.get("discovered",NOW), published=date or prev.get("published"))
-            status[source["id"]] = dict(ok=bool(seen), count=len(seen), partial=bool(seen and errors), error=" / ".join(errors))
-            print(source["name"],len(seen),"/".join(errors)[:90],flush=True)
-    verified = json.loads((ROOT/"config/verified-affiliations.json").read_text("utf8"))
-    merged = {}
-    for item in items.values():
-        if item["url"] in verified:
-            item["verified_affiliations"] = verified[item["url"]]
-            previous = merged.setdefault(item["url"], item)
-            previous["published"] = previous["published"] or item["published"]
-        else:
-            merged[item["id"]] = item
-    ordered = sorted(merged.values(), key=lambda x: x["published"] or "", reverse=True)
-    tmp = output.with_suffix(".tmp")
-    tmp.write_text(json.dumps(dict(updated=NOW,items=ordered,status=status),ensure_ascii=False,indent=2),"utf8")
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        for s, rows, error in pool.map(collect,sources):
+            for url,(title,published,listing) in rows.items():
+                key = hashlib.sha256((s["id"]+"|"+url.rstrip("/")).encode()).hexdigest()[:20]
+                previous = old.get(key,{})
+                items[key] = dict(id=key,source=s["id"],url=url,title=title,discovered=previous.get("discovered",NOW),
+                                  published=published or previous.get("published"),listed_on=listing,kind="공식 연구 목록")
+            status[s["id"]] = dict(ok=bool(rows),count=len(rows),partial=bool(rows and error),error=error or "")
+            print(s["name"],len(rows),error or "",flush=True)
+    ordered = sorted(items.values(),key=lambda x:x["published"] or "",reverse=True)
+    tmp=output.with_suffix(".tmp")
+    tmp.write_text(json.dumps(dict(updated=NOW,items=ordered,status=status),indent=2,ensure_ascii=False),"utf8")
     tmp.replace(output)
 
 
-if __name__ == "__main__":
+if __name__=="__main__":
     main()
 
