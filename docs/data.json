@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03T09:09:30+00:00",
+  "updated": "2026-11-03T09:10:37+00:00",
   "items": [
     {
       "id": "d793d7193483cb9d0b94",
@@ -353,19 +353,6 @@
       "date_basis": "상세 글"
     },
     {
-      "id": "8fc2e1fc55ad495f58fe",
-      "source": "1",
-      "url": "https://www.anthropic.com/research/provable-inference",
-      "title": "Progress on provable inference for large language models",
-      "discovered": "2026-11-03T08:05:43+00:00",
-      "published": "2026-11-02",
-      "listed_on": "https://www.anthropic.com/research",
-      "official_html": true,
-      "kind": "공식 연구 게시글",
-      "listing_date": null,
-      "date_basis": "상세 글"
-    },
-    {
       "id": "2fb62d7d86f90fc1b6c6",
       "source": "0",
       "url": "https://openai.com/index/lifeval/",
@@ -377,6 +364,22 @@
       "kind": "공식 연구 게시글",
       "listing_date": null,
       "date_basis": "상세 글"
+    },
+    {
+      "id": "8fc2e1fc55ad495f58fe",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/provable-inference",
+      "title": "Progress on provable inference for large language models",
+      "discovered": "2026-11-03T08:05:43+00:00",
+      "published": "2026-11-02",
+      "listed_on": "https://www.anthropic.com/research/team/frontier-red-team",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "listing_date": "2026-11-02",
+      "date_basis": "상세 글",
+      "teams": {
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      }
     },
     {
       "id": "86ac7e0fba764328a052",
@@ -418,32 +421,6 @@
       "date_basis": "상세 글"
     },
     {
-      "id": "3d0ab171eaea916a6b72",
-      "source": "1",
-      "url": "https://www.anthropic.com/research/early-progress-drug-development",
-      "title": "Early progress on accelerating drug development with Claude",
-      "discovered": "2026-11-03T08:05:43+00:00",
-      "published": "2026-10-27",
-      "listed_on": "https://www.anthropic.com/research",
-      "official_html": true,
-      "kind": "공식 연구 게시글",
-      "listing_date": null,
-      "date_basis": "상세 글"
-    },
-    {
-      "id": "8379e3a6821a4f860aa2",
-      "source": "1",
-      "url": "https://www.anthropic.com/research/agents-judgment-calls",
-      "title": "How AI agents shape experts’ judgment calls",
-      "discovered": "2026-11-03T08:05:43+00:00",
-      "published": "2026-10-27",
-      "listed_on": "https://www.anthropic.com/research",
-      "official_html": true,
-      "kind": "공식 연구 게시글",
-      "listing_date": null,
-      "date_basis": "상세 글"
-    },
-    {
       "id": "aaf71b1b3b171ff19270",
       "source": "10",
       "url": "https://allenai.org/blog/novelty-bench",
@@ -467,6 +444,55 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": null,
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "8379e3a6821a4f860aa2",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/agents-judgment-calls",
+      "title": "How AI agents shape experts’ judgment calls",
+      "discovered": "2026-11-03T08:05:43+00:00",
+      "published": "2026-10-27",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "listing_date": "2026-10-27",
+      "date_basis": "상세 글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      }
+    },
+    {
+      "id": "3d0ab171eaea916a6b72",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/early-progress-drug-development",
+      "title": "Early progress on accelerating drug development with Claude",
+      "discovered": "2026-11-03T08:05:43+00:00",
+      "published": "2026-10-27",
+      "listed_on": "https://www.anthropic.com/science",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "listing_date": "2026-10-27",
+      "date_basis": "상세 글",
+      "teams": {
+        "Science": "https://www.anthropic.com/science"
+      }
+    },
+    {
+      "id": "b6d44a7df31cedcb5802",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/discovering-vulnerabilities-with-claude",
+      "title": "Discovering and exploiting vulnerabilities in critical, real-world software with Claude",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-10-27",
+      "published": "2026-10-27",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -522,19 +548,6 @@
       "date_basis": "상세 글"
     },
     {
-      "id": "842e9ee72e9dde755b00",
-      "source": "1",
-      "url": "https://www.anthropic.com/research/alignment-assessment-ukaisi",
-      "title": "An alignment assessment of the UK AISI cybertesting incident",
-      "discovered": "2026-11-03T08:05:43+00:00",
-      "published": "2026-10-23",
-      "listed_on": "https://www.anthropic.com/research",
-      "official_html": true,
-      "kind": "공식 연구 게시글",
-      "listing_date": null,
-      "date_basis": "상세 글"
-    },
-    {
       "id": "7f994509bef83dc42372",
       "source": "10",
       "url": "https://allenai.org/blog/litpivot",
@@ -546,6 +559,22 @@
       "kind": "공식 연구 게시글",
       "listing_date": null,
       "date_basis": "상세 글"
+    },
+    {
+      "id": "842e9ee72e9dde755b00",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/alignment-assessment-ukaisi",
+      "title": "An alignment assessment of the UK AISI cybertesting incident",
+      "discovered": "2026-11-03T08:05:43+00:00",
+      "published": "2026-10-23",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "listing_date": "2026-10-23",
+      "date_basis": "상세 글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      }
     },
     {
       "id": "b2791a54fe8f2fa9d8ae",
@@ -587,6 +616,23 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "7bb4b6ea63e6b828abb6",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/formal-verification",
+      "title": "LLMs are making formal software verification feasible at a much larger scale",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-10-22",
+      "published": "2026-10-22",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "7f7982fbb0e706e7b609",
       "source": "0",
       "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data/",
@@ -610,19 +656,6 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": "2026-10-20",
-      "date_basis": "상세 글"
-    },
-    {
-      "id": "8ed690b183085221675a",
-      "source": "1",
-      "url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
-      "title": "How Claude designed protein binders against scorpion neurotoxins",
-      "discovered": "2026-11-03T08:05:43+00:00",
-      "published": "2026-10-20",
-      "listed_on": "https://www.anthropic.com/research",
-      "official_html": true,
-      "kind": "공식 연구 게시글",
-      "listing_date": null,
       "date_basis": "상세 글"
     },
     {
@@ -652,6 +685,39 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "8ed690b183085221675a",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
+      "title": "How Claude designed protein binders against scorpion neurotoxins",
+      "discovered": "2026-11-03T08:05:43+00:00",
+      "published": "2026-10-20",
+      "listed_on": "https://www.anthropic.com/science",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "listing_date": "2026-10-20",
+      "date_basis": "상세 글",
+      "teams": {
+        "Science": "https://www.anthropic.com/science"
+      }
+    },
+    {
+      "id": "3a2fdea07a58e8c514d3",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/attack-surface-reduction",
+      "title": "Using Claude to reduce the attack surface of code",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-10-20",
+      "published": "2026-10-20",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "a9d599f10cca63294fcf",
       "source": "0",
       "url": "https://openai.com/index/low-resource-programming-languages/",
@@ -678,16 +744,53 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "3494658182bb943ed324",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/designing-efficient-quantum-circuits",
+      "title": "Designing more efficient quantum circuits with Claude",
+      "discovered": "2026-11-03T08:05:43+00:00",
+      "published": "2026-10-16",
+      "listed_on": "https://www.anthropic.com/science",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "listing_date": "2026-10-16",
+      "date_basis": "상세 글",
+      "teams": {
+        "Science": "https://www.anthropic.com/science"
+      }
+    },
+    {
       "id": "987e78e4189d773cfdcb",
       "source": "1",
       "url": "https://www.anthropic.com/research/expectations-for-the-future",
       "title": "Working at the frontier shapes expectations for the future",
       "discovered": "2026-11-03T08:05:43+00:00",
       "published": "2026-10-16",
-      "listed_on": "https://www.anthropic.com/research",
+      "listed_on": "https://www.anthropic.com/institute",
       "official_html": true,
       "kind": "공식 연구 게시글",
-      "listing_date": null,
+      "listing_date": "2026-10-16",
+      "date_basis": "상세 글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Economics": "https://www.anthropic.com/research/team/economics"
+      }
+    },
+    {
+      "id": "8336b284c6d60a23e195",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
+      "title": "Claude reveals ECDSA curve origins",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-10-16",
+      "published": "2026-10-16",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -697,11 +800,15 @@
       "title": "How employment is changing at Anthropic",
       "discovered": "2026-11-03T08:05:43+00:00",
       "published": "2026-10-16",
-      "listed_on": "https://www.anthropic.com/research",
+      "listed_on": "https://www.anthropic.com/institute",
       "official_html": true,
       "kind": "공식 연구 게시글",
-      "listing_date": null,
-      "date_basis": "상세 글"
+      "listing_date": "2026-10-16",
+      "date_basis": "상세 글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Economics": "https://www.anthropic.com/research/team/economics"
+      }
     },
     {
       "id": "50cbc5b91edaf2e268a8",
@@ -710,24 +817,15 @@
       "title": "The AI expectations gap",
       "discovered": "2026-11-03T08:05:43+00:00",
       "published": "2026-10-16",
-      "listed_on": "https://www.anthropic.com/research",
+      "listed_on": "https://www.anthropic.com/institute",
       "official_html": true,
       "kind": "공식 연구 게시글",
-      "listing_date": null,
-      "date_basis": "상세 글"
-    },
-    {
-      "id": "3494658182bb943ed324",
-      "source": "1",
-      "url": "https://www.anthropic.com/research/designing-efficient-quantum-circuits",
-      "title": "Designing more efficient quantum circuits with Claude",
-      "discovered": "2026-11-03T08:05:43+00:00",
-      "published": "2026-10-16",
-      "listed_on": "https://www.anthropic.com/research",
-      "official_html": true,
-      "kind": "공식 연구 게시글",
-      "listing_date": null,
-      "date_basis": "상세 글"
+      "listing_date": "2026-10-16",
+      "date_basis": "상세 글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Economics": "https://www.anthropic.com/research/team/economics"
+      }
     },
     {
       "id": "f1c634d62b4e4a0e3401",
@@ -762,11 +860,14 @@
       "title": "Redesigning source control at Anthropic",
       "discovered": "2026-11-03T08:05:43+00:00",
       "published": "2026-10-13",
-      "listed_on": "https://www.anthropic.com/research",
+      "listed_on": "https://www.anthropic.com/engineering",
       "official_html": true,
       "kind": "공식 연구 게시글",
-      "listing_date": null,
-      "date_basis": "상세 글"
+      "listing_date": "2026-10-13",
+      "date_basis": "상세 글",
+      "teams": {
+        "Engineering": "https://www.anthropic.com/engineering"
+      }
     },
     {
       "id": "afc38250cc76923c1fe8",
@@ -795,16 +896,20 @@
       "date_basis": "상세 글"
     },
     {
-      "id": "ec2a75df5c3ad0456aad",
+      "id": "9627c5cacddf78e3e11c",
       "source": "1",
-      "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
-      "title": "Investigating unintended model actions in our evaluations and internal use",
-      "discovered": "2026-11-03T08:05:43+00:00",
-      "published": "2026-10-09",
-      "listed_on": "https://www.anthropic.com/research",
+      "url": "https://www.anthropic.com/research/self-replicating-ai",
+      "title": "AI models may be capable of self-replicating without access to a datacenter",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-10-12",
+      "published": "2026-10-12",
+      "listed_on": "https://www.anthropic.com/institute",
       "official_html": true,
       "kind": "공식 연구 게시글",
-      "listing_date": null,
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -819,6 +924,22 @@
       "kind": "공식 연구 게시글",
       "listing_date": null,
       "date_basis": "상세 글"
+    },
+    {
+      "id": "ec2a75df5c3ad0456aad",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+      "title": "Investigating unintended model actions in our evaluations and internal use",
+      "discovered": "2026-11-03T08:05:43+00:00",
+      "published": "2026-10-09",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "listing_date": "2026-10-09",
+      "date_basis": "상세 글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      }
     },
     {
       "id": "2f6f7cd20df04023d9a4",
@@ -853,10 +974,30 @@
       "title": "The missing map of the sky",
       "discovered": "2026-11-03T08:05:43+00:00",
       "published": "2026-10-08",
-      "listed_on": "https://www.anthropic.com/research",
+      "listed_on": "https://www.anthropic.com/science",
       "official_html": true,
       "kind": "공식 연구 게시글",
-      "listing_date": null,
+      "listing_date": "2026-10-08",
+      "date_basis": "상세 글",
+      "teams": {
+        "Science": "https://www.anthropic.com/science"
+      }
+    },
+    {
+      "id": "1b34f7d21bfd21e2f08e",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source",
+      "title": "Launching an opt-in vulnerability-finding service for open-source software",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-10-08",
+      "published": "2026-10-08",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -931,11 +1072,14 @@
       "title": "Claude-shaped science",
       "discovered": "2026-11-03T08:05:43+00:00",
       "published": "2026-10-01",
-      "listed_on": "https://www.anthropic.com/research",
+      "listed_on": "https://www.anthropic.com/science",
       "official_html": true,
       "kind": "공식 연구 게시글",
-      "listing_date": null,
-      "date_basis": "상세 글"
+      "listing_date": "2026-10-01",
+      "date_basis": "상세 글",
+      "teams": {
+        "Science": "https://www.anthropic.com/science"
+      }
     },
     {
       "id": "45281b66e70f53fc7f03",
@@ -1146,19 +1290,6 @@
       "date_basis": "상세 글"
     },
     {
-      "id": "22dcf4b2dadb3ce399dd",
-      "source": "1",
-      "url": "https://www.anthropic.com/research/what-work-can-robots-do",
-      "title": "What work can robots do?",
-      "discovered": "2026-11-03T08:05:43+00:00",
-      "published": "2026-09-30",
-      "listed_on": "https://www.anthropic.com/research",
-      "official_html": true,
-      "kind": "공식 연구 게시글",
-      "listing_date": null,
-      "date_basis": "상세 글"
-    },
-    {
       "id": "8c64d22d4857ddec1def",
       "source": "9",
       "url": "https://www.salesforce.com/blog/small-business/agentic-enterprise-guide-takeaways/?bc=HL",
@@ -1172,17 +1303,21 @@
       "date_basis": "상세 글"
     },
     {
-      "id": "6eee1acb42855719bf12",
+      "id": "22dcf4b2dadb3ce399dd",
       "source": "1",
-      "url": "https://www.anthropic.com/research/your-thoughts-on-ai",
-      "title": "What do you want from AI?",
+      "url": "https://www.anthropic.com/research/what-work-can-robots-do",
+      "title": "What work can robots do?",
       "discovered": "2026-11-03T08:05:43+00:00",
-      "published": "2026-09-29",
-      "listed_on": "https://www.anthropic.com/research",
+      "published": "2026-09-30",
+      "listed_on": "https://www.anthropic.com/institute",
       "official_html": true,
       "kind": "공식 연구 게시글",
-      "listing_date": null,
-      "date_basis": "상세 글"
+      "listing_date": "2026-09-30",
+      "date_basis": "상세 글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Economics": "https://www.anthropic.com/research/team/economics"
+      }
     },
     {
       "id": "3841a590fb8548e7a144",
@@ -1195,6 +1330,40 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": null,
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "6eee1acb42855719bf12",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/your-thoughts-on-ai",
+      "title": "What do you want from AI?",
+      "discovered": "2026-11-03T08:05:43+00:00",
+      "published": "2026-09-29",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "listing_date": "2026-09-29",
+      "date_basis": "상세 글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Societal Impacts": "https://www.anthropic.com/research/team/societal-impacts"
+      }
+    },
+    {
+      "id": "268392760642b023e28e",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities",
+      "title": "GLM-5.3 and the spread of advanced cyber capabilities",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-09-29",
+      "published": "2026-09-29",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -1224,30 +1393,37 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "95feb3d2a79c42a9a74e",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/yes-claude-can-do-nine-loops",
+      "title": "Yes, Claude can do Nine Loops",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-09-25",
+      "published": "2026-09-25",
+      "listed_on": "https://www.anthropic.com/science",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Science": "https://www.anthropic.com/science"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "1bd22ad0a382c3242676",
       "source": "1",
       "url": "https://www.anthropic.com/research/project-swap",
       "title": "Project Swap: What happens when agents trade for us?",
       "discovered": "2026-11-03T08:05:43+00:00",
       "published": "2026-09-24",
-      "listed_on": "https://www.anthropic.com/research",
+      "listed_on": "https://www.anthropic.com/institute",
       "official_html": true,
       "kind": "공식 연구 게시글",
-      "listing_date": null,
-      "date_basis": "상세 글"
-    },
-    {
-      "id": "08736c72e5766dea81d2",
-      "source": "1",
-      "url": "https://www.anthropic.com/research/claude-discovers-novel-enzyme-system",
-      "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
-      "discovered": "2026-11-03T08:05:43+00:00",
-      "published": "2026-09-23",
-      "listed_on": "https://www.anthropic.com/research",
-      "official_html": true,
-      "kind": "공식 연구 게시글",
-      "listing_date": null,
-      "date_basis": "상세 글"
+      "listing_date": "2026-09-24",
+      "date_basis": "상세 글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Economics": "https://www.anthropic.com/research/team/economics"
+      }
     },
     {
       "id": "0781974c008dcd86a0a2",
@@ -1289,17 +1465,36 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "2b8b2b27debeadd923e9",
+      "source": "1",
+      "url": "https://www.anthropic.com/institute/measuring-pace-of-ai-development",
+      "title": "Illuminating the frontier",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-09-17",
+      "published": "2026-09-17",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "공식 목록"
+    },
+    {
       "id": "326acc8c44b1581c029a",
       "source": "1",
       "url": "https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling",
       "title": "How Claude is uplifting biomolecular modeling",
       "discovered": "2026-11-03T08:05:43+00:00",
       "published": "2026-09-17",
-      "listed_on": "https://www.anthropic.com/research",
+      "listed_on": "https://www.anthropic.com/science",
       "official_html": true,
       "kind": "공식 연구 게시글",
-      "listing_date": null,
-      "date_basis": "상세 글"
+      "listing_date": "2026-09-17",
+      "date_basis": "상세 글",
+      "teams": {
+        "Science": "https://www.anthropic.com/science"
+      }
     },
     {
       "id": "369c0d9a2733d2ec1538",
@@ -1445,16 +1640,20 @@
       "date_basis": "상세 글"
     },
     {
-      "id": "69cdb0a4595ff8a281fc",
+      "id": "220a2e12f5e52b184fd8",
       "source": "1",
-      "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
-      "title": "An alignment assessment of recent cybersecurity incidents",
-      "discovered": "2026-11-03T08:05:43+00:00",
-      "published": "2026-09-09",
-      "listed_on": "https://www.anthropic.com/research",
+      "url": "https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities",
+      "title": "Measuring tactical intelligence targeting and conventional weapons capabilities of AI models",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-09-10",
+      "published": "2026-09-10",
+      "listed_on": "https://www.anthropic.com/institute",
       "official_html": true,
       "kind": "공식 연구 게시글",
-      "listing_date": null,
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -1471,17 +1670,53 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "69cdb0a4595ff8a281fc",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+      "title": "An alignment assessment of recent cybersecurity incidents",
+      "discovered": "2026-11-03T08:05:43+00:00",
+      "published": "2026-09-09",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "listing_date": "2026-09-09",
+      "date_basis": "상세 글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      }
+    },
+    {
+      "id": "6f333bd7ee7f8627452f",
+      "source": "1",
+      "url": "https://www.anthropic.com/institute/econ-scenarios",
+      "title": "Scenarios for our economic future",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-09-09",
+      "published": "2026-09-09",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Economics": "https://www.anthropic.com/research/team/economics"
+      },
+      "date_basis": "공식 목록"
+    },
+    {
       "id": "d15b91add77104a1d557",
       "source": "1",
       "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
       "title": "Formalizing Fermat's Last Theorem",
       "discovered": "2026-11-03T08:05:43+00:00",
       "published": "2026-09-04",
-      "listed_on": "https://www.anthropic.com/research",
+      "listed_on": "https://www.anthropic.com/science",
       "official_html": true,
       "kind": "공식 연구 게시글",
-      "listing_date": null,
-      "date_basis": "상세 글"
+      "listing_date": "2026-09-04",
+      "date_basis": "상세 글",
+      "teams": {
+        "Science": "https://www.anthropic.com/science"
+      }
     },
     {
       "id": "c1b86689f9e5188b6982",
@@ -1776,11 +2011,14 @@
       "title": "Automated researchers can reliably mitigate alignment failures",
       "discovered": "2026-11-03T08:05:43+00:00",
       "published": "2026-08-28",
-      "listed_on": "https://www.anthropic.com/research",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
       "official_html": true,
       "kind": "공식 연구 게시글",
-      "listing_date": null,
-      "date_basis": "상세 글"
+      "listing_date": "2026-08-28",
+      "date_basis": "상세 글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      }
     },
     {
       "id": "354454ed5ee3b674c911",
@@ -1796,19 +2034,6 @@
       "date_basis": "상세 글"
     },
     {
-      "id": "f4880407c2438b70227e",
-      "source": "1",
-      "url": "https://www.anthropic.com/research/enabling-independent-research",
-      "title": "Enabling independent research on how people use Claude",
-      "discovered": "2026-11-03T08:05:43+00:00",
-      "published": "2026-08-26",
-      "listed_on": "https://www.anthropic.com/research",
-      "official_html": true,
-      "kind": "공식 연구 게시글",
-      "listing_date": null,
-      "date_basis": "상세 글"
-    },
-    {
       "id": "568d1edd0fe2d0379b52",
       "source": "22",
       "url": "https://www.redwoodresearch.org/research/hugging-face-incident",
@@ -1820,6 +2045,23 @@
       "kind": "공식 연구 게시글",
       "listing_date": null,
       "date_basis": "상세 글"
+    },
+    {
+      "id": "f4880407c2438b70227e",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/enabling-independent-research",
+      "title": "Enabling independent research on how people use Claude",
+      "discovered": "2026-11-03T08:05:43+00:00",
+      "published": "2026-08-26",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "listing_date": "2026-08-26",
+      "date_basis": "상세 글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Societal Impacts": "https://www.anthropic.com/research/team/societal-impacts"
+      }
     },
     {
       "id": "cb30960f0b55a86d95fa",
@@ -1845,6 +2087,22 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": null,
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "d1b11e2f03ca63706271",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/Claude-accelerates-protein-design",
+      "title": "How Claude is accelerating protein design and analytical chemistry",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-08-18",
+      "published": "2026-08-18",
+      "listed_on": "https://www.anthropic.com/science",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Science": "https://www.anthropic.com/science"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -1965,6 +2223,23 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "773083e21b30c4b55c97",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/multiagent-systems",
+      "title": "Patterns and problems in emerging multiagent systems",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-08-13",
+      "published": "2026-08-13",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "8c6af2f46e58df764ef9",
       "source": "8",
       "url": "https://research.ibm.com/publications/ddr-sse-duplicated-retrieval-of-documents-for-system-wide-secure-searchable-symmetric-encryption",
@@ -2014,6 +2289,23 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": null,
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "1a8f8093a5a88c47ddbd",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/reviewing-the-evidence-on-worker-retraining-programs",
+      "title": "Reviewing the evidence on worker retraining programs",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-08-12",
+      "published": "2026-08-12",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Economics": "https://www.anthropic.com/research/team/economics"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -2079,6 +2371,22 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": null,
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "2eeb7294e073bcb8048d",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/riemann-zeta",
+      "title": "Learning more about Claude's mathematical capabilities",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-08-10",
+      "published": "2026-08-10",
+      "listed_on": "https://www.anthropic.com/science",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Science": "https://www.anthropic.com/science"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -2498,6 +2806,40 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "d8219ce8bb2d37e86d2d",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/discovering-cryptographic-weaknesses",
+      "title": "Discovering cryptographic weaknesses with Claude",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-07-28",
+      "published": "2026-07-28",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "d05f578cb0127739097a",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/project-pilot",
+      "title": "Project Pilot: Can AI control a drone?",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-07-24",
+      "published": "2026-07-24",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "7198a9f91391c7f2c955",
       "source": "20",
       "url": "https://sakana.ai/umf/",
@@ -2550,6 +2892,23 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "282e5ae1a0ed1486988c",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/how-canada-uses-claude",
+      "title": "How Canada uses Claude: Findings from the Anthropic Economic Index",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-07-14",
+      "published": "2026-07-14",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Economics": "https://www.anthropic.com/research/team/economics"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "c8011f074918f049c1f2",
       "source": "20",
       "url": "https://sakana.ai/smart-cellular-bricks/",
@@ -2573,6 +2932,23 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": null,
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "b36b26dcafe7364d0d1e",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/claude-values-models-languages",
+      "title": "Claude’s values across models and languages",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-07-13",
+      "published": "2026-07-13",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Societal Impacts": "https://www.anthropic.com/research/team/societal-impacts"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -2602,6 +2978,23 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "e77e41b68ae49ea15d1f",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/claude-plays-robotics",
+      "title": "Claude plays robotics",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-07-09",
+      "published": "2026-07-09",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "c0332c2e7378b76a194b",
       "source": "15",
       "url": "https://cohere.com/research/papers/evaluating-the-retrieval-robustness-of-large-language-models-2026-07-08",
@@ -2626,6 +3019,22 @@
       "kind": "공식 연구 게시글",
       "listing_date": "2026-07-08",
       "date_basis": "공식 목록"
+    },
+    {
+      "id": "e07cd5cb4b067532d64c",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/off-switch-dual-use",
+      "title": "An off switch for dual-use knowledge in AI models",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-07-08",
+      "published": "2026-07-08",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
     },
     {
       "id": "9e606fc8fce475835a8d",
@@ -2677,6 +3086,22 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": null,
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "339ab93da5d66d73c5f7",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/global-workspace",
+      "title": "A global workspace in language models",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-07-06",
+      "published": "2026-07-06",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -3590,6 +4015,23 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "d1729395582bcc8645b0",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/economic-index-june-2026-report",
+      "title": "Anthropic Economic Index report: Cadences",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-06-26",
+      "published": "2026-06-26",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Economics": "https://www.anthropic.com/research/team/economics"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "06fd75b50d4feeee19c1",
       "source": "2",
       "url": "https://deepmind.google/research/publications/224397/",
@@ -3642,6 +4084,23 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "e6e5b186e8f6ff1a10b0",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/project-fetch-phase-two",
+      "title": "Project Fetch: Phase two",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-06-18",
+      "published": "2026-06-18",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "e0376ea9922b82a0eab8",
       "source": "30",
       "url": "https://blog.ml.cmu.edu/2026/06/17/pre-training-isnt-bitter-enough/",
@@ -3652,6 +4111,23 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": null,
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "8f1edad40969fcd7351f",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/claude-code-expertise",
+      "title": "Agentic coding and persistent returns to expertise",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-06-16",
+      "published": "2026-06-16",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Economics": "https://www.anthropic.com/research/team/economics"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -3694,6 +4170,23 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "6121c2b584bea45aabe3",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/anthropic-public-record",
+      "title": "Results from the first Anthropic Public Record",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-06-12",
+      "published": "2026-06-12",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Societal Impacts": "https://www.anthropic.com/research/team/societal-impacts"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "cbbef72dd0295e8b8629",
       "source": "3",
       "url": "https://www.goodfire.com/research/predictive-data-debugging",
@@ -3717,6 +4210,39 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": null,
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "2053da0996e28bd2a8cd",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/agents-in-biology",
+      "title": "Paving the way for agents in biology",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-06-08",
+      "published": "2026-06-08",
+      "listed_on": "https://www.anthropic.com/science",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Science": "https://www.anthropic.com/science"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "5f8f5d5d61efd0b49fcc",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/n-days",
+      "title": "Measuring LLMs’ impact on N-day exploits",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-06-08",
+      "published": "2026-06-08",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -3759,6 +4285,22 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "9b0906e4976d1d0d999c",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/making-claude-a-chemist",
+      "title": "Making Claude a chemist",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-06-05",
+      "published": "2026-06-05",
+      "listed_on": "https://www.anthropic.com/science",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Science": "https://www.anthropic.com/science"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "ed491eb41202fe8ce12a",
       "source": "2",
       "url": "https://deepmind.google/research/publications/231466/",
@@ -3769,6 +4311,23 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": "2026-06-04",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "c70577af421a293324ad",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/attack-navigator",
+      "title": "Mapping AI-enabled cyber threats: Insights from the LLM ATT&CK Navigator",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-06-03",
+      "published": "2026-06-03",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -3889,6 +4448,23 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "15c4c98a0fc0a29262b3",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/coding-agents-social-sciences",
+      "title": "Coding agents in the social sciences",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-05-27",
+      "published": "2026-05-27",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Societal Impacts": "https://www.anthropic.com/research/team/societal-impacts"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "343dd208ebcda9c37b44",
       "source": "27",
       "url": "https://crfm.stanford.edu/2026/05/26/helm-arabic-enterprise.html",
@@ -3900,6 +4476,39 @@
       "kind": "공식 연구 게시글",
       "listing_date": "2026-05-26",
       "date_basis": "공식 목록"
+    },
+    {
+      "id": "70446f19a2b2214ee255",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/how-we-contain-claude",
+      "title": "How we contain Claude across products",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-05-25",
+      "published": "2026-05-25",
+      "listed_on": "https://www.anthropic.com/engineering",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Engineering": "https://www.anthropic.com/engineering"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "d901096a03e67fd216f4",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/exploit-evals",
+      "title": "Measuring LLMs’ ability to develop exploits",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-05-22",
+      "published": "2026-05-22",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
+      "date_basis": "상세 글"
     },
     {
       "id": "e62a65647949ca587dbf",
@@ -3980,6 +4589,22 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "7118ca94c10aaa37dc86",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/teaching-claude-why",
+      "title": "Teaching Claude why",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-05-08",
+      "published": "2026-05-08",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "46f025ace88a6e0527f8",
       "source": "3",
       "url": "https://www.goodfire.com/research/manifold-steering",
@@ -4003,6 +4628,38 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": "2026-05-07",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "994214d338d747aba3c4",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/donating-open-source-petri",
+      "title": "Donating our open-source alignment tool",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-05-07",
+      "published": "2026-05-07",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "241e3fa32ed76aaa58c8",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/natural-language-autoencoders",
+      "title": "Natural Language Autoencoders: Turning Claude’s thoughts into text",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-05-07",
+      "published": "2026-05-07",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -4240,6 +4897,23 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "8d99666bd3c7648f2e47",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/claude-personal-guidance",
+      "title": "How people ask Claude for personal guidance",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-04-30",
+      "published": "2026-04-30",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Societal Impacts": "https://www.anthropic.com/research/team/societal-impacts"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "3258a9bd2260deebccf9",
       "source": "3",
       "url": "https://www.goodfire.com/research/probe-based-data-attribution",
@@ -4263,6 +4937,22 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": "2026-04-29",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "4e17e059c664d8b817be",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/Evaluating-Claude-For-Bioinformatics-With-BioMysteryBench",
+      "title": "Evaluating Claude’s bioinformatics research capabilities with BioMysteryBench",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-04-29",
+      "published": "2026-04-29",
+      "listed_on": "https://www.anthropic.com/science",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Science": "https://www.anthropic.com/science"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -4409,6 +5099,22 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "7541f1fc8b59613e07d0",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/april-23-postmortem",
+      "title": "An update on recent Claude Code quality reports",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-04-23",
+      "published": "2026-04-23",
+      "listed_on": "https://www.anthropic.com/engineering",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Engineering": "https://www.anthropic.com/engineering"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "66310ad167c37478c93e",
       "source": "2",
       "url": "https://deepmind.google/research/publications/240658/",
@@ -4432,6 +5138,40 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": "2026-04-22",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "c6429d7c8f8678e65f0e",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/81k-economics",
+      "title": "What 81,000 people told us about the economics of AI",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-04-22",
+      "published": "2026-04-22",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Economics": "https://www.anthropic.com/research/team/economics"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "bdd256d2d591d7ca6324",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/economic-index-survey-announcement",
+      "title": "Announcing the Anthropic Economic Index Survey",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-04-22",
+      "published": "2026-04-22",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Economics": "https://www.anthropic.com/research/team/economics"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -4539,6 +5279,22 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "289f58721bc3a388d61b",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/automated-alignment-researchers",
+      "title": "Automated Alignment Researchers: Using large language models to scale scalable oversight",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-04-14",
+      "published": "2026-04-14",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "ed87f01cb185ae330f6a",
       "source": "18",
       "url": "https://seed.bytedance.com/en/public_papers/protenix-v2-broadening-the-reach-of-structure-prediction-and-biomolecular-design",
@@ -4562,6 +5318,72 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": "2026-04-10",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "fe5d2b20ac06c49d2943",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/trustworthy-agents",
+      "title": "Trustworthy agents in practice",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-04-09",
+      "published": "2026-04-09",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "d38ab2bad0292db39406",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/managed-agents",
+      "title": "Scaling Managed Agents: Decoupling the brain from the hands",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-04-08",
+      "published": "2026-04-08",
+      "listed_on": "https://www.anthropic.com/engineering",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Engineering": "https://www.anthropic.com/engineering"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "05145c1d17a07caaed39",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/mythos-preview",
+      "title": "Assessing Claude Mythos Preview’s cybersecurity capabilities",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-04-07",
+      "published": "2026-04-07",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "8b2a37dfba07568105f1",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/emotion-concepts-function",
+      "title": "Emotion concepts and their function in a large language model",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-04-02",
+      "published": "2026-04-02",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -4812,6 +5634,23 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "5118a35fff54ab0011ef",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/how-australia-uses-claude",
+      "title": "How Australia uses Claude: Findings from the Anthropic Economic Index",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-03-31",
+      "published": "2026-03-31",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Economics": "https://www.anthropic.com/research/team/economics"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "cdebf2826e88b024296e",
       "source": "17",
       "url": "https://www.ai21.com/blog/vllm-cuda-integer-overflow/",
@@ -4822,6 +5661,55 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": "2026-03-25",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "8d1bf597661a025755ac",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/claude-code-auto-mode",
+      "title": "How we built Claude Code auto mode: a safer way to skip permissions",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-03-25",
+      "published": "2026-03-25",
+      "listed_on": "https://www.anthropic.com/engineering",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Engineering": "https://www.anthropic.com/engineering"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "5e93b3ff42e3ca14b0d1",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/harness-design-long-running-apps",
+      "title": "Harness design for long-running application development",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-03-24",
+      "published": "2026-03-24",
+      "listed_on": "https://www.anthropic.com/engineering",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Engineering": "https://www.anthropic.com/engineering"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "fb474d047dde27398fe5",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/economic-index-march-2026-report",
+      "title": "Anthropic Economic Index report: Learning curves",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-03-24",
+      "published": "2026-03-24",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Economics": "https://www.anthropic.com/research/team/economics"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -4838,6 +5726,54 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "188efea45fa6eabe6607",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/vibe-physics",
+      "title": "Vibe physics: The AI grad student",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-03-23",
+      "published": "2026-03-23",
+      "listed_on": "https://www.anthropic.com/science",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Science": "https://www.anthropic.com/science"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "fcd28dcb5b5a4ee9a0a1",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/long-running-claude",
+      "title": "Long-running Claude for scientific computing",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-03-23",
+      "published": "2026-03-23",
+      "listed_on": "https://www.anthropic.com/science",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Science": "https://www.anthropic.com/science"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "f85a37e38f6e84358bdd",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/introducing-anthropic-science",
+      "title": "Introducing our Science Blog",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-03-23",
+      "published": "2026-03-23",
+      "listed_on": "https://www.anthropic.com/science",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Science": "https://www.anthropic.com/science"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "cdb96b151acb2c54e9f2",
       "source": "2",
       "url": "https://deepmind.google/research/publications/146950/",
@@ -4851,6 +5787,23 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "8e1249da252c36e46d86",
+      "source": "1",
+      "url": "https://www.anthropic.com/features/81k-interviews",
+      "title": "What 81,000 people want from AI",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-03-18",
+      "published": "2026-03-18",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Economics": "https://www.anthropic.com/research/team/economics"
+      },
+      "date_basis": "공식 목록"
+    },
+    {
       "id": "2d0575bd6f63cd0d3dca",
       "source": "30",
       "url": "https://blog.ml.cmu.edu/2026/03/17/lumberchunker-long-form-narrative-document-segmentation/",
@@ -4861,6 +5814,22 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": null,
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "6029833a5599df0cf086",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/diff-tool",
+      "title": "A “diff” tool for AI: Finding behavioral differences in new models",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-03-13",
+      "published": "2026-03-13",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -4887,6 +5856,56 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": "2026-03-10",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "06d8ffd64ad49635d9b6",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/eval-awareness-browsecomp",
+      "title": "Eval awareness in Claude Opus 4.6’s BrowseComp performance",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-03-06",
+      "published": "2026-03-06",
+      "listed_on": "https://www.anthropic.com/engineering",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Engineering": "https://www.anthropic.com/engineering"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "ff8efb1be95b8465ca4f",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/exploit",
+      "title": "Reverse engineering Claude's CVE-2026-2796 exploit",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-03-06",
+      "published": "2026-03-06",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "b3d3bf37dd717f9e61ea",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/labor-market-impacts",
+      "title": "Labor market impacts of AI: A new measure and early evidence",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-03-05",
+      "published": "2026-03-05",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Economics": "https://www.anthropic.com/research/team/economics"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -5280,6 +6299,22 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "2ff1c8c8c0a90dec11d7",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/persona-selection-model",
+      "title": "The persona selection model",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-02-23",
+      "published": "2026-02-23",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "5b1f92c3e44514daacf1",
       "source": "26",
       "url": "https://jina.ai/news/jina-embeddings-v5-text-distilling-4b-quality-into-sub-1b-multilingual-embeddings/",
@@ -5290,6 +6325,40 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": null,
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "a5bb6dbde1f2555ec545",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/measuring-agent-autonomy",
+      "title": "Measuring AI agent autonomy in practice",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-02-18",
+      "published": "2026-02-18",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Societal Impacts": "https://www.anthropic.com/research/team/societal-impacts"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "18a9cdac41433f534572",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/india-brief-economic-index",
+      "title": "India Country Brief: The Anthropic Economic Index",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-02-16",
+      "published": "2026-02-16",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Economics": "https://www.anthropic.com/research/team/economics"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -5355,6 +6424,55 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": "2026-02-05",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "846453e27381d8c38288",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/building-c-compiler",
+      "title": "Building a C compiler with a team of parallel Claudes",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-02-05",
+      "published": "2026-02-05",
+      "listed_on": "https://www.anthropic.com/engineering",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Engineering": "https://www.anthropic.com/engineering"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "af50dcb9f02a91cc6d84",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/infrastructure-noise",
+      "title": "Quantifying infrastructure noise in agentic coding evals",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-02-05",
+      "published": "2026-02-05",
+      "listed_on": "https://www.anthropic.com/engineering",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Engineering": "https://www.anthropic.com/engineering"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "af9f7d94079ea73346c5",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/zero-days",
+      "title": "Evaluating and mitigating the growing risk of LLM-discovered 0-days",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-02-05",
+      "published": "2026-02-05",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -5683,6 +6801,22 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "4840f2879cf5e9ccd21b",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/AI-assistance-coding-skills",
+      "title": "How AI assistance impacts the formation of coding skills",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-01-29",
+      "published": "2026-01-29",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "e383889c538876d8e48e",
       "source": "3",
       "url": "https://www.goodfire.com/research/interpretability-for-alzheimers-detection",
@@ -5693,6 +6827,22 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": "2026-01-28",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "a5da92eadd4adca92c62",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/disempowerment-patterns",
+      "title": "Disempowerment patterns in real-world AI usage",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-01-28",
+      "published": "2026-01-28",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -5735,6 +6885,38 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "09ddf8f315bdbfba4a13",
+      "source": "1",
+      "url": "https://www.anthropic.com/constitution",
+      "title": "Claude's Constitution",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-01-22",
+      "published": "2026-01-22",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "공식 목록"
+    },
+    {
+      "id": "0d78f3b9fd5441b18e3f",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/AI-resistant-technical-evaluations",
+      "title": "Designing AI-resistant technical evaluations",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-01-21",
+      "published": "2026-01-21",
+      "listed_on": "https://www.anthropic.com/engineering",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Engineering": "https://www.anthropic.com/engineering"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "efd71c83e827503b4d21",
       "source": "8",
       "url": "https://research.ibm.com/publications/gp-molformer-sim-test-time-molecular-optimization-through-contextual-similarity-guidance",
@@ -5758,6 +6940,106 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": "2026-01-19",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "91380d5af721abb3fb4f",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/assistant-axis",
+      "title": "The assistant axis: situating and stabilizing the character of large language models",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-01-19",
+      "published": "2026-01-19",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "0ec568759bc663baf347",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/cyber-toolkits-update",
+      "title": "AI models are showing a greater ability to find and exploit vulnerabilities on realistic cyber ranges",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-01-16",
+      "published": "2026-01-16",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "44eb0491862b248d9f87",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/accelerating-scientific-research",
+      "title": "How scientists are using Claude to accelerate research and discovery",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-01-15",
+      "published": "2026-01-15",
+      "listed_on": "https://www.anthropic.com/science",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Science": "https://www.anthropic.com/science"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "fcbc5819843f4701f257",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/anthropic-economic-index-january-2026-report",
+      "title": "Anthropic Economic Index report: Economic primitives",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-01-15",
+      "published": "2026-01-15",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Economics": "https://www.anthropic.com/research/team/economics"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "3dd8d0c605d3da729afa",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/economic-index-primitives",
+      "title": "Anthropic Economic Index: New building blocks for understanding AI use",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-01-15",
+      "published": "2026-01-15",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Economics": "https://www.anthropic.com/research/team/economics"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "947e5e281e230c965cac",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/property-based-testing",
+      "title": "Finding bugs across the Python ecosystem with Claude and property-based testing",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-01-14",
+      "published": "2026-01-14",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -5800,6 +7082,38 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "ee2b7d5b8e827b8ce88b",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/next-generation-constitutional-classifiers",
+      "title": "Next-generation Constitutional Classifiers: More efficient protection against universal jailbreaks",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-01-09",
+      "published": "2026-01-09",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "18baa447c4fd87c63ed0",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/demystifying-evals-for-ai-agents",
+      "title": "Demystifying evals for AI agents",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-01-09",
+      "published": "2026-01-09",
+      "listed_on": "https://www.anthropic.com/engineering",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Engineering": "https://www.anthropic.com/engineering"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "1a7900ca92a1c0144673",
       "source": "17",
       "url": "https://www.ai21.com/blog/scaling-agentic-evaluation-swe-bench/",
@@ -5823,6 +7137,23 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": "2026-01-08",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "d833a9e773aaa1bc6a76",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/critical-infrastructure-defense",
+      "title": "Experimenting with AI to defend critical infrastructure",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2026-01-08",
+      "published": "2026-01-08",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -6333,6 +7664,22 @@
       "date_basis": "공식 목록"
     },
     {
+      "id": "30ddf36048da3993d411",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/bloom",
+      "title": "Introducing Bloom: an open source tool for automated behavioral evaluations",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-12-19",
+      "published": "2025-12-19",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "9c4b0045460beee3d693",
       "source": "27",
       "url": "https://crfm.stanford.edu/2025/12/18/helm-arabic.html",
@@ -6344,6 +7691,23 @@
       "kind": "공식 연구 게시글",
       "listing_date": "2025-12-18",
       "date_basis": "공식 목록"
+    },
+    {
+      "id": "dfe36add0c65ba2f72d4",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/project-vend-2",
+      "title": "Project Vend: Phase two",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-12-18",
+      "published": "2025-12-18",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
+      "date_basis": "상세 글"
     },
     {
       "id": "231c39eb5442d2715aa1",
@@ -6398,6 +7762,23 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "e5d0d3102a5baa0fe9ca",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/anthropic-interviewer",
+      "title": "Introducing Anthropic Interviewer: What 1,250 professionals told us about working with AI",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-12-04",
+      "published": "2025-12-04",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Societal Impacts": "https://www.anthropic.com/research/team/societal-impacts"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "25d85ec01f8334fe023d",
       "source": "2",
       "url": "https://deepmind.google/research/publications/141313/",
@@ -6424,6 +7805,23 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "3bcbfd47ace1ce188fda",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/how-ai-is-transforming-work-at-anthropic",
+      "title": "How AI is transforming work at Anthropic",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-12-02",
+      "published": "2025-12-02",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Societal Impacts": "https://www.anthropic.com/research/team/societal-impacts"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "470ddf994e5baf51615b",
       "source": "12",
       "url": "https://www.deepseek.com/en/news/deepseek-v3-2/",
@@ -6434,6 +7832,23 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": null,
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "23474f05267eaf11ef0d",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/smart-contracts",
+      "title": "AI agents find $4.6M in blockchain smart contract exploits",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-12-01",
+      "published": "2025-12-01",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -6879,6 +8294,104 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "f26536ac9f15667ecf89",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/effective-harnesses-for-long-running-agents",
+      "title": "Effective harnesses for long-running agents",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-11-26",
+      "published": "2025-11-26",
+      "listed_on": "https://www.anthropic.com/engineering",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Engineering": "https://www.anthropic.com/engineering"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "2d7073129f6a4398783e",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/estimating-productivity-gains",
+      "title": "Estimating AI productivity gains from Claude conversations",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-11-25",
+      "published": "2025-11-25",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Economics": "https://www.anthropic.com/research/team/economics"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "67fca590a62412e63347",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/prompt-injection-defenses",
+      "title": "Mitigating the risk of prompt injections in browser use",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-11-24",
+      "published": "2025-11-24",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "8ab070756f239d674e46",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/advanced-tool-use",
+      "title": "Introducing advanced tool use on the Claude Developer Platform",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-11-24",
+      "published": "2025-11-24",
+      "listed_on": "https://www.anthropic.com/engineering",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Engineering": "https://www.anthropic.com/engineering"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "b7f551cb20a9b6d1fd17",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/emergent-misalignment-reward-hacking",
+      "title": "From shortcuts to sabotage: Natural emergent misalignment from reward hacking",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-11-21",
+      "published": "2025-11-21",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "0646000d091e2aa27052",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/political-even-handedness",
+      "title": "Measuring political bias in Claude",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-11-13",
+      "published": "2025-11-13",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Societal Impacts": "https://www.anthropic.com/research/team/societal-impacts"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "a2360576d1ca9db54384",
       "source": "14",
       "url": "https://qwen.ai/research/qwen-deepresearch",
@@ -6890,6 +8403,23 @@
       "kind": "공식 연구 게시글",
       "listing_date": "2025-11-12",
       "date_basis": "공식 목록"
+    },
+    {
+      "id": "eb9cb6cfb60e548237e9",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/project-fetch-robot-dog",
+      "title": "Project Fetch: Can Claude train a robot dog?",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-11-12",
+      "published": "2025-11-12",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
+      "date_basis": "상세 글"
     },
     {
       "id": "a28a232c54649dfba3ff",
@@ -6915,6 +8445,22 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": "2025-11-05",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "f05fd4720dd18bcadc93",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/code-execution-with-mcp",
+      "title": "Code execution with MCP: Building more efficient agents",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-11-04",
+      "published": "2025-11-04",
+      "listed_on": "https://www.anthropic.com/engineering",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Engineering": "https://www.anthropic.com/engineering"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -7100,6 +8646,22 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "e2b13337b1048ac6225f",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/introspection",
+      "title": "Signs of introspection in large language models",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-10-29",
+      "published": "2025-10-29",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "2bcdc4b84df4380a5811",
       "source": "3",
       "url": "https://www.goodfire.com/research/rakuten-sae-probes-for-pii-detection",
@@ -7139,6 +8701,22 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "a0a0966b186f2bf72efc",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/claude-code-sandboxing",
+      "title": "Beyond permission prompts: making Claude Code more secure and autonomous",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-10-20",
+      "published": "2025-10-20",
+      "listed_on": "https://www.anthropic.com/engineering",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Engineering": "https://www.anthropic.com/engineering"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "f811d4a1783bc028c2fe",
       "source": "20",
       "url": "https://sakana.ai/icfp-2025/",
@@ -7152,6 +8730,55 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "7caba0492d563238bc9e",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/equipping-agents-for-the-real-world-with-agent-skills",
+      "title": "Equipping agents for the real world with Agent Skills",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-10-16",
+      "published": "2025-10-16",
+      "listed_on": "https://www.anthropic.com/engineering",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Engineering": "https://www.anthropic.com/engineering"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "25c769c747880e32eaa3",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/economic-policy-responses",
+      "title": "Preparing for AI’s economic impact: exploring policy responses",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-10-14",
+      "published": "2025-10-14",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Economics": "https://www.anthropic.com/research/team/economics"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "dd20bf1fb6b0f9f14a28",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/small-samples-poison",
+      "title": "A small number of samples can poison LLMs of any size",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-10-09",
+      "published": "2025-10-09",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "0de420a55a932cb8c32d",
       "source": "24",
       "url": "https://blog.eleuther.ai/reward_hacking/",
@@ -7162,6 +8789,22 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": null,
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "26af368076754fe0c049",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/petri-open-source-auditing",
+      "title": "Petri: An open-source auditing tool to accelerate AI safety research",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-10-06",
+      "published": "2025-10-06",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -7620,6 +9263,39 @@
       "date_basis": "공식 목록"
     },
     {
+      "id": "3285692e2b3b9744c74e",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+      "title": "Effective context engineering for AI agents",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-09-29",
+      "published": "2025-09-29",
+      "listed_on": "https://www.anthropic.com/engineering",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Engineering": "https://www.anthropic.com/engineering"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "f17aa5d0f7591eaa0e49",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/building-ai-cyber-defenders",
+      "title": "Building AI for cyber defenders",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-09-29",
+      "published": "2025-09-29",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "7653fbdd88545db30c9d",
       "source": "21",
       "url": "https://thinkingmachines.ai/blog/modular-manifolds/",
@@ -7802,6 +9478,22 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "62b1c628738d3881c0a3",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/a-postmortem-of-three-recent-issues",
+      "title": "A postmortem of three recent issues",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-09-17",
+      "published": "2025-09-17",
+      "listed_on": "https://www.anthropic.com/engineering",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Engineering": "https://www.anthropic.com/engineering"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "a4fc5faec6789a4a8097",
       "source": "30",
       "url": "https://blog.ml.cmu.edu/2025/09/15/verlog-a-multi-turn-rl-framework-for-llm-agents/",
@@ -7812,6 +9504,56 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": null,
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "dac508192435a56bd7fd",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/economic-index-geography",
+      "title": "Anthropic Economic Index: Tracking AI’s role in the US and global economy",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-09-15",
+      "published": "2025-09-15",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Economics": "https://www.anthropic.com/research/team/economics"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "8a6c79476d08929a2a4d",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/anthropic-economic-index-september-2025-report",
+      "title": "Anthropic Economic Index report: Uneven geographic and enterprise AI adoption",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-09-15",
+      "published": "2025-09-15",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Economics": "https://www.anthropic.com/research/team/economics"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "d48e6e351a9b7bb0dd3d",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/writing-tools-for-agents",
+      "title": "Writing effective tools for agents — with agents",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-09-11",
+      "published": "2025-09-11",
+      "listed_on": "https://www.anthropic.com/engineering",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Engineering": "https://www.anthropic.com/engineering"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -7852,6 +9594,23 @@
       "kind": "공식 연구 게시글",
       "listing_date": "2025-09-08",
       "date_basis": "공식 목록"
+    },
+    {
+      "id": "717f758c93c300cdffb2",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/biorisk",
+      "title": "Why do we take LLMs seriously as a potential source of biorisk?",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-09-05",
+      "published": "2025-09-05",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
+      "date_basis": "상세 글"
     },
     {
       "id": "cb1c4b1ec17232bbacc7",
@@ -8244,6 +10003,23 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "91c60ad2aa480715b314",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/anthropic-education-report-how-educators-use-claude",
+      "title": "Anthropic Education Report: How educators use Claude",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-08-27",
+      "published": "2025-08-27",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Societal Impacts": "https://www.anthropic.com/research/team/societal-impacts"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "cb29a22e7a138a763548",
       "source": "9",
       "url": "https://www.salesforce.com/blog/the-agentic-ai-era-after-the-dawn-heres-what-to-expect/?bc=HL",
@@ -8270,6 +10046,23 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "60b228e8a2f22e1945c8",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/nuclear-safeguards-for-ai",
+      "title": "Developing nuclear safeguards for AI",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-08-21",
+      "published": "2025-08-21",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "d242baa595f9e2cc8d45",
       "source": "14",
       "url": "https://qwen.ai/research/qwen-image-edit",
@@ -8283,6 +10076,22 @@
       "date_basis": "공식 목록"
     },
     {
+      "id": "462db006b69dd4875228",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/end-subset-conversations",
+      "title": "Claude Opus 4 and 4.1 can now end a rare subset of conversations",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-08-15",
+      "published": "2025-08-15",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "ae3aa43130dfe91e6b15",
       "source": "24",
       "url": "https://blog.eleuther.ai/deep-ignorance/",
@@ -8293,6 +10102,23 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": null,
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "0d0a1a3c20a6cfcd1c8d",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/cyber-competitions",
+      "title": "Claude is competitive with humans in (some) cyber competitions",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-08-09",
+      "published": "2025-08-09",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -8319,6 +10145,22 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": null,
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "81bcb12341e0d0ae8675",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/persona-vectors",
+      "title": "Persona vectors: Monitoring and controlling character traits in language models",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-08-01",
+      "published": "2025-08-01",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -8579,6 +10421,23 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": "2025-07-15",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "e691c502bf48e1ffcb7d",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/claude-4-cyber",
+      "title": "Detailed cyber evaluations of Claude 4",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-07-15",
+      "published": "2025-07-15",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -9115,6 +10974,39 @@
       "date_basis": "공식 목록"
     },
     {
+      "id": "7dc4c77765779e3af519",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/how-people-use-claude-for-support-advice-and-companionship",
+      "title": "How people use Claude for support, advice, and companionship",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-06-27",
+      "published": "2025-06-27",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "97d93b61e474dbbbf14d",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/project-vend-1",
+      "title": "Project Vend: Can Claude run a small shop? (And why does that matter?)",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-06-27",
+      "published": "2025-06-27",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "b29ee567dba74e189849",
       "source": "14",
       "url": "https://qwen.ai/research/qwen-vlo",
@@ -9126,6 +11018,22 @@
       "kind": "공식 연구 게시글",
       "listing_date": "2025-06-26",
       "date_basis": "공식 목록"
+    },
+    {
+      "id": "1b016aeb572267e52328",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/desktop-extensions",
+      "title": "Desktop Extensions: One-click MCP server installation for Claude Desktop",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-06-26",
+      "published": "2025-06-26",
+      "listed_on": "https://www.anthropic.com/engineering",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Engineering": "https://www.anthropic.com/engineering"
+      },
+      "date_basis": "상세 글"
     },
     {
       "id": "13e044b497261b90a28e",
@@ -9154,6 +11062,38 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "a36167ad3ea039b99e46",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/agentic-misalignment",
+      "title": "Agentic misalignment: How LLMs could be insider threats",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-06-20",
+      "published": "2025-06-20",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "0ea22ecaf1e6e4d7583a",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/confidential-inference-trusted-vms",
+      "title": "Confidential Inference via Trusted Virtual Machines",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-06-18",
+      "published": "2025-06-18",
+      "listed_on": "https://www.anthropic.com/engineering",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Engineering": "https://www.anthropic.com/engineering"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "b4c42ab7cf6776ed04d4",
       "source": "20",
       "url": "https://sakana.ai/ale-bench/",
@@ -9177,6 +11117,55 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": "2025-06-17",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "b09476257cd1c0bc87e2",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/shade-arena-sabotage-monitoring",
+      "title": "SHADE-Arena: Evaluating sabotage and monitoring in LLM agents",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-06-16",
+      "published": "2025-06-16",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "9bb2f678de277cb92a4d",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/multi-agent-research-system",
+      "title": "How we built our multi-agent research system",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-06-13",
+      "published": "2025-06-13",
+      "listed_on": "https://www.anthropic.com/engineering",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Engineering": "https://www.anthropic.com/engineering"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "81de389ac4107d3b6d12",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/cyber-toolkits",
+      "title": "LLMs with cyber toolkits can conduct multistage cyber operations on business-sized computer networks",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-06-13",
+      "published": "2025-06-13",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -9700,6 +11689,22 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "fa1c639fd1b95822e444",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/open-source-circuit-tracing",
+      "title": "Open-sourcing circuit tracing tools",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-05-29",
+      "published": "2025-05-29",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "cbd74fdb0d6ca31d0364",
       "source": "27",
       "url": "https://crfm.stanford.edu/2025/05/28/fast-kernels.html",
@@ -9908,6 +11913,84 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "3b373bfec25a8547d115",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/humanoid-policy",
+      "title": "Humanoid Policy ~ Human Policy",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-05",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "a40d460519c01aadb40d",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/english-accent",
+      "title": "Do Large Language Models Have an English Accent? Evaluating and Improving the Naturalness of Multilingual LLMs",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-05",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "1282443745380ccdd6cc",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/large-photogrammetry-model",
+      "title": "Matrix3D: Large Photogrammetry Model All-in-One",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-05",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "00f226339fc607e7d99c",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/sample-complexity",
+      "title": "Improved Sample Complexity for Private Nonsmooth Nonconvex Optimization",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-05",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "4bc1fdc1cdf7c64eb4d5",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/local-pan-privacy",
+      "title": "Local Pan-Privacy for Federated Analytics",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-05",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "1c73f8378f0344f7ae69",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/mechanisms-of-projective-composition",
+      "title": "Mechanisms of Projective Composition of Diffusion Models",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-05",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
       "id": "ead2b4a7f9fc82778cb2",
       "source": "14",
       "url": "https://qwen.ai/research/qwen3",
@@ -9921,6 +12004,24 @@
       "date_basis": "공식 목록"
     },
     {
+      "id": "eb8be5103b032526ef22",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/impact-software-development",
+      "title": "Anthropic Economic Index: AI’s impact on software development",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-04-28",
+      "published": "2025-04-28",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Economics": "https://www.anthropic.com/research/team/economics",
+        "Societal Impacts": "https://www.anthropic.com/research/team/societal-impacts"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "84e811ad567bd47779f5",
       "source": "19",
       "url": "https://www.liquid.ai/blog/how-effectively-does-a-model-use-its-memory",
@@ -9931,6 +12032,55 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": null,
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "aecc140d20bbdae34a4f",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/exploring-model-welfare",
+      "title": "Exploring model welfare",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-04-24",
+      "published": "2025-04-24",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "74006d4624fa6ca63105",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/values-wild",
+      "title": "Values in the wild: Discovering and analyzing values in real-world language model interactions",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-04-21",
+      "published": "2025-04-21",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Societal Impacts": "https://www.anthropic.com/research/team/societal-impacts"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "e5e339bd8b7d3b124e3a",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/claude-code-best-practices",
+      "title": "Claude Code: Best practices for agentic coding",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-04-18",
+      "published": "2025-04-18",
+      "listed_on": "https://www.anthropic.com/engineering",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Engineering": "https://www.anthropic.com/engineering"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -9960,6 +12110,23 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "6bbef4979faef7079bb9",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/anthropic-education-report-how-university-students-use-claude",
+      "title": "Anthropic Education Report: How university students use Claude",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-04-08",
+      "published": "2025-04-08",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Societal Impacts": "https://www.anthropic.com/research/team/societal-impacts"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "b7a60a2e4cc538e3fc35",
       "source": "9",
       "url": "https://www.salesforce.com/blog/enterprise-general-intelligence/?bc=HL",
@@ -9970,6 +12137,22 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": null,
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "07b16d6aa97ff495a7a4",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/reasoning-models-dont-say-think",
+      "title": "Reasoning models don't always say what they think",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-04-03",
+      "published": "2025-04-03",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -9986,6 +12169,435 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "4bb2b760a446b8befeb7",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/how-to-verify-distribution-property",
+      "title": "How to Verify Any (Reasonable) Distribution Property: Computationally Sound Argument Systems for Distributions",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "a6c05bf15b41cbda26d1",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/fastvlm-efficient-vision-encoding",
+      "title": "FastVLM: Efficient Vision encoding for Vision Language Models",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "b07087bf7854cc1c7cb3",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/disentangled-representational-learning-gromov",
+      "title": "Disentangled Representational Learning with the Gromov-Monge Gap",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "94c9194fc14f93ef761c",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/dart-denoising-autoregressive-transformer",
+      "title": "DART: Denoising Autoregressive Transformer for Scalable Text-to-Image Generation",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "01860d75c38c2f3ec55e",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/scaling-diffusion-language-models",
+      "title": "Scaling Diffusion Language Models via Adaptation from Autoregressive Models",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "0d72ab71d1f834a97396",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/scaling-laws-native-multimodal-models",
+      "title": "Scaling Laws for Native Multimodal Models",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "ba9ad83fc4a097715ab1",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/diffusion-elementary-tutorial",
+      "title": "Step-by-Step Diffusion: An Elementary Tutorial",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "5965fbc79e144e7d9b6f",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/comotion-concurrent-3d-motion",
+      "title": "CoMotion: Concurrent Multi-Person 3D Motion",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "8abeb2596b2298e8258c",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/ec-dit",
+      "title": "EC-DIT: Scaling Diffusion Transformers with Adaptive Expert-Choice Routing",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "267e68191571214db9e9",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/tis-dpo-importance-sampling",
+      "title": "TIS-DPO: Token-level Importance Sampling for Direct Preference Optimization",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "ab1eab6e8a2bc9dc3b6d",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/focallens",
+      "title": "FocalLens: Instruction Tuning Enables Zero-Shot Conditional Image Representations",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "00ca4cc32837d203fd77",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/exploring-hallucinations",
+      "title": "Language Models Know More Than They Show: Exploring Hallucinations From the Model's Viewpoint",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "b0a81dbd56f4a3a31acf",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/mm-ego",
+      "title": "MM-Ego: Towards Building Egocentric Multimodal LLMs",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "cec2babc8f3e2853ca60",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/talking-turns",
+      "title": "Talking Turns: Benchmarking Audio Foundation Models on Turn-Taking Dynamics",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "8ece4aa5eb57608b260c",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/adaptive-batch-size",
+      "title": "Adaptive Batch Size for Privately Finding Second-order Stationary Points",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "10f630b6e2dd5996ebfb",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/length-generalization-transformers",
+      "title": "A Formal Framework for Understanding Length Generalization in Transformers",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "01f11d488e49d0d7abaf",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/do-llms-know-internally",
+      "title": "Do LLMs Know Internally When They  Follow Instructions?",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "d3db57806ec273e77730",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/ferret-ui-2",
+      "title": "Ferret-UI 2: Mastering Universal User Interface Understanding Across Platforms",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "bfdfe69a83cc98716a8d",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/micronn-on-device",
+      "title": "MicroNN: An On-device Disk Resident Updatable Vector Database",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "1a0c85409b3c9fcb57df",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/no-need-to-talk",
+      "title": "No Need to Talk: Asynchronous Mixture of Language Models",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "64fc5d857bf83cec36eb",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/relative-contrastive-learning",
+      "title": "RelCon: Relative Contrastive Learning for a Motion Foundation Model for Wearable Data",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "cc546ba7776d1c66b464",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/simple-reflow",
+      "title": "Simple ReFlow: Improved Techniques for Fast Flow Models",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "1a786b1cdbedb8c6d86f",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/task-adaptive",
+      "title": "Task-Adaptive Pretrained Language Models via Clustered-Importance Sampling",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "69e3c4a061c277f15585",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/ademamix-optimizer",
+      "title": "The AdEMAMix Optimizer: Better, Faster, Older",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "f5e37b20676802b9a63e",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/estimate-uncertainty-well",
+      "title": "Do LLMs Estimate Uncertainty Well in Instruction-Following?",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "a7f39ca2c656b147eeed",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/large-scale-image-caption",
+      "title": "Revisit Large-Scale Image–Caption Data in Pre-training Multimodal Foundation Models",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "55d2b7845225eb1c3b8a",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/seedlm-compressing",
+      "title": "SeedLM: Compressing LLM Weights into Seeds of Pseudo-Random Generators",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "47a39ec75df11c7a7c17",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/interpreting-improving-optimal-control",
+      "title": "Interpreting and Improving Optimal Control Problems With Directional Corrections",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "30dbcf8842d81181e46b",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/dense-to-dynamic",
+      "title": "From Dense to Dynamic: Token-Difficulty Driven MoEfication of Pre-Trained LLMs",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "b64abc9e7f68cb86993e",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/modeling-speech-emotion",
+      "title": "Modeling Speech Emotion With Label Variance and Analyzing Performance Across Speakers and Unseen Acoustic Conditions",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "596f029cad1eaf94a1f6",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/mutual-reinforcement-llm-dialogue",
+      "title": "Mutual Reinforcement of LLM Dialogue Synthesis and Summarization Capabilities for Few-Shot Dialogue Summarization",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "d8b8255a1d1d0958bcbd",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/role-of-prosody",
+      "title": "The Role of Prosody in Spoken Question Answering",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "bb581f56b059e094bf44",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/universally-instance-optimal-mechanisms",
+      "title": "Universally Instance-Optimal Mechanisms for Private Statistical Estimation",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-04",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
       "id": "6fe2bca684c6b3ca43a8",
       "source": "14",
       "url": "https://qwen.ai/research/qvq-max-preview",
@@ -9997,6 +12609,39 @@
       "kind": "공식 연구 게시글",
       "listing_date": "2025-03-27",
       "date_basis": "공식 목록"
+    },
+    {
+      "id": "d81800a3523b799f25d6",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/tracing-thoughts-language-model",
+      "title": "Tracing the thoughts of a large language model",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-03-27",
+      "published": "2025-03-27",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "a237096b26348185485d",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/anthropic-economic-index-insights-from-claude-sonnet-3-7",
+      "title": "Anthropic Economic Index: Insights from Claude 3.7 Sonnet",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-03-27",
+      "published": "2025-03-27",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Societal Impacts": "https://www.anthropic.com/research/team/societal-impacts"
+      },
+      "date_basis": "상세 글"
     },
     {
       "id": "1c74a3b340ba4cad8ba4",
@@ -10051,6 +12696,39 @@
       "date_basis": "공식 목록"
     },
     {
+      "id": "a608a3738ddae235b4e9",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/claude-think-tool",
+      "title": "The \"think\" tool: Enabling Claude to stop and think in complex tool use situations",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-03-20",
+      "published": "2025-03-20",
+      "listed_on": "https://www.anthropic.com/engineering",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Engineering": "https://www.anthropic.com/engineering"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "4e8cbef323eaa484dae1",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/strategic-warning-for-ai-risk-progress-and-insights-from-our-frontier-red-team",
+      "title": "Progress from our Frontier Red Team",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-03-19",
+      "published": "2025-03-19",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "d87e92e36b5eac370205",
       "source": "20",
       "url": "https://sakana.ai/ai-scientist-first-publication-jp/",
@@ -10075,6 +12753,23 @@
       "kind": "공식 연구 게시글",
       "listing_date": "2025-03-13",
       "date_basis": "공식 목록"
+    },
+    {
+      "id": "f7597eed2915b2501040",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/auditing-hidden-objectives",
+      "title": "Auditing language models for hidden objectives",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-03-13",
+      "published": "2025-03-13",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment",
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
+      "date_basis": "상세 글"
     },
     {
       "id": "d37bbc234a25442a8f12",
@@ -10103,6 +12798,227 @@
       "date_basis": "공식 목록"
     },
     {
+      "id": "a327ca3c4be112454658",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/vibe-visual-analytics-workflow",
+      "title": "VibE: A Visual Analytics Workflow for Semantic Error Analysis of CVML Models at Subgroup Level",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-03",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "a943ad020a9478568db3",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/interactive-data-augmentation",
+      "title": "Exploring Empty Spaces: Human-in-the-Loop Data Augmentation",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-03",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "5f67e6a181bcbfedf4f8",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/toolsandbox-stateful-conversational-llm-benchmark",
+      "title": "ToolSandbox: A Stateful, Conversational, Interactive Evaluation Benchmark for LLM Tool Use Capabilities",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-03",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "262b9a96261a9908f166",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/evaluating-text2sql-solutions",
+      "title": "Fundamental Challenges in Evaluating Text2SQL Solutions and Detecting Their Limitations",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-03",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "ef920ca2085de91c2a16",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/univg-diffusion-model",
+      "title": "UniVG: A Generalist Diffusion Model for Unified Image Generation and Editing",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-03",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "6c3c8b7a2739486742c2",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/exploring-prediction-targets",
+      "title": "Exploring Prediction Targets in Masked Pre-Training for Speech Foundation Models",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-03",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "13be8e0d313746cefa70",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/efficient-streaming-audio-visual",
+      "title": "An Efficient and Streaming Audio Visual Active Speaker Detection System",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-03",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "0d47c3f1cb1f42302fee",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/when-does-predictor-know",
+      "title": "When Does a Predictor Know Its Own Loss?",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-03",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "45114bb9182aeac8f2c9",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/kv-prediction",
+      "title": "KV Prediction for Improved Time to First Token",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-03",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "1f0efbbd82c02c59deb6",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/ai-sign-language-generation",
+      "title": "Towards AI-Driven Sign Language Generation with Non-Manual Markers",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-03",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "9d818d8e8fd4529164c0",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/dr-mpc-deep-residual",
+      "title": "DR-MPC: Deep Residual Model Predictive Control for Real-World Social Navigation",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-03",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "6b6ff0a0682b4a14c6d6",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/cognition-emerge-frontier-models",
+      "title": "Does Spatial Cognition Emerge in Frontier Models?",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-03",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "09cc222adccc6796b7b8",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/multi-rate-residuals-transformers",
+      "title": "M2R2: Mixture of Multi-Rate Residuals for Efficient Transformer Inference",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-03",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "59cab6bf3eb0699b8605",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/selma-speech-enabled-language",
+      "title": "SELMA: A Speech-Enabled Language Model for Virtual Assistant Interactions",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-03",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "6da7631d87198bbd23c3",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/speaker-ipl-vector-pseudo-labels",
+      "title": "Speaker-IPL: Unsupervised Learning of Speaker Characteristics with i-Vector Based Pseudo-Labels",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-03",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "3e5ea65c094e6716560d",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/speech-models-using-rank",
+      "title": "Towards Automatic Assessment of Self-Supervised Speech Models Using Rank",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-03",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "cf676088e59d23d489e6",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/mm15-methods-analysis-insights",
+      "title": "MM1.5: Methods, Analysis & Insights from Multimodal LLM Fine-Tuning",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-03",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
       "id": "d5ec5f4b15a384dfb858",
       "source": "20",
       "url": "https://sakana.ai/taid/",
@@ -10113,6 +13029,22 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": "2025-02-25",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "f83ed9c765e3f7bcc8ac",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/forecasting-rare-behaviors",
+      "title": "Forecasting rare language model behaviors",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-02-25",
+      "published": "2025-02-25",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -10139,6 +13071,107 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": "2025-02-20",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "e7144a171d8704441177",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/crosscoder-model-diffing",
+      "title": "Insights on crosscoder model diffing",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-02-20",
+      "published": "2025-02-20",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "ca8b7aa648fe3c38068d",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/the-anthropic-economic-index",
+      "title": "The Anthropic Economic Index",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-02-10",
+      "published": "2025-02-10",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Economics": "https://www.anthropic.com/research/team/economics"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "1119a323bae97e3e321f",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/constitutional-classifiers",
+      "title": "Constitutional Classifiers: Defending against universal jailbreaks",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-02-03",
+      "published": "2025-02-03",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "f9ee09667a68cfc0ea34",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/speech-tokenization-made-simple",
+      "title": "dMel: Speech Tokenization Made Simple",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-02",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "84b9cee14fd45ef920cb",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/pixel-space-diffusion-models",
+      "title": "Novel View Synthesis with Pixel-Space Diffusion Models",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-02",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "397f33abbfa3691dfd01",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/towards-better-instruction-following",
+      "title": "MIA-Bench: Towards Better Instruction Following Evaluation of Multimodal LLMs",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-02",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "7eeb10ebdf0bd78f659c",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/grounding-multimodal-large",
+      "title": "Grounding Multimodal Large Language Models in Actions",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": null,
+      "published": "2025-02",
+      "listed_on": "https://machinelearning.apple.com/research",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
       "date_basis": "상세 글"
     },
     {
@@ -10233,6 +13266,22 @@
       "date_basis": "공식 목록"
     },
     {
+      "id": "31e8a151f1fc4462c5d8",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/swe-bench-sonnet",
+      "title": "Raising the bar on SWE-bench Verified with Claude 3.5 Sonnet",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2025-01-06",
+      "published": "2025-01-06",
+      "listed_on": "https://www.anthropic.com/engineering",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Engineering": "https://www.anthropic.com/engineering"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "f10edf09e2303270dfed",
       "source": "14",
       "url": "https://qwen.ai/research/qvq-72b-preview",
@@ -10269,6 +13318,38 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": "2024-12-23",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "2609b9763cec7c2e33a4",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/building-effective-agents",
+      "title": "Building effective agents",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2024-12-19",
+      "published": "2024-12-19",
+      "listed_on": "https://www.anthropic.com/engineering",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Engineering": "https://www.anthropic.com/engineering"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "56c74661496c347bccb9",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/alignment-faking",
+      "title": "Alignment faking in large language models",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2024-12-18",
+      "published": "2024-12-18",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -10360,6 +13441,23 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": null,
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "2d9d18620eb934fe3388",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/clio",
+      "title": "Clio: A system for privacy-preserving insights into real-world AI use",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2024-12-12",
+      "published": "2024-12-12",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Societal Impacts": "https://www.anthropic.com/research/team/societal-impacts"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -10493,6 +13591,22 @@
       "date_basis": "공식 목록"
     },
     {
+      "id": "aeaf02d2917710bee2a4",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/statistical-approach-to-model-evals",
+      "title": "A statistical approach to model evaluations",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2024-11-19",
+      "published": "2024-11-19",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "794fc5ef3a1fcc3c1aa0",
       "source": "14",
       "url": "https://qwen.ai/research/qwen2.5-turbo",
@@ -10558,6 +13672,56 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "c1fb02e3f42307bae2fb",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/evaluating-feature-steering",
+      "title": "Evaluating feature steering: A case study in mitigating social biases",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2024-10-25",
+      "published": "2024-10-25",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability",
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Societal Impacts": "https://www.anthropic.com/research/team/societal-impacts"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "9b2636ef1ef8ddc6ab35",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/sabotage-evaluations",
+      "title": "Sabotage evaluations for frontier models",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2024-10-18",
+      "published": "2024-10-18",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "09549c3fdd0a9f929dbc",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/features-as-classifiers",
+      "title": "Using dictionary learning features as classifiers",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2024-10-16",
+      "published": "2024-10-16",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "c41e33b561145daa77d8",
       "source": "24",
       "url": "https://blog.eleuther.ai/mad_research_update_2/",
@@ -10584,6 +13748,22 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "e2c9219cbe233e645a5c",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/circuits-updates-sept-2024",
+      "title": "Circuits Updates – September 2024",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2024-10-01",
+      "published": "2024-10-01",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "6e0143a23bc946e21c5e",
       "source": "3",
       "url": "https://www.goodfire.com/research/understanding-and-steering-llama-3",
@@ -10594,6 +13774,22 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": "2024-09-25",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "4ef52cd1fa3bcc8fddef",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/contextual-retrieval",
+      "title": "Introducing Contextual Retrieval",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2024-09-19",
+      "published": "2024-09-19",
+      "listed_on": "https://www.anthropic.com/engineering",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Engineering": "https://www.anthropic.com/engineering"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -10659,6 +13855,22 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": null,
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "cea812232cfb5af588e8",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/circuits-updates-august-2024",
+      "title": "Circuits Updates – August 2024",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2024-09-06",
+      "published": "2024-09-06",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -10831,6 +14043,22 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "9e8ebeb23a0876f0b96c",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/circuits-updates-july-2024",
+      "title": "Circuits Updates – July 2024",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2024-07-31",
+      "published": "2024-07-31",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "1b45545bc7f94007fecf",
       "source": "20",
       "url": "https://sakana.ai/evo-ukiyoe/",
@@ -10870,6 +14098,38 @@
       "date_basis": "상세 글"
     },
     {
+      "id": "3f11e6027fb5ab8ddc13",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/circuits-updates-june-2024",
+      "title": "Circuits Updates – June 2024",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2024-06-28",
+      "published": "2024-06-28",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "2232fdc51547ab2bf80c",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/reward-tampering",
+      "title": "Sycophancy to subterfuge: Investigating reward tampering in language models",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2024-06-17",
+      "published": "2024-06-17",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "a4c4f88d57e415c6c9d8",
       "source": "20",
       "url": "https://sakana.ai/llm-squared/",
@@ -10880,6 +14140,38 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": "2024-06-13",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "7cceba2f858f3d4267d2",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/engineering-challenges-interpretability",
+      "title": "The engineering challenges of scaling interpretability",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2024-06-13",
+      "published": "2024-06-13",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "5bb2961fce6e46b0a3ee",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/claude-character",
+      "title": "Claude’s character",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2024-06-08",
+      "published": "2024-06-08",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -10909,6 +14201,22 @@
       "date_basis": "공식 목록"
     },
     {
+      "id": "22b607892c1ceb05a9e7",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/golden-gate-claude",
+      "title": "Golden Gate Claude",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2024-05-23",
+      "published": "2024-05-23",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "0d55e60ddada9bf13b63",
       "source": "27",
       "url": "https://crfm.stanford.edu/2024/05/21/fmti-may-2024.html",
@@ -10920,6 +14228,22 @@
       "kind": "공식 연구 게시글",
       "listing_date": "2024-05-21",
       "date_basis": "공식 목록"
+    },
+    {
+      "id": "5d0ba7d10fc491c5d7e3",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/mapping-mind-language-model",
+      "title": "Mapping the mind of a large language model",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2024-05-21",
+      "published": "2024-05-21",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
+      "date_basis": "상세 글"
     },
     {
       "id": "691f10c6ac6074740f5b",
@@ -10961,6 +14285,22 @@
       "date_basis": "공식 목록"
     },
     {
+      "id": "d417ad74d18f794e551f",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/circuits-updates-april-2024",
+      "title": "Circuits Updates – April 2024",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2024-04-26",
+      "published": "2024-04-26",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "12c4d88a029d5749131a",
       "source": "14",
       "url": "https://qwen.ai/research/qwen1.5-110b",
@@ -10972,6 +14312,23 @@
       "kind": "공식 연구 게시글",
       "listing_date": "2024-04-25",
       "date_basis": "공식 목록"
+    },
+    {
+      "id": "f4817af4dc04d071fb70",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/probes-catch-sleeper-agents",
+      "title": "Simple probes can catch sleeper agents",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2024-04-23",
+      "published": "2024-04-23",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment",
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
+      "date_basis": "상세 글"
     },
     {
       "id": "195e1c4120b29599b6da",
@@ -11000,6 +14357,23 @@
       "date_basis": "공식 목록"
     },
     {
+      "id": "6a239fb20b3006e7cfe2",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/measuring-model-persuasiveness",
+      "title": "Measuring the persuasiveness of language models",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2024-04-09",
+      "published": "2024-04-09",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Societal Impacts": "https://www.anthropic.com/research/team/societal-impacts"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "02b99a9fdd16b361f137",
       "source": "27",
       "url": "https://crfm.stanford.edu/2024/04/08/aups.html",
@@ -11024,6 +14398,22 @@
       "kind": "공식 연구 게시글",
       "listing_date": "2024-04-02",
       "date_basis": "공식 목록"
+    },
+    {
+      "id": "21f12ea8f6176592ed71",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/many-shot-jailbreaking",
+      "title": "Many-shot jailbreaking",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2024-04-02",
+      "published": "2024-04-02",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
     },
     {
       "id": "e9987dc752e2d81ab681",
@@ -11075,6 +14465,22 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": "2024-03-21",
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "a1b742471acf885b7a78",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/transformer-circuits",
+      "title": "Reflections on qualitative research",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2024-03-08",
+      "published": "2024-03-08",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -11143,6 +14549,22 @@
       "date_basis": "공식 목록"
     },
     {
+      "id": "068c73265091f33be886",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/sleeper-agents-training-deceptive-llms-that-persist-through-safety-training",
+      "title": "Sleeper Agents: Training deceptive LLMs that persist through safety training",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2024-01-14",
+      "published": "2024-01-14",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "21ebaf1e70767159273b",
       "source": "27",
       "url": "https://crfm.stanford.edu/2023/12/19/helm-lite.html",
@@ -11166,6 +14588,23 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": null,
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "00db5003036a954a66c3",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/evaluating-and-mitigating-discrimination-in-language-model-decisions",
+      "title": "Evaluating and mitigating discrimination in language model decisions",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2023-12-07",
+      "published": "2023-12-07",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Societal Impacts": "https://www.anthropic.com/research/team/societal-impacts"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -11195,6 +14634,38 @@
       "date_basis": "공식 목록"
     },
     {
+      "id": "4552ad3494e0d8d90c06",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/specific-versus-general-principles-for-constitutional-ai",
+      "title": "Specific versus general principles for Constitutional AI",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2023-10-24",
+      "published": "2023-10-24",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "d44b4efb882a8219d0b2",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/towards-understanding-sycophancy-in-language-models",
+      "title": "Towards understanding sycophancy in language models",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2023-10-23",
+      "published": "2023-10-23",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "738f468a70e43c5c4a3b",
       "source": "9",
       "url": "https://www.salesforce.com/blog/from-copilot-to-coorchestration/?bc=HL",
@@ -11205,6 +14676,23 @@
       "official_html": true,
       "kind": "공식 연구 게시글",
       "listing_date": null,
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "232395e4e8ba76782b61",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/collective-constitutional-ai-aligning-a-language-model-with-public-input",
+      "title": "Collective Constitutional AI: Aligning a language model with public input",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2023-10-17",
+      "published": "2023-10-17",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Societal Impacts": "https://www.anthropic.com/research/team/societal-impacts"
+      },
       "date_basis": "상세 글"
     },
     {
@@ -11234,6 +14722,55 @@
       "date_basis": "공식 목록"
     },
     {
+      "id": "3cf93ff9d332f4861f5b",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/towards-monosemanticity-decomposing-language-models-with-dictionary-learning",
+      "title": "Towards monosemanticity: Decomposing language models with dictionary learning",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2023-10-05",
+      "published": "2023-10-05",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "2d6c0618dd4d735ec2b3",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/decomposing-language-models-into-understandable-components",
+      "title": "Decomposing language models into understandable components",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2023-10-05",
+      "published": "2023-10-05",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "ba92757338ba6cf95d9f",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/evaluating-ai-systems",
+      "title": "Challenges in evaluating AI systems",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2023-10-04",
+      "published": "2023-10-04",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Frontier Red Team": "https://www.anthropic.com/research/team/frontier-red-team"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "b3a6eb672724ff78431a",
       "source": "27",
       "url": "https://crfm.stanford.edu/2023/10/02/open-fm-workshop.html",
@@ -11260,6 +14797,38 @@
       "date_basis": "공식 목록"
     },
     {
+      "id": "351cd5d25a5fc3417d63",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/studying-large-language-model-generalization-with-influence-functions",
+      "title": "Studying large language model generalization with influence functions",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2023-08-08",
+      "published": "2023-08-08",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "9aaf4436e51d88ef316e",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/influence-functions",
+      "title": "Tracing model outputs to the training data",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2023-08-08",
+      "published": "2023-08-08",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "f475b25878541c323609",
       "source": "27",
       "url": "https://crfm.stanford.edu/2023/07/30/watermarking.html",
@@ -11271,6 +14840,38 @@
       "kind": "공식 연구 게시글",
       "listing_date": "2023-07-30",
       "date_basis": "공식 목록"
+    },
+    {
+      "id": "9dd1a7cdcdc2d0cfefbd",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/question-decomposition-improves-the-faithfulness-of-model-generated-reasoning",
+      "title": "Question decomposition improves the faithfulness of model-generated reasoning",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2023-07-18",
+      "published": "2023-07-18",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "47e5b44c1cdfe87c00cf",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/measuring-faithfulness-in-chain-of-thought-reasoning",
+      "title": "Measuring faithfulness in Chain-of-Thought reasoning",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2023-07-18",
+      "published": "2023-07-18",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
     },
     {
       "id": "e82697fa1d5b49a61134",
@@ -11286,10 +14887,27 @@
       "date_basis": "공식 목록"
     },
     {
+      "id": "3c50af3c6775cc27d902",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/towards-measuring-the-representation-of-subjective-global-opinions-in-language-models",
+      "title": "Towards measuring the representation of subjective global opinions in language models",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2023-06-29",
+      "published": "2023-06-29",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Societal Impacts": "https://www.anthropic.com/research/team/societal-impacts"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "91dc623a72c18e36f3f9",
       "source": "27",
       "url": "https://crfm.stanford.edu/2023/06/16/levanter-1_0-release.html",
-      "title": "Levanter",
+      "title": "Levanter — Legible, Scalable, Reproducible Foundation Models with JAX",
       "discovered": "2026-11-03T08:14:52+00:00",
       "published": "2023-06-16",
       "listed_on": "https://crfm.stanford.edu/blog.html",
@@ -11325,6 +14943,38 @@
       "date_basis": "공식 목록"
     },
     {
+      "id": "08082c3be78c8880c519",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/interpretability-dreams",
+      "title": "Interpretability dreams",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2023-05-24",
+      "published": "2023-05-24",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "783b148f704ea5a35069",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/circuits-updates-may-2023",
+      "title": "Circuits Updates — May 2023",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2023-05-24",
+      "published": "2023-05-24",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "c155ecb1ef61f93783b1",
       "source": "27",
       "url": "https://crfm.stanford.edu/2023/05/22/alpaca-farm.html",
@@ -11338,6 +14988,22 @@
       "date_basis": "공식 목록"
     },
     {
+      "id": "9a854b1f61294dbd6491",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/distributed-representations-composition-superposition",
+      "title": "Distributed representations: Composition & superposition",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2023-05-04",
+      "published": "2023-05-04",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "02e22c835b2254da5a8b",
       "source": "27",
       "url": "https://crfm.stanford.edu/2023/03/29/ecosystem-graphs.html",
@@ -11349,6 +15015,22 @@
       "kind": "공식 연구 게시글",
       "listing_date": "2023-03-29",
       "date_basis": "공식 목록"
+    },
+    {
+      "id": "90f508eef3e3606c1541",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/privileged-bases-in-the-transformer-residual-stream",
+      "title": "Privileged bases in the transformer residual stream",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2023-03-16",
+      "published": "2023-03-16",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
+      "date_basis": "상세 글"
     },
     {
       "id": "80db97d5a9d577b27240",
@@ -11390,6 +15072,23 @@
       "date_basis": "공식 목록"
     },
     {
+      "id": "46e42809fa1ffdd0ec11",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/the-capacity-for-moral-self-correction-in-large-language-models",
+      "title": "The capacity for moral self-correction in large language models",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2023-02-15",
+      "published": "2023-02-15",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Societal Impacts": "https://www.anthropic.com/research/team/societal-impacts"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "1561c528bfd156b1e4b8",
       "source": "27",
       "url": "https://crfm.stanford.edu/2023/01/13/flashattention.html",
@@ -11401,6 +15100,22 @@
       "kind": "공식 연구 게시글",
       "listing_date": "2023-01-13",
       "date_basis": "공식 목록"
+    },
+    {
+      "id": "c0db92dc6d3dc6a6ee0a",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/superposition-memorization-and-double-descent",
+      "title": "Superposition, memorization, and double descent",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2023-01-05",
+      "published": "2023-01-05",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
+      "date_basis": "상세 글"
     },
     {
       "id": "d276e3b041ba7ab17042",
@@ -11429,6 +15144,22 @@
       "date_basis": "공식 목록"
     },
     {
+      "id": "aa8fdfc892efd473ce0f",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/discovering-language-model-behaviors-with-model-written-evaluations",
+      "title": "Discovering Language Model Behaviors with Model-Written Evaluations",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2022-12-19",
+      "published": "2022-12-19",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "36e8a304e406d388b551",
       "source": "27",
       "url": "https://crfm.stanford.edu/2022/12/15/biomedlm.html",
@@ -11440,6 +15171,22 @@
       "kind": "공식 연구 게시글",
       "listing_date": "2022-12-15",
       "date_basis": "공식 목록"
+    },
+    {
+      "id": "85ee4e67d5c1de5dabdf",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback",
+      "title": "Constitutional AI: Harmlessness from AI feedback",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2022-12-15",
+      "published": "2022-12-15",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
     },
     {
       "id": "399c4c27d2ae5dc5dc82",
@@ -11468,6 +15215,71 @@
       "date_basis": "공식 목록"
     },
     {
+      "id": "cb3dbed5153ac98b6fa0",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/measuring-progress-on-scalable-oversight-for-large-language-models",
+      "title": "Measuring progress on scalable oversight for large language models",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2022-11-04",
+      "published": "2022-11-04",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "7a438f3a52a9176ced12",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/toy-models-of-superposition",
+      "title": "Toy models of superposition",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2022-09-14",
+      "published": "2022-09-14",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "c3a5091fa134f2645828",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/red-teaming-language-models-to-reduce-harms-methods-scaling-behaviors-and-lessons-learned",
+      "title": "Red teaming language models to reduce harms: methods, scaling behaviors, and lessons learned",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2022-08-22",
+      "published": "2022-08-22",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Societal Impacts": "https://www.anthropic.com/research/team/societal-impacts"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "a46d2767c3b31838bca7",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/language-models-mostly-know-what-they-know",
+      "title": "Language models (mostly) know what they know",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2022-07-11",
+      "published": "2022-07-11",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "b480bfc02b4099edaa27",
       "source": "27",
       "url": "https://crfm.stanford.edu/2022/06/24/30-years.html",
@@ -11479,6 +15291,38 @@
       "kind": "공식 연구 게시글",
       "listing_date": "2022-06-24",
       "date_basis": "공식 목록"
+    },
+    {
+      "id": "31fbd5ab4f080d230dac",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/softmax-linear-units",
+      "title": "Softmax Linear Units",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2022-06-17",
+      "published": "2022-06-17",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "83db048dd05738bc4c8c",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/scaling-laws-and-interpretability-of-learning-from-repeated-data",
+      "title": "Scaling laws and interpretability of learning from repeated data",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2022-05-21",
+      "published": "2022-05-21",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
+      "date_basis": "상세 글"
     },
     {
       "id": "4f98f460c7efa7ef4704",
@@ -11507,6 +15351,38 @@
       "date_basis": "공식 목록"
     },
     {
+      "id": "c1aa4d55ad0706a59afa",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/training-a-helpful-and-harmless-assistant-with-reinforcement-learning-from-human-feedback",
+      "title": "Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2022-04-12",
+      "published": "2022-04-12",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "e0b091643e0d9821f348",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/in-context-learning-and-induction-heads",
+      "title": "In-context learning and induction heads",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2022-03-08",
+      "published": "2022-03-08",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
+      "date_basis": "상세 글"
+    },
+    {
       "id": "50c3784f056bb561cd8f",
       "source": "27",
       "url": "https://crfm.stanford.edu/2022/02/16/dabs.html",
@@ -11518,6 +15394,55 @@
       "kind": "공식 연구 게시글",
       "listing_date": "2022-02-16",
       "date_basis": "공식 목록"
+    },
+    {
+      "id": "053e80d54d5d4238e8d2",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/predictability-and-surprise-in-large-generative-models",
+      "title": "Predictability and Surprise in Large Generative Models",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2022-02-15",
+      "published": "2022-02-15",
+      "listed_on": "https://www.anthropic.com/institute",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "The Anthropic Institute": "https://www.anthropic.com/institute",
+        "Societal Impacts": "https://www.anthropic.com/research/team/societal-impacts"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "27d7b46369e215f08bb3",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/a-mathematical-framework-for-transformer-circuits",
+      "title": "A Mathematical Framework for Transformer Circuits",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2021-12-22",
+      "published": "2021-12-22",
+      "listed_on": "https://www.anthropic.com/research/team/interpretability",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Interpretability": "https://www.anthropic.com/research/team/interpretability"
+      },
+      "date_basis": "상세 글"
+    },
+    {
+      "id": "5604f9a66e55391c5f46",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/a-general-language-assistant-as-a-laboratory-for-alignment",
+      "title": "A General Language Assistant as a Laboratory for Alignment",
+      "discovered": "2026-11-03T09:10:37+00:00",
+      "listing_date": "2021-12-01",
+      "published": "2021-12-01",
+      "listed_on": "https://www.anthropic.com/research/team/alignment",
+      "official_html": true,
+      "kind": "공식 연구 게시글",
+      "teams": {
+        "Alignment": "https://www.anthropic.com/research/team/alignment"
+      },
+      "date_basis": "상세 글"
     },
     {
       "id": "331e723cb44db0ef1a86",
@@ -11574,15 +15499,15 @@
   ],
   "status": {
     "0": {
-      "ok": true,
-      "count": 4,
+      "ok": false,
+      "count": 0,
       "partial": false,
-      "error": "",
+      "error": "403 Client Error: Forbidden for url: https://openai.com/research/index/",
       "next_url": null
     },
     "1": {
       "ok": true,
-      "count": 22,
+      "count": 209,
       "partial": false,
       "error": "",
       "next_url": null
@@ -11624,10 +15549,10 @@
     },
     "7": {
       "ok": true,
-      "count": 420,
+      "count": 480,
       "partial": false,
       "error": "",
-      "next_url": "https://machinelearning.apple.com/research/humanoid-policy"
+      "next_url": "https://machinelearning.apple.com/research/keyframer"
     },
     "8": {
       "ok": true,

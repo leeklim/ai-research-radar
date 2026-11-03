@@ -123,6 +123,29 @@ def verify_html(url,listing):
 
 
 def catalog(s):
+    if s.get("team"):
+        # Featured work is not always present in the team's paginated list.
+        soup=BeautifulSoup(fetch(s["url"]).content,"html.parser")
+        for a in soup.select("main a[href]:has(h2),main h2 a[href]"):
+            title=a.select_one("h2") or a
+            url=urljoin(s["url"],a["href"])
+            if urlsplit(url).path.startswith(("/research/","/institute/")) and "/team/" not in url:
+                yield url,title.get_text(" ",strip=True),None
+        page=1
+        while True:
+            endpoint=f"https://www.anthropic.com/listing/{s['feed']}/default/{page}"
+            data=fetch(endpoint).json()
+            for post in data["posts"]:
+                path=post.get("linkedUrl")
+                slug=(post.get("slug") or {}).get("current")
+                if not path and slug and post.get("articleType") in ("research","engineering","institute","news"):
+                    path=f"/{post['articleType']}/{slug}"
+                if path and post.get("title"):
+                    yield urljoin(s["url"],path),post["title"].strip(),day(post.get("publishedOn") or "")
+            if not data["hasNextPage"]:
+                break
+            page+=1
+        return
     if s["id"]=="14":
         # This is the first-party content response used by the Qwen research page.
         for post in fetch("https://qwen.ai/api/page_config?code=research.research-list&language=en").json():
@@ -185,12 +208,16 @@ def catalog(s):
 def collect(s, old, cursor):
     rows = {}
     errors = []
-    for listing in [s]+s.get("additional",[]):
+    memberships = {}
+    for listing in listings(s):
         try:
             count = 0
             for url,title,published in catalog(dict(listing,id=s["id"])):
                 if official_post(url,listing["url"]):
-                    rows.setdefault(url,(title,published,listing["url"]))
+                    if listing.get("team"):
+                        memberships.setdefault(url,{})[listing["team"]]=listing["url"]
+                    if url not in rows or (published and not rows[url][1]):
+                        rows[url]=(title,published,listing["url"])
                     count += 1
             if not count:
                 errors.append("공식 목록에서 연구 링크를 확인하지 못함")
@@ -209,12 +236,16 @@ def collect(s, old, cursor):
     with ThreadPoolExecutor(max_workers=3) as checks:
         start = next((i for i,r in enumerate(queue) if r[0]==cursor),0)
         pending = queue[start:]+queue[:start]
-        batch = pending[:60]
+        batch = pending if memberships else pending[:60]
         for row,destination in zip(batch,checks.map(lambda r:verify_html(r[0],r[3]),batch)):
             if destination:
                 url,title,published,listing=row
                 verified[url]=(title,published,listing,destination)
-    return s,verified," / ".join(errors),pending[60][0] if len(pending)>60 else None
+    return s,verified," / ".join(errors),pending[len(batch)][0] if len(pending)>len(batch) else None,memberships
+
+
+def listings(s):
+    return s["additional"] if s["id"]=="1" else [s]+s.get("additional",[])
 
 
 def main():
@@ -222,17 +253,20 @@ def main():
     output = ROOT/"docs/data.json"
     snapshot = json.loads(output.read_text("utf8"))
     old = {x["id"]:x for x in snapshot["items"]}
-    lists = {s["id"]:{v["url"] for v in [s]+s.get("additional",[])} for s in sources}
+    lists = {s["id"]:{v["url"] for v in listings(s)} for s in sources}
     # Keep historical listings only if the official page was recorded as evidence.
     items = {k:v for k,v in old.items() if v.get("official_html") and v.get("listed_on") in lists.get(v["source"],set()) and official_post(v["url"],v["listed_on"])}
     status = {}
     with ThreadPoolExecutor(max_workers=6) as pool:
-        for s, rows, error, cursor in pool.map(lambda s:collect(s,old,snapshot["status"].get(s["id"],{}).get("next_url")),sources):
+        for s, rows, error, cursor, memberships in pool.map(lambda s:collect(s,old,snapshot["status"].get(s["id"],{}).get("next_url")),sources):
             for url,(title,published,listing,destination) in rows.items():
                 key = hashlib.sha256((s["id"]+"|"+url.rstrip("/")).encode()).hexdigest()[:20]
                 previous = old.get(key,{})
                 items[key] = dict(previous,id=key,source=s["id"],url=destination,title=title,discovered=previous.get("discovered",NOW),
                                   listing_date=published or previous.get("listing_date"),published=previous.get("published"),listed_on=listing,official_html=True,kind="공식 연구 게시글")
+                if url in memberships:
+                    previous_teams={team:page for team,page in previous.get("teams",{}).items() if page in lists[s["id"]]}
+                    items[key]["teams"]={**previous_teams,**memberships[url]}
             status[s["id"]] = dict(ok=bool(rows),count=len(rows),partial=bool(rows and error),error=error or "",next_url=cursor)
             print(s["name"],len(rows),error or "",flush=True)
     pending=[item for item in items.values() if item.get("date_basis")!="상세 글"]

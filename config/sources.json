@@ -9,7 +9,48 @@
     "id": "1",
     "name": "Anthropic",
     "url": "https://www.anthropic.com/research",
-    "row": "main h3 a[href^='/research/'], main [class*='publication'] a[href^='/research/']"
+    "additional": [
+      {
+        "team": "Alignment",
+        "url": "https://www.anthropic.com/research/team/alignment",
+        "feed": "team-alignment"
+      },
+      {
+        "team": "Interpretability",
+        "url": "https://www.anthropic.com/research/team/interpretability",
+        "feed": "team-interpretability"
+      },
+      {
+        "team": "Engineering",
+        "url": "https://www.anthropic.com/engineering",
+        "feed": "team-engineering"
+      },
+      {
+        "team": "Science",
+        "url": "https://www.anthropic.com/science",
+        "feed": "team-science"
+      },
+      {
+        "team": "The Anthropic Institute",
+        "url": "https://www.anthropic.com/institute",
+        "feed": "collection-institute"
+      },
+      {
+        "team": "Economics",
+        "url": "https://www.anthropic.com/research/team/economics",
+        "feed": "team-economics"
+      },
+      {
+        "team": "Frontier Red Team",
+        "url": "https://www.anthropic.com/research/team/frontier-red-team",
+        "feed": "team-frontier-red-team"
+      },
+      {
+        "team": "Societal Impacts",
+        "url": "https://www.anthropic.com/research/team/societal-impacts",
+        "feed": "team-societal-impacts"
+      }
+    ]
   },
   {
     "id": "2",
