@@ -1,6 +1,78 @@
 {
-  "updated": "2026-11-03T07:47:32+00:00",
+  "updated": "2026-11-03T07:50:21+00:00",
   "items": [
+    {
+      "id": "1cf5f2772345a0cd8f22",
+      "source": "0",
+      "url": "https://openai.com/research/index/",
+      "title": "View research index",
+      "discovered": "2026-11-03T07:50:21+00:00",
+      "published": null
+    },
+    {
+      "id": "96c3fc03bd04e7c039a6",
+      "source": "11",
+      "url": "https://www.amazon.science/publications/qasp-query-adaptive-robust-vector-search-policy",
+      "title": "QASP: Query-adaptive robust vector search policy",
+      "discovered": "2026-11-03T07:50:21+00:00",
+      "published": null
+    },
+    {
+      "id": "f083ab080cdf55469c14",
+      "source": "11",
+      "url": "https://www.amazon.science/research-areas/search-and-information-retrieval",
+      "title": "Search and information retrieval",
+      "discovered": "2026-11-03T07:50:21+00:00",
+      "published": null
+    },
+    {
+      "id": "58c3f1c361f6a653143e",
+      "source": "11",
+      "url": "https://www.amazon.science/publications/unisaf-bench-intention-grounded-safety-evaluation-for-unified-multimodal-generation-models",
+      "title": "UNISAF-BENCH: Intention-grounded safety evaluation for unified multimodal generation models",
+      "discovered": "2026-11-03T07:50:21+00:00",
+      "published": null
+    },
+    {
+      "id": "a686bf7a7331ad9146c6",
+      "source": "11",
+      "url": "https://www.amazon.science/publications/wise-flow-workflow-induced-structured-experience-for-self-evolving-conversational-service-agents",
+      "title": "WISE-Flow: Workflow-induced structured experience for self-evolving conversational service agents",
+      "discovered": "2026-11-03T07:50:21+00:00",
+      "published": null
+    },
+    {
+      "id": "1466d5a109d40e6592e9",
+      "source": "11",
+      "url": "https://www.amazon.science/publications/omniqum-multilingual-query-to-location-understanding-model-for-local-search",
+      "title": "OmniQUM: Multilingual query-to-location understanding model for local search",
+      "discovered": "2026-11-03T07:50:21+00:00",
+      "published": null
+    },
+    {
+      "id": "8f57c29e986646a52e06",
+      "source": "11",
+      "url": "https://www.amazon.science/publications/retrieval-augmented-generation-must-move-beyond-factual-grounding-to-represent-diverse-opinions",
+      "title": "Retrieval-augmented generation must move beyond factual grounding to represent diverse opinions",
+      "discovered": "2026-11-03T07:50:21+00:00",
+      "published": null
+    },
+    {
+      "id": "2b53d838c1c86d336daa",
+      "source": "11",
+      "url": "https://www.amazon.science/publications/trustworthy-llm-based-rule-learning-for-auditable-agentic-decision-making",
+      "title": "Trustworthy LLM-based rule learning for auditable agentic decision-making",
+      "discovered": "2026-11-03T07:50:21+00:00",
+      "published": null
+    },
+    {
+      "id": "25c17884095f062f892d",
+      "source": "11",
+      "url": "https://www.amazon.science/publications/distill-globally-adapt-locally-reasoning-distillation-and-product-type-test-time-training-for-scalable-trade-up-recommendation",
+      "title": "Distill globally, adapt locally: Reasoning distillation and product-type test-time training for scalable trade-up recommendation",
+      "discovered": "2026-11-03T07:50:21+00:00",
+      "published": null
+    },
     {
       "id": "bff7bcfd268389e7c4ec",
       "source": "1",
@@ -2228,20 +2300,20 @@
   ],
   "status": {
     "0": {
-      "ok": false,
-      "error": "403 Client Error: Forbidden for url: https://openai.com/research/"
+      "ok": true,
+      "new": 1
     },
     "1": {
       "ok": true,
-      "new": 24
+      "new": 0
     },
     "2": {
       "ok": true,
-      "new": 2
+      "new": 0
     },
     "3": {
       "ok": true,
-      "new": 40
+      "new": 0
     },
     "4": {
       "ok": true,
@@ -2249,19 +2321,19 @@
     },
     "5": {
       "ok": true,
-      "new": 10
+      "new": 0
     },
     "6": {
       "ok": true,
-      "new": 16
+      "new": 0
     },
     "7": {
       "ok": true,
-      "new": 10
+      "new": 0
     },
     "8": {
       "ok": true,
-      "new": 20
+      "new": 0
     },
     "9": {
       "ok": false,
@@ -2269,11 +2341,11 @@
     },
     "10": {
       "ok": true,
-      "new": 25
+      "new": 0
     },
     "11": {
       "ok": true,
-      "new": 19
+      "new": 8
     },
     "12": {
       "ok": true,
@@ -2281,7 +2353,7 @@
     },
     "13": {
       "ok": true,
-      "new": 39
+      "new": 0
     },
     "14": {
       "ok": true,
@@ -2289,11 +2361,11 @@
     },
     "15": {
       "ok": true,
-      "new": 15
+      "new": 0
     },
     "16": {
       "ok": true,
-      "new": 5
+      "new": 0
     },
     "17": {
       "ok": true,
@@ -2301,11 +2373,11 @@
     },
     "18": {
       "ok": true,
-      "new": 5
+      "new": 0
     },
     "19": {
       "ok": true,
-      "new": 15
+      "new": 0
     },
     "20": {
       "ok": true,
@@ -2313,27 +2385,27 @@
     },
     "21": {
       "ok": true,
-      "new": 7
+      "new": 0
     },
     "22": {
       "ok": true,
-      "new": 4
+      "new": 0
     },
     "23": {
       "ok": true,
-      "new": 1
+      "new": 0
     },
     "24": {
       "ok": true,
-      "new": 12
+      "new": 0
     },
     "25": {
       "ok": true,
-      "new": 6
+      "new": 0
     },
     "26": {
       "ok": true,
-      "new": 3
+      "new": 0
     }
   }
 }
