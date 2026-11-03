@@ -62,22 +62,14 @@
   {
     "id": "9",
     "name": "Salesforce AI Research",
-    "url": "https://www.salesforceairesearch.com/publications",
-    "row": "main a[href*='arxiv.org/abs/'],main a[href*='openreview.net/forum']",
-    "additional": [
-      {
-        "url": "https://www.salesforce.com/blog/salesforce-iclr-2026/",
-        "row": "article h4:has(a[href])",
-        "link": "a[href]",
-        "title": "self"
-      }
-    ]
+    "url": "https://www.salesforce.com/blog/category/ai-research/",
+    "row": "main .card__title a[href*=\"/blog/\"]"
   },
   {
     "id": "10",
     "name": "Ai2",
-    "url": "https://allenai.org/papers",
-    "row": "h2 a[href*='semanticscholar.org/paper/']"
+    "url": "https://allenai.org/blog",
+    "row": "main a[href^='/blog/']"
   },
   {
     "id": "11",
@@ -88,16 +80,14 @@
   {
     "id": "12",
     "name": "DeepSeek",
-    "url": "https://www.deepseek.com/en/transparency/",
-    "row": "div.border-b:has(.ds-text-title)",
-    "link": "a[href*='huggingface.co/deepseek-ai/'][href$='.pdf']",
-    "title": ".ds-text-title"
+    "url": "https://www.deepseek.com/en/news/",
+    "row": "main a[href^='/en/news/'][href*='v']"
   },
   {
     "id": "13",
     "name": "Mistral AI",
-    "url": "https://mistral.ai/research",
-    "row": "a[href*='arxiv.org/abs/'],a[href*='technical_report']"
+    "url": "https://mistral.ai/research/",
+    "row": "a[href^='/news/']:-soup-contains('Research')"
   },
   {
     "id": "14",
@@ -114,8 +104,8 @@
   {
     "id": "16",
     "name": "xAI",
-    "url": "https://x.ai/safety",
-    "row": "a[href*='media.x.ai'][href$='.pdf']:-soup-contains('Grok'), a[href*='data.x.ai'][href$='.pdf']:-soup-contains('Grok')"
+    "url": "https://x.ai/news",
+    "row": "a[href*=\"/news/\"]:-soup-contains(\"Research\")"
   },
   {
     "id": "17",
@@ -137,8 +127,8 @@
     "id": "19",
     "name": "Liquid AI",
     "url": "https://www.liquid.ai/research",
-    "row": "li:has(a[href])",
-    "link": "a:-soup-contains('View publication')",
+    "row": "li:has(a[href^='/blog/'])",
+    "link": "a[href^='/blog/']",
     "title": "span.font-serif",
     "date": "time"
   },
@@ -163,9 +153,7 @@
     "id": "22",
     "name": "Redwood Research",
     "url": "https://www.redwoodresearch.org/research",
-    "row": "article:has(a[href*='arxiv.org'])",
-    "link": "a[href*='arxiv.org']",
-    "title": "h2,h3"
+    "row": "main a[href^='/research/']"
   },
   {
     "id": "23",
@@ -179,29 +167,27 @@
   {
     "id": "24",
     "name": "EleutherAI",
-    "url": "https://eleuther.ai/papers/",
-    "row": ".library-year-group a[href]",
-    "title": "h3"
+    "url": "https://blog.eleuther.ai/",
+    "row": "main a[href^=\"/\"]:not(.link)"
   },
   {
     "id": "25",
     "name": "Hugging Face",
-    "url": "https://huggingface.co/collections/science/papers",
-    "row": "a[href^='/papers/']"
+    "url": "https://huggingface.co/blog",
+    "row": "article a[href^='/blog/huggingface/']",
+    "title": "h4"
   },
   {
     "id": "26",
     "name": "Jina AI",
-    "url": "https://jina.ai/#research",
-    "row": "#research a:has(.pubcard)",
-    "title": ".text-weight-light",
-    "date": ".text-caption"
+    "url": "https://jina.ai/news/",
+    "row": "a[href^='/news/jina-']"
   },
   {
     "id": "27",
     "name": "Stanford CRFM",
-    "url": "https://crfm.stanford.edu/research.html",
-    "row": "a[href*='arxiv.org/'],a[href*='aclanthology.org/'],a[href*='proceedings.mlr.press/']"
+    "url": "https://crfm.stanford.edu/blog.html",
+    "row": "a[href*='/20'][href$='.html']"
   },
   {
     "id": "28",
@@ -212,21 +198,19 @@
   {
     "id": "29",
     "name": "MIT CSAIL",
-    "url": "https://lis.csail.mit.edu/publications/",
-    "row": "a[href*='arxiv.org/'],a[href$='.pdf']"
+    "url": "https://www.csail.mit.edu/news",
+    "row": ".news-card a[href^=\"/news/\"]"
   },
   {
     "id": "30",
     "name": "CMU ML",
-    "url": "https://ml.cmu.edu/research/phd-dissertations",
-    "row": "a[href*='/research/'][href$='.pdf']"
+    "url": "https://blog.ml.cmu.edu/category/research/",
+    "row": ".post-header h3 a"
   },
   {
     "id": "31",
     "name": "Mila",
-    "url": "https://mila.quebec/en/research/publications",
-    "row": ".mila-publication",
-    "link": ".publication-url a[href^='http']",
-    "title": ".field-name-title"
+    "url": "https://mila.quebec/en/research/blog",
+    "row": "h3 a[href^='/en/article/']"
   }
 ]
