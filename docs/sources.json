@@ -1,0 +1,137 @@
+[
+  {
+    "id": "0",
+    "name": "OpenAI",
+    "url": "https://openai.com/research/"
+  },
+  {
+    "id": "1",
+    "name": "Anthropic",
+    "url": "https://www.anthropic.com/research"
+  },
+  {
+    "id": "2",
+    "name": "Google DeepMind",
+    "url": "https://deepmind.google/research/"
+  },
+  {
+    "id": "3",
+    "name": "Goodfire",
+    "url": "https://www.goodfire.ai/research"
+  },
+  {
+    "id": "4",
+    "name": "Meta FAIR",
+    "url": "https://ai.meta.com/research/"
+  },
+  {
+    "id": "5",
+    "name": "Microsoft Research",
+    "url": "https://www.microsoft.com/en-us/research/publications/"
+  },
+  {
+    "id": "6",
+    "name": "NVIDIA Research",
+    "url": "https://research.nvidia.com/publications"
+  },
+  {
+    "id": "7",
+    "name": "Apple ML Research",
+    "url": "https://machinelearning.apple.com/research"
+  },
+  {
+    "id": "8",
+    "name": "IBM Research",
+    "url": "https://research.ibm.com/"
+  },
+  {
+    "id": "9",
+    "name": "Salesforce AI Research",
+    "url": "https://www.salesforceairesearch.com/"
+  },
+  {
+    "id": "10",
+    "name": "Ai2",
+    "url": "https://allenai.org/"
+  },
+  {
+    "id": "11",
+    "name": "Amazon Science",
+    "url": "https://www.amazon.science/publications"
+  },
+  {
+    "id": "12",
+    "name": "DeepSeek",
+    "url": "https://github.com/deepseek-ai"
+  },
+  {
+    "id": "13",
+    "name": "Mistral AI",
+    "url": "https://mistral.ai/news"
+  },
+  {
+    "id": "14",
+    "name": "Alibaba Qwen",
+    "url": "https://qwenlm.github.io/"
+  },
+  {
+    "id": "15",
+    "name": "Cohere",
+    "url": "https://cohere.com/research"
+  },
+  {
+    "id": "16",
+    "name": "xAI",
+    "url": "https://x.ai/"
+  },
+  {
+    "id": "17",
+    "name": "AI21 Labs",
+    "url": "https://www.ai21.com/"
+  },
+  {
+    "id": "18",
+    "name": "ByteDance Seed",
+    "url": "https://seed.bytedance.com/"
+  },
+  {
+    "id": "19",
+    "name": "Liquid AI",
+    "url": "https://www.liquid.ai/"
+  },
+  {
+    "id": "20",
+    "name": "Sakana AI",
+    "url": "https://sakana.ai/"
+  },
+  {
+    "id": "21",
+    "name": "Thinking Machines Lab",
+    "url": "https://thinkingmachines.ai/"
+  },
+  {
+    "id": "22",
+    "name": "Redwood Research",
+    "url": "https://www.redwoodresearch.org/"
+  },
+  {
+    "id": "23",
+    "name": "Apollo Research",
+    "url": "https://www.apolloresearch.ai/"
+  },
+  {
+    "id": "24",
+    "name": "EleutherAI",
+    "url": "https://www.eleuther.ai/"
+  },
+  {
+    "id": "25",
+    "name": "Hugging Face Papers",
+    "url": "https://huggingface.co/papers"
+  },
+  {
+    "id": "26",
+    "name": "Jina AI",
+    "url": "https://jina.ai/"
+  }
+]

@@ -1,0 +1,2339 @@
+{
+  "updated": "2026-11-03T07:47:32+00:00",
+  "items": [
+    {
+      "id": "bff7bcfd268389e7c4ec",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/team/frontier-red-team",
+      "title": "Frontier Red Team",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "67cc51543bf850584885",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/team/interpretability",
+      "title": "Interpretability",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "f822844c4b3545d4cf96",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/team/societal-impacts",
+      "title": "Societal Impacts",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "8fc2e1fc55ad495f58fe",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/provable-inference",
+      "title": "Progress on provable inference for large language models",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "3d0ab171eaea916a6b72",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/early-progress-drug-development",
+      "title": "Early progress on accelerating drug development with Claude",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "842e9ee72e9dde755b00",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/alignment-assessment-ukaisi",
+      "title": "An alignment assessment of the UK AISI cybertesting incident",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "8ed690b183085221675a",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
+      "title": "How Claude designed protein binders against scorpion neurotoxins",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "987e78e4189d773cfdcb",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/expectations-for-the-future",
+      "title": "Working at the frontier shapes expectations for the future",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "f5bfb93743bb18d0b34c",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/employment-at-anthropic",
+      "title": "How employment is changing at Anthropic",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "50cbc5b91edaf2e268a8",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/ai-expectations-gap",
+      "title": "The AI expectations gap",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "3494658182bb943ed324",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/designing-efficient-quantum-circuits",
+      "title": "Designing more efficient quantum circuits with Claude",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "40abec8e11dda1653d78",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/redesigning-source-control",
+      "title": "Redesigning source control at Anthropic",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "ec2a75df5c3ad0456aad",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+      "title": "Investigating unintended model actions in our evaluations and internal use",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "5eab3765effd0b1da45d",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/claude-shaped-science",
+      "title": "Claude-shaped science",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "22dcf4b2dadb3ce399dd",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/what-work-can-robots-do",
+      "title": "What work can robots do?",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "6eee1acb42855719bf12",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/your-thoughts-on-ai",
+      "title": "What do you want from AI?",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "08736c72e5766dea81d2",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/claude-discovers-novel-enzyme-system",
+      "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "2b8b2b27debeadd923e9",
+      "source": "1",
+      "url": "https://www.anthropic.com/institute/measuring-pace-of-ai-development",
+      "title": "Illuminating the frontier",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "326acc8c44b1581c029a",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling",
+      "title": "How Claude is uplifting biomolecular modeling",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "6f333bd7ee7f8627452f",
+      "source": "1",
+      "url": "https://www.anthropic.com/institute/econ-scenarios",
+      "title": "Scenarios for our economic future",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "69cdb0a4595ff8a281fc",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+      "title": "An alignment assessment of recent cybersecurity incidents",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "d15b91add77104a1d557",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
+      "title": "Formalizing Fermat's Last Theorem",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "604e71080582901f3026",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures",
+      "title": "Automated researchers can reliably mitigate alignment failures",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "f4880407c2438b70227e",
+      "source": "1",
+      "url": "https://www.anthropic.com/research/enabling-independent-research",
+      "title": "Enabling independent research on how people use Claude",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "3c52270eb0d642e54ca1",
+      "source": "2",
+      "url": "https://deepmind.google/research/projects/",
+      "title": "View breakthroughs",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "f0e97eca62d52081da4c",
+      "source": "2",
+      "url": "https://deepmind.google/research/publications/",
+      "title": "View all publications",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "13ee77a0d4cad6248ef3",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/already-clean",
+      "title": "Fundamental Research Neural Networks Are Already Clean Nick Cammarata Â· October 15, 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "9e2fe56538a8f0f1d2aa",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/production-cyber-monitors-on-kimi-k3",
+      "title": "Applied Research Training and Deploying Production Cyber Monitors on Kimi K3 Lubana et al. Â· October 8, 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "58bb13193cbfa8bd7f30",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/better-biosecurity-monitors",
+      "title": "Applied Research Better biosecurity monitors for AI agents via protein embeddings Dooms et al. Â· October 1, 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "9c020b80b4c3a5be65da",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/reward-hacking-activation-monitors",
+      "title": "Applied Research Models know when theyâre reward hacking â and we can catch them at scale Bergen et al. Â· September 17, 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "56d8bdcb941ce5cf0e65",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/forking-fast",
+      "title": "Fundamental Research Forking Fast: Efficiently Estimating Uncertainty Dynamics in Text Generation Bigelow et al. Â· August 20, 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "ee96428fd1ed8225e2d1",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/bsf-vision",
+      "title": "Fundamental Research Uncovering Neural Geometry in Vision Models With Block-Sparse Featurizers Fel et al. Â· July 7, 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "f52d59fc5760ddc23f58",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/stories-in-space",
+      "title": "Fundamental Research Meandering on Manifolds: The Neural Geometry of Stories Over Time Bigelow et al. Â· June 23, 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "ba4c1f7c318c93aa6de6",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/predictive-data-debugging",
+      "title": "Applied Research Predictive Data Debugging: Reveal and Shape What Your Model Learns, Before You Train Bergen et al. Â· June 11, 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "8c0cb1edbbce97d86b2a",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/logits-as-a-new-monitor-for-evaluation-awareness",
+      "title": "Link post Applied Research Logits as a new monitor for evaluation awareness Santiago Aranguri Â· June 4, 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "8435e951f9ce51416149",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/why-larger-models-learn-more",
+      "title": "Fundamental Research Link post Why Larger Models Learn More: Effects of Capacity, Interference, and Rare-Task Retention Huang et al. Â· June 1, 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "780b22f0abbb0af4b456",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/can-saes-capture-neural-geometry",
+      "title": "Fundamental Research Can SAEs Capture Neural Geometry? Bhalla et al. Â· May 21, 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "63e4522d15d97defb640",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/a-geometric-calculator",
+      "title": "Fundamental Research A Geometric Calculator Inside a Neural Network Feucht et al. Â· May 14, 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "5b0cbe249cd1911e6714",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/predicting-rare-llm-failures-with-30x-fewer-rollouts",
+      "title": "Link post Predicting Rare LLM Failures with 30Ã Fewer Rollouts Aranguri & Pernice Â· May 13, 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "392155623b898cf7fe70",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/manifold-steering",
+      "title": "Fundamental Research Steering Along Manifolds to Control Neural Networks Wurgaft et al. Â· May 7, 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "ba988df7204942224264",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/the-world-inside-neural-networks",
+      "title": "Fundamental Research The World Inside Neural Networks Geiger et al. Â· May 7, 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "e5a4b100bb8e81f822fa",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/vpd-explainer",
+      "title": "Fundamental Research Paper Summary: Interpreting Language Model Parameters Bushnaq et al. Â· May 5, 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "e349993e9ccc5ce7a8f5",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/interpreting-lm-parameters",
+      "title": "Fundamental Research Interpreting Language Model Parameters Bushnaq et al. Â· May 5, 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "6ad0f48b2abb94c329e3",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/verbalized-eval-awareness-inflates-measured-safety",
+      "title": "Applied Research Verbalized Eval Awareness Inflates Measured Safety Aranguri and Bloom Â· May 4, 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "231c72e0b8eed9871934",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/probe-based-data-attribution",
+      "title": "Applied Research Probe-Based Data Attribution: Surfacing and Mitigating Undesirable Behaviors in LLM Post-Training Xiao and Aranguri Â· April 29, 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "d67477c713da4abdbeb2",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/evee-explaining-genetic-variants",
+      "title": "Applied Research Explaining 4.2 million genetic variants with state-of-the-art, interpretable predictions Pearce et al. Â· April 14, 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "d5d4e353e5fe809d9667",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/covariance-pooling",
+      "title": "Fundamental Research Covariance-based Sequence Pooling Dooms et al. Â· April 10, 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "b0475074aa627ca3059e",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/self-correcting-search",
+      "title": "Applied Research Using Self-Correcting Search to Accelerate Materials Discovery Hazra et al. Â· April 1, 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "31f048e40ff0b0949707",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/reasoning-theater",
+      "title": "Applied Research Reasoning Theater: Probing for Performative Chain-of-Thought Boppana et al. Â· March 12, 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "8a9ee4e183347e2fffc3",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/rlfr",
+      "title": "Fundamental Research Features as Rewards: Using Interpretability to Reduce Hallucinations Prasad et al. Â· February 11, 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "e9870bd6fd2b8c980f3c",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/interpretability-for-alzheimers-detection",
+      "title": "Applied Research Using Interpretability to Identify a Novel Class of Alzheimer's Biomarkers Wang et al. Â· January 28, 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "ae1df90bc5184b48fff8",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/understanding-memorization-via-loss-curvature",
+      "title": "Fundamental Research Understanding Memorization via Loss Curvature Merullo et al. Â· November 6, 2025",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "269ac4c687a1b9e08fb0",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/priors-in-time",
+      "title": "Fundamental Research Link post Priors in Time: Missing Inductive Biases for Language Model Interpretability Lubana et al. Â· November 3, 2025",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "99a05243f39a0b0c4783",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/belief-dynamics-icl-steering",
+      "title": "Fundamental Research Link post Belief Dynamics Reveal the Dual Nature of In-Context Learning and Activation Steering Bigelow et al. Â· November 1, 2025",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "b9bb2bd8eac75ebde5d5",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/rakuten-sae-probes-for-pii-detection",
+      "title": "Applied Research Deploying Interpretability to Production with Rakuten: SAE Probes for PII Detection Nguyen et al. Â· October 28, 2025",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "07c8d1a334230ac12243",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/mixing-mechanisms",
+      "title": "Fundamental Research Link post Mixing Mechanisms: How Language Models Retrieve Bound Entities In-Context Gur-Arieh et al. Â· October 7, 2025",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "da56b62bfd943085a764",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/sae-scaling-with-feature-manifolds",
+      "title": "Fundamental Research Link post Understanding Sparse Autoencoder Scaling in the Presence of Feature Manifolds Michaud et al. Â· September 4, 2025",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "032fd2b2bd304c6835a6",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/phylogeny-manifold",
+      "title": "Applied Research Finding the Tree of Life in Evo 2 Pearce et al. Â· August 28, 2025",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "281b20074d8dca35b5be",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/adversarial-examples-are-not-bugs-they-are-superposition",
+      "title": "Fundamental Research Link post Adversarial Examples Are Not Bugs, They Are Superposition Gorton & Lewis Â· August 26, 2025",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "95c3e4d3fc2e46955437",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/model-diff-amplification",
+      "title": "Applied Research Discovering Undesired Rare Behaviors via Model Diff Amplification Aranguri & McGrath Â· August 21, 2025",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "86099b966f4c423a741f",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/the-circuits-research-landscape",
+      "title": "Fundamental Research Link post The Circuits Research Landscape: Results and Perspectives Lindsey et al. Â· August 5, 2025",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "ae39b33b33d9cccad620",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/stochastic-param-decomp",
+      "title": "Fundamental Research Towards Scalable Parameter Decomposition Bushnaq et al. Â· June 28, 2025",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "e24027f902f4530bf3c0",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/replicating-circuit-tracing-for-a-simple-mechanism",
+      "title": "Fundamental Research Replicating Circuit Tracing for a Simple Known Mechanism Loeffler et al. Â· June 11, 2025",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "bf85d583a8390a24e12b",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/painting-with-concepts",
+      "title": "Applied Research Painting With Concepts Using Diffusion Model Latents Cammarata et al. Â· May 27, 2025",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "8e0d7a497daae03de1f1",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/under-the-hood-of-a-reasoning-model",
+      "title": "Fundamental Research Under the Hood of a Reasoning Model Hazra et al. Â· April 15, 2025",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "6e3f938ed381878074ec",
+      "source": "3",
+      "url": "https://www.goodfire.ai/research/interpreting-evo-2",
+      "title": "Applied Research Interpreting Evo 2: Arc Institute's Next-Generation Genomic Foundation Model Gorton et al. Â· February 20, 2025",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "d7dcc9965d1cede580b4",
+      "source": "5",
+      "url": "https://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/",
+      "title": "From synthetic enterprise data evaluations to real Microsoft Copilot AI confidence",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Fri, 30 Oct 2026 13:05:28 +0000"
+    },
+    {
+      "id": "1d1fe0dcd72345d75bc7",
+      "source": "5",
+      "url": "https://www.microsoft.com/en-us/research/podcast/microsoft-research-focus-edition-97/",
+      "title": "Microsoft Research Focus – Edition #97",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Thu, 29 Oct 2026 19:19:16 +0000"
+    },
+    {
+      "id": "0bbd6ef23d3d242bc2d0",
+      "source": "5",
+      "url": "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/",
+      "title": "Flint-interactive: A language for creating interactive data visualizations",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Thu, 22 Oct 2026 16:00:00 +0000"
+    },
+    {
+      "id": "bb248c7d82f8bd57b53b",
+      "source": "5",
+      "url": "https://www.microsoft.com/en-us/research/blog/solving-a-31-year-old-grand-challenge-in-mathematics-the-kls-conjecture/",
+      "title": "Solving a 31-year-old grand challenge in mathematics – the KLS conjecture",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Wed, 21 Oct 2026 16:00:00 +0000"
+    },
+    {
+      "id": "6419780bbaf895089ed9",
+      "source": "5",
+      "url": "https://www.microsoft.com/en-us/research/podcast/called-to-serve-tech-research-and-positive-impact-with-chris-white/",
+      "title": "Called to serve: Tech, research, and positive impact",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Tue, 20 Oct 2026 16:00:00 +0000"
+    },
+    {
+      "id": "b5e3c45eff96c988f5e8",
+      "source": "5",
+      "url": "https://www.microsoft.com/en-us/research/blog/proof-based-general-purpose-computing-with-magnetar/",
+      "title": "Proof-based general-purpose computing with Magnetar",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Thu, 15 Oct 2026 16:00:00 +0000"
+    },
+    {
+      "id": "3c621022c44bebe229be",
+      "source": "5",
+      "url": "https://www.microsoft.com/en-us/research/blog/simulating-student-learning-for-better-ai-tutoring/",
+      "title": "Simulating student learning for better AI tutoring",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Mon, 12 Oct 2026 16:00:00 +0000"
+    },
+    {
+      "id": "fd51a7c8339ba72becd9",
+      "source": "5",
+      "url": "https://www.microsoft.com/en-us/research/blog/agent-lightning-v1-0-a-3500-line-lightweight-agentic-rl-framework-for-training-agents-with-real-harnesses/",
+      "title": "Agent Lightning v1.0: A 3,500-Line Lightweight Agentic RL Framework for Training Agents with Real Harnesses",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Wed, 07 Oct 2026 16:00:00 +0000"
+    },
+    {
+      "id": "9b7476c06e36249f6766",
+      "source": "5",
+      "url": "https://www.microsoft.com/en-us/research/podcast/what-ai-gets-wrong-and-what-failure-teaches-us/",
+      "title": "What AI gets wrong and what failure teaches us",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Tue, 06 Oct 2026 16:19:06 +0000"
+    },
+    {
+      "id": "e83fa27c4b257f11a49d",
+      "source": "5",
+      "url": "https://www.microsoft.com/en-us/research/blog/forecasting-space-weather-risks-on-power-grids/",
+      "title": "Forecasting space weather risks on power grids",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Wed, 30 Sep 2026 16:00:00 +0000"
+    },
+    {
+      "id": "e4777e40f1fe7c01a03c",
+      "source": "6",
+      "url": "https://research.nvidia.com/publications?f%5B0%5D=research_area%3A26",
+      "title": "Artificial Intelligence and Machine Learning (619)",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "03f7429987769a3c5b36",
+      "source": "6",
+      "url": "https://research.nvidia.com/publications?f%5B0%5D=research_area%3A23",
+      "title": "Computer Vision (385)",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "a03b49f97a988ec2adcb",
+      "source": "6",
+      "url": "https://research.nvidia.com/publications?f%5B0%5D=research_area%3A17",
+      "title": "Computer Graphics (367)",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "dbe96f3dd53d4b847824",
+      "source": "6",
+      "url": "https://research.nvidia.com/publications?f%5B0%5D=research_area%3A22",
+      "title": "Computer Architecture (229)",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "efb66b88e4db961e0b5c",
+      "source": "6",
+      "url": "https://research.nvidia.com/publications?f%5B0%5D=research_area%3A3915",
+      "title": "Generative AI (177)",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "0352bc0c1baca62a94e3",
+      "source": "6",
+      "url": "https://research.nvidia.com/publications?f%5B0%5D=research_area%3A2947",
+      "title": "Robotics (171)",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "20566e94d6a90d96485b",
+      "source": "6",
+      "url": "https://research.nvidia.com/publications?f%5B0%5D=research_area%3A19",
+      "title": "Circuits and VLSI Design (124)",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "dd2ea2c3b62163e83927",
+      "source": "6",
+      "url": "https://research.nvidia.com/publications?f%5B0%5D=research_area%3A18",
+      "title": "Algorithms and Numerical Methods (121)",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "d99a3272719a279f004f",
+      "source": "6",
+      "url": "https://research.nvidia.com/publications?f%5B0%5D=research_area%3A25",
+      "title": "High Performance Computing (118)",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "d8ead86da21bf81a5041",
+      "source": "6",
+      "url": "https://research.nvidia.com/publications?f%5B0%5D=research_area%3A30",
+      "title": "Real-Time Rendering (98)",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "ac6c17db8c14fa989875",
+      "source": "6",
+      "url": "https://research.nvidia.com/publications?f%5B0%5D=research_area%3A36",
+      "title": "VR, AR and Display Technology (80)",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "fa6ab5563fc84299e7df",
+      "source": "6",
+      "url": "https://research.nvidia.com/publications?f%5B0%5D=research_area%3A2537",
+      "title": "Human Computer Interaction (72)",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "b395fd904db3f1a3cbe2",
+      "source": "6",
+      "url": "https://research.nvidia.com/publications?f%5B0%5D=research_area%3A3445",
+      "title": "Autonomous Vehicles (70)",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "b5bb73a6feb7ad516871",
+      "source": "6",
+      "url": "https://research.nvidia.com/publications?f%5B0%5D=research_area%3A31",
+      "title": "Resilience and Safety (63)",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "ad8713591ca9d65f0300",
+      "source": "6",
+      "url": "https://research.nvidia.com/publications?f%5B0%5D=research_area%3A29",
+      "title": "Programming Languages, Systems and Tools (61)",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "4720af89d675eda40eae",
+      "source": "6",
+      "url": "https://research.nvidia.com/publications?f%5B0%5D=research_area%3A4390",
+      "title": "Natural Language Processing (57)",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "45281b66e70f53fc7f03",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/gharp-head-animation",
+      "title": "GHARP: Real-Time Gaussian Head Animation from Large-Scale Reconstruction Prior",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Mon, 26 Oct 2026 00:00:00 GMT"
+    },
+    {
+      "id": "58b74bccb41628bc5757",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+      "title": "Local and Distributed Large LLM Inference with MLX and RDMA on Mac Studio",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Thu, 15 Oct 2026 00:00:00 GMT"
+    },
+    {
+      "id": "788eab760bf8c169d5ca",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/selection-structured-reasoning",
+      "title": "Selection-Based Structured Reasoning: Toward Efficient Multimodal Search Agents",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Thu, 15 Oct 2026 00:00:00 GMT"
+    },
+    {
+      "id": "f4aec0cb25025ae3aa1d",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/plan-retrieve-tool-discovery",
+      "title": "Plan or Retrieve First? A Scale Study of Tool Discovery Architectures",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Thu, 15 Oct 2026 00:00:00 GMT"
+    },
+    {
+      "id": "22c7f40989932ad3ab13",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/code-switching-detection",
+      "title": "Code-Switching Detection via Language-Selective Dimensions in Speech Foundation Models",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Wed, 14 Oct 2026 00:00:00 GMT"
+    },
+    {
+      "id": "0137da1e7dd1ba0e5186",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/tri-modal-masked-diffusion",
+      "title": "The Design Space of Tri-Modal Masked Diffusion Models",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Wed, 14 Oct 2026 00:00:00 GMT"
+    },
+    {
+      "id": "08021fb80f8ec9d03feb",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/mix-dont-tune",
+      "title": "Mix, Don't Tune: Bilingual Pre-Training Outperforms Hyperparameter Search in Data-Constrained Settings",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Tue, 13 Oct 2026 00:00:00 GMT"
+    },
+    {
+      "id": "9225ab5ca02f3e72163a",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/llm-translation-quality-annotation",
+      "title": "Large Language Models for Machine Translation Quality Annotation: Humans and Models Are Both Challenged",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Mon, 12 Oct 2026 00:00:00 GMT"
+    },
+    {
+      "id": "1c51e399b9d6df19429f",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/distributed-gpu-cloud",
+      "title": "Minions: A Dynamic and Distributed Virtual GPU Cloud Built on Idle Apple Silicon Devices",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Mon, 12 Oct 2026 00:00:00 GMT"
+    },
+    {
+      "id": "f6e89fd111ca9f88966c",
+      "source": "7",
+      "url": "https://machinelearning.apple.com/research/self-compacting-language-agents",
+      "title": "Self-Compacting Language Model Agents",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Mon, 12 Oct 2026 00:00:00 GMT"
+    },
+    {
+      "id": "1766bd75232642b24049",
+      "source": "8",
+      "url": "https://research.ibm.com/blog/ponder-this-november-2026?utm_medium=rss&utm_source=rss",
+      "title": "Ponder This Challenge - November 2026 - The SumSum",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Sat, 31 Oct 2026 23:00:00 GMT"
+    },
+    {
+      "id": "20ec58c25dbbcf89e2bb",
+      "source": "8",
+      "url": "https://research.ibm.com/blog/celebrating-70-years-ibm-research-europe?utm_medium=rss&utm_source=rss",
+      "title": "How Zurich is shaping the future of algorithms, 70 years in",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Thu, 29 Oct 2026 14:15:00 GMT"
+    },
+    {
+      "id": "401af5ffd8db26e6784b",
+      "source": "8",
+      "url": "https://research.ibm.com/blog/connecting-quantum-processors-with-l-couplers?utm_medium=rss&utm_source=rss",
+      "title": "Modular quantum computing takes shape with l-couplers",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Tue, 27 Oct 2026 12:00:00 GMT"
+    },
+    {
+      "id": "a2526c99cb2533e1b440",
+      "source": "8",
+      "url": "https://research.ibm.com/blog/ibm-and-kaggle-launch-leaderboard-for-java-framework-migration?utm_medium=rss&utm_source=rss",
+      "title": "IBM and Kaggle launch Java framework migration leaderboard",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Tue, 27 Oct 2026 12:00:00 GMT"
+    },
+    {
+      "id": "0499119dc0e2d6b282bb",
+      "source": "8",
+      "url": "https://research.ibm.com/blog/pytorch-spyre-accelerator-software-ecosystem-updates?utm_medium=rss&utm_source=rss",
+      "title": "PyTorch opens the AI ecosystem to a new accelerator class",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Mon, 26 Oct 2026 12:00:00 GMT"
+    },
+    {
+      "id": "5cc14a7b779d9c1436f9",
+      "source": "8",
+      "url": "https://research.ibm.com/blog/ibm-nedo-challenge-2026?utm_medium=rss&utm_source=rss",
+      "title": "IBM supports award-winning projects in NEDO Challenge",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Fri, 23 Oct 2026 04:00:00 GMT"
+    },
+    {
+      "id": "960748f7eee52fbddd90",
+      "source": "8",
+      "url": "https://research.ibm.com/blog/qiskit-2-6-release-summary?utm_medium=rss&utm_source=rss",
+      "title": "Qiskit SDK v2.6 release summary",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Thu, 22 Oct 2026 04:00:00 GMT"
+    },
+    {
+      "id": "99ae1727e53917e6718f",
+      "source": "8",
+      "url": "https://research.ibm.com/blog/fast-interpretability-plugin-vllm?utm_medium=rss&utm_source=rss",
+      "title": "A new plugin can enable fast runtime monitoring and control",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Wed, 21 Oct 2026 12:00:00 GMT"
+    },
+    {
+      "id": "e8d5e3fbcb5a95433610",
+      "source": "8",
+      "url": "https://research.ibm.com/blog/llmd-1-0-is-ready-for-production-inference-serving?utm_medium=rss&utm_source=rss",
+      "title": "llm-d 1.0 hardens open-source AI inference for production",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Tue, 20 Oct 2026 12:00:00 GMT"
+    },
+    {
+      "id": "0b845379530c1aae1687",
+      "source": "8",
+      "url": "https://research.ibm.com/blog/coursera-dataflow-accelerator-architecture-specialization?utm_medium=rss&utm_source=rss",
+      "title": "New course teaches how AI models run on modern accelerators",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Mon, 19 Oct 2026 12:00:00 GMT"
+    },
+    {
+      "id": "678615795ad58ae8e58e",
+      "source": "8",
+      "url": "https://research.ibm.com/blog/preparing-chip-designers-for-the-nanostack-era?utm_medium=rss&utm_source=rss",
+      "title": "Preparing chip designers for the nanostack era",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Tue, 13 Oct 2026 16:00:00 GMT"
+    },
+    {
+      "id": "eac87ec705996ff58a32",
+      "source": "8",
+      "url": "https://research.ibm.com/blog/open-agent-factories-and-distributed-inference-for-chip-design?utm_medium=rss&utm_source=rss",
+      "title": "Scaling AI-driven chip design with open agent factories",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Tue, 13 Oct 2026 12:00:00 GMT"
+    },
+    {
+      "id": "b9c0dc55c084e5b3081f",
+      "source": "8",
+      "url": "https://research.ibm.com/blog/distributed-inference?utm_medium=rss&utm_source=rss",
+      "title": "How distributed inference keeps large AI models moving",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Mon, 12 Oct 2026 04:00:00 GMT"
+    },
+    {
+      "id": "752b9e33668e8911cf5d",
+      "source": "8",
+      "url": "https://research.ibm.com/blog/whats-new-q3-2026?utm_medium=rss&utm_source=rss",
+      "title": "What's new at IBM Quantum Q3 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Wed, 07 Oct 2026 04:00:00 GMT"
+    },
+    {
+      "id": "e5d8c4faee3926526345",
+      "source": "8",
+      "url": "https://research.ibm.com/blog/qiskit-beyond-python?utm_medium=rss&utm_source=rss",
+      "title": "Qiskit beyond Python: Fortran, C++, and Julia",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Tue, 06 Oct 2026 04:00:00 GMT"
+    },
+    {
+      "id": "77bbbc62fe88c1b40e96",
+      "source": "8",
+      "url": "https://research.ibm.com/blog/directed-execution?utm_medium=rss&utm_source=rss",
+      "title": "Directed execution: same performance, more control",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Mon, 05 Oct 2026 16:30:00 GMT"
+    },
+    {
+      "id": "2a206b2211c411a4d318",
+      "source": "8",
+      "url": "https://research.ibm.com/blog/ponder-this-october-2026?utm_medium=rss&utm_source=rss",
+      "title": "Ponder This Challenge - October 2026 - The Ultimate Ultimate Tic-Tac-Toe Game",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Thu, 01 Oct 2026 16:30:00 GMT"
+    },
+    {
+      "id": "2f4b2ed3bc4015b3616f",
+      "source": "8",
+      "url": "https://research.ibm.com/blog/why-are-silicon-wafers-round?utm_medium=rss&utm_source=rss",
+      "title": "Why are silicon wafers round?",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Mon, 28 Sep 2026 13:15:00 GMT"
+    },
+    {
+      "id": "b0c2ec9ef5e8dbdb492f",
+      "source": "8",
+      "url": "https://research.ibm.com/blog/qec-continuum?utm_medium=rss&utm_source=rss",
+      "title": "From error mitigation to fault-tolerant quantum computing",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Tue, 15 Sep 2026 14:30:00 GMT"
+    },
+    {
+      "id": "d0e5a7b4956b3740b785",
+      "source": "8",
+      "url": "https://research.ibm.com/blog/quantum-circuits-vs-llms?utm_medium=rss&utm_source=rss",
+      "title": "A theoretical separation between quantum computers & LLMs",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Tue, 15 Sep 2026 04:00:00 GMT"
+    },
+    {
+      "id": "c82d0eff7cc582f9e8eb",
+      "source": "10",
+      "url": "https://allenai.org/blog/nextcloud",
+      "title": "How Olmo 3 earned the highest ethical rating from Nextcloud",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-11-02T00:00:00-08:00"
+    },
+    {
+      "id": "ad775b4e0c5f12698cc5",
+      "source": "10",
+      "url": "https://allenai.org/blog/olmocr-2-historical-archives",
+      "title": "How researchers are adapting olmOCR 2 for historical and archaeological archives",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-10-28T00:00:00-08:00"
+    },
+    {
+      "id": "aaf71b1b3b171ff19270",
+      "source": "10",
+      "url": "https://allenai.org/blog/novelty-bench",
+      "title": "Can we trust LLMs to judge whether a research idea is novel?",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-10-27T00:00:00-08:00"
+    },
+    {
+      "id": "7f994509bef83dc42372",
+      "source": "10",
+      "url": "https://allenai.org/blog/litpivot",
+      "title": "LitPivot: Developing research ideas through dynamic contextualization within the literature landscape",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-10-23T00:00:00-08:00"
+    },
+    {
+      "id": "c7d4f2ff7fdf9ded9c98",
+      "source": "10",
+      "url": "https://allenai.org/blog/olmoearth-v1-3",
+      "title": "OlmoEarth v1.3: State-of-the-art embeddings for the whole planet",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-10-22T00:00:00-08:00"
+    },
+    {
+      "id": "5ad4e837a9b19bb9501d",
+      "source": "10",
+      "url": "https://allenai.org/blog/planteur",
+      "title": "A crop-mapping benchmark for the tropics",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-10-22T00:00:00-08:00"
+    },
+    {
+      "id": "0f7d9129d2f5afe38836",
+      "source": "10",
+      "url": "https://allenai.org/blog/fairstress",
+      "title": "FairStress: A deeper evaluation of fairness in LLM decision-making",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-10-20T00:00:00-08:00"
+    },
+    {
+      "id": "281f692a9b5c46d2580c",
+      "source": "10",
+      "url": "https://allenai.org/blog/hiro-acev2",
+      "title": "HiRO-ACEv2: Simulating extreme weather at 3 km resolution for a fraction of the cost",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-10-14T00:00:00-08:00"
+    },
+    {
+      "id": "7d01d98174cf1b4bc787",
+      "source": "10",
+      "url": "https://allenai.org/blog/molmo2fish",
+      "title": "How Molmo 2’s open release helped an MIT researcher rethink fish tracking",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-10-13T00:00:00-08:00"
+    },
+    {
+      "id": "d76f66112ef92c7e79f7",
+      "source": "10",
+      "url": "https://allenai.org/blog/impactful-scheduling",
+      "title": "Impactful scheduling for GPU clusters",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-10-09T00:00:00-08:00"
+    },
+    {
+      "id": "0edcce74f71b09e3692c",
+      "source": "10",
+      "url": "https://allenai.org/blog/colm-2026-recap",
+      "title": "Ai2 at COLM 2026: Open research, from models to agents for science",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-10-09T00:00:00-08:00"
+    },
+    {
+      "id": "da6dd981b3b292619c2f",
+      "source": "10",
+      "url": "https://allenai.org/blog/bolmo-nature",
+      "title": "Now in Nature: Retrofitting language models to operate over bytes",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-10-07T00:00:00-08:00"
+    },
+    {
+      "id": "8369e701e3f33a53fbf2",
+      "source": "10",
+      "url": "https://allenai.org/blog/astabrief",
+      "title": "Open-sourcing AstaBrief, the fast report-generation model in Asta",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-10-02T00:00:00-08:00"
+    },
+    {
+      "id": "4bd9c97b2c3eca8946f4",
+      "source": "10",
+      "url": "https://allenai.org/blog/olmocore3",
+      "title": "Introducing Olmo-core 3: Open, scalable training infrastructure for large MoEs",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-10-01T00:00:00-08:00"
+    },
+    {
+      "id": "f8d2bcbb96eb5a682dda",
+      "source": "10",
+      "url": "https://allenai.org/blog/olmo-arena",
+      "title": "What a crowdsourced game revealed about steering Olmo 3",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-09-17T00:00:00-08:00"
+    },
+    {
+      "id": "afbc9bfa7ca03534319c",
+      "source": "10",
+      "url": "https://allenai.org/blog/autodiscovery-student-challenge",
+      "title": "Teaching future scientists to interrogate AI tools for scientific discovery",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-09-14T00:00:00-08:00"
+    },
+    {
+      "id": "585cabb0593824df739d",
+      "source": "10",
+      "url": "https://allenai.org/blog/goodfire-olmo",
+      "title": "How Goodfire used Ai2’s open post-training stack to trace unwanted model behavior",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-09-09T00:00:00-08:00"
+    },
+    {
+      "id": "88bf61a400a86dcc88fc",
+      "source": "10",
+      "url": "https://allenai.org/blog/benchmirt",
+      "title": "BenchMIRT: What are LLM benchmarks actually measuring?",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-09-01T00:00:00-08:00"
+    },
+    {
+      "id": "8c555ec192a738dd318e",
+      "source": "10",
+      "url": "https://allenai.org/blog/swedish-autodiscovery-recap",
+      "title": "The hard parts of AI-assisted science",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-09-01T00:00:00-08:00"
+    },
+    {
+      "id": "57fe7bf8c23ddb4c27c0",
+      "source": "10",
+      "url": "https://allenai.org/blog/swedish-autodiscovery-partnership",
+      "title": "Ai2 and Providence Swedish Cancer Institute partner to advance AI-assisted scientific discovery",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-08-27T00:00:00-08:00"
+    },
+    {
+      "id": "33aaa82f1325d33450e2",
+      "source": "10",
+      "url": "https://allenai.org/blog/thai-llm-dolma",
+      "title": "How researchers adapted Dolma for better Thai language models",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-08-26T00:00:00-08:00"
+    },
+    {
+      "id": "a3fa14d03b761a7b255a",
+      "source": "10",
+      "url": "https://allenai.org/blog/olmo-capability-tracing",
+      "title": "How a Georgia Tech team used the open Olmo stack to trace social reasoning",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-08-21T00:00:00-08:00"
+    },
+    {
+      "id": "8bcd289bf72bb4cd7486",
+      "source": "10",
+      "url": "https://allenai.org/blog/olmo-drug-morphology",
+      "title": "When a model reads a drug's class from its name—not its knowledge",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-08-18T00:00:00-08:00"
+    },
+    {
+      "id": "6286098c52354ed2dc1c",
+      "source": "10",
+      "url": "https://allenai.org/blog/tutormoments",
+      "title": "TutorMoments: Do AI tutors know when to help and when to hold back?",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-08-07T00:00:00-08:00"
+    },
+    {
+      "id": "ac406f7894c8ae52983c",
+      "source": "10",
+      "url": "https://allenai.org/blog/hugging-face-partnership",
+      "title": "Ai2 expands collaboration with Hugging Face to accelerate open science",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-08-06T00:00:00-08:00"
+    },
+    {
+      "id": "09a3b129d69536ef1872",
+      "source": "11",
+      "url": "https://www.amazon.science/publications/model-merging-does-not-require-uniform-lora-ranks",
+      "title": "Model merging does not require uniform LoRA ranks",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "f7013b4db060b39153f3",
+      "source": "11",
+      "url": "https://www.amazon.science/research-areas/machine-learning",
+      "title": "Machine learning",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "4083a9674c39cc9d6745",
+      "source": "11",
+      "url": "https://www.amazon.science/publications/anchored-mixture-of-experts-for-efficient-time-series-forecasting",
+      "title": "Anchored mixture-of-experts for efficient time series forecasting",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "23b20e25f1dc828e4331",
+      "source": "11",
+      "url": "https://www.amazon.science/publications/metrics-that-write-themselves-evolving-an-evaluator-from-its-own-blind-spots",
+      "title": "Metrics that write themselves: Evolving an evaluator from its own blind spots",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "850742b14b05324c25cf",
+      "source": "11",
+      "url": "https://www.amazon.science/publications/when-retrieval-metrics-mislead-measuring-policy-signal-in-long-horizon-tool-use-agents",
+      "title": "When retrieval metrics mislead: Measuring policy signal in long-horizon tool-use agents",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "5b2e1b49ad86c05cc08c",
+      "source": "11",
+      "url": "https://www.amazon.science/publications/tracing-the-thoughts-of-a-coding-agent-playing-arc-agi-3-lessons-for-continual-learning",
+      "title": "Tracing the thoughts of a coding agent playing ARC-AGI-3: Lessons for continual learning",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "d5f65018a7966f6bdc84",
+      "source": "11",
+      "url": "https://www.amazon.science/publications/prism-prompt-representation-internalization-via-selective-compression-into-lora-weights",
+      "title": "PRISM: Prompt representation internalization via selective compression into LoRA weights",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "bb0a2fffe53cff1f9de5",
+      "source": "11",
+      "url": "https://www.amazon.science/publications/beyond-pairs-your-language-model-is-secretly-optimizing-a-preference-graph",
+      "title": "Beyond pairs: Your language model is secretly optimizing a preference graph",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "96663cd3eaa7bdc1c997",
+      "source": "11",
+      "url": "https://www.amazon.science/publications/orchopt-validation-gated-architecture-search-for-self-organizing-multi-agent-orchestration",
+      "title": "OrchOpt: Validation-gated architecture search for self-organizing multi-agent orchestration",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "6348d780c6ac5b641f25",
+      "source": "11",
+      "url": "https://www.amazon.science/publications/gear-training-free-rule-distillation-for-advanced-and-efficient-tool-augmented-reasoning",
+      "title": "GEAR: Training-free rule distillation for advanced and efficient tool-augmented reasoning",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "bda62d5274181c2d55c0",
+      "source": "11",
+      "url": "https://www.amazon.science/publications/bot-grpo-efficient-process-reward-rl-for-reasoning-via-bag-of-token-aggregation",
+      "title": "BoT-GRPO: Efficient process-reward RL for reasoning via bag-of-token aggregation",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "7993d0c2b4fad0383a11",
+      "source": "11",
+      "url": "https://www.amazon.science/publications/sourcereward-source-preserving-reward-modeling-for-high-precision-image-editing",
+      "title": "SourceReward: Source-preserving reward modeling for high-precision image editing",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "81bf8248a36479c0f4e6",
+      "source": "11",
+      "url": "https://www.amazon.science/research-areas/computer-vision",
+      "title": "Computer vision",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "676c2f00bc354348d70b",
+      "source": "11",
+      "url": "https://www.amazon.science/publications/the-cross-border-e-commerce-selection-benchmarking-model-a-multi-modal-framework-for-improved-zero-shot-cross-lingual-product-classification",
+      "title": "The cross-border e-commerce selection benchmarking model: A multi-modal framework for improved zero-shot cross-lingual product classification",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "56292861a0315f8ff632",
+      "source": "11",
+      "url": "https://www.amazon.science/research-areas/conversational-ai-natural-language-processing",
+      "title": "Conversational AI",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "88d22af11025fe4e20ff",
+      "source": "11",
+      "url": "https://www.amazon.science/publications/small-language-models-as-autonomous-operational-agents",
+      "title": "Small language models as autonomous operational agents",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "57600b6c4baa1c352c93",
+      "source": "11",
+      "url": "https://www.amazon.science/research-areas/cloud-and-systems",
+      "title": "Cloud and systems",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "d17eaeda20f7145292d9",
+      "source": "11",
+      "url": "https://www.amazon.science/publications/listqa-a-benchmark-for-evaluating-list-formatted-factual-knowledge-retrieval-in-large-language-models",
+      "title": "ListQA: A benchmark for evaluating list-formatted factual knowledge retrieval in large language models",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "c2c596fc0117088931a4",
+      "source": "11",
+      "url": "https://www.amazon.science/publications/which-tokens-can-a-device-afford-to-score-vocabulary-pruning-by-log-mass-maximization",
+      "title": "Which tokens can a device afford to score? Vocabulary pruning by log-mass maximization",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "8ed8db3da5b96942bd4b",
+      "source": "13",
+      "url": "https://mistral.ai/news/mistral-large-4-oss/",
+      "title": "Le Chonk: Built for Coders, Trusted by Defenders.",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Thu, 29 Oct 2026 12:00:07 GMT"
+    },
+    {
+      "id": "ef1b6d5c624a471acc6c",
+      "source": "13",
+      "url": "https://mistral.ai/news/mistral-nvidia-ai-for-industrial-engineering/",
+      "title": "Mistral Advances AI for Engineering with NVIDIA",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Wed, 21 Oct 2026 12:00:20 GMT"
+    },
+    {
+      "id": "2b5a8a7e0ddd1c0969ca",
+      "source": "13",
+      "url": "https://mistral.ai/news/timestral/",
+      "title": "Introducing Timestral",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Thu, 15 Oct 2026 12:00:00 GMT"
+    },
+    {
+      "id": "de905bc034d719a374d2",
+      "source": "13",
+      "url": "https://mistral.ai/news/mistral-large-4/",
+      "title": "Introducing Mistral Large 4",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Tue, 06 Oct 2026 12:00:27 GMT"
+    },
+    {
+      "id": "0e34ecd46a4da1aa6d48",
+      "source": "13",
+      "url": "https://mistral.ai/news/hallo-deutschland/",
+      "title": "Hallo, Deutschland!",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Mon, 28 Sep 2026 15:57:59 GMT"
+    },
+    {
+      "id": "598e0dd3a6fd3eab542c",
+      "source": "13",
+      "url": "https://mistral.ai/news/mistral-x-mozilla/",
+      "title": "Mistral and Mozilla are bringing open, private and multilingual AI to your web browser",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Wed, 16 Sep 2026 12:00:00 GMT"
+    },
+    {
+      "id": "66590b77d46dc185dca3",
+      "source": "13",
+      "url": "https://mistral.ai/news/mistral-x-cloudera/",
+      "title": "Cloudera and Mistral Partner to Bring Specialized, Sovereign Intelligence to Enterprise Data",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Thu, 10 Sep 2026 10:42:55 GMT"
+    },
+    {
+      "id": "27ba83452870a6eff9e7",
+      "source": "13",
+      "url": "https://mistral.ai/news/legacy-code-modernization/",
+      "title": "Modernizing complex legacy code with AI agents.",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Wed, 09 Sep 2026 12:00:46 GMT"
+    },
+    {
+      "id": "223f295cf06ad4d8cbf8",
+      "source": "13",
+      "url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
+      "title": "Mistral raises €3B to make sovereign, open-weight AI the technology frontier",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Tue, 08 Sep 2026 12:00:22 GMT"
+    },
+    {
+      "id": "4e7ba49b5e09ca1a5ae0",
+      "source": "13",
+      "url": "https://mistral.ai/news/mistral-x-humain/",
+      "title": "Mistral x HUMAIN",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Mon, 24 Aug 2026 16:02:41 GMT"
+    },
+    {
+      "id": "b68547f51956c03381f1",
+      "source": "13",
+      "url": "https://mistral.ai/news/agentic-search/",
+      "title": "Agentic Search. More accurate and efficient results from your AI systems.",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Thu, 20 Aug 2026 12:00:17 GMT"
+    },
+    {
+      "id": "5070c1baf5b066ed7c88",
+      "source": "13",
+      "url": "https://mistral.ai/news/regional-inference-open-models-new-compute/",
+      "title": "In-region inference, open models, and new European infrastructure for sovereign AI.",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Tue, 11 Aug 2026 12:00:27 GMT"
+    },
+    {
+      "id": "c018aeb660282a626159",
+      "source": "13",
+      "url": "https://mistral.ai/news/shieldstral/",
+      "title": "Introducing Shieldstral.",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Tue, 04 Aug 2026 12:00:26 GMT"
+    },
+    {
+      "id": "810335bedf0a413253e5",
+      "source": "13",
+      "url": "https://mistral.ai/news/manage-prompts-and-skills-in-studio/",
+      "title": "Your Prompts and Skills need a system of record.",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Thu, 09 Jul 2026 12:00:00 GMT"
+    },
+    {
+      "id": "f6fb51a7e760f70b1353",
+      "source": "13",
+      "url": "https://mistral.ai/news/robostral-navigate/",
+      "title": "Introducing Robostral Navigate",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Wed, 08 Jul 2026 12:00:59 GMT"
+    },
+    {
+      "id": "b69f607430b9409febdf",
+      "source": "13",
+      "url": "https://mistral.ai/news/leanstral-1-5/",
+      "title": "Leanstral 1.5: Proof Abundance for All",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Thu, 02 Jul 2026 13:55:54 GMT"
+    },
+    {
+      "id": "188c3cac004c05d69c7e",
+      "source": "13",
+      "url": "https://mistral.ai/news/more-control-over-connectors/",
+      "title": "Bringing more control over your connectors",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Wed, 24 Jun 2026 12:00:30 GMT"
+    },
+    {
+      "id": "8b7aa8fd06f19bd5c2df",
+      "source": "13",
+      "url": "https://mistral.ai/news/ocr-4/",
+      "title": "Introducing Mistral OCR 4",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Tue, 23 Jun 2026 12:00:48 GMT"
+    },
+    {
+      "id": "9438212471218e98904a",
+      "source": "13",
+      "url": "https://mistral.ai/news/ai-now-summit-2026/",
+      "title": "AI Now Summit 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Thu, 28 May 2026 12:00:20 GMT"
+    },
+    {
+      "id": "c2f76d87bf32d8e1a0d0",
+      "source": "13",
+      "url": "https://mistral.ai/news/vibe-agent/",
+      "title": "Vibe gets to work.",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Thu, 28 May 2026 12:00:09 GMT"
+    },
+    {
+      "id": "08ec64352484352b754b",
+      "source": "13",
+      "url": "https://mistral.ai/news/search-toolkit/",
+      "title": "Introducing Search Toolkit",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Thu, 28 May 2026 11:42:21 GMT"
+    },
+    {
+      "id": "358d0803107f2d386a2e",
+      "source": "13",
+      "url": "https://mistral.ai/news/introducing-physics-ai-at-mistral/",
+      "title": "Introducing physics AI at Mistral: the foundation for engineering acceleration.",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Wed, 27 May 2026 12:00:55 GMT"
+    },
+    {
+      "id": "45aa51613475b7bd60f0",
+      "source": "13",
+      "url": "https://mistral.ai/news/physics-ai-research/",
+      "title": "Physics AI research that’s shaping the industry.",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Wed, 27 May 2026 12:00:05 GMT"
+    },
+    {
+      "id": "ce70f0535398d355d4c1",
+      "source": "13",
+      "url": "https://mistral.ai/news/accelerate-ai-native-industry/",
+      "title": "Emmi joins Mistral to accelerate the AI-native industry",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Sat, 23 May 2026 12:00:26 GMT"
+    },
+    {
+      "id": "6ee55a2901cc81aabcab",
+      "source": "13",
+      "url": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5/",
+      "title": "Remote agents in Vibe. Powered by Mistral Medium 3.5.",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Fri, 22 May 2026 15:01:55 GMT"
+    },
+    {
+      "id": "794e5e6c18bf0e486e2f",
+      "source": "13",
+      "url": "https://mistral.ai/news/connectors/",
+      "title": "Connect the dots: Build with built-in and custom MCPs in Studio",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Fri, 22 May 2026 14:48:28 GMT"
+    },
+    {
+      "id": "c25c3a44f89382428026",
+      "source": "13",
+      "url": "https://mistral.ai/news/workflows/",
+      "title": "Workflows for work that runs the business",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Mon, 27 Apr 2026 12:00:23 GMT"
+    },
+    {
+      "id": "cc13ee7d3e948ee6742e",
+      "source": "13",
+      "url": "https://mistral.ai/news/spaces/",
+      "title": "Spaces: A CLI Built for Humans and Agents",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Tue, 31 Mar 2026 12:00:00 GMT"
+    },
+    {
+      "id": "df91dfa2e038558b83c7",
+      "source": "13",
+      "url": "https://mistral.ai/news/voxtral-tts/",
+      "title": "Speaking of Voxtral",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Mon, 23 Mar 2026 16:00:00 GMT"
+    },
+    {
+      "id": "9d9842c5af4d921141ad",
+      "source": "13",
+      "url": "https://mistral.ai/news/forge/",
+      "title": "Introducing Forge",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Tue, 17 Mar 2026 16:00:00 GMT"
+    },
+    {
+      "id": "be5a3b3f440242ad282d",
+      "source": "13",
+      "url": "https://mistral.ai/news/mistral-small-4/",
+      "title": "Introducing Mistral Small 4",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Mon, 16 Mar 2026 21:00:00 GMT"
+    },
+    {
+      "id": "f0b8a87f4154e13690c5",
+      "source": "13",
+      "url": "https://mistral.ai/news/mistral-ai-and-nvidia-partner-to-accelerate-open-frontier-models/",
+      "title": "Mistral partners with NVIDIA to accelerate open frontier models",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Mon, 16 Mar 2026 20:00:00 GMT"
+    },
+    {
+      "id": "00669c0496e566aed956",
+      "source": "13",
+      "url": "https://mistral.ai/news/leanstral/",
+      "title": "Leanstral: Open-Source foundation for trustworthy vibe-coding",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Mon, 16 Mar 2026 16:00:00 GMT"
+    },
+    {
+      "id": "9085439c58e5ba505b51",
+      "source": "13",
+      "url": "https://mistral.ai/news/rails-testing-on-autopilot-building-an-agent-that-writes-what-developers-wont/",
+      "title": "Rails testing on autopilot: Building an agent that writes what developers won't",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Wed, 11 Mar 2026 12:00:00 GMT"
+    },
+    {
+      "id": "baf6b422f8d299491aa7",
+      "source": "13",
+      "url": "https://mistral.ai/news/voxtral-transcribe-2/",
+      "title": "Voxtral transcribes at the speed of sound.",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Wed, 04 Feb 2026 16:00:00 GMT"
+    },
+    {
+      "id": "bc5b21d917adf4310100",
+      "source": "13",
+      "url": "https://mistral.ai/news/mistral-vibe-2-0/",
+      "title": "Terminally online Mistral Vibe.",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Tue, 27 Jan 2026 16:00:00 GMT"
+    },
+    {
+      "id": "f1bd20158cf3ba40a8e7",
+      "source": "13",
+      "url": "https://mistral.ai/news/debugging-memory-leak-in-vllm/",
+      "title": "Heaps do lie: debugging a memory leak in vLLM.",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Wed, 21 Jan 2026 16:00:00 GMT"
+    },
+    {
+      "id": "0f5ca7b15de083718e97",
+      "source": "13",
+      "url": "https://mistral.ai/news/mistral-ocr-3/",
+      "title": "Introducing Mistral OCR 3",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Wed, 17 Dec 2025 15:00:00 GMT"
+    },
+    {
+      "id": "8d83a3ac325cedad695a",
+      "source": "13",
+      "url": "https://mistral.ai/news/devstral-2-vibe-cli/",
+      "title": "Introducing: Devstral 2 and Mistral Vibe CLI.",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Tue, 09 Dec 2025 12:00:00 GMT"
+    },
+    {
+      "id": "70f36071c0f9ea275115",
+      "source": "15",
+      "url": "https://cohere.com/blog",
+      "title": "Blog The latest news, launches, and insights",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "85860f5c3be1aed7440c",
+      "source": "15",
+      "url": "https://cohere.com/research/futures-of-work",
+      "title": "Future(s) of Work How will AI change the way we work?",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "07fd08007885fac625cc",
+      "source": "15",
+      "url": "https://cohere.com/research/aya",
+      "title": "Aya Models Multilingual AI at scale",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "93583aefe186b906ba29",
+      "source": "15",
+      "url": "https://cohere.com/research/scholars-program",
+      "title": "Research Scholars Finding the new generation of ML talent",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "d5c3c8f88acbc1b95801",
+      "source": "15",
+      "url": "https://cohere.com/research/open-science",
+      "title": "Open Science Community Championing global, open science",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "772faa95d27cda2e1ef7",
+      "source": "15",
+      "url": "https://cohere.com/research/grants",
+      "title": "Catalyst Grants Supporting impactful ML endeavors",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "0dfaaa231d64e17e57a6",
+      "source": "15",
+      "url": "https://cohere.com/research/agentic-task-ecosystem",
+      "title": "Agentic Task Ecosystem",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "b737cd54df6dfa54abfc",
+      "source": "15",
+      "url": "https://cohere.com/research/papers/afriguard-safety-and-robust-refusal-for-african-languages-2026-10-26",
+      "title": "AFRIGUARD: Safety and Robust Refusal For African Languages",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "b2791a54fe8f2fa9d8ae",
+      "source": "15",
+      "url": "https://cohere.com/research/papers/culturalriddles-2026-10-22",
+      "title": "CulturalRiddles",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "f1c634d62b4e4a0e3401",
+      "source": "15",
+      "url": "https://cohere.com/research/papers/zero-shot-spoken-language-understanding-with-slam-asr-what-do-monolingual-asr-trained-linear-projectors-enable-2026-10-14",
+      "title": "Zero-Shot Spoken Language Understanding with SLAM-ASR: What Do Monolingual ASR-Trained Linear Projectors Enable?",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "afc38250cc76923c1fe8",
+      "source": "15",
+      "url": "https://cohere.com/research/papers/scaling-inference-time-compute-with-teams-of-coding-agents-2026-10-12",
+      "title": "Scaling Inference-Time Compute with Teams of Coding Agents",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "9565f1214944595d728e",
+      "source": "15",
+      "url": "https://cohere.com/research/papers/the-agentic-task-ecosystem-a-supply-side-record-of-agentic-automation-2026-10-08",
+      "title": "The Agentic Task Ecosystem: A Supply-Side Record of Agentic Automation",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "8e9dfd8b0deb36b7f0f7",
+      "source": "15",
+      "url": "https://cohere.com/research/papers/north-small-translate-advanced-cost-effective-translation-cohere-cat-2026-09-12",
+      "title": "North Small Translate: Advanced Cost-Effective Translation (Cohere CAT+)",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "79885e406544e03dd303",
+      "source": "15",
+      "url": "https://cohere.com/research/newsletter",
+      "title": "sign up for our mailing list",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "08c9641d4c8ceb154d7b",
+      "source": "15",
+      "url": "https://cohere.com/research/open-science/application",
+      "title": "join our open science community",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "c2d1ebc895fc282e8e43",
+      "source": "16",
+      "url": "https://x.ai/news/grok-4-7",
+      "title": "New Meet Grok 4.7 · Our new model",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "eb90183443a2e9f7ec27",
+      "source": "16",
+      "url": "https://x.ai/news/grok-voice-3",
+      "title": "Oct 14, 2026 Introducing Grok Voice 3.0",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "b35857eea52077e9dbef",
+      "source": "16",
+      "url": "https://x.ai/news/data-bot",
+      "title": "Product · Nov 2, 2026 Giving every team a data scientist with Grok Bot",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "d6b7d4d6a8cbe192a4b5",
+      "source": "16",
+      "url": "https://x.ai/news/grok-bot-sales",
+      "title": "Product · Oct 27, 2026 Your next sales teammate should be a Grok Bot",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "2b387adb645b9324785c",
+      "source": "16",
+      "url": "https://x.ai/news/partnernetworkannouncement",
+      "title": "Company · Oct 22, 2026 Introducing the SpaceX Super Intelligence Partner Network",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "0eb4c38a8f68050ca927",
+      "source": "18",
+      "url": "https://seed.bytedance.com/en/blog/seed-alignment-preparedness-team-looking-for-global-talents",
+      "title": "Seed Alignment & Preparedness team looking for global talents Oct 14, 2026 Recruitment Learn more",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "4569964468feaed2d502",
+      "source": "18",
+      "url": "https://seed.bytedance.com/en/blog/seedrealtime-audio-visual-full-duplex-llm-released-toward-omni-modal-natural-interaction",
+      "title": "Seed Audio-Visual Full-Duplex LLM Released: Toward Fully Multimodal Natural Interaction Aug 5, 2026 Audio Learn more",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "d86f53820cbe88cd604a",
+      "source": "18",
+      "url": "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+      "title": "One-take Creation, Flexible Referencing: Introducing Seedance 2.5 Jul 31, 2026 Visual Learn more",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "4c0f6738b6864c625001",
+      "source": "18",
+      "url": "https://seed.bytedance.com/en/blog/from-speech-to-audio-creation-introducing-the-seed-audio-1-0-audio-creation-model",
+      "title": "From Speech to Audio Creation | Introducing the Seed Audio 1.0 Audio Creation Model Jul 20, 2026 Audio Learn more",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "26ca3359c55bd4e9e7a8",
+      "source": "18",
+      "url": "https://seed.bytedance.com/en/blog/beyond-generation-it-understands-design-introducing-seedream-5-0-pro",
+      "title": "Beyond Generation, It Understands Design | Introducing Seedream 5.0 Pro Jul 8, 2026 Visual Learn more",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "d961b91821e93d604a34",
+      "source": "19",
+      "url": "https://www.liquid.ai/blog/lfm3",
+      "title": "10.27 Models Introducing LFM3: Every Modality for Specialized Intelligence",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "dc60a3c5404c6e7adef5",
+      "source": "19",
+      "url": "https://www.liquid.ai/blog/low-latency",
+      "title": "10.22 News RIPL: Real-time Intelligence When Every Millisecond Counts",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "94cf5f775fba220df73d",
+      "source": "19",
+      "url": "https://www.liquid.ai/blog/d1-ultra",
+      "title": "10.15 Models d1-ultra: Introducing the World’s Best Decision Model",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "718093ed1e4064b36c0d",
+      "source": "19",
+      "url": "https://www.liquid.ai/blog/lfm2-5-24b-a2b",
+      "title": "10.13 Models LFM2.5-24B-A2B: Built for Fast On-Device Agents",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "ba99010cdef10a3139a8",
+      "source": "19",
+      "url": "https://www.liquid.ai/blog/d1-open",
+      "title": "10.07 Models Open d1: Edge decision models for text, vision, and audio",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "a4e1662e965428373e62",
+      "source": "19",
+      "url": "https://www.liquid.ai/blog/d1-decision-model",
+      "title": "10.05 Models Introducing d1: The most capable decision model, now with vision",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "0bbdc2e1e95631374d03",
+      "source": "19",
+      "url": "https://www.liquid.ai/blog/lfm2-5-vl-dspark",
+      "title": "09.24 Models LFM2.5-VL-DSpark: Accelerating vision-language models on edge and beyond",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "b3d2ce20949e5003ac55",
+      "source": "19",
+      "url": "https://www.liquid.ai/blog/liquid-context-qualcomm",
+      "title": "09.23 News Liquid AI, in Collaboration with Qualcomm Technologies, Brings Personal AI Context to Devices Powered by Snapdragon",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "a240306ad371f8405289",
+      "source": "19",
+      "url": "https://www.liquid.ai/blog/pipette-on-device-ai-benchmarking-by-liquid-ai",
+      "title": "08.24 News Introducing Pipette: A benchmarking suite for on-device intelligence",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "bddc8c7ac4a89e027cc3",
+      "source": "19",
+      "url": "https://www.liquid.ai/blog/lfm2.5-dspark",
+      "title": "08.20 Models LFM2.5-DSpark: Up to 3.2x Faster Inference from H100 to MacBook",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "3934dd55999bca9d8233",
+      "source": "19",
+      "url": "https://www.liquid.ai/blog/qad",
+      "title": "08.19 Models LFM2.5 Q4_0: Quantization-Aware Distillation for Edge Deployment",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "eb790fbfafd7bbbea5da",
+      "source": "19",
+      "url": "https://www.liquid.ai/blog/agent-loops",
+      "title": "08.18 Engineering Designing Loops for Production-Grade Work",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "2c131aa779a848420113",
+      "source": "19",
+      "url": "https://www.liquid.ai/blog/lfm2-5-vl-3b",
+      "title": "08.12 Models LFM2.5-VL-3B: A Better and Faster Vision-Language Model for the Edge",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "78643c7eb8a017ea6dcc",
+      "source": "19",
+      "url": "https://www.liquid.ai/blog/macpaw-partners-liquid-ai-on-device-ai-mac-users",
+      "title": "08.05 News MacPaw Partners with Liquid AI to Bring On-Device AI to Millions of Mac Users",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "1a923ab2d85f3654a15b",
+      "source": "19",
+      "url": "https://www.liquid.ai/research",
+      "title": "Research The frontier Where the frontier moves. Liquid neural networks, state-space models, and new training recipes. Published in the open. Read our research",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "045e7690dd8af9ccf5dc",
+      "source": "21",
+      "url": "https://thinkingmachines.ai/blog/a-safe-path-to-open-weights/",
+      "title": "A Safe Path to Open Weights",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Fri, 31 Jul 2026 00:00:00 GMT"
+    },
+    {
+      "id": "59e326b7c4f8ebd7b472",
+      "source": "21",
+      "url": "https://thinkingmachines.ai/blog/the-future-worth-building-is-human/",
+      "title": "The Future Worth Building Is Human",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Fri, 10 Jul 2026 00:00:00 GMT"
+    },
+    {
+      "id": "b5e33265f2b6992a12e5",
+      "source": "21",
+      "url": "https://thinkingmachines.ai/blog/interaction-models/",
+      "title": "Interaction Models: A Scalable Approach to Human-AI Collaboration",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Mon, 11 May 2026 00:00:00 GMT"
+    },
+    {
+      "id": "ba940a56dc66ad008e43",
+      "source": "21",
+      "url": "https://thinkingmachines.ai/blog/on-policy-distillation/",
+      "title": "On-Policy Distillation",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Mon, 27 Oct 2025 00:00:00 GMT"
+    },
+    {
+      "id": "01754832bc3626f0d6d4",
+      "source": "21",
+      "url": "https://thinkingmachines.ai/blog/lora/",
+      "title": "LoRA Without Regret",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Mon, 29 Sep 2025 00:00:00 GMT"
+    },
+    {
+      "id": "7653fbdd88545db30c9d",
+      "source": "21",
+      "url": "https://thinkingmachines.ai/blog/modular-manifolds/",
+      "title": "Modular Manifolds",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Fri, 26 Sep 2025 00:00:00 GMT"
+    },
+    {
+      "id": "70b7e9bcbe2d1c4f2a3a",
+      "source": "21",
+      "url": "https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/",
+      "title": "Defeating Nondeterminism in LLM Inference",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "Wed, 10 Sep 2025 07:01:00 GMT"
+    },
+    {
+      "id": "69898bd7cf367ef6b479",
+      "source": "22",
+      "url": "https://www.redwoodresearch.org/research",
+      "title": "Our Research",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "14d4aa51685348ce683c",
+      "source": "22",
+      "url": "https://www.redwoodresearch.org/blog",
+      "title": "Redwood Research blog",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "a94ec7058522aa130a1f",
+      "source": "22",
+      "url": "https://www.redwoodresearch.org/blog/screwtape-adversarial-transcript",
+      "title": "Screwtape: Adversarial Transcript Editing for Monitor Red-Teaming Automatically finding monitor failures by editing real agent transcripts Gosha Kozhevnikov, Tyler Tracy October 16, 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "5491f6b339853142f946",
+      "source": "22",
+      "url": "https://www.redwoodresearch.org/blog/capabilities-research-expands-the",
+      "title": "Capabilities research expands the safety-usefulness Pareto frontier too A model of when and why research improves or hurts safety Alex Mallen October 2, 2026",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "c95e23b7a4a5e00cf5c8",
+      "source": "23",
+      "url": "https://www.apolloresearch.ai/blog/principles-for-embedded-evaluations",
+      "title": "Embedded evaluations",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "13791d07e5b0107094d8",
+      "source": "24",
+      "url": "https://www.eleuther.ai/research/",
+      "title": "Explore our research",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "2f25929a4ec8a29769b6",
+      "source": "24",
+      "url": "https://huggingface.co/common-pile",
+      "title": "The Common Pile",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "40a42b6fd39519cd4803",
+      "source": "24",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness",
+      "title": "lm-evaluation-harness",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "0e69930d2693f071b655",
+      "source": "24",
+      "url": "https://huggingface.co/EleutherAI/gpt-neox-20b",
+      "title": "GPT-NeoX-20B",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "85491202ea03a2b87446",
+      "source": "24",
+      "url": "https://www.eleuther.ai/research/open-models-and-data/",
+      "title": "Open Models and Tools →",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "666584ad8a873406263f",
+      "source": "24",
+      "url": "https://www.eleuther.ai/research/interpretability/",
+      "title": "Interpretability Over Time →",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "fa19465ce9d89794c953",
+      "source": "24",
+      "url": "https://arxiv.org/abs/2606.06533",
+      "title": "a science of AI must study training dynamics",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "2a4d7dd868ea158f5451",
+      "source": "24",
+      "url": "https://www.eleuther.ai/research/open-weight-safety/",
+      "title": "Open-Weight Safety →",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "05ed4e73373cd902055d",
+      "source": "24",
+      "url": "https://arxiv.org/abs/2508.06601",
+      "title": "Deep Ignorance →",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "d2c4d2a1329dcb4dc065",
+      "source": "24",
+      "url": "https://arxiv.org/abs/2406.16746",
+      "title": "Development Cheatsheet →",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "9ce17293c2702d0fba4e",
+      "source": "24",
+      "url": "https://www.eleuther.ai/research/evaluation/",
+      "title": "Evaluation →",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "92329a1a07ba2b001e64",
+      "source": "24",
+      "url": "https://arxiv.org/abs/2602.16763",
+      "title": "Benchmark Saturation →",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "05d16a1b9aecb37adcf7",
+      "source": "25",
+      "url": "https://huggingface.co/SJTU-DENG-Lab",
+      "title": "DENG Lab @ SJTU",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "e735b0bb508f8cc26420",
+      "source": "25",
+      "url": "https://huggingface.co/VideoRebirthAI",
+      "title": "Video Rebirth",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "b6f6af249f01bb8f185f",
+      "source": "25",
+      "url": "https://huggingface.co/SJTU",
+      "title": "Shanghai Jiao Tong University",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "49916bf75af91db62d76",
+      "source": "25",
+      "url": "https://huggingface.co/PekingUniversity",
+      "title": "Peking University",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "ba37f39efd5d7695e7d5",
+      "source": "25",
+      "url": "https://huggingface.co/UMCUtrecht",
+      "title": "University Medical Center Utrecht",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "e91c07175d992eef441f",
+      "source": "25",
+      "url": "https://huggingface.co/GeorgiaTech",
+      "title": "Georgia Institute of Technology",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "4b3a5351e0d91afa3ce9",
+      "source": "26",
+      "url": "https://jina.ai/news/jina-ocr-v1-faster-document-parsing-on-low-budget-gpus",
+      "title": "open_in_new Learn more",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "e7d3212eb26918d1caad",
+      "source": "26",
+      "url": "https://arxiv.org/abs/2405.20204",
+      "title": "ICML 2024 May 30, 2024 Jina CLIP: Your CLIP Model Is Also Your Text Retriever",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    },
+    {
+      "id": "c354dbcdc3751ac5d4a4",
+      "source": "26",
+      "url": "https://jina.ai/news",
+      "title": "auto_stories Read more",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": null
+    }
+  ],
+  "status": {
+    "0": {
+      "ok": false,
+      "error": "403 Client Error: Forbidden for url: https://openai.com/research/"
+    },
+    "1": {
+      "ok": true,
+      "new": 24
+    },
+    "2": {
+      "ok": true,
+      "new": 2
+    },
+    "3": {
+      "ok": true,
+      "new": 40
+    },
+    "4": {
+      "ok": true,
+      "new": 0
+    },
+    "5": {
+      "ok": true,
+      "new": 10
+    },
+    "6": {
+      "ok": true,
+      "new": 16
+    },
+    "7": {
+      "ok": true,
+      "new": 10
+    },
+    "8": {
+      "ok": true,
+      "new": 20
+    },
+    "9": {
+      "ok": false,
+      "error": "HTTPSConnectionPool(host='www.salesforceairesearch.com', port=443): Max retries exceeded with url: / (Caused by SSLError"
+    },
+    "10": {
+      "ok": true,
+      "new": 25
+    },
+    "11": {
+      "ok": true,
+      "new": 19
+    },
+    "12": {
+      "ok": true,
+      "new": 0
+    },
+    "13": {
+      "ok": true,
+      "new": 39
+    },
+    "14": {
+      "ok": true,
+      "new": 0
+    },
+    "15": {
+      "ok": true,
+      "new": 15
+    },
+    "16": {
+      "ok": true,
+      "new": 5
+    },
+    "17": {
+      "ok": true,
+      "new": 0
+    },
+    "18": {
+      "ok": true,
+      "new": 5
+    },
+    "19": {
+      "ok": true,
+      "new": 15
+    },
+    "20": {
+      "ok": true,
+      "new": 0
+    },
+    "21": {
+      "ok": true,
+      "new": 7
+    },
+    "22": {
+      "ok": true,
+      "new": 4
+    },
+    "23": {
+      "ok": true,
+      "new": 1
+    },
+    "24": {
+      "ok": true,
+      "new": 12
+    },
+    "25": {
+      "ok": true,
+      "new": 6
+    },
+    "26": {
+      "ok": true,
+      "new": 3
+    }
+  }
+}
