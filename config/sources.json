@@ -3,7 +3,32 @@
     "id": "0",
     "name": "OpenAI",
     "url": "https://openai.com/research/index/",
-    "row": "main a[href^='/index/']"
+    "row": "main a[href^='/index/']",
+    "additional": [
+      {
+        "team": "Alignment Research",
+        "url": "https://alignment.openai.com/",
+        "link": "h2 a[href^='/']",
+        "title": "h2",
+        "date": "time",
+        "row": "article.ap-post"
+      },
+      {
+        "team": "Alignment · Misalignment Reports",
+        "url": "https://alignment.openai.com/misalignment-reports/",
+        "link": "a.report-title",
+        "title": "a.report-title",
+        "date": "td[data-label='First posted']",
+        "row": "tr.entry-main:has(a.report-title)"
+      },
+      {
+        "team": "Deployment Safety · System Cards",
+        "url": "https://deploymentsafety.openai.com/",
+        "title": "p.text-h4",
+        "date": ".text-meta",
+        "row": "main a[href^='/']:has(p.text-h4)"
+      }
+    ]
   },
   {
     "id": "1",
@@ -58,7 +83,17 @@
     "url": "https://deepmind.google/research/publications/",
     "row": "a.list-group__link[href*='/research/publications/']",
     "title": ".list-group__description",
-    "date": ".list-group__date"
+    "date": ".list-group__date",
+    "next_selector": "a[aria-label='Next page']",
+    "additional": [
+      {
+        "team": "Research projects",
+        "url": "https://deepmind.google/research/projects/",
+        "link": "a.card__overlay-link",
+        "title": ".card__title",
+        "row": "article.card:has(a.card__overlay-link[href^='/blog/']),article.card:has(a.card__overlay-link[href^='/research/'])"
+      }
+    ]
   },
   {
     "id": "3",
@@ -66,25 +101,186 @@
     "url": "https://www.goodfire.com/research",
     "row": "a.index-item[href^='/research/']",
     "title": "h2,h3",
-    "date": ".index-meta span:last-child"
+    "date": ".index-meta span:last-child",
+    "additional": [
+      {
+        "team": "Language",
+        "url": "https://www.goodfire.com/language",
+        "link": "a[href^='/research/']",
+        "title": "h3",
+        "row": ".example-text:has(a[href^='/research/'])"
+      },
+      {
+        "team": "Life Sciences",
+        "url": "https://www.goodfire.com/life-sciences",
+        "link": "a[href^='/research/']",
+        "title": "h3",
+        "row": ".example-text:has(a[href^='/research/'])"
+      }
+    ]
   },
   {
     "id": "4",
     "name": "Meta FAIR",
     "url": "https://ai.meta.com/blog/meta-fair-updates-agents-robustness-safety-architecture/",
-    "row": "a[href*=\"/research/publications/\"]"
+    "row": "a[href*=\"/research/publications/\"]",
+    "additional": [
+      {
+        "team": "FAIR · June 2024",
+        "url": "https://ai.meta.com/blog/meta-fair-research-new-releases/",
+        "adapter": "lab_publications",
+        "lab_data": "fair"
+      },
+      {
+        "team": "FAIR · October 2024",
+        "url": "https://ai.meta.com/blog/fair-news-segment-anything-2-1-meta-spirit-lm-layer-skip-salsa-lingua/",
+        "adapter": "lab_publications",
+        "lab_data": "fair"
+      }
+    ]
   },
   {
     "id": "5",
     "name": "Microsoft Research",
     "url": "https://www.microsoft.com/en-us/research/publications/",
-    "row": "h3 a[href*='/research/publication/']"
+    "row": "h3 a[href*='/research/publication/']",
+    "next_selector": "a[aria-label='Next page']",
+    "additional": [
+      {
+        "team": "AI for Science",
+        "url": "https://www.microsoft.com/en-us/research/lab/microsoft-research-ai-for-science/publications/",
+        "next_selector": "a[aria-label='Next page']",
+        "row": "h3 a[href*='/research/publication/']"
+      },
+      {
+        "team": "Asia-Pacific",
+        "url": "https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/publications/",
+        "next_selector": "a[aria-label='Next page']",
+        "row": "h3 a[href*='/research/publication/']"
+      },
+      {
+        "team": "Cambridge",
+        "url": "https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/publications/",
+        "next_selector": "a[aria-label='Next page']",
+        "row": "h3 a[href*='/research/publication/']"
+      },
+      {
+        "team": "Catalyst Lab",
+        "url": "https://www.microsoft.com/en-us/research/lab/catalyst-lab/",
+        "row": "main article h3 a[href*='/en-us/research/blog/']"
+      },
+      {
+        "team": "India",
+        "url": "https://www.microsoft.com/en-us/research/lab/microsoft-research-india/publications/",
+        "next_selector": "a[aria-label='Next page']",
+        "row": "h3 a[href*='/research/publication/']"
+      },
+      {
+        "team": "Montreal",
+        "url": "https://www.microsoft.com/en-us/research/lab/microsoft-research-montreal/publications/",
+        "next_selector": "a[aria-label='Next page']",
+        "row": "h3 a[href*='/research/publication/']"
+      },
+      {
+        "team": "New England",
+        "url": "https://www.microsoft.com/en-us/research/lab/microsoft-research-new-england/publications/",
+        "next_selector": "a[aria-label='Next page']",
+        "row": "h3 a[href*='/research/publication/']"
+      },
+      {
+        "team": "New York City",
+        "url": "https://www.microsoft.com/en-us/research/lab/microsoft-research-new-york/publications/",
+        "next_selector": "a[aria-label='Next page']",
+        "row": "h3 a[href*='/research/publication/']"
+      },
+      {
+        "team": "Redmond",
+        "url": "https://www.microsoft.com/en-us/research/lab/microsoft-research-redmond/",
+        "row": "main article h3 a[href*='/en-us/research/blog/']"
+      }
+    ]
   },
   {
     "id": "6",
     "name": "NVIDIA Research",
     "url": "https://research.nvidia.com/publications",
-    "row": "a[href^='/publication/']"
+    "row": "a[href^='/publication/']",
+    "next_selector": "a[rel~=next]",
+    "additional": [
+      {
+        "team": "Autonomous Systems and Physical AI",
+        "url": "https://research.nvidia.com/labs/aspire/",
+        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']"
+      },
+      {
+        "team": "Dynamic Vision and Learning",
+        "url": "https://research.nvidia.com/labs/dvl/",
+        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']"
+      },
+      {
+        "team": "Electronic Design Automation",
+        "url": "https://research.nvidia.com/labs/electronic-design-automation/",
+        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']"
+      },
+      {
+        "team": "Fundamental Generative AI Research",
+        "url": "https://research.nvidia.com/labs/genair/",
+        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']"
+      },
+      {
+        "team": "Perception, Action and Reasoning",
+        "url": "https://research.nvidia.com/labs/par/",
+        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']"
+      },
+      {
+        "team": "High-Fidelity Physics",
+        "url": "https://research.nvidia.com/labs/prl/",
+        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']"
+      },
+      {
+        "team": "Real-Time Graphics",
+        "url": "https://research.nvidia.com/labs/rtr/",
+        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']"
+      },
+      {
+        "team": "Taiwan Research Lab",
+        "url": "https://research.nvidia.com/labs/twn/",
+        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']"
+      },
+      {
+        "team": "AI-Mediated Reality and Interaction",
+        "url": "https://research.nvidia.com/labs/amri/",
+        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']"
+      },
+      {
+        "team": "Applied Research in Autonomous Vehicles",
+        "url": "https://research.nvidia.com/labs/av-applied-research/",
+        "row": "h3.article-title a[href*='/publication/'],h3 a[href*='/projects/']"
+      },
+      {
+        "team": "Applied Deep Learning Research",
+        "url": "https://research.nvidia.com/labs/adlr/projects/",
+        "row": "h2.archive__item-title a[href]"
+      },
+      {
+        "team": "Cosmos Lab",
+        "url": "https://research.nvidia.com/labs/cosmos-lab/",
+        "adapter": "lab_publications",
+        "lab_data": "cosmos"
+      },
+      {
+        "team": "Spatial Intelligence",
+        "url": "https://research.nvidia.com/labs/sil/publications/",
+        "adapter": "lab_publications",
+        "lab_data": "sil"
+      },
+      {
+        "team": "Generalist Embodied Agents",
+        "url": "https://research.nvidia.com/labs/gear/publications/",
+        "adapter": "lab_publications",
+        "lab_data": "gear"
+      }
+    ]
   },
   {
     "id": "7",
@@ -92,55 +288,282 @@
     "url": "https://machinelearning.apple.com/research",
     "row": "li.post-row",
     "link": "a[href^='/research/']",
-    "title": ".post-title"
+    "title": ".post-title",
+    "additional": [
+      {
+        "team": "Research Highlights",
+        "url": "https://machinelearning.apple.com/highlights",
+        "link": "a.post-link[href^='/research/']",
+        "title": "h2,h3",
+        "date": ".font-weight-semibold span",
+        "row": "main .card-content,main li.post-row"
+      }
+    ]
   },
   {
     "id": "8",
     "name": "IBM Research",
     "url": "https://research.ibm.com/publications",
-    "row": "a[href^='/publications/']"
+    "row": "a[href^='/publications/']",
+    "next_selector": "a[aria-label='Next page']",
+    "additional": [
+      {
+        "team": "Africa Lab",
+        "url": "https://research.ibm.com/labs/africa",
+        "row": "main h3 a[href^='/publications/'],main h3 a[href^='https://research.ibm.com/publications/'],main h3 a[href^='/blog/'],main h3 a[href^='https://research.ibm.com/blog/']"
+      },
+      {
+        "team": "Albany Lab",
+        "url": "https://research.ibm.com/labs/albany",
+        "row": "main h3 a[href^='/publications/'],main h3 a[href^='https://research.ibm.com/publications/'],main h3 a[href^='/blog/'],main h3 a[href^='https://research.ibm.com/blog/']"
+      },
+      {
+        "team": "Cambridge Lab",
+        "url": "https://research.ibm.com/labs/cambridge",
+        "row": "main h3 a[href^='/publications/'],main h3 a[href^='https://research.ibm.com/publications/'],main h3 a[href^='/blog/'],main h3 a[href^='https://research.ibm.com/blog/']"
+      },
+      {
+        "team": "India Lab",
+        "url": "https://research.ibm.com/labs/india",
+        "row": "main h3 a[href^='/publications/'],main h3 a[href^='https://research.ibm.com/publications/'],main h3 a[href^='/blog/'],main h3 a[href^='https://research.ibm.com/blog/']"
+      },
+      {
+        "team": "Ireland Lab",
+        "url": "https://research.ibm.com/labs/ireland",
+        "row": "main h3 a[href^='/publications/'],main h3 a[href^='https://research.ibm.com/publications/'],main h3 a[href^='/blog/'],main h3 a[href^='https://research.ibm.com/blog/']"
+      },
+      {
+        "team": "Israel Lab",
+        "url": "https://research.ibm.com/labs/israel",
+        "row": "main h3 a[href^='/publications/'],main h3 a[href^='https://research.ibm.com/publications/'],main h3 a[href^='/blog/'],main h3 a[href^='https://research.ibm.com/blog/']"
+      },
+      {
+        "team": "Japan Lab",
+        "url": "https://research.ibm.com/labs/japan",
+        "row": "main h3 a[href^='/publications/'],main h3 a[href^='https://research.ibm.com/publications/'],main h3 a[href^='/blog/'],main h3 a[href^='https://research.ibm.com/blog/']"
+      },
+      {
+        "team": "Silicon Valley Lab",
+        "url": "https://research.ibm.com/labs/silicon-valley",
+        "row": "main h3 a[href^='/publications/'],main h3 a[href^='https://research.ibm.com/publications/'],main h3 a[href^='/blog/'],main h3 a[href^='https://research.ibm.com/blog/']"
+      },
+      {
+        "team": "United Kingdom Lab",
+        "url": "https://research.ibm.com/labs/uk",
+        "row": "main h3 a[href^='/publications/'],main h3 a[href^='https://research.ibm.com/publications/'],main h3 a[href^='/blog/'],main h3 a[href^='https://research.ibm.com/blog/']"
+      },
+      {
+        "team": "Yorktown Heights Lab",
+        "url": "https://research.ibm.com/labs/yorktown-heights",
+        "row": "main h3 a[href^='/publications/'],main h3 a[href^='https://research.ibm.com/publications/'],main h3 a[href^='/blog/'],main h3 a[href^='https://research.ibm.com/blog/']"
+      },
+      {
+        "team": "Zurich Lab",
+        "url": "https://research.ibm.com/labs/zurich",
+        "row": "main h3 a[href^='/publications/'],main h3 a[href^='https://research.ibm.com/publications/'],main h3 a[href^='/blog/'],main h3 a[href^='https://research.ibm.com/blog/']"
+      }
+    ]
   },
   {
     "id": "9",
     "name": "Salesforce AI Research",
     "url": "https://www.salesforce.com/blog/category/ai-research/",
-    "row": "main .card__title a[href*=\"/blog/\"]"
+    "row": "main .card__title a[href*=\"/blog/\"]",
+    "additional": [
+      {
+        "team": "AI Research archive",
+        "url": "https://www.salesforce.com/blog/category/ai-research/?archive=true",
+        "link": ".card__title a",
+        "title": ".card__title",
+        "next_selector": "link[rel~=next]",
+        "row": "main article.card:has(a[href*='/blog/category/ai-research'])"
+      }
+    ]
   },
   {
     "id": "10",
     "name": "Ai2",
     "url": "https://allenai.org/blog",
-    "row": "main a[href^='/blog/']"
+    "row": "main a[href^='/blog/']",
+    "next_selector": "a[href*='/research?o=']:-soup-contains('Next')",
+    "additional": [
+      {
+        "team": "AI for science",
+        "url": "https://allenai.org/ai-for-science",
+        "adapter": "lab_publications",
+        "lab_data": "ai2"
+      },
+      {
+        "team": "Embodied AI",
+        "url": "https://allenai.org/embodied-ai",
+        "adapter": "lab_publications",
+        "lab_data": "ai2"
+      },
+      {
+        "team": "Language models",
+        "url": "https://allenai.org/language-models",
+        "adapter": "lab_publications",
+        "lab_data": "ai2"
+      },
+      {
+        "team": "Multimodal models",
+        "url": "https://allenai.org/multimodal-models",
+        "adapter": "lab_publications",
+        "lab_data": "ai2"
+      },
+      {
+        "team": "Evaluation frameworks",
+        "url": "https://allenai.org/evaluation-frameworks",
+        "adapter": "lab_publications",
+        "lab_data": "ai2"
+      },
+      {
+        "team": "Olmo",
+        "url": "https://allenai.org/olmo",
+        "adapter": "lab_publications",
+        "lab_data": "ai2"
+      },
+      {
+        "team": "Molmo",
+        "url": "https://allenai.org/molmo",
+        "adapter": "lab_publications",
+        "lab_data": "ai2"
+      },
+      {
+        "team": "Asta",
+        "url": "https://allenai.org/asta",
+        "adapter": "lab_publications",
+        "lab_data": "ai2"
+      },
+      {
+        "team": "OlmoEarth",
+        "url": "https://allenai.org/olmoearth",
+        "adapter": "lab_publications",
+        "lab_data": "ai2"
+      }
+    ]
   },
   {
     "id": "11",
     "name": "Amazon Science",
     "url": "https://www.amazon.science/publications",
-    "row": "a[href*='/publications/']"
+    "row": "a[href*='/publications/']",
+    "next_selector": "a[rel~=next][href]",
+    "additional": [
+      {
+        "team": "Research area · Automated reasoning",
+        "url": "https://www.amazon.science/research-areas/automated-reasoning",
+        "row": ".PromoF-title a[href*=\"/publications/\"], .PromoA-title a[href*=\"/publications/\"]"
+      },
+      {
+        "team": "Research area · Cloud and systems",
+        "url": "https://www.amazon.science/research-areas/cloud-and-systems",
+        "row": ".PromoF-title a[href*=\"/publications/\"], .PromoA-title a[href*=\"/publications/\"]"
+      },
+      {
+        "team": "Research area · Computer vision",
+        "url": "https://www.amazon.science/research-areas/computer-vision",
+        "row": ".PromoF-title a[href*=\"/publications/\"], .PromoA-title a[href*=\"/publications/\"]"
+      },
+      {
+        "team": "Research area · Conversational AI",
+        "url": "https://www.amazon.science/research-areas/conversational-ai-natural-language-processing",
+        "row": ".PromoF-title a[href*=\"/publications/\"], .PromoA-title a[href*=\"/publications/\"]"
+      },
+      {
+        "team": "Research area · Economics",
+        "url": "https://www.amazon.science/research-areas/economics",
+        "row": ".PromoF-title a[href*=\"/publications/\"], .PromoA-title a[href*=\"/publications/\"]"
+      },
+      {
+        "team": "Research area · Information and knowledge management",
+        "url": "https://www.amazon.science/research-areas/information-and-knowledge-management",
+        "row": ".PromoF-title a[href*=\"/publications/\"], .PromoA-title a[href*=\"/publications/\"]"
+      },
+      {
+        "team": "Research area · Machine learning",
+        "url": "https://www.amazon.science/research-areas/machine-learning",
+        "row": ".PromoF-title a[href*=\"/publications/\"], .PromoA-title a[href*=\"/publications/\"]"
+      },
+      {
+        "team": "Research area · Operations research and optimization",
+        "url": "https://www.amazon.science/research-areas/operations-research-and-optimization",
+        "row": ".PromoF-title a[href*=\"/publications/\"], .PromoA-title a[href*=\"/publications/\"]"
+      },
+      {
+        "team": "Research area · Quantum technologies",
+        "url": "https://www.amazon.science/research-areas/quantum-technologies",
+        "row": ".PromoF-title a[href*=\"/publications/\"], .PromoA-title a[href*=\"/publications/\"]"
+      },
+      {
+        "team": "Research area · Robotics",
+        "url": "https://www.amazon.science/research-areas/robotics",
+        "row": ".PromoF-title a[href*=\"/publications/\"], .PromoA-title a[href*=\"/publications/\"]"
+      },
+      {
+        "team": "Research area · Search and information retrieval",
+        "url": "https://www.amazon.science/research-areas/search-and-information-retrieval",
+        "row": ".PromoF-title a[href*=\"/publications/\"], .PromoA-title a[href*=\"/publications/\"]"
+      },
+      {
+        "team": "Research area · Security, privacy, and abuse prevention",
+        "url": "https://www.amazon.science/research-areas/security-privacy-and-abuse-prevention",
+        "row": ".PromoF-title a[href*=\"/publications/\"], .PromoA-title a[href*=\"/publications/\"]"
+      },
+      {
+        "team": "Research area · Sustainability",
+        "url": "https://www.amazon.science/research-areas/sustainability",
+        "row": ".PromoF-title a[href*=\"/publications/\"], .PromoA-title a[href*=\"/publications/\"]"
+      }
+    ]
   },
   {
     "id": "12",
     "name": "DeepSeek",
     "url": "https://www.deepseek.com/en/news/",
-    "row": "main a[href^='/en/news/'][href*='v']"
+    "adapter": "interactive_catalogs"
   },
   {
     "id": "13",
     "name": "Mistral AI",
     "url": "https://mistral.ai/research/",
-    "row": "a[href^='/news/']:-soup-contains('Research')"
+    "row": "a[href^='/news/']:-soup-contains('Research')",
+    "additional": [
+      {
+        "team": "Research news",
+        "url": "https://mistral.ai/news/",
+        "row": "[data-categories~=\"research\"] a[href^=\"/news/\"]",
+        "title": "h2",
+        "date": "footer p:first-child"
+      }
+    ]
   },
   {
     "id": "14",
     "name": "Alibaba Qwen",
     "url": "https://qwen.ai/research",
-    "row": "qwen"
+    "adapter": "interactive_catalogs"
   },
   {
     "id": "15",
     "name": "Cohere",
     "url": "https://cohere.com/research/papers",
-    "row": "a[href^='/research/papers/']"
+    "adapter": "interactive_catalogs",
+    "additional": [
+      {
+        "team": "Aya",
+        "url": "https://cohere.com/research/aya",
+        "row": "a[href^=\"/research/papers/\"]"
+      },
+      {
+        "team": "Research blog",
+        "url": "https://cohere.com/blog/tag/research",
+        "row": "a[href^=\"/blog/\"]:has(.font-eyebrow)",
+        "next_selector": "a[aria-label=\"Go to next page\"]",
+        "title": "p.font-body",
+        "date": "p.font-eyebrow"
+      }
+    ]
   },
   {
     "id": "16",
@@ -154,15 +577,53 @@
     "url": "https://www.ai21.com/research/",
     "row": "a.research__link",
     "title": ".research__title",
-    "date": ".research__date"
+    "date": ".research__date",
+    "next_selector": "a.next.page-numbers"
   },
   {
     "id": "18",
     "name": "ByteDance Seed",
-    "url": "https://seed.bytedance.com/en/research",
-    "row": "a[href^='/en/public_papers/']",
-    "title": "span span",
-    "date": ":scope > span:first-child"
+    "url": "https://seed.bytedance.com/en/public_papers",
+    "adapter": "interactive_catalogs",
+    "additional": [
+      {
+        "label": "Featured research",
+        "url": "https://seed.bytedance.com/en/research",
+        "row": "a[href^='/en/public_papers/']",
+        "title": "span span",
+        "date": ":scope > span:first-child"
+      },
+      {
+        "team": "Blog · Foundation models",
+        "url": "https://seed.bytedance.com/en/blog_list/foundation",
+        "adapter": "interactive_catalogs",
+        "area_id": 100
+      },
+      {
+        "team": "Blog · Visual",
+        "url": "https://seed.bytedance.com/en/blog_list/visual",
+        "adapter": "interactive_catalogs",
+        "area_id": 101
+      },
+      {
+        "team": "Blog · Audio",
+        "url": "https://seed.bytedance.com/en/blog_list/audio",
+        "adapter": "interactive_catalogs",
+        "area_id": 102
+      },
+      {
+        "team": "Blog · AI Infra",
+        "url": "https://seed.bytedance.com/en/blog_list/ai-infra",
+        "adapter": "interactive_catalogs",
+        "area_id": 103
+      },
+      {
+        "team": "Blog · Frontier research",
+        "url": "https://seed.bytedance.com/en/blog_list/frontier-research",
+        "adapter": "interactive_catalogs",
+        "area_id": 104
+      }
+    ]
   },
   {
     "id": "19",
@@ -171,7 +632,14 @@
     "row": "li:has(a[href^='/blog/'])",
     "link": "a[href^='/blog/']",
     "title": "span.font-serif",
-    "date": "time"
+    "date": "time",
+    "additional": [
+      {
+        "team": "Engineering",
+        "url": "https://www.liquid.ai/engineering",
+        "row": "main a[href^=\"/blog/\"]"
+      }
+    ]
   },
   {
     "id": "20",
@@ -180,7 +648,25 @@
     "row": "article[data-labels='research']:not(:has(a[href='/frontier-intelligence-group/']))",
     "link": "header h1 a",
     "title": "header h1",
-    "date": "header time"
+    "date": "header time",
+    "additional": [
+      {
+        "team": "Recursive Self-Improvement Lab",
+        "url": "https://sakana.ai/rsi-lab/",
+        "row": "article li strong a[href^=\"/\"]"
+      },
+      {
+        "team": "Frontier Intelligence Group",
+        "url": "https://sakana.ai/frontier-intelligence-group/",
+        "row": "article li a[href^=\"https://sakana.ai/\"]:has(strong)"
+      },
+      {
+        "team": "Sakana AI Publications",
+        "url": "https://pub.sakana.ai/",
+        "row": "a.card__link[href]",
+        "title": "h2.card__title"
+      }
+    ]
   },
   {
     "id": "21",
@@ -194,35 +680,77 @@
     "id": "22",
     "name": "Redwood Research",
     "url": "https://www.redwoodresearch.org/research",
-    "row": "main a[href^='/research/']"
+    "row": "main a[href^='/research/']",
+    "additional": [
+      {
+        "team": "Research blog",
+        "url": "https://www.redwoodresearch.org/blog",
+        "row": "main a[href^=\"/blog/\"]:has(article)",
+        "title": "h3",
+        "date": "span.ml-auto"
+      }
+    ]
   },
   {
     "id": "23",
     "name": "Apollo Research",
     "url": "https://www.apolloresearch.ai/science",
-    "row": ".hilight_card",
-    "link": "a[href^='/science/']",
-    "title": "p.text-size-large",
-    "date": "p.text-color-blue"
+    "row": ".hilight_card, .fidings_card-wrapper",
+    "link": "a[href^=\"/science/\"]",
+    "title": ".text-size-large",
+    "date": "p.text-color-blue, .fidings_card-right .text-size-small",
+    "next_selector": "main a.w-pagination-next",
+    "additional": [
+      {
+        "team": "Monitoring",
+        "url": "https://www.apolloresearch.ai/monitoring",
+        "row": ".hilight_card, .fidings_card-wrapper",
+        "link": "a[href^=\"/monitoring/\"]",
+        "title": ".text-size-large",
+        "date": "p.text-color-blue, .fidings_card-right .text-size-small",
+        "next_selector": "main a.w-pagination-next"
+      },
+      {
+        "team": "Governance",
+        "url": "https://www.apolloresearch.ai/governance",
+        "row": ".hilight_card, .fidings_card-wrapper",
+        "link": "a[href^=\"/governance/\"]",
+        "title": ".text-size-large",
+        "date": "p.text-color-blue, .fidings_card-right .text-size-small",
+        "next_selector": "main a.w-pagination-next"
+      }
+    ]
   },
   {
     "id": "24",
     "name": "EleutherAI",
     "url": "https://blog.eleuther.ai/",
-    "row": "main a[href^=\"/\"]:not(.link)"
+    "row": "main article:has(h3)",
+    "link": "a[href^=\"/\"]",
+    "title": "h3",
+    "next_selector": "nav.blog-pagination a[href]:-soup-contains(\"Older posts\")"
   },
   {
     "id": "25",
     "name": "Hugging Face",
     "url": "https://huggingface.co/blog",
     "row": "article a[href^='/blog/huggingface/']",
-    "title": "h4"
+    "title": "h4",
+    "additional": [
+      {
+        "team": "Research editorial",
+        "url": "https://huggingface.co/blog?tag=research",
+        "adapter": "newsroom_catalogs"
+      }
+    ],
+    "next_selector": "a[href^=\"/blog?p=\"]:-soup-contains(\"Next\")"
   },
   {
     "id": "26",
     "name": "Jina AI",
     "url": "https://jina.ai/news/",
-    "row": "a[href^='/news/jina-']"
+    "row": "a[href^='/news/jina-']",
+    "adapter": "newsroom_catalogs"
   },
   {
     "id": "27",
@@ -234,24 +762,27 @@
     "id": "28",
     "name": "Berkeley BAIR",
     "url": "https://bair.berkeley.edu/blog/",
-    "row": "a.post-link"
+    "row": "a.post-link",
+    "next_selector": "a.pagination-item:-soup-contains(\"Older\")"
   },
   {
     "id": "29",
     "name": "MIT CSAIL",
     "url": "https://www.csail.mit.edu/news",
-    "row": ".news-card a[href^=\"/news/\"]"
+    "row": ".news-card a[href^=\"/news/\"]",
+    "adapter": "newsroom_catalogs"
   },
   {
     "id": "30",
     "name": "CMU ML",
     "url": "https://blog.ml.cmu.edu/category/research/",
-    "row": ".post-header h3 a"
+    "row": ".post-header h3 a",
+    "next_selector": "a[href]:-soup-contains(\"Older Posts\")"
   },
   {
     "id": "31",
     "name": "Mila",
-    "url": "https://mila.quebec/en/research/blog",
-    "row": "h3 a[href^='/en/article/']"
+    "url": "https://mila.quebec/en/research/publications",
+    "next_selector": "li.pager__item--next a[rel=next]"
   }
 ]
