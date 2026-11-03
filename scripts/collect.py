@@ -24,12 +24,72 @@ def fetch(url):
 
 
 def day(raw):
-    raw = raw.strip()
-    for fmt in ("%Y-%m-%d", "%B %d, %Y", "%b %d, %Y", "%d %B %Y"):
+    raw = " ".join(raw.split())
+    raw = re.sub(r"(?<=\d)(st|nd|rd|th)\b","",raw,flags=re.I)
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}[T ].*",raw):
+        raw = raw[:10]
+    for fmt in ("%Y-%m-%d", "%Y/%m/%d", "%B %d, %Y", "%b %d, %Y", "%d %B %Y", "%d %b %Y", "%Y-%m", "%B %Y", "%b %Y", "%Y"):
         try:
-            return datetime.strptime(raw[:10] if fmt=="%Y-%m-%d" else raw, fmt).date().isoformat()
+            value = datetime.strptime(raw,fmt)
+            if not 1900<=value.year<=2100:
+                return None
+            if fmt=="%Y":
+                return value.strftime("%Y")
+            if "%d" not in fmt:
+                return value.strftime("%Y-%m")
+            return value.date().isoformat()
         except ValueError:
             continue
+    return None
+
+
+def detail_date(soup,url):
+    for tag in soup.select('meta[property="article:published_time"], meta[name="citation_publication_date"], meta[itemprop="datePublished"]'):
+        date = day(tag.get("content",""))
+        if date:
+            return date
+    host = urlsplit(url).hostname
+    if host=="machinelearning.apple.com":
+        label = soup.find("span",string=lambda s:s and s.strip().lower()=="published")
+        if label:
+            return day(str(label.next_sibling or ""))
+    selectors = {
+        "research.nvidia.com":".field--name-field-publication-date time[datetime]",
+        "mistral.ai":"p.text-body-small.text-current",
+        "www.csail.mit.edu":".news-top .field--name-field-publication-date time",
+        "blog.eleuther.ai":".article-header .article-meta span:first-child",
+        "mila.quebec":".group-blog-article-header .field-name-node-post-date",
+    }
+    if host in selectors:
+        node=soup.select_one(selectors[host])
+        if node:
+            return day(node.get("datetime") or node.get_text(" ",strip=True))
+    if host=="huggingface.co":
+        node=soup.find(string=lambda t:t and t.strip().startswith("Published"))
+        if node:
+            return day(node.strip().removeprefix("Published"))
+    if host=="crfm.stanford.edu":
+        match=re.search(r"/(\d{4}/\d{2}/\d{2})/",urlsplit(url).path)
+        if match:
+            return day(match[1])
+    # These sites put the publication date in the same header block as the title.
+    if host in ("ai.meta.com","allenai.org","mistral.ai"):
+        title=soup.find("h1")
+        for parent in list(title.parents)[:3] if title else []:
+            for text in parent.stripped_strings:
+                date=day(text)
+                if date and len(date)==10:
+                    return date
+    return None
+
+
+def lookup_date(item):
+    try:
+        response=fetch(item["url"])
+        if official_post(response.url,item["listed_on"]):
+            return detail_date(BeautifulSoup(response.content,"html.parser"),response.url)
+    except requests.RequestException:
+        pass
     return None
 
 
@@ -95,6 +155,8 @@ def catalog(s):
             continue
         date_tag = row.select_one(s["date"]) if s.get("date") else None
         published = day(date_tag.get("datetime") or date_tag.get_text(strip=True)) if date_tag else None
+        if s["id"]=="13":
+            published = next((date for t in row.select("footer *") if (date:=day(t.get_text(" ",strip=True)))),None)
         if s["id"]=="15":
             published = day(href.rstrip("/")[-10:])
         if s["id"]=="28":
@@ -163,6 +225,10 @@ def main():
                                   published=published or previous.get("published"),listed_on=listing,official_html=True,kind="공식 연구 게시글")
             status[s["id"]] = dict(ok=bool(rows),count=len(rows),partial=bool(rows and error),error=error or "",next_url=cursor)
             print(s["name"],len(rows),error or "",flush=True)
+    undated=[item for item in items.values() if not item["published"]]
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        for item,date in zip(undated,pool.map(lookup_date,undated)):
+            item["published"]=date
     ordered = sorted(items.values(),key=lambda x:x["published"] or "",reverse=True)
     tmp=output.with_suffix(".tmp")
     tmp.write_text(json.dumps(dict(updated=NOW,items=ordered,status=status),indent=2,ensure_ascii=False),"utf8")
