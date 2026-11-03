@@ -1952,7 +1952,15 @@
       "url": "https://arxiv.org/abs/2610.19441",
       "kind": "논문 · 소속 확인",
       "discovered": "2026-11-03T07:54:06+00:00",
-      "published": "2026-10-14"
+      "published": "2026-10-14",
+      "verified_affiliations": {
+        "institutions": [
+          "Harvard University",
+          "Sakana AI",
+          "Goodfire"
+        ],
+        "evidence": "https://arxiv.org/html/2610.19441"
+      }
     },
     {
       "id": "ae5cb77a9804708bc6ae",

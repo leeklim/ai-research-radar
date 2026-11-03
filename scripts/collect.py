@@ -110,7 +110,16 @@ def main():
                                   discovered=prev.get("discovered",NOW), published=date or prev.get("published"))
             status[source["id"]] = dict(ok=bool(seen), count=len(seen), partial=bool(seen and errors), error=" / ".join(errors))
             print(source["name"],len(seen),"/".join(errors)[:90],flush=True)
-    ordered = sorted(items.values(), key=lambda x: x["published"] or "", reverse=True)
+    verified = json.loads((ROOT/"config/verified-affiliations.json").read_text("utf8"))
+    merged = {}
+    for item in items.values():
+        if item["url"] in verified:
+            item["verified_affiliations"] = verified[item["url"]]
+            previous = merged.setdefault(item["url"], item)
+            previous["published"] = previous["published"] or item["published"]
+        else:
+            merged[item["id"]] = item
+    ordered = sorted(merged.values(), key=lambda x: x["published"] or "", reverse=True)
     tmp = output.with_suffix(".tmp")
     tmp.write_text(json.dumps(dict(updated=NOW,items=ordered,status=status),ensure_ascii=False,indent=2),"utf8")
     tmp.replace(output)
