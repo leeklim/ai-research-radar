@@ -16,24 +16,8 @@ def fetch(url, **params):
 def entries(source):
     ident=source["id"]
     if ident=="29":
-        # CSAIL's own Publications page identifies this specific DSpace community.
-        # Scope on the server, never query by words in a paper's title or affiliation.
-        community="a099ca0a-5497-44fb-9fd4-6900bf7e205b"
-        page=int(source.get("resume") or 1)
-        for number in (0,page,page+1):
-            result=fetch("https://dspace.mit.edu/server/api/discover/search/objects",scope=community,dsoType="item",
-                         sort="dc.date.issued,DESC",page=number,size=50).json()["_embedded"]["searchResult"]
-            for obj in result["_embedded"].get("objects",[]):
-                item=obj["_embedded"]["indexableObject"]
-                if not re.fullmatch(r"1721\.1/\d+",item.get("handle","")):
-                    continue
-                dates=item["metadata"].get("dc.date.issued",[])
-                date=dates[0]["value"] if dates else None
-                yield "https://dspace.mit.edu/handle/"+item["handle"],item["name"],date if date and re.fullmatch(r"\d{4}(?:-\d{2}(?:-\d{2})?)?",date) else None
-            if number+1>=result["page"]["totalPages"]:
-                source["continue_at"]=1
-                break
-            source["continue_at"]=number+1
+        from mit_catalog import entries as mit_entries
+        yield from mit_entries(source)
         return
 
     soup=BeautifulSoup(fetch(source["url"]).content,"html.parser")

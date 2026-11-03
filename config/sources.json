@@ -11,14 +11,41 @@
         "link": "h2 a[href^='/']",
         "title": "h2",
         "date": "time",
-        "row": "article.ap-post"
+        "row": "article.ap-post",
+        "paper_links": {
+          "openai.com": "/index/[^/]+/?",
+          "www.openai.com": "/index/[^/]+/?"
+        }
       },
       {
         "team": "Deployment Safety · System Cards",
         "url": "https://deploymentsafety.openai.com/",
         "title": "p.text-h4",
         "date": ".text-meta",
-        "row": "main a[href^='/']:has(p.text-h4)"
+        "row": "main a[href^='/']:has(p.text-h4)",
+        "section": "deployment_updates"
+      },
+      {
+        "team": "Research Index · Publication",
+        "adapter": "openai_publications",
+        "url": "https://openai.com/research/index/publication/",
+        "row": "main a[href^='/index/']"
+      },
+      {
+        "url": "https://openai.com/signals/research/",
+        "team": "Economic Research",
+        "section": "signals_reports",
+        "paper_links": {
+          "cdn.openai.com": "/pdf/(?:[^/]+/)*[^/]+\\.pdf"
+        }
+      },
+      {
+        "url": "https://openai.com/signals/",
+        "team": "Signals Reports",
+        "section": "signals_reports",
+        "paper_links": {
+          "cdn.openai.com": "/pdf/(?:[^/]+/)*[^/]+\\.pdf"
+        }
       }
     ]
   },
@@ -86,46 +113,19 @@
     "paper_links": {
       "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
       "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
-      "already-clean.goodfire.com": "/"
+      "already-clean.goodfire.com": "/",
+      "www.lesswrong.com": "/posts/(?:PK7ZvFZxrgpYtrpF4/logits-as-a-new-monitor-for-evaluation-awareness-1|CempXdo6cx5yseRLt/predicting-rare-llm-failures-with-30-fewer-rollouts)/?",
+      "www.neuronpedia.org": "/graph/info/?"
     },
     "paper_section": "Goodfire 공식 Research 목록"
   },
   {
     "id": "4",
-    "name": "Meta FAIR",
-    "url": "https://ai.meta.com/blog/meta-fair-updates-agents-robustness-safety-architecture/",
-    "row": "a[href*=\"/research/publications/\"]",
-    "additional": [
-      {
-        "team": "FAIR · June 2024",
-        "url": "https://ai.meta.com/blog/meta-fair-research-new-releases/",
-        "adapter": "lab_publications",
-        "lab_data": "fair",
-        "paper_links": {
-          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
-          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?"
-        },
-        "paper_section": "FAIR 공식 연구 발표의 명시적 논문 링크"
-      },
-      {
-        "team": "FAIR · October 2024",
-        "url": "https://ai.meta.com/blog/fair-news-segment-anything-2-1-meta-spirit-lm-layer-skip-salsa-lingua/",
-        "adapter": "lab_publications",
-        "lab_data": "fair",
-        "paper_links": {
-          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
-          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?"
-        },
-        "paper_section": "FAIR 공식 연구 발표의 명시적 논문 링크"
-      }
-    ],
-    "adapter": "lab_publications",
-    "lab_data": "fair",
-    "paper_links": {
-      "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
-      "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?"
-    },
-    "paper_section": "FAIR 공식 연구 발표의 명시적 논문 링크"
+    "name": "Meta AI",
+    "url": "https://ai.meta.com/results/?content_types%5B0%5D=publication",
+    "section": "meta_publications",
+    "next_selector": "a[rel~=next][href]",
+    "paper_section": "Meta AI Publications"
   },
   {
     "id": "5",
@@ -299,7 +299,8 @@
           "papers.nips.cc": "/paper(?:_files/paper)?/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
           "www.isca-archive.org": "/[\\w.-]+/[\\w.-]+\\.(?:html|pdf)",
           "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[\\w.%-]+",
-          "research.nvidia.com": "/labs/[\\w./%-]+\\.pdf"
+          "research.nvidia.com": "/labs/[\\w./%-]+\\.pdf",
+          "nvlabs.github.io": "(?:/[^\\s]+\\.pdf)"
         },
         "paper_section": "NVIDIA 연구팀 공식 Publications·연구 프로젝트 카드",
         "adapter": "lab_publications",
@@ -319,7 +320,12 @@
           "papers.nips.cc": "/paper(?:_files/paper)?/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
           "www.isca-archive.org": "/[\\w.-]+/[\\w.-]+\\.(?:html|pdf)",
           "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[\\w.%-]+",
-          "research.nvidia.com": "/labs/[\\w./%-]+\\.pdf"
+          "research.nvidia.com": "(?:/labs/[\\w./%-]+\\.pdf)|(?:(?:/(?:labs/[^/]+/(?:projects|publication|publications|files|assets)/[^\\s]+|publication/[^/]+|sites/default/files/[^\\s]+\\.pdf)))",
+          "cs.dartmouth.edu": "(?:/~wjarosz/publications/[^/]+\\.(?:pdf|html))",
+          "d1qx31qr3h6wln.cloudfront.net": "(?:/publications/[^\\s]+\\.pdf)",
+          "shlomisteinberg.com": "(?:/2023rtplt/2023_rtplt_lowres\\.pdf)",
+          "diglib.eg.org": "(?:/bitstream/handle/10\\.2312/sr20221161/117\\-126\\.pdf)",
+          "nvlabs.github.io": "(?:/[^\\s]+\\.pdf)"
         },
         "paper_section": "NVIDIA 연구팀 공식 Publications·연구 프로젝트 카드",
         "adapter": "lab_publications",
@@ -359,7 +365,11 @@
           "papers.nips.cc": "/paper(?:_files/paper)?/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
           "www.isca-archive.org": "/[\\w.-]+/[\\w.-]+\\.(?:html|pdf)",
           "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[\\w.%-]+",
-          "research.nvidia.com": "/labs/[\\w./%-]+\\.pdf"
+          "research.nvidia.com": "/labs/[\\w./%-]+\\.pdf",
+          "github.com": "(?:/SINRG\\-Lab/TSMC)",
+          "bchao1.github.io": "(?:/[^\\s]+\\.pdf)",
+          "www.computationalimaging.org": "(?:/publications/[^/]+/?)",
+          "sites.google.com": "(?:/nvidia\\.com/nvgaze)"
         },
         "paper_section": "NVIDIA 연구팀 공식 Publications·연구 프로젝트 카드",
         "adapter": "lab_publications",
@@ -461,6 +471,319 @@
           "research.nvidia.com": "/labs/[\\w./%-]+\\.pdf"
         },
         "paper_section": "NVIDIA 연구팀 공식 Publications·연구 프로젝트 카드"
+      },
+      {
+        "team": "Dynamic Vision and Learning",
+        "url": "https://research.nvidia.com/labs/dvl/publication/",
+        "row": "h3.article-title a[href]",
+        "paper_links": {
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "openaccess.thecvf.com": "/content/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.mlr.press": "/v\\d+/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.iclr.cc": "/paper_files/paper/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "papers.nips.cc": "/paper(?:_files/paper)?/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "www.isca-archive.org": "/[\\w.-]+/[\\w.-]+\\.(?:html|pdf)",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[\\w.%-]+",
+          "research.nvidia.com": "/labs/[\\w./%-]+\\.pdf"
+        },
+        "paper_section": "NVIDIA 연구팀 공식 Publications·연구 프로젝트 카드",
+        "adapter": "lab_publications",
+        "lab_data": "nvidia_cards"
+      },
+      {
+        "team": "Electronic Design Automation",
+        "url": "https://research.nvidia.com/labs/electronic-design-automation/publication/",
+        "row": "h3.article-title a[href]",
+        "paper_links": {
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "openaccess.thecvf.com": "/content/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.mlr.press": "/v\\d+/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.iclr.cc": "/paper_files/paper/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "papers.nips.cc": "/paper(?:_files/paper)?/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "www.isca-archive.org": "/[\\w.-]+/[\\w.-]+\\.(?:html|pdf)",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[\\w.%-]+",
+          "research.nvidia.com": "/labs/[\\w./%-]+\\.pdf"
+        },
+        "paper_section": "NVIDIA 연구팀 공식 Publications·연구 프로젝트 카드",
+        "adapter": "lab_publications",
+        "lab_data": "nvidia_cards"
+      },
+      {
+        "team": "Fundamental Generative AI Research",
+        "url": "https://research.nvidia.com/labs/genair/publication/",
+        "row": "h3.article-title a[href]",
+        "paper_links": {
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "openaccess.thecvf.com": "/content/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.mlr.press": "/v\\d+/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.iclr.cc": "/paper_files/paper/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "papers.nips.cc": "/paper(?:_files/paper)?/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "www.isca-archive.org": "/[\\w.-]+/[\\w.-]+\\.(?:html|pdf)",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[\\w.%-]+",
+          "research.nvidia.com": "/labs/[\\w./%-]+\\.pdf"
+        },
+        "paper_section": "NVIDIA 연구팀 공식 Publications·연구 프로젝트 카드",
+        "adapter": "lab_publications",
+        "lab_data": "nvidia_cards"
+      },
+      {
+        "team": "Perception, Action and Reasoning",
+        "url": "https://research.nvidia.com/labs/par/publication.html",
+        "row": "h3.article-title a[href]",
+        "paper_links": {
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "openaccess.thecvf.com": "/content/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.mlr.press": "/v\\d+/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.iclr.cc": "/paper_files/paper/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "papers.nips.cc": "/paper(?:_files/paper)?/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "www.isca-archive.org": "/[\\w.-]+/[\\w.-]+\\.(?:html|pdf)",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[\\w.%-]+",
+          "research.nvidia.com": "/labs/[\\w./%-]+\\.pdf"
+        },
+        "paper_section": "NVIDIA 연구팀 공식 Publications·연구 프로젝트 카드",
+        "adapter": "lab_publications",
+        "lab_data": "nvidia_cards"
+      },
+      {
+        "team": "High-Fidelity Physics",
+        "url": "https://research.nvidia.com/labs/prl/publication/",
+        "row": "h3.article-title a[href]",
+        "paper_links": {
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "openaccess.thecvf.com": "/content/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.mlr.press": "/v\\d+/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.iclr.cc": "/paper_files/paper/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "papers.nips.cc": "/paper(?:_files/paper)?/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "www.isca-archive.org": "/[\\w.-]+/[\\w.-]+\\.(?:html|pdf)",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[\\w.%-]+",
+          "research.nvidia.com": "/labs/[\\w./%-]+\\.pdf",
+          "nvlabs.github.io": "(?:/[^\\s]+\\.pdf)"
+        },
+        "paper_section": "NVIDIA 연구팀 공식 Publications·연구 프로젝트 카드",
+        "adapter": "lab_publications",
+        "lab_data": "nvidia_cards"
+      },
+      {
+        "team": "Real-Time Graphics",
+        "url": "https://research.nvidia.com/labs/rtr/publication/",
+        "row": "h3.article-title a[href]",
+        "paper_links": {
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "openaccess.thecvf.com": "/content/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.mlr.press": "/v\\d+/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.iclr.cc": "/paper_files/paper/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "papers.nips.cc": "/paper(?:_files/paper)?/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "www.isca-archive.org": "/[\\w.-]+/[\\w.-]+\\.(?:html|pdf)",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[\\w.%-]+",
+          "research.nvidia.com": "(?:/labs/[\\w./%-]+\\.pdf)|(?:(?:/(?:labs/[^/]+/(?:projects|publication|publications|files|assets)/[^\\s]+|publication/[^/]+|sites/default/files/[^\\s]+\\.pdf)))",
+          "cs.dartmouth.edu": "(?:/~wjarosz/publications/[^/]+\\.(?:pdf|html))",
+          "d1qx31qr3h6wln.cloudfront.net": "(?:/publications/[^\\s]+\\.pdf)",
+          "shlomisteinberg.com": "(?:/2023rtplt/2023_rtplt_lowres\\.pdf)",
+          "diglib.eg.org": "(?:/bitstream/handle/10\\.2312/sr20221161/117\\-126\\.pdf)",
+          "nvlabs.github.io": "(?:/[^\\s]+\\.pdf)"
+        },
+        "paper_section": "NVIDIA 연구팀 공식 Publications·연구 프로젝트 카드",
+        "adapter": "lab_publications",
+        "lab_data": "nvidia_cards"
+      },
+      {
+        "team": "AI-Mediated Reality and Interaction",
+        "url": "https://research.nvidia.com/labs/amri/publication/",
+        "row": "h3.article-title a[href]",
+        "paper_links": {
+          "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
+          "openreview.net": "/(?:forum|pdf)",
+          "openaccess.thecvf.com": "/content/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.mlr.press": "/v\\d+/[\\w./%-]+\\.(?:html|pdf)",
+          "proceedings.iclr.cc": "/paper_files/paper/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "papers.nips.cc": "/paper(?:_files/paper)?/\\d{4}/[\\w./%-]+\\.(?:html|pdf)",
+          "www.isca-archive.org": "/[\\w.-]+/[\\w.-]+\\.(?:html|pdf)",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[\\w.%-]+",
+          "research.nvidia.com": "/labs/[\\w./%-]+\\.pdf",
+          "github.com": "(?:/SINRG\\-Lab/TSMC)",
+          "bchao1.github.io": "(?:/[^\\s]+\\.pdf)",
+          "www.computationalimaging.org": "(?:/publications/[^/]+/?)",
+          "sites.google.com": "(?:/nvidia\\.com/nvgaze)"
+        },
+        "paper_section": "NVIDIA 연구팀 공식 Publications·연구 프로젝트 카드",
+        "adapter": "lab_publications",
+        "lab_data": "nvidia_cards"
+      },
+      {
+        "team": "AI-Aided Engineering",
+        "nv_section": "aie",
+        "url": "https://research.nvidia.com/labs/aie/publications/",
+        "adapter": "nvidia_extra",
+        "paper_section": "NVIDIA lab publication cards",
+        "papers_only": true,
+        "paper_links": {
+          "arxiv.org": "(?:/(?:abs|html|pdf)/(?:[a-z-]+/)?[0-9.]+(?:v\\d+)?(?:\\.pdf)?/?)",
+          "www.jmlr.org": "(?:/papers/[^\\s]+\\.(?:html|pdf))"
+        }
+      },
+      {
+        "team": "Conversational AI",
+        "nv_section": "conversation",
+        "url": "https://research.nvidia.com/labs/conv-ai/publications/",
+        "adapter": "nvidia_extra",
+        "paper_section": "NVIDIA lab publication cards",
+        "papers_only": true,
+        "paper_links": {
+          "arxiv.org": "(?:/(?:abs|html|pdf)/(?:[a-z-]+/)?[0-9.]+(?:v\\d+)?(?:\\.pdf)?/?)",
+          "ieeexplore.ieee.org": "(?:/(?:document/\\d+|stamp/stamp\\.jsp)/?|/abstract/document/10022960|/abstract/document/10023219|/abstract/document/10094850|/abstract/document/10447169|/abstract/document/9053051|/abstract/document/9414470|/abstract/document/9746806)",
+          "www.isca-speech.org": "(?:/archive/[^\\s]+\\.(?:html|pdf))",
+          "proceedings.mlr.press": "(?:/v\\d+/[^\\s]+\\.(?:html|pdf))",
+          "aclanthology.org": "(?:/(?:[A-Za-z0-9._-]+)/?)",
+          "openreview.net": "(?:/(?:forum/?|pdf/?|pdf/[a-f0-9]{40}\\.pdf|attachment))",
+          "www.interspeech2020.org": "(?:/index\\.php)"
+        }
+      },
+      {
+        "team": "Digital Biology",
+        "nv_section": "digital-biology",
+        "url": "https://research.nvidia.com/labs/dbr/",
+        "adapter": "nvidia_extra",
+        "paper_section": "NVIDIA lab publication cards",
+        "papers_only": true,
+        "paper_links": {
+          "research.nvidia.com": "(?:/(?:labs/[^/]+/(?:projects|publication|publications|files|assets)/[^\\s]+|publication/[^/]+|sites/default/files/[^\\s]+\\.pdf)|/labs/genair/la\\-proteina/|/labs/genair/proteina\\-complexa/assets/proteina_complexa_validation\\.pdf)",
+          "rfd4-proteina.org": "(?:/)",
+          "arxiv.org": "(?:/(?:abs|html|pdf)/(?:[a-z-]+/)?[0-9.]+(?:v\\d+)?(?:\\.pdf)?/?)",
+          "www.biorxiv.org": "(?:/content/10\\.\\d{4,9}/[^\\s]+)",
+          "doi.org": "(?:/10\\.\\d{4,9}/[^\\s]+)",
+          "openreview.net": "(?:/(?:forum/?|pdf/?|pdf/[a-f0-9]{40}\\.pdf|attachment))"
+        }
+      },
+      {
+        "team": "Efficient AI",
+        "nv_section": "eai",
+        "url": "https://research.nvidia.com/labs/eai/publication/",
+        "adapter": "nvidia_extra",
+        "paper_section": "NVIDIA lab publication cards",
+        "papers_only": true,
+        "paper_links": {
+          "arxiv.org": "(?:/(?:abs|html|pdf)/(?:[a-z-]+/)?[0-9.]+(?:v\\d+)?(?:\\.pdf)?/?|/pef/2503\\.22020)"
+        }
+      },
+      {
+        "team": "Human Performance and Experience",
+        "nv_section": "hpx",
+        "url": "https://research.nvidia.com/labs/hpx/",
+        "adapter": "nvidia_extra",
+        "paper_section": "NVIDIA lab publication cards",
+        "papers_only": true,
+        "paper_links": {
+          "research.nvidia.com": "(?:/(?:labs/[^/]+/(?:projects|publication|publications|files|assets)/[^\\s]+|publication/[^/]+|sites/default/files/[^\\s]+\\.pdf))"
+        }
+      },
+      {
+        "team": "Learning and Perception",
+        "nv_section": "lpr",
+        "url": "https://research.nvidia.com/labs/lpr/publications/",
+        "adapter": "nvidia_extra",
+        "paper_section": "NVIDIA lab publication cards",
+        "papers_only": true,
+        "paper_links": {
+          "arxiv.org": "(?:/(?:abs|html|pdf)/(?:[a-z-]+/)?[0-9.]+(?:v\\d+)?(?:\\.pdf)?/?)",
+          "www.science.org": "(?:/doi/10\\.1126/science\\.aeh2982)",
+          "www.nature.com": "(?:/articles/[^/]+/?)",
+          "dl.acm.org": "(?:/doi/(?:abs/|pdf/|epdf/)?10\\.\\d{4,9}/[^\\s]+)",
+          "openaccess.thecvf.com": "(?:/content[^\\s]*\\.(?:html|pdf)|//content/ICCV2023/papers/Wang_Learning_Human_Dynamics_in_Autonomous_Driving_Scenarios_ICCV_2023_paper\\.pdf)",
+          "doi.org": "(?:/10\\.\\d{4,9}/[^\\s]+)",
+          "openreview.net": "(?:/(?:forum/?|pdf/?|pdf/[a-f0-9]{40}\\.pdf|attachment))",
+          "proceedings.neurips.cc": "(?:/paper(?:_files/paper)?/\\d{4}/[^\\s]+\\.(?:html|pdf))",
+          "www.frontiersin.org": "(?:/journals/marine\\-science/articles/10\\.3389/fmars\\.2024\\.1443284/full)",
+          "www.climatechange.ai": "(?:/papers/iclr2024/9)",
+          "proceedings.mlr.press": "(?:/v\\d+/[^\\s]+\\.(?:html|pdf))",
+          "cs.stanford.edu": "(?:/\\~haotianz/vid2player3d/index\\.html)",
+          "d1qx31qr3h6wln.cloudfront.net": "(?:/publications/[^\\s]+\\.pdf)",
+          "cxlcl.github.io": "(?:/[^\\s]+\\.pdf)",
+          "www.ecva.net": "(?:/papers/eccv_2022/papers_ECCV/papers/136750389\\.pdf)",
+          "www.computer.org": "(?:/csdl/journal/tp/2023/05/09903574/1GZofm4GNCo)",
+          "ma3mool.github.io": "(?:/[^\\s]+\\.pdf)",
+          "ieeexplore.ieee.org": "(?:/(?:document/\\d+|stamp/stamp\\.jsp)/?)",
+          "papers.nips.cc": "(?:/paper(?:_files/paper)?/\\d{4}/[^\\s]+\\.(?:html|pdf))",
+          "www.pytorchfi.dev": "(?:/)"
+        }
+      },
+      {
+        "team": "Nemotron",
+        "nv_section": "nemotron",
+        "url": "https://research.nvidia.com/labs/nemotron/Nemotron-3/",
+        "adapter": "nvidia_extra",
+        "paper_section": "NVIDIA lab publication cards",
+        "papers_only": true,
+        "paper_links": {
+          "research.nvidia.com": "(?:/(?:labs/[^/]+/(?:projects|publication|publications|files|assets)/[^\\s]+|publication/[^/]+|sites/default/files/[^\\s]+\\.pdf))"
+        }
+      },
+      {
+        "team": "Robotics",
+        "nv_section": "srl",
+        "url": "https://research.nvidia.com/labs/srl/publication/",
+        "adapter": "nvidia_extra",
+        "paper_section": "NVIDIA lab publication cards",
+        "papers_only": true,
+        "paper_links": {
+          "arxiv.org": "(?:/(?:abs|html|pdf)/(?:[a-z-]+/)?[0-9.]+(?:v\\d+)?(?:\\.pdf)?/?|/abs/)",
+          "openreview.net": "(?:/(?:forum/?|pdf/?|pdf/[a-f0-9]{40}\\.pdf|attachment))",
+          "research.nvidia.com": "(?:/(?:labs/[^/]+/(?:projects|publication|publications|files|assets)/[^\\s]+|publication/[^/]+|sites/default/files/[^\\s]+\\.pdf))",
+          "schedulestream.github.io": "(?:/)",
+          "critic-guided-distillation.github.io": "(?:/[^\\s]+\\.pdf)",
+          "binghao-huang.github.io": "(?:/vt_refine/)",
+          "ieeexplore.ieee.org": "(?:/(?:document/\\d+|stamp/stamp\\.jsp)/?)",
+          "co-training.github.io": "(?:/)",
+          "robotics-reality-gap.github.io": "(?:/)",
+          "www.nature.com": "(?:/articles/[^/]+/?)",
+          "nvlabs.github.io": "(?:/object_centric_diffusion/)",
+          "wangyian-me.github.io": "(?:/MatchMaker/)",
+          "zt-yang.github.io": "(?:/vlm\\-tamp\\-robot/)",
+          "srsa2024.github.io": "(?:/)",
+          "hamster-robo.github.io": "(?:/[^\\s]+\\.pdf)",
+          "scene-synthesizer.github.io": "(?:/)",
+          "www.dynsyslab.org": "(?:/mastering\\-robot\\-manipulation\\-in\\-a\\-world\\-of\\-abundant\\-data/)",
+          "sites.google.com": "(?:/nvidia\\.com/defgraspsim|/nvidia\\.com/graspdataset|/nvidia\\.com/tactiledata|/nvidia\\.com/tactiledata2|/view/abillionwaystograsp/|/view/defgraspnets|/view/deformableobjectgrasping|/view/deformernet/|/view/factoryrobotics|/view/pcap/home|/view/robolang/|/view/spire\\-corl\\-2024|/view/stow\\-corl23|/view/structformer|/view/tactile\\-obj\\-dynamics)",
+          "skillgen.github.io": "(?:/)",
+          "robo-point.github.io": "(?:)",
+          "actaim2.github.io": "(?:/)",
+          "stanford-tml.github.io": "(?:/extrinsic\\-manipulation/)",
+          "dl.acm.org": "(?:/doi/(?:abs/|pdf/|epdf/)?10\\.\\d{4,9}/[^\\s]+)",
+          "adaptive-horizon-actor-critic.github.io": "(?:/)",
+          "foundationpose.github.io": "(?:/foundationpose/)",
+          "iakinola23.github.io": "(?:/tacsl/)",
+          "orbit-surgical.github.io": "(?:/)",
+          "robotic-view-transformer.github.io": "(?:/)",
+          "m2-t2.github.io": "(?:)",
+          "piginet.github.io": "(?:/)",
+          "actaim.github.io": "(?:/)",
+          "progprompt.github.io": "(?:/)",
+          "github.com": "(?:/nerf2nerf/nerf2nerf\\.github\\.io/raw/main/nerf2nerf_paper\\.pdf)",
+          "ac-rad.github.io": "(?:/MVTrans/)",
+          "dexgrasp.github.io": "(?:/)",
+          "proceedings.mlr.press": "(?:/v\\d+/[^\\s]+\\.(?:html|pdf))",
+          "www.ifaamas.org": "(?:/Proceedings/aamas2022/pdfs/p1783\\.pdf)",
+          "nvidia.slack.com": "(?:/files/U83ENUD6U/F02EW20E1SS/assistive_tele_op\\.pdf)",
+          "www.pair.toronto.edu": "(?:/laser/|/lbw\\-kp/)",
+          "www.roboticsproceedings.org": "(?:/rss16/p084\\.pdf|/rss17/p067\\.pdf)",
+          "xinleipan.github.io": "(?:/emergent_morphology/)",
+          "www.robot-learning.ml": "(?:/2019/files/papers/Guided%20Uncertainty\\-Aware%20Policy%20Optimization:%20Combining%20Learning%20and%20Model\\-Based%20Strategies%20for%20Sample\\-Efficient%20Policy%20Learning\\.pdf)",
+          "motionpredictionicra2019.github.io": "(?:/[^\\s]+\\.pdf)",
+          "auai.org": "(?:/uai2019/proceedings/papers/163\\.pdf)",
+          "journals.sagepub.com": "(?:/doi/abs/10\\.1177/0278364919846549)"
+        }
       }
     ]
   },
@@ -487,7 +810,8 @@
     "name": "IBM Research",
     "url": "https://research.ibm.com/publications",
     "row": "a[href^='/publications/']",
-    "next_selector": "a[aria-label='Next page']"
+    "next_selector": "a[aria-label='Next page']",
+    "adapter": "ibm_publications"
   },
   {
     "id": "10",
@@ -501,11 +825,21 @@
     "papers_only": true,
     "paper_section": "Ai2 Papers",
     "paper_links": {
-      "www.semanticscholar.org": "/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?",
+      "www.semanticscholar.org": "(?:/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?)|(?:/(?:paper/(?:[^/]+/)?[a-fA-F0-9]{40}|reader/[a-fA-F0-9]{40})/?)",
       "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
       "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
       "openreview.net": "/(?:forum|pdf)",
-      "doi.org": "/10\\.\\d{4,9}/[^\\s]+"
+      "doi.org": "/10\\.\\d{4,9}/[^\\s]+",
+      "api.semanticscholar.org": "/(?:(?i:arxiv):[\\w./-]+|(?i:corpusid):\\d+|[a-f0-9]{40}|10\\.\\d+/[^\\s]+)",
+      "chemrxiv.org": "/doi/(?:abs/)?10\\.\\d+/[^\\s]+",
+      "ascopubs.org": "/doi/(?:abs/)?10\\.\\d+/[^\\s]+",
+      "agupubs.onlinelibrary.wiley.com": "/doi/10\\.\\d+/[^\\s]+",
+      "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[^\\s]+",
+      "aclanthology.org": "/[\\w.-]+(?:\\.pdf|/)?",
+      "dx.doi.org": "/10\\.\\d+/[^\\s]+",
+      "maria-antoniak.github.io": "/resources/2023_riveter\\.pdf",
+      "openaccess.thecvf.com": "/content/[^\\s]+\\.(?:pdf|html)",
+      "raw.githubusercontent.com": "/DIUx-xView/xView3_fourth_place/main/whitepaper\\.pdf"
     },
     "additional": [
       {
@@ -559,11 +893,21 @@
         "papers_only": true,
         "paper_section": "Ai2 Papers",
         "paper_links": {
-          "www.semanticscholar.org": "/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?",
+          "www.semanticscholar.org": "(?:/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?)|(?:/(?:paper/(?:[^/]+/)?[a-fA-F0-9]{40}|reader/[a-fA-F0-9]{40})/?)",
           "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
           "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
           "openreview.net": "/(?:forum|pdf)",
-          "doi.org": "/10\\.\\d{4,9}/[^\\s]+"
+          "doi.org": "/10\\.\\d{4,9}/[^\\s]+",
+          "api.semanticscholar.org": "/(?:(?i:arxiv):[\\w./-]+|(?i:corpusid):\\d+|[a-f0-9]{40}|10\\.\\d+/[^\\s]+)",
+          "chemrxiv.org": "/doi/(?:abs/)?10\\.\\d+/[^\\s]+",
+          "ascopubs.org": "/doi/(?:abs/)?10\\.\\d+/[^\\s]+",
+          "agupubs.onlinelibrary.wiley.com": "/doi/10\\.\\d+/[^\\s]+",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[^\\s]+",
+          "aclanthology.org": "/[\\w.-]+(?:\\.pdf|/)?",
+          "dx.doi.org": "/10\\.\\d+/[^\\s]+",
+          "maria-antoniak.github.io": "/resources/2023_riveter\\.pdf",
+          "openaccess.thecvf.com": "/content/[^\\s]+\\.(?:pdf|html)",
+          "raw.githubusercontent.com": "/DIUx-xView/xView3_fourth_place/main/whitepaper\\.pdf"
         },
         "team": "Papers · AllenNLP",
         "url": "https://allenai.org/papers?tags=AllenNLP"
@@ -577,11 +921,21 @@
         "papers_only": true,
         "paper_section": "Ai2 Papers",
         "paper_links": {
-          "www.semanticscholar.org": "/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?",
+          "www.semanticscholar.org": "(?:/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?)|(?:/(?:paper/(?:[^/]+/)?[a-fA-F0-9]{40}|reader/[a-fA-F0-9]{40})/?)",
           "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
           "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
           "openreview.net": "/(?:forum|pdf)",
-          "doi.org": "/10\\.\\d{4,9}/[^\\s]+"
+          "doi.org": "/10\\.\\d{4,9}/[^\\s]+",
+          "api.semanticscholar.org": "/(?:(?i:arxiv):[\\w./-]+|(?i:corpusid):\\d+|[a-f0-9]{40}|10\\.\\d+/[^\\s]+)",
+          "chemrxiv.org": "/doi/(?:abs/)?10\\.\\d+/[^\\s]+",
+          "ascopubs.org": "/doi/(?:abs/)?10\\.\\d+/[^\\s]+",
+          "agupubs.onlinelibrary.wiley.com": "/doi/10\\.\\d+/[^\\s]+",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[^\\s]+",
+          "aclanthology.org": "/[\\w.-]+(?:\\.pdf|/)?",
+          "dx.doi.org": "/10\\.\\d+/[^\\s]+",
+          "maria-antoniak.github.io": "/resources/2023_riveter\\.pdf",
+          "openaccess.thecvf.com": "/content/[^\\s]+\\.(?:pdf|html)",
+          "raw.githubusercontent.com": "/DIUx-xView/xView3_fourth_place/main/whitepaper\\.pdf"
         },
         "team": "Papers · Aristo",
         "url": "https://allenai.org/papers?tags=Aristo"
@@ -595,11 +949,21 @@
         "papers_only": true,
         "paper_section": "Ai2 Papers",
         "paper_links": {
-          "www.semanticscholar.org": "/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?",
+          "www.semanticscholar.org": "(?:/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?)|(?:/(?:paper/(?:[^/]+/)?[a-fA-F0-9]{40}|reader/[a-fA-F0-9]{40})/?)",
           "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
           "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
           "openreview.net": "/(?:forum|pdf)",
-          "doi.org": "/10\\.\\d{4,9}/[^\\s]+"
+          "doi.org": "/10\\.\\d{4,9}/[^\\s]+",
+          "api.semanticscholar.org": "/(?:(?i:arxiv):[\\w./-]+|(?i:corpusid):\\d+|[a-f0-9]{40}|10\\.\\d+/[^\\s]+)",
+          "chemrxiv.org": "/doi/(?:abs/)?10\\.\\d+/[^\\s]+",
+          "ascopubs.org": "/doi/(?:abs/)?10\\.\\d+/[^\\s]+",
+          "agupubs.onlinelibrary.wiley.com": "/doi/10\\.\\d+/[^\\s]+",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[^\\s]+",
+          "aclanthology.org": "/[\\w.-]+(?:\\.pdf|/)?",
+          "dx.doi.org": "/10\\.\\d+/[^\\s]+",
+          "maria-antoniak.github.io": "/resources/2023_riveter\\.pdf",
+          "openaccess.thecvf.com": "/content/[^\\s]+\\.(?:pdf|html)",
+          "raw.githubusercontent.com": "/DIUx-xView/xView3_fourth_place/main/whitepaper\\.pdf"
         },
         "team": "Papers · Asta",
         "url": "https://allenai.org/papers?tags=Asta"
@@ -613,11 +977,21 @@
         "papers_only": true,
         "paper_section": "Ai2 Papers",
         "paper_links": {
-          "www.semanticscholar.org": "/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?",
+          "www.semanticscholar.org": "(?:/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?)|(?:/(?:paper/(?:[^/]+/)?[a-fA-F0-9]{40}|reader/[a-fA-F0-9]{40})/?)",
           "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
           "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
           "openreview.net": "/(?:forum|pdf)",
-          "doi.org": "/10\\.\\d{4,9}/[^\\s]+"
+          "doi.org": "/10\\.\\d{4,9}/[^\\s]+",
+          "api.semanticscholar.org": "/(?:(?i:arxiv):[\\w./-]+|(?i:corpusid):\\d+|[a-f0-9]{40}|10\\.\\d+/[^\\s]+)",
+          "chemrxiv.org": "/doi/(?:abs/)?10\\.\\d+/[^\\s]+",
+          "ascopubs.org": "/doi/(?:abs/)?10\\.\\d+/[^\\s]+",
+          "agupubs.onlinelibrary.wiley.com": "/doi/10\\.\\d+/[^\\s]+",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[^\\s]+",
+          "aclanthology.org": "/[\\w.-]+(?:\\.pdf|/)?",
+          "dx.doi.org": "/10\\.\\d+/[^\\s]+",
+          "maria-antoniak.github.io": "/resources/2023_riveter\\.pdf",
+          "openaccess.thecvf.com": "/content/[^\\s]+\\.(?:pdf|html)",
+          "raw.githubusercontent.com": "/DIUx-xView/xView3_fourth_place/main/whitepaper\\.pdf"
         },
         "team": "Papers · Climate Modeling",
         "url": "https://allenai.org/papers?tags=Climate+Modeling"
@@ -631,11 +1005,21 @@
         "papers_only": true,
         "paper_section": "Ai2 Papers",
         "paper_links": {
-          "www.semanticscholar.org": "/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?",
+          "www.semanticscholar.org": "(?:/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?)|(?:/(?:paper/(?:[^/]+/)?[a-fA-F0-9]{40}|reader/[a-fA-F0-9]{40})/?)",
           "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
           "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
           "openreview.net": "/(?:forum|pdf)",
-          "doi.org": "/10\\.\\d{4,9}/[^\\s]+"
+          "doi.org": "/10\\.\\d{4,9}/[^\\s]+",
+          "api.semanticscholar.org": "/(?:(?i:arxiv):[\\w./-]+|(?i:corpusid):\\d+|[a-f0-9]{40}|10\\.\\d+/[^\\s]+)",
+          "chemrxiv.org": "/doi/(?:abs/)?10\\.\\d+/[^\\s]+",
+          "ascopubs.org": "/doi/(?:abs/)?10\\.\\d+/[^\\s]+",
+          "agupubs.onlinelibrary.wiley.com": "/doi/10\\.\\d+/[^\\s]+",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[^\\s]+",
+          "aclanthology.org": "/[\\w.-]+(?:\\.pdf|/)?",
+          "dx.doi.org": "/10\\.\\d+/[^\\s]+",
+          "maria-antoniak.github.io": "/resources/2023_riveter\\.pdf",
+          "openaccess.thecvf.com": "/content/[^\\s]+\\.(?:pdf|html)",
+          "raw.githubusercontent.com": "/DIUx-xView/xView3_fourth_place/main/whitepaper\\.pdf"
         },
         "team": "Papers · EarthRanger",
         "url": "https://allenai.org/papers?tags=EarthRanger"
@@ -649,11 +1033,21 @@
         "papers_only": true,
         "paper_section": "Ai2 Papers",
         "paper_links": {
-          "www.semanticscholar.org": "/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?",
+          "www.semanticscholar.org": "(?:/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?)|(?:/(?:paper/(?:[^/]+/)?[a-fA-F0-9]{40}|reader/[a-fA-F0-9]{40})/?)",
           "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
           "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
           "openreview.net": "/(?:forum|pdf)",
-          "doi.org": "/10\\.\\d{4,9}/[^\\s]+"
+          "doi.org": "/10\\.\\d{4,9}/[^\\s]+",
+          "api.semanticscholar.org": "/(?:(?i:arxiv):[\\w./-]+|(?i:corpusid):\\d+|[a-f0-9]{40}|10\\.\\d+/[^\\s]+)",
+          "chemrxiv.org": "/doi/(?:abs/)?10\\.\\d+/[^\\s]+",
+          "ascopubs.org": "/doi/(?:abs/)?10\\.\\d+/[^\\s]+",
+          "agupubs.onlinelibrary.wiley.com": "/doi/10\\.\\d+/[^\\s]+",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[^\\s]+",
+          "aclanthology.org": "/[\\w.-]+(?:\\.pdf|/)?",
+          "dx.doi.org": "/10\\.\\d+/[^\\s]+",
+          "maria-antoniak.github.io": "/resources/2023_riveter\\.pdf",
+          "openaccess.thecvf.com": "/content/[^\\s]+\\.(?:pdf|html)",
+          "raw.githubusercontent.com": "/DIUx-xView/xView3_fourth_place/main/whitepaper\\.pdf"
         },
         "team": "Papers · PRIOR",
         "url": "https://allenai.org/papers?tags=PRIOR"
@@ -667,11 +1061,21 @@
         "papers_only": true,
         "paper_section": "Ai2 Papers",
         "paper_links": {
-          "www.semanticscholar.org": "/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?",
+          "www.semanticscholar.org": "(?:/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?)|(?:/(?:paper/(?:[^/]+/)?[a-fA-F0-9]{40}|reader/[a-fA-F0-9]{40})/?)",
           "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
           "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
           "openreview.net": "/(?:forum|pdf)",
-          "doi.org": "/10\\.\\d{4,9}/[^\\s]+"
+          "doi.org": "/10\\.\\d{4,9}/[^\\s]+",
+          "api.semanticscholar.org": "/(?:(?i:arxiv):[\\w./-]+|(?i:corpusid):\\d+|[a-f0-9]{40}|10\\.\\d+/[^\\s]+)",
+          "chemrxiv.org": "/doi/(?:abs/)?10\\.\\d+/[^\\s]+",
+          "ascopubs.org": "/doi/(?:abs/)?10\\.\\d+/[^\\s]+",
+          "agupubs.onlinelibrary.wiley.com": "/doi/10\\.\\d+/[^\\s]+",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[^\\s]+",
+          "aclanthology.org": "/[\\w.-]+(?:\\.pdf|/)?",
+          "dx.doi.org": "/10\\.\\d+/[^\\s]+",
+          "maria-antoniak.github.io": "/resources/2023_riveter\\.pdf",
+          "openaccess.thecvf.com": "/content/[^\\s]+\\.(?:pdf|html)",
+          "raw.githubusercontent.com": "/DIUx-xView/xView3_fourth_place/main/whitepaper\\.pdf"
         },
         "team": "Papers · Semantic Scholar",
         "url": "https://allenai.org/papers?tags=Semantic+Scholar"
@@ -685,11 +1089,21 @@
         "papers_only": true,
         "paper_section": "Ai2 Papers",
         "paper_links": {
-          "www.semanticscholar.org": "/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?",
+          "www.semanticscholar.org": "(?:/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?)|(?:/(?:paper/(?:[^/]+/)?[a-fA-F0-9]{40}|reader/[a-fA-F0-9]{40})/?)",
           "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
           "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
           "openreview.net": "/(?:forum|pdf)",
-          "doi.org": "/10\\.\\d{4,9}/[^\\s]+"
+          "doi.org": "/10\\.\\d{4,9}/[^\\s]+",
+          "api.semanticscholar.org": "/(?:(?i:arxiv):[\\w./-]+|(?i:corpusid):\\d+|[a-f0-9]{40}|10\\.\\d+/[^\\s]+)",
+          "chemrxiv.org": "/doi/(?:abs/)?10\\.\\d+/[^\\s]+",
+          "ascopubs.org": "/doi/(?:abs/)?10\\.\\d+/[^\\s]+",
+          "agupubs.onlinelibrary.wiley.com": "/doi/10\\.\\d+/[^\\s]+",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[^\\s]+",
+          "aclanthology.org": "/[\\w.-]+(?:\\.pdf|/)?",
+          "dx.doi.org": "/10\\.\\d+/[^\\s]+",
+          "maria-antoniak.github.io": "/resources/2023_riveter\\.pdf",
+          "openaccess.thecvf.com": "/content/[^\\s]+\\.(?:pdf|html)",
+          "raw.githubusercontent.com": "/DIUx-xView/xView3_fourth_place/main/whitepaper\\.pdf"
         },
         "team": "Papers · Skylight",
         "url": "https://allenai.org/papers?tags=Skylight"
@@ -703,11 +1117,21 @@
         "papers_only": true,
         "paper_section": "Ai2 Papers",
         "paper_links": {
-          "www.semanticscholar.org": "/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?",
+          "www.semanticscholar.org": "(?:/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?)|(?:/(?:paper/(?:[^/]+/)?[a-fA-F0-9]{40}|reader/[a-fA-F0-9]{40})/?)",
           "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
           "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
           "openreview.net": "/(?:forum|pdf)",
-          "doi.org": "/10\\.\\d{4,9}/[^\\s]+"
+          "doi.org": "/10\\.\\d{4,9}/[^\\s]+",
+          "api.semanticscholar.org": "/(?:(?i:arxiv):[\\w./-]+|(?i:corpusid):\\d+|[a-f0-9]{40}|10\\.\\d+/[^\\s]+)",
+          "chemrxiv.org": "/doi/(?:abs/)?10\\.\\d+/[^\\s]+",
+          "ascopubs.org": "/doi/(?:abs/)?10\\.\\d+/[^\\s]+",
+          "agupubs.onlinelibrary.wiley.com": "/doi/10\\.\\d+/[^\\s]+",
+          "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[^\\s]+",
+          "aclanthology.org": "/[\\w.-]+(?:\\.pdf|/)?",
+          "dx.doi.org": "/10\\.\\d+/[^\\s]+",
+          "maria-antoniak.github.io": "/resources/2023_riveter\\.pdf",
+          "openaccess.thecvf.com": "/content/[^\\s]+\\.(?:pdf|html)",
+          "raw.githubusercontent.com": "/DIUx-xView/xView3_fourth_place/main/whitepaper\\.pdf"
         },
         "team": "Papers · Wildlands",
         "url": "https://allenai.org/papers?tags=Wildlands"
@@ -890,7 +1314,10 @@
       {
         "team": "Frontier Intelligence Group",
         "url": "https://sakana.ai/frontier-intelligence-group/",
-        "row": "article li a[href^=\"https://sakana.ai/\"]:has(strong)"
+        "row": "article li a[href^=\"https://sakana.ai/\"]:has(strong), article li a[href^=\"https://pub.sakana.ai/\"]:has(strong)",
+        "paper_links": {
+          "pub.sakana.ai": "/[A-Za-z0-9_-]+/?"
+        }
       },
       {
         "team": "Sakana AI Publications",
@@ -898,7 +1325,8 @@
         "row": "a.card__link[href]",
         "title": "h2.card__title"
       }
-    ]
+    ],
+    "adapter": "sakana_research"
   },
   {
     "id": "21",
@@ -1032,7 +1460,7 @@
     "adapter": "strict_publications",
     "paper_section": "MIT CSAIL Publications → DSpace CSAIL community",
     "paper_links": {
-      "dspace.mit.edu": "/handle/1721\\.1/\\d+"
+      "dspace.mit.edu": "/handle/1721\\.1/\\d+(?:\\.\\d+)?"
     },
     "papers_only": true
   },
@@ -1053,10 +1481,18 @@
     "name": "Mila",
     "url": "https://mila.quebec/en/research/publications",
     "next_selector": "li.pager__item--next a[rel=next]",
-    "papers_only": true,
     "paper_section": "Mila Publications",
+    "papers_only": true,
     "paper_links": {
-      "openreview.net": "/(?:forum|pdf)"
+      "mila.quebec": "/en/research/publications",
+      "openreview.net": "/(?:forum|pdf)",
+      "doi.org": "/10\\.\\d{4,9}/.+",
+      "arxiv.org": "/(?:abs|pdf)/(?:[\\w.-]+/)?[\\w.-]+/?",
+      "proceedings.mlr.press": "/v\\d+/[\\w.-]+(?:/[\\w.-]+)?",
+      "www.semanticscholar.org": "/paper/[\\w%.-]+(?:/[\\w.-]+)?/?",
+      "dblp.uni-trier.de": "/rec/[\\w./%+-]+",
+      "openalex.org": "/W\\d+/?",
+      "pubmed.ncbi.nlm.nih.gov": "/\\d+/?"
     }
   }
 ]

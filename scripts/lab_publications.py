@@ -37,23 +37,31 @@ def entries(s):
                     yield url,heading["content"].strip(),None
         return
     if s["lab_data"]=="nvidia_cards":
-        soup=BeautifulSoup(fetch(s["url"]).content,"html.parser")
+        page=s["url"]
+        seen_pages=set()
         seen=set()
-        for a in soup.select(s["row"]):
-            href=urljoin(s["url"],a["href"])
-            title=a.get_text(" ",strip=True)
-            if not title or href in seen:
-                continue
-            seen.add(href)
-            card=a.find_parent(class_="stream-item") or a.find_parent(class_="card-simple") or a.find_parent("article")
-            paper=None
-            if card:
-                for link in card.select("a[href]"):
-                    target=urljoin(s["url"],link["href"])
-                    if link.get_text(" ",strip=True).casefold() in ("paper","pdf","arxiv","arxiv pdf") and is_paper(target):
-                        paper=target
-                        break
-            yield paper or href,title,None
+        while page and page not in seen_pages:
+            seen_pages.add(page)
+            soup=BeautifulSoup(fetch(page).content,"html.parser")
+            s["found_on"]=page
+            for a in soup.select(s["row"]):
+                href=urljoin(page,a["href"])
+                title=a.get_text(" ",strip=True)
+                if not title or href in seen:
+                    continue
+                seen.add(href)
+                card=a.find_parent(class_="stream-item") or a.find_parent(class_="card-simple") or a.find_parent("article")
+                paper=None
+                if card:
+                    for link in card.select("a[href]"):
+                        target=urljoin(page,link["href"])
+                        if link.get_text(" ",strip=True).casefold() in ("paper","pdf","arxiv","arxiv pdf") and is_paper(target):
+                            paper=target
+                            break
+                yield paper or href,title,None
+            nxt=soup.select_one("a[rel~=next],.pagination a[aria-label*=Next i],.pagination li:last-child a[href*='/page/']")
+            following=urljoin(page,nxt["href"]) if nxt and nxt.has_attr("href") else None
+            page=following if following and urlsplit(following).hostname==urlsplit(s["url"]).hostname else None
         return
     if s["lab_data"]=="cosmos":
         data=fetch(urljoin(s["url"],"data/publications.json")).json()

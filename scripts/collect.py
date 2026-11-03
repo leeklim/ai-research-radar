@@ -12,6 +12,7 @@ import requests
 from bs4 import BeautifulSoup
 from editorial_quality import REVIEWED, PROMOTIONAL, GUIDE_OR_NEWS_SUMMARY, exclusion_reason
 from ibm_publication import ibm_evidence, ibm_research_paper
+import snapshot as catalog_snapshot
 
 ROOT = Path(__file__).resolve().parents[1]
 REVIEWED_URLS = json.loads((ROOT/"config/reviewed_nonresearch.json").read_text("utf8"))
@@ -141,7 +142,9 @@ def paper_target(url,listing):
     if not pattern or dest.scheme not in ("https","http") or not re.fullmatch(pattern,dest.path):
         return False
     if dest.netloc=="openreview.net":
-        return openreview_id(url) is not None
+        return (openreview_id(url) is not None or bool(re.fullmatch(r"/pdf/[a-f0-9]{40,64}\.pdf",dest.path))
+                or dest.path=="/attachment" and parse_qs(dest.query).get("name")==["pdf"]
+                and bool(re.fullmatch(r"[\w-]+",parse_qs(dest.query).get("id",[""])[0])))
     return True
 
 
@@ -152,6 +155,8 @@ def eligible_link(url,listing):
 def keep_research(source,url,title,summary=""):
     path=urlsplit(url).path.rstrip("/")
     if url.rstrip("/") in REVIEWED_URLS or (source,path) in REVIEWED:
+        return False
+    if source=="5" and re.match(r"^(?:proceedings (?:of|from) (?:the |a |an |[0-9])|call for (?:papers|participation)\b|table of contents\b|author index\b|message from the (?:chairs|editors)\b|(?:preface|foreword)(?:$| to (?:the |this )?(?:proceedings|special issue)))",title,re.I):
         return False
     if source not in ("0","1","10","17","20","21"):
         return True
@@ -218,6 +223,38 @@ def article_id(source_id,url):
 
 
 def catalog(s):
+    if s.get("adapter")=="openai_publications":
+        from openai_publications import openai_publication_candidates,verified_openai_article
+        with requests.Session() as session:
+            session.headers.update(HEADERS)
+            candidates=list(openai_publication_candidates(session))
+            start=int(s.get("resume") or 6)
+            window=list(dict.fromkeys(candidates[:6]+candidates[start:start+12]))
+            s["continue_at"]=start+12 if start+12<len(candidates) else 6
+            failures=0
+            for url in window:
+                try:record=verified_openai_article(session,url)
+                except requests.RequestException:
+                    failures+=1
+                    continue
+                if record:
+                    s["found_on"]=record["found_on"]
+                    yield record["url"],record["title"],record["published"]
+            if failures:
+                raise ValueError(f"Publication 분류 확인을 위한 상세 페이지 {failures}건 접근 제한")
+        return
+    if s.get("adapter")=="sakana_research":
+        from sakana_research import entries
+        yield from entries(s)
+        return
+    if s.get("adapter")=="ibm_publications":
+        from ibm_publication import catalog as ibm_catalog
+        yield from ibm_catalog(s,fetch,day)
+        return
+    if s.get("adapter")=="nvidia_extra":
+        from nvidia_extra import entries
+        yield from entries(s)
+        return
     if s.get("adapter")=="deepmind_publications":
         from deepmind_publications import publications
         yield from publications(s,fetch,day)
@@ -298,20 +335,30 @@ def catalog(s):
 def catalog_page(s,page,soup):
     if urlsplit(page.url).hostname.removeprefix("www.") != urlsplit(s["url"]).hostname.removeprefix("www."):
         raise ValueError("등록된 기관 도메인 밖으로 이동")
-    if s["id"]=="31" and s["url"]==MILA_PUBLICATIONS:
-        for card in soup.select(".mila-publication"):
-            title=card.select_one(".field-name-title")
-            links=[a for a in card.select(".publication-url a[href]") if openreview_id(a["href"])]
-            if not title or not links:
-                continue
-            link=next((a for a in links if urlsplit(a["href"]).path=="/forum"),links[0])
-            block=link.find_parent(class_="field-item")
-            date=block.select_one(".publication-date.has-info") if block else None
-            if not date:
-                date=card.select_one(".publication-date.has-info")
-            yield link["href"],title.get_text(" ",strip=True),day(date.get_text(" ",strip=True)) if date else None
+    if s.get("section")=="meta_publications":
+        from meta_publications import cards
+        yield from cards(soup,page.url,day)
         return
-    if s["url"].rstrip("/")=="https://openai.com/research/index":
+    if s.get("section")=="deployment_updates":
+        from openai_updates import deployment_cards
+        for url,title,stamp in deployment_cards(soup):
+            yield url,title,day(stamp or "")
+        return
+    if s["id"]=="31" and s["url"]==MILA_PUBLICATIONS:
+        from mila_catalog import parse_cards,pick
+        for card in parse_cards(soup):
+            selected=pick(card)
+            if selected:
+                yield selected
+        return
+    if s.get("section")=="signals_reports":
+        for link in soup.select("main a[href]"):
+            parts=list(link.stripped_strings)
+            stamp=next((re.match(r"^([A-Za-z]+ \d{4})\s*\|",part) for part in parts if re.match(r"^[A-Za-z]+ \d{4}\s*\|",part)),None)
+            if stamp and len(parts)>1 and day(stamp[1]):
+                yield urljoin(page.url,link["href"]),parts[0],day(stamp[1])
+        return
+    if s["url"].rstrip("/") in ("https://openai.com/research/index","https://openai.com/research/index/publication"):
         # The official index also lists products. Use the publisher's feed to label
         # only URLs actually present on that index and recover their publication dates.
         feed = ElementTree.fromstring(fetch("https://openai.com/news/rss.xml").content)
@@ -343,10 +390,16 @@ def catalog_page(s,page,soup):
         title = " ".join(label.stripped_strings)
         if s["id"]=="4" and title.lower()=="read the paper":
             title = urlsplit(href).path.rstrip("/").rsplit("/",1)[-1].replace("-"," ").capitalize()
-        if len(title)<5 or len(title)>400 or re.fullmatch(r"[\W\d]*(?:authors?|comments?|paper|pdf|read more|view all|publication|research|publications)[\W\d]*",title,re.I):
+        if (len(title)<5 and not (s["id"]=="20" and urlsplit(s["url"]).hostname=="pub.sakana.ai" and title)) or len(title)>400 or re.fullmatch(r"[\W\d]*(?:authors?|comments?|paper|pdf|read more|view all|publication|research|publications)[\W\d]*",title,re.I):
             continue
         date_tag = row.select_one(s["date"]) if s.get("date") else None
         published = day(date_tag.get_text(" ",strip=True)) if date_tag else None
+        if s["id"]=="5":
+            card=row.find_parent("article")
+            stamp=card.select_one(".content-excerpt__journal-and-issue,.content-excerpt__published") if card else None
+            if stamp:
+                dates=re.findall(r"(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+(?:\d{1,2},\s+)?\d{4}",stamp.get_text(" ",strip=True))
+                if dates:published=day(dates[-1])
         if s["id"]=="27":
             card=row.find_parent("div",class_="item")
             if card:
@@ -385,12 +438,18 @@ def collect(s, old, previous_status):
             next_pages[listing["url"]]=scan["continue_at"]
         if scan.get("index_summary"):
             reconciled=(scan["index_summary"],{article_id(s["id"],u) for u in rows})
+        if scan.get("paper_metadata"):
+            s["paper_metadata"]=scan["paper_metadata"]
+        if scan.get("nonpapers"):
+            s["nonpapers"]=scan["nonpapers"]
     verified = {}
     queue = []
     for url,(title,published,listing) in rows.items():
         key = article_id(s["id"],url)
         previous = old.get(key,{})
-        if paper_target(url,listed_by_url[listing]):
+        if url in s.get("paper_metadata",{}):
+            verified[url]=(title,published,listing,url)
+        elif paper_target(url,listed_by_url[listing]):
             # The publisher's own paper card is the evidence for the outbound link.
             verified[url]=(title,published,listing,url)
         elif previous.get("listed_on")==listing and not obsolete_url(previous) and (
@@ -427,13 +486,31 @@ def obsolete_url(item):
         or url.hostname=="qwen.ai" and url.path.startswith("/research/"))
 
 
+def destination_key(source,url):
+    parsed=urlsplit(url)
+    host=parsed.hostname.removeprefix("www.")
+    path=parsed.path.rstrip("/")
+    if host=="openreview.net" and openreview_id(url):
+        return source,"openreview",openreview_id(url)
+    if host=="arxiv.org":
+        paper=re.fullmatch(r"/(?:abs|pdf|html)/([\w./-]+?)(?:v\d+)?(?:\.pdf)?",path)
+        if paper:return source,"arxiv",paper[1]
+    if host in ("doi.org","dx.doi.org"):
+        return source,"doi",path.lower()
+    if host=="semanticscholar.org":
+        paper=re.fullmatch(r"/paper/(?:[^/]+/)?([a-fA-F0-9]{40})",path)
+        if paper:return source,"semanticscholar",paper[1].lower()
+    query=urlencode([(k,v) for k,v in parse_qsl(parsed.query,keep_blank_values=True)
+                     if not k.startswith("utm_") and k not in ("view_from","bc")])
+    if parsed.fragment.startswith(":~:text="):
+        return source,host,path,query,parsed.fragment
+    return source,host,path,query
+
+
 def unique_destinations(items):
     unique={}
     for item in items.values():
-        url=urlsplit(item["url"])
-        query=urlencode([(k,v) for k,v in parse_qsl(url.query,keep_blank_values=True)
-                         if not k.startswith("utm_") and k not in ("view_from","bc")])
-        key=(item["source"],url.hostname.removeprefix("www."),url.path.rstrip("/"),query)
+        key=destination_key(item["source"],item["url"])
         if key not in unique:
             unique[key]=item
         else:
@@ -450,7 +527,7 @@ def unique_destinations(items):
 def main():
     sources = json.loads((ROOT/"config/sources.json").read_text("utf8"))
     output = ROOT/"docs/data.json"
-    snapshot = json.loads(output.read_text("utf8"))
+    snapshot = catalog_snapshot.read(output)
     old = {x["id"]:x for x in snapshot["items"]}
     lists = {s["id"]:{v["url"] for v in listings(s)} for s in sources}
     policies={s["id"]:{v["url"]:v for v in listings(s)} for s in sources}
@@ -476,6 +553,8 @@ def main():
             if reconciled:
                 for key in [k for k,x in items.items() if x["source"]==s["id"] and k not in reconciled[1]]:
                     del items[key]
+            for excluded in s.get("nonpapers",()):
+                items.pop(article_id(s["id"],excluded),None)
             for url,(title,published,listing,destination) in rows.items():
                 key = article_id(s["id"],url)
                 previous = old.get(key,{})
@@ -487,6 +566,9 @@ def main():
                     items[key]["scope_key"]=policies[s["id"]][listing]["scope_key"]
                 if s["id"]=="14":
                     items[key]["collection"]="research_archive"
+                if url in s.get("paper_metadata",{}):
+                    kind,venue=s["paper_metadata"][url]
+                    items[key].update(publication_type=kind,venue=venue,ibm_verified=True)
                 if paper_target(destination,policies[s["id"]][listing]):
                     items[key].update(academic_paper=True,openreview=bool(openreview_id(destination)),official_html=False,kind=policies[s["id"]][listing].get("paper_section","공식 논문 목록"),
                                       published=published,date_basis="공식 목록" if published else None)
@@ -512,17 +594,16 @@ def main():
     for item in articles:
         if item.get("date_basis")!="상세 글" and item.get("listing_date"):
             item.update(published=item["listing_date"],date_basis="공식 목록")
-    pending=[item for item in articles if item.get("date_basis")!="상세 글" and not item.get("openreview") and not item.get("academic_paper")
+    pending=[item for item in articles if not (item.get("catalog_audited") and item.get("published")) and item.get("date_basis")!="상세 글" and not item.get("openreview") and not item.get("academic_paper")
              and item.get("date_checked","")<=retry_before]
+    pending=sorted(pending,key=lambda item:item.get("date_checked",""))[:240]
     with ThreadPoolExecutor(max_workers=6) as pool:
         for item,date in zip(pending,pool.map(lookup_date,pending)):
             item["published"]=date or item.get("listing_date")
             item["date_basis"]="상세 글" if date else "공식 목록" if item["published"] else None
             item["date_checked"]=NOW[:10]
     ordered = sorted(articles,key=lambda x:x["published"] or "",reverse=True)
-    tmp=output.with_suffix(".tmp")
-    tmp.write_text(json.dumps(dict(updated=NOW,items=ordered,status=status),indent=2,ensure_ascii=False),"utf8")
-    tmp.replace(output)
+    catalog_snapshot.write(output,NOW,ordered,status)
 
 
 if __name__=="__main__":
