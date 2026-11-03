@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03T07:54:44+00:00",
+  "updated": "2026-11-03T07:56:28+00:00",
   "items": [
     {
       "id": "7dc813e5436dd9d4353e",
@@ -1874,6 +1874,15 @@
       "published": "2026-10-15"
     },
     {
+      "id": "13ee77a0d4cad6248ef3",
+      "source": "3",
+      "title": "Neural Networks Are Already Clean",
+      "url": "https://www.goodfire.ai/research/already-clean",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-10-15"
+    },
+    {
       "id": "ec6d92c9b95579ad768c",
       "source": "15",
       "title": "Zero-Shot Spoken Language Understanding with SLAM-ASR: What Do Monolingual ASR-Trained Linear Projectors Enable?",
@@ -2324,6 +2333,15 @@
       "published": "2026-10-08"
     },
     {
+      "id": "9e2fe56538a8f0f1d2aa",
+      "source": "3",
+      "title": "Training and Deploying Production Cyber Monitors on Kimi K3",
+      "url": "https://www.goodfire.ai/research/production-cyber-monitors-on-kimi-k3",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-10-08"
+    },
+    {
       "id": "0b23cc65447c7acfbba5",
       "source": "2",
       "title": "TouchScale: 500 Hours of Human Vision and Touch for Visual-Tactile Learning",
@@ -2666,6 +2684,15 @@
       "published": "2026-10-01"
     },
     {
+      "id": "58bb13193cbfa8bd7f30",
+      "source": "3",
+      "title": "Better biosecurity monitors for AI agents via protein embeddings",
+      "url": "https://www.goodfire.ai/research/better-biosecurity-monitors",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-10-01"
+    },
+    {
       "id": "5db8a3995066bff7510d",
       "source": "10",
       "title": "You're Hired: Strategic Model Selection for LLM Collaboration",
@@ -3005,6 +3032,15 @@
       "url": "https://doi.org/10.64898/2026.09.14.751452",
       "kind": "논문 · 소속 확인",
       "discovered": "2026-11-03T07:54:06+00:00",
+      "published": "2026-09-17"
+    },
+    {
+      "id": "9c020b80b4c3a5be65da",
+      "source": "3",
+      "title": "Models know when they’re reward hacking — and we can catch them at scale",
+      "url": "https://www.goodfire.ai/research/reward-hacking-activation-monitors",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
       "published": "2026-09-17"
     },
     {
@@ -3494,6 +3530,15 @@
       "published": "2026-08-20"
     },
     {
+      "id": "56d8bdcb941ce5cf0e65",
+      "source": "3",
+      "title": "Forking Fast: Efficiently Estimating Uncertainty Dynamics in Text Generation",
+      "url": "https://www.goodfire.ai/research/forking-fast",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-08-20"
+    },
+    {
       "id": "5e86487bbf52bef25d0b",
       "source": "29",
       "title": "Outputs of generative diffusion models are often unattributable",
@@ -3980,6 +4025,15 @@
       "published": "2026-07-07"
     },
     {
+      "id": "ee96428fd1ed8225e2d1",
+      "source": "3",
+      "title": "Uncovering Neural Geometry in Vision Models With Block-Sparse Featurizers",
+      "url": "https://www.goodfire.ai/research/bsf-vision",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-07-07"
+    },
+    {
       "id": "f595b6740d0c8d83db2d",
       "source": "15",
       "title": "Do Medical Vision Language Models Actually See? A Counterfactual Grounding Framework and Hard-Negative Contrastive Training for Visually-Reliant Medical VLMs",
@@ -4022,6 +4076,15 @@
       "url": "https://arxiv.org/abs/2607.26069",
       "kind": "논문 · 소속 확인",
       "discovered": "2026-11-03T07:54:06+00:00",
+      "published": "2026-06-23"
+    },
+    {
+      "id": "f52d59fc5760ddc23f58",
+      "source": "3",
+      "title": "Meandering on Manifolds: The Neural Geometry of Stories Over Time",
+      "url": "https://www.goodfire.ai/research/stories-in-space",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
       "published": "2026-06-23"
     },
     {
@@ -4106,6 +4169,15 @@
       "published": "2026-06-11"
     },
     {
+      "id": "ba4c1f7c318c93aa6de6",
+      "source": "3",
+      "title": "Predictive Data Debugging: Reveal and Shape What Your Model Learns, Before You Train",
+      "url": "https://www.goodfire.ai/research/predictive-data-debugging",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-06-11"
+    },
+    {
       "id": "bbc7efcc13fc552d886c",
       "source": "10",
       "title": "Which Models Are Our Models Built On? Auditing Invisible Dependencies in Modern LLMs",
@@ -4187,6 +4259,15 @@
       "published": "2026-06-04"
     },
     {
+      "id": "8c0cb1edbbce97d86b2a",
+      "source": "3",
+      "title": "Logits as a new monitor for evaluation awareness",
+      "url": "https://www.goodfire.ai/research/logits-as-a-new-monitor-for-evaluation-awareness",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-06-04"
+    },
+    {
       "id": "0e4e878cbf775735d18e",
       "source": "21",
       "title": "SparDA: Sparse Decoupled Attention for Efficient Long-Context LLM Inference",
@@ -4211,6 +4292,15 @@
       "url": "https://arxiv.org/abs/2606.02745",
       "kind": "논문 · 소속 확인",
       "discovered": "2026-11-03T07:54:06+00:00",
+      "published": "2026-06-01"
+    },
+    {
+      "id": "8435e951f9ce51416149",
+      "source": "3",
+      "title": "Why Larger Models Learn More: Effects of Capacity, Interference, and Rare-Task Retention",
+      "url": "https://www.goodfire.ai/research/why-larger-models-learn-more",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
       "published": "2026-06-01"
     },
     {
@@ -4259,6 +4349,15 @@
       "published": "2026-05-22"
     },
     {
+      "id": "780b22f0abbb0af4b456",
+      "source": "3",
+      "title": "Can SAEs Capture Neural Geometry?",
+      "url": "https://www.goodfire.ai/research/can-saes-capture-neural-geometry",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-05-21"
+    },
+    {
       "id": "d207efc15bf163e761b7",
       "source": "15",
       "title": "Training-free active learning framework in materials science with large language models",
@@ -4304,6 +4403,24 @@
       "published": "2026-05-14"
     },
     {
+      "id": "63e4522d15d97defb640",
+      "source": "3",
+      "title": "A Geometric Calculator Inside a Neural Network",
+      "url": "https://www.goodfire.ai/research/a-geometric-calculator",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-05-14"
+    },
+    {
+      "id": "5b0cbe249cd1911e6714",
+      "source": "3",
+      "title": "Predicting Rare LLM Failures with 30× Fewer Rollouts",
+      "url": "https://www.goodfire.ai/research/predicting-rare-llm-failures-with-30x-fewer-rollouts",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-05-13"
+    },
+    {
       "id": "e8444f9ef56359def1f4",
       "source": "28",
       "title": "Selection of the Best Policy under Fairness Constraints for Subpopulations",
@@ -4340,12 +4457,66 @@
       "published": "2026-05-08"
     },
     {
+      "id": "ba988df7204942224264",
+      "source": "3",
+      "title": "The World Inside Neural Networks",
+      "url": "https://www.goodfire.ai/research/the-world-inside-neural-networks",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-05-07"
+    },
+    {
+      "id": "392155623b898cf7fe70",
+      "source": "3",
+      "title": "Steering Along Manifolds to Control Neural Networks",
+      "url": "https://www.goodfire.ai/research/manifold-steering",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-05-07"
+    },
+    {
+      "id": "e5a4b100bb8e81f822fa",
+      "source": "3",
+      "title": "Paper Summary: Interpreting Language Model Parameters",
+      "url": "https://www.goodfire.ai/research/vpd-explainer",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-05-05"
+    },
+    {
+      "id": "e349993e9ccc5ce7a8f5",
+      "source": "3",
+      "title": "Interpreting Language Model Parameters",
+      "url": "https://www.goodfire.ai/research/interpreting-lm-parameters",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-05-05"
+    },
+    {
+      "id": "6ad0f48b2abb94c329e3",
+      "source": "3",
+      "title": "Verbalized Eval Awareness Inflates Measured Safety",
+      "url": "https://www.goodfire.ai/research/verbalized-eval-awareness-inflates-measured-safety",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-05-04"
+    },
+    {
       "id": "3a65557334f568a4617e",
       "source": "15",
       "title": "Validating open-source machine translation for quantitative text analysis",
       "url": "https://doi.org/10.1017/psrm.2026.10102",
       "kind": "논문 · 소속 확인",
       "discovered": "2026-11-03T07:54:06+00:00",
+      "published": "2026-04-29"
+    },
+    {
+      "id": "231c72e0b8eed9871934",
+      "source": "3",
+      "title": "Probe-Based Data Attribution: Surfacing and Mitigating Undesirable Behaviors in LLM Post-Training",
+      "url": "https://www.goodfire.ai/research/probe-based-data-attribution",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
       "published": "2026-04-29"
     },
     {
@@ -4403,6 +4574,15 @@
       "published": "2026-04-17"
     },
     {
+      "id": "d67477c713da4abdbeb2",
+      "source": "3",
+      "title": "Explaining 4.2 million genetic variants with state-of-the-art, interpretable predictions",
+      "url": "https://www.goodfire.ai/research/evee-explaining-genetic-variants",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-04-14"
+    },
+    {
       "id": "9addbcc612c3db0d51cf",
       "source": "3",
       "title": "Interpretable variant effect prediction from genomic foundation model representations",
@@ -4430,6 +4610,15 @@
       "published": "2026-04-10"
     },
     {
+      "id": "d5d4e353e5fe809d9667",
+      "source": "3",
+      "title": "Covariance-based Sequence Pooling",
+      "url": "https://www.goodfire.ai/research/covariance-pooling",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-04-10"
+    },
+    {
       "id": "3619d6f3f9fb7e734961",
       "source": "15",
       "title": "BidirLM: From Text to Omnimodal Bidirectional Encoders by Adapting and Composing Causal LLMs",
@@ -4437,6 +4626,15 @@
       "kind": "논문 · 소속 확인",
       "discovered": "2026-11-03T07:54:06+00:00",
       "published": "2026-04-02"
+    },
+    {
+      "id": "b0475074aa627ca3059e",
+      "source": "3",
+      "title": "Using Self-Correcting Search to Accelerate Materials Discovery",
+      "url": "https://www.goodfire.ai/research/self-correcting-search",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-04-01"
     },
     {
       "id": "74ca5f7a77e69497a4d3",
@@ -4472,6 +4670,15 @@
       "url": "https://arxiv.org/abs/2603.11510",
       "kind": "논문 · 소속 확인",
       "discovered": "2026-11-03T07:54:06+00:00",
+      "published": "2026-03-12"
+    },
+    {
+      "id": "31f048e40ff0b0949707",
+      "source": "3",
+      "title": "Reasoning Theater: Probing for Performative Chain-of-Thought",
+      "url": "https://www.goodfire.ai/research/reasoning-theater",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
       "published": "2026-03-12"
     },
     {
@@ -4556,6 +4763,15 @@
       "published": "2026-02-18"
     },
     {
+      "id": "8a9ee4e183347e2fffc3",
+      "source": "3",
+      "title": "Features as Rewards: Using Interpretability to Reduce Hallucinations",
+      "url": "https://www.goodfire.ai/research/rlfr",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2026-02-11"
+    },
+    {
       "id": "3119a33ec6322818dfc1",
       "source": "15",
       "title": "A Unified Framework for Rethinking Policy Divergence Measures in GRPO",
@@ -4598,6 +4814,15 @@
       "url": "https://arxiv.org/abs/2601.20144",
       "kind": "논문 · 소속 확인",
       "discovered": "2026-11-03T07:54:06+00:00",
+      "published": "2026-01-28"
+    },
+    {
+      "id": "e9870bd6fd2b8c980f3c",
+      "source": "3",
+      "title": "Using Interpretability to Identify a Novel Class of Alzheimer's Biomarkers",
+      "url": "https://www.goodfire.ai/research/interpretability-for-alzheimers-detection",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
       "published": "2026-01-28"
     },
     {
@@ -4727,6 +4952,15 @@
       "published": "2025-11-06"
     },
     {
+      "id": "ae1df90bc5184b48fff8",
+      "source": "3",
+      "title": "Understanding Memorization via Loss Curvature",
+      "url": "https://www.goodfire.ai/research/understanding-memorization-via-loss-curvature",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2025-11-06"
+    },
+    {
       "id": "64148b178d2787ecc2fd",
       "source": "22",
       "title": "Optimizing AI Agent Attacks With Synthetic Data",
@@ -4736,12 +4970,39 @@
       "published": "2025-11-04"
     },
     {
+      "id": "269ac4c687a1b9e08fb0",
+      "source": "3",
+      "title": "Priors in Time: Missing Inductive Biases for Language Model Interpretability",
+      "url": "https://www.goodfire.ai/research/priors-in-time",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2025-11-03"
+    },
+    {
+      "id": "99a05243f39a0b0c4783",
+      "source": "3",
+      "title": "Belief Dynamics Reveal the Dual Nature of In-Context Learning and Activation Steering",
+      "url": "https://www.goodfire.ai/research/belief-dynamics-icl-steering",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2025-11-01"
+    },
+    {
       "id": "7bec94d33401d23ae1f7",
       "source": "15",
       "title": "Discrete radar based on modulo arithmetic",
       "url": "https://doi.org/10.1186/s13634-025-01264-1",
       "kind": "논문 · 소속 확인",
       "discovered": "2026-11-03T07:54:06+00:00",
+      "published": "2025-10-28"
+    },
+    {
+      "id": "b9bb2bd8eac75ebde5d5",
+      "source": "3",
+      "title": "Deploying Interpretability to Production with Rakuten: SAE Probes for PII Detection",
+      "url": "https://www.goodfire.ai/research/rakuten-sae-probes-for-pii-detection",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
       "published": "2025-10-28"
     },
     {
@@ -4763,6 +5024,15 @@
       "published": "2025-10-15"
     },
     {
+      "id": "07c8d1a334230ac12243",
+      "source": "3",
+      "title": "Mixing Mechanisms: How Language Models Retrieve Bound Entities In-Context",
+      "url": "https://www.goodfire.ai/research/mixing-mechanisms",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2025-10-07"
+    },
+    {
       "id": "01fc5f132002461551d9",
       "source": "22",
       "title": "Inoculation Prompting: Instructing LLMs to misbehave at train-time improves test-time alignment",
@@ -4770,6 +5040,42 @@
       "kind": "논문 · 소속 확인",
       "discovered": "2026-11-03T07:54:06+00:00",
       "published": "2025-10-06"
+    },
+    {
+      "id": "da56b62bfd943085a764",
+      "source": "3",
+      "title": "Understanding Sparse Autoencoder Scaling in the Presence of Feature Manifolds",
+      "url": "https://www.goodfire.ai/research/sae-scaling-with-feature-manifolds",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2025-09-04"
+    },
+    {
+      "id": "032fd2b2bd304c6835a6",
+      "source": "3",
+      "title": "Finding the Tree of Life in Evo 2",
+      "url": "https://www.goodfire.ai/research/phylogeny-manifold",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2025-08-28"
+    },
+    {
+      "id": "281b20074d8dca35b5be",
+      "source": "3",
+      "title": "Adversarial Examples Are Not Bugs, They Are Superposition",
+      "url": "https://www.goodfire.ai/research/adversarial-examples-are-not-bugs-they-are-superposition",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2025-08-26"
+    },
+    {
+      "id": "95c3e4d3fc2e46955437",
+      "source": "3",
+      "title": "Discovering Undesired Rare Behaviors via Model Diff Amplification",
+      "url": "https://www.goodfire.ai/research/model-diff-amplification",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2025-08-21"
     },
     {
       "id": "425be24b1a0a2cbe9a46",
@@ -4790,6 +5096,15 @@
       "published": "2025-08-11"
     },
     {
+      "id": "86099b966f4c423a741f",
+      "source": "3",
+      "title": "The Circuits Research Landscape: Results and Perspectives",
+      "url": "https://www.goodfire.ai/research/the-circuits-research-landscape",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2025-08-05"
+    },
+    {
       "id": "06c9bd300008b59d5dd0",
       "source": "3",
       "title": "Human whole-epigenome modelling for clinical applications with Pleiades",
@@ -4806,6 +5121,33 @@
       "kind": "논문 · 소속 확인",
       "discovered": "2026-11-03T07:54:06+00:00",
       "published": "2025-07-01"
+    },
+    {
+      "id": "ae39b33b33d9cccad620",
+      "source": "3",
+      "title": "Towards Scalable Parameter Decomposition",
+      "url": "https://www.goodfire.ai/research/stochastic-param-decomp",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2025-06-28"
+    },
+    {
+      "id": "e24027f902f4530bf3c0",
+      "source": "3",
+      "title": "Replicating Circuit Tracing for a Simple Known Mechanism",
+      "url": "https://www.goodfire.ai/research/replicating-circuit-tracing-for-a-simple-mechanism",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2025-06-11"
+    },
+    {
+      "id": "bf85d583a8390a24e12b",
+      "source": "3",
+      "title": "Painting With Concepts Using Diffusion Model Latents",
+      "url": "https://www.goodfire.ai/research/painting-with-concepts",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2025-05-27"
     },
     {
       "id": "be2146b50ccb82ac5d24",
@@ -4844,6 +5186,15 @@
       "published": "2025-04-16"
     },
     {
+      "id": "8e0d7a497daae03de1f1",
+      "source": "3",
+      "title": "Under the Hood of a Reasoning Model",
+      "url": "https://www.goodfire.ai/research/under-the-hood-of-a-reasoning-model",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2025-04-15"
+    },
+    {
       "id": "cf38a64f9a639bcd6216",
       "source": "22",
       "title": "How to evaluate control measures for LLM agents? A trajectory from today to superintelligence",
@@ -4878,6 +5229,15 @@
       "kind": "논문 · 소속 확인",
       "discovered": "2026-11-03T07:54:06+00:00",
       "published": "2025-02-21"
+    },
+    {
+      "id": "6e3f938ed381878074ec",
+      "source": "3",
+      "title": "Interpreting Evo 2: Arc Institute's Next-Generation Genomic Foundation Model",
+      "url": "https://www.goodfire.ai/research/interpreting-evo-2",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:47:32+00:00",
+      "published": "2025-02-20"
     },
     {
       "id": "48588b12ebe3d3d2d1c9",
@@ -4925,6 +5285,15 @@
       "published": "2025-01-27"
     },
     {
+      "id": "121cc2a3ba8a2a69d5e8",
+      "source": "3",
+      "title": "Open Problems in Mechanistic Interpretability",
+      "url": "https://www.goodfire.ai/research/open-problems-in-mech-interp",
+      "kind": "연구 결과",
+      "discovered": "2026-11-03T07:54:06+00:00",
+      "published": "2025-01-27"
+    },
+    {
       "id": "6eb14a7a6dc020917e05",
       "source": "9",
       "title": "MoonShot: Towards Controllable Video Generation and Editing with Motion-Aware Multimodal Conditions",
@@ -4957,6 +5326,15 @@
       "title": "StructTest: Benchmarking LLMs' Reasoning through Compositional Structured Outputs",
       "url": "https://arxiv.org/abs/2412.18011",
       "kind": "논문 · 소속 확인",
+      "discovered": "2026-11-03T07:54:06+00:00",
+      "published": "2024-12-23"
+    },
+    {
+      "id": "ce214bbc87d84901d0ff",
+      "source": "3",
+      "title": "Mapping the Latent Space of Llama 3.3 70B",
+      "url": "https://www.goodfire.ai/research/mapping-latent-spaces-llama",
+      "kind": "연구 결과",
       "discovered": "2026-11-03T07:54:06+00:00",
       "published": "2024-12-23"
     },
@@ -5218,6 +5596,15 @@
       "title": "Characterizing stable regions in the residual stream of LLMs",
       "url": "https://arxiv.org/abs/2409.17113",
       "kind": "논문 · 소속 확인",
+      "discovered": "2026-11-03T07:54:06+00:00",
+      "published": "2024-09-25"
+    },
+    {
+      "id": "d504141f945141e7b993",
+      "source": "3",
+      "title": "Understanding and Steering Llama 3 with Sparse Autoencoders",
+      "url": "https://www.goodfire.ai/research/understanding-and-steering-llama-3",
+      "kind": "연구 결과",
       "discovered": "2026-11-03T07:54:06+00:00",
       "published": "2024-09-25"
     },
@@ -6518,15 +6905,6 @@
       "published": null
     },
     {
-      "id": "8435e951f9ce51416149",
-      "source": "3",
-      "title": "Why Larger Models Learn More: Effects of Capacity, Interference, and Rare-Task Retention",
-      "url": "https://www.goodfire.ai/research/why-larger-models-learn-more",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
-      "published": null
-    },
-    {
       "id": "fa157ad249e40a810a65",
       "source": "27",
       "title": "Why Do Pretrained Language Models Help in Downstream Tasks? An Analysis of Head and Prompt Tuning",
@@ -6680,39 +7058,12 @@
       "published": null
     },
     {
-      "id": "6ad0f48b2abb94c329e3",
-      "source": "3",
-      "title": "Verbalized Eval Awareness Inflates Measured Safety",
-      "url": "https://www.goodfire.ai/research/verbalized-eval-awareness-inflates-measured-safety",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
-      "published": null
-    },
-    {
       "id": "db2f2fa17dfeb40474ed",
       "source": "30",
       "title": "Using Task Driven Methods to Uncover Representations of Human Vision and Semantics",
       "url": "https://ml.cmu.edu/research/joint_phd_dissertations/thesis_wang_aria.pdf",
       "kind": "논문 · 기관 목록",
       "discovered": "2026-11-03T07:54:06+00:00",
-      "published": null
-    },
-    {
-      "id": "b0475074aa627ca3059e",
-      "source": "3",
-      "title": "Using Self-Correcting Search to Accelerate Materials Discovery",
-      "url": "https://www.goodfire.ai/research/self-correcting-search",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
-      "published": null
-    },
-    {
-      "id": "e9870bd6fd2b8c980f3c",
-      "source": "3",
-      "title": "Using Interpretability to Identify a Novel Class of Alzheimer's Biomarkers",
-      "url": "https://www.goodfire.ai/research/interpretability-for-alzheimers-detection",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
       "published": null
     },
     {
@@ -6758,51 +7109,6 @@
       "url": "https://ml.cmu.edu/research/phd-dissertation-pdfs/ekr_phd_mld_2024.pdf",
       "kind": "논문 · 기관 목록",
       "discovered": "2026-11-03T07:54:06+00:00",
-      "published": null
-    },
-    {
-      "id": "d504141f945141e7b993",
-      "source": "3",
-      "title": "Understanding and Steering Llama 3 with Sparse Autoencoders",
-      "url": "https://www.goodfire.ai/research/understanding-and-steering-llama-3",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:54:06+00:00",
-      "published": null
-    },
-    {
-      "id": "da56b62bfd943085a764",
-      "source": "3",
-      "title": "Understanding Sparse Autoencoder Scaling in the Presence of Feature Manifolds",
-      "url": "https://www.goodfire.ai/research/sae-scaling-with-feature-manifolds",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
-      "published": null
-    },
-    {
-      "id": "ae1df90bc5184b48fff8",
-      "source": "3",
-      "title": "Understanding Memorization via Loss Curvature",
-      "url": "https://www.goodfire.ai/research/understanding-memorization-via-loss-curvature",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
-      "published": null
-    },
-    {
-      "id": "8e0d7a497daae03de1f1",
-      "source": "3",
-      "title": "Under the Hood of a Reasoning Model",
-      "url": "https://www.goodfire.ai/research/under-the-hood-of-a-reasoning-model",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
-      "published": null
-    },
-    {
-      "id": "ee96428fd1ed8225e2d1",
-      "source": "3",
-      "title": "Uncovering Neural Geometry in Vision Models With Block-Sparse Featurizers",
-      "url": "https://www.goodfire.ai/research/bsf-vision",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
       "published": null
     },
     {
@@ -6878,15 +7184,6 @@
       "published": null
     },
     {
-      "id": "9e2fe56538a8f0f1d2aa",
-      "source": "3",
-      "title": "Training and Deploying Production Cyber Monitors on Kimi K3",
-      "url": "https://www.goodfire.ai/research/production-cyber-monitors-on-kimi-k3",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
-      "published": null
-    },
-    {
       "id": "bc8b24abde86f0068b7e",
       "source": "30",
       "title": "Training ML Models to Adapt at Test Time",
@@ -6956,15 +7253,6 @@
       "url": "https://ml.cmu.edu/research/phd-dissertation-pdfs/chepingt_mld_phd_thesis_2026.pdf",
       "kind": "논문 · 기관 목록",
       "discovered": "2026-11-03T07:54:06+00:00",
-      "published": null
-    },
-    {
-      "id": "ae39b33b33d9cccad620",
-      "source": "3",
-      "title": "Towards Scalable Parameter Decomposition",
-      "url": "https://www.goodfire.ai/research/stochastic-param-decomp",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
       "published": null
     },
     {
@@ -7139,15 +7427,6 @@
       "published": null
     },
     {
-      "id": "ba988df7204942224264",
-      "source": "3",
-      "title": "The World Inside Neural Networks",
-      "url": "https://www.goodfire.ai/research/the-world-inside-neural-networks",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
-      "published": null
-    },
-    {
       "id": "487e0a8d62cf6848fe6e",
       "source": "30",
       "title": "The When, Where and Why of Human Memory Retrieval",
@@ -7181,15 +7460,6 @@
       "url": "https://ml.cmu.edu/research/phd-dissertation-pdfs/PhD_Thesis.pdf",
       "kind": "논문 · 기관 목록",
       "discovered": "2026-11-03T07:54:06+00:00",
-      "published": null
-    },
-    {
-      "id": "86099b966f4c423a741f",
-      "source": "3",
-      "title": "The Circuits Research Landscape: Results and Perspectives",
-      "url": "https://www.goodfire.ai/research/the-circuits-research-landscape",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
       "published": null
     },
     {
@@ -7289,15 +7559,6 @@
       "url": "https://ml.cmu.edu/research/phd-dissertation-pdfs/cmu-ml-19-116-dann.pdf",
       "kind": "논문 · 기관 목록",
       "discovered": "2026-11-03T07:54:06+00:00",
-      "published": null
-    },
-    {
-      "id": "392155623b898cf7fe70",
-      "source": "3",
-      "title": "Steering Along Manifolds to Control Neural Networks",
-      "url": "https://www.goodfire.ai/research/manifold-steering",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
       "published": null
     },
     {
@@ -7616,15 +7877,6 @@
       "published": null
     },
     {
-      "id": "e24027f902f4530bf3c0",
-      "source": "3",
-      "title": "Replicating Circuit Tracing for a Simple Known Mechanism",
-      "url": "https://www.goodfire.ai/research/replicating-circuit-tracing-for-a-simple-mechanism",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
-      "published": null
-    },
-    {
       "id": "aab9d02d2e1fbd14b62d",
       "source": "6",
       "title": "Relight: Simple, User-Level Checkpointing and Fast Forward Replay for Distributed Task-Based Systems",
@@ -7685,15 +7937,6 @@
       "url": "https://ml.cmu.edu/research/phd-dissertation-pdfs/cmu-ml-20-101-song.pdf",
       "kind": "논문 · 기관 목록",
       "discovered": "2026-11-03T07:54:06+00:00",
-      "published": null
-    },
-    {
-      "id": "31f048e40ff0b0949707",
-      "source": "3",
-      "title": "Reasoning Theater: Probing for Performative Chain-of-Thought",
-      "url": "https://www.goodfire.ai/research/reasoning-theater",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
       "published": null
     },
     {
@@ -7814,15 +8057,6 @@
       "published": null
     },
     {
-      "id": "231c72e0b8eed9871934",
-      "source": "3",
-      "title": "Probe-Based Data Attribution: Surfacing and Mitigating Undesirable Behaviors in LLM Post-Training",
-      "url": "https://www.goodfire.ai/research/probe-based-data-attribution",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
-      "published": null
-    },
-    {
       "id": "a7ef9fe7c498e5651906",
       "source": "30",
       "title": "Probabilistic Single Cell Lineage Tracing",
@@ -7838,15 +8072,6 @@
       "url": "https://ml.cmu.edu/research/phd-dissertation-pdfs/thesis_eysenbach.pdf",
       "kind": "논문 · 기관 목록",
       "discovered": "2026-11-03T07:54:06+00:00",
-      "published": null
-    },
-    {
-      "id": "269ac4c687a1b9e08fb0",
-      "source": "3",
-      "title": "Priors in Time: Missing Inductive Biases for Language Model Interpretability",
-      "url": "https://www.goodfire.ai/research/priors-in-time",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
       "published": null
     },
     {
@@ -7877,30 +8102,12 @@
       "published": null
     },
     {
-      "id": "ba4c1f7c318c93aa6de6",
-      "source": "3",
-      "title": "Predictive Data Debugging: Reveal and Shape What Your Model Learns, Before You Train",
-      "url": "https://www.goodfire.ai/research/predictive-data-debugging",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
-      "published": null
-    },
-    {
       "id": "fc19dc88173be7b7bbfe",
       "source": "30",
       "title": "Prediction and Learning Algorithms for Robustness in the Wild",
       "url": "https://ml.cmu.edu/research/phd-dissertation-pdfs/kbaek_ml_phd_thesis_2026-copy.pdf",
       "kind": "논문 · 기관 목록",
       "discovered": "2026-11-03T07:54:06+00:00",
-      "published": null
-    },
-    {
-      "id": "5b0cbe249cd1911e6714",
-      "source": "3",
-      "title": "Predicting Rare LLM Failures with 30× Fewer Rollouts",
-      "url": "https://www.goodfire.ai/research/predicting-rare-llm-failures-with-30x-fewer-rollouts",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
       "published": null
     },
     {
@@ -8030,24 +8237,6 @@
       "published": null
     },
     {
-      "id": "e5a4b100bb8e81f822fa",
-      "source": "3",
-      "title": "Paper Summary: Interpreting Language Model Parameters",
-      "url": "https://www.goodfire.ai/research/vpd-explainer",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
-      "published": null
-    },
-    {
-      "id": "bf85d583a8390a24e12b",
-      "source": "3",
-      "title": "Painting With Concepts Using Diffusion Model Latents",
-      "url": "https://www.goodfire.ai/research/painting-with-concepts",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
-      "published": null
-    },
-    {
       "id": "65f23df4f56bda719a41",
       "source": "18",
       "title": "Paint-Anything: Unified Any-Color Control for Image Generation and Editing",
@@ -8108,15 +8297,6 @@
       "url": "https://www.amazon.science/publications/orchopt-validation-gated-architecture-search-for-self-organizing-multi-agent-orchestration",
       "kind": "논문 · 기관 목록",
       "discovered": "2026-11-03T07:47:32+00:00",
-      "published": null
-    },
-    {
-      "id": "121cc2a3ba8a2a69d5e8",
-      "source": "3",
-      "title": "Open Problems in Mechanistic Interpretability",
-      "url": "https://www.goodfire.ai/research/open-problems-in-mech-interp",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:54:06+00:00",
       "published": null
     },
     {
@@ -8237,15 +8417,6 @@
       "published": null
     },
     {
-      "id": "13ee77a0d4cad6248ef3",
-      "source": "3",
-      "title": "Neural Networks Are Already Clean",
-      "url": "https://www.goodfire.ai/research/already-clean",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
-      "published": null
-    },
-    {
       "id": "4a1a5e423b8a4ed7af2b",
       "source": "30",
       "title": "Neural Dynamics and Interactions in the Human Ventral Visual Pathway",
@@ -8309,15 +8480,6 @@
       "published": null
     },
     {
-      "id": "9c020b80b4c3a5be65da",
-      "source": "3",
-      "title": "Models know when they’re reward hacking — and we can catch them at scale",
-      "url": "https://www.goodfire.ai/research/reward-hacking-activation-monitors",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
-      "published": null
-    },
-    {
       "id": "9f0204125f86b1938e7e",
       "source": "30",
       "title": "Modeling Epidemiological Time Series",
@@ -8332,15 +8494,6 @@
       "title": "Model merging does not require uniform LoRA ranks",
       "url": "https://www.amazon.science/publications/model-merging-does-not-require-uniform-lora-ranks",
       "kind": "논문 · 기관 목록",
-      "discovered": "2026-11-03T07:47:32+00:00",
-      "published": null
-    },
-    {
-      "id": "07c8d1a334230ac12243",
-      "source": "3",
-      "title": "Mixing Mechanisms: How Language Models Retrieve Bound Entities In-Context",
-      "url": "https://www.goodfire.ai/research/mixing-mechanisms",
-      "kind": "연구 결과",
       "discovered": "2026-11-03T07:47:32+00:00",
       "published": null
     },
@@ -8435,29 +8588,11 @@
       "published": null
     },
     {
-      "id": "f52d59fc5760ddc23f58",
-      "source": "3",
-      "title": "Meandering on Manifolds: The Neural Geometry of Stories Over Time",
-      "url": "https://www.goodfire.ai/research/stories-in-space",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
-      "published": null
-    },
-    {
       "id": "a804c2f4aa3c5d580299",
       "source": "30",
       "title": "Mathematical Foundations of Data-Training-Inference Interaction in Language Modeling",
       "url": "https://ml.cmu.edu/research/phd-dissertation-pdfs/yuchenl4_mld_phd_thesis_2025.pdf",
       "kind": "논문 · 기관 목록",
-      "discovered": "2026-11-03T07:54:06+00:00",
-      "published": null
-    },
-    {
-      "id": "ce214bbc87d84901d0ff",
-      "source": "3",
-      "title": "Mapping the Latent Space of Llama 3.3 70B",
-      "url": "https://www.goodfire.ai/research/mapping-latent-spaces-llama",
-      "kind": "연구 결과",
       "discovered": "2026-11-03T07:54:06+00:00",
       "published": null
     },
@@ -8540,15 +8675,6 @@
       "url": "https://arxiv.org/abs/2108.04145",
       "kind": "논문 · 기관 목록",
       "discovered": "2026-11-03T07:54:06+00:00",
-      "published": null
-    },
-    {
-      "id": "8c0cb1edbbce97d86b2a",
-      "source": "3",
-      "title": "Logits as a new monitor for evaluation awareness",
-      "url": "https://www.goodfire.ai/research/logits-as-a-new-monitor-for-evaluation-awareness",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
       "published": null
     },
     {
@@ -8966,24 +9092,6 @@
       "published": null
     },
     {
-      "id": "e349993e9ccc5ce7a8f5",
-      "source": "3",
-      "title": "Interpreting Language Model Parameters",
-      "url": "https://www.goodfire.ai/research/interpreting-lm-parameters",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
-      "published": null
-    },
-    {
-      "id": "6e3f938ed381878074ec",
-      "source": "3",
-      "title": "Interpreting Evo 2: Arc Institute's Next-Generation Genomic Foundation Model",
-      "url": "https://www.goodfire.ai/research/interpreting-evo-2",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
-      "published": null
-    },
-    {
       "id": "b5d1e3281e9e648ea66a",
       "source": "29",
       "title": "Integrated Task and Motion Planning",
@@ -9389,15 +9497,6 @@
       "published": null
     },
     {
-      "id": "56d8bdcb941ce5cf0e65",
-      "source": "3",
-      "title": "Forking Fast: Efficiently Estimating Uncertainty Dynamics in Text Generation",
-      "url": "https://www.goodfire.ai/research/forking-fast",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
-      "published": null
-    },
-    {
       "id": "dc4719928034f52f7029",
       "source": "29",
       "title": "Flow-based Domain Randomization for Learning and Sequencing Robotic Skills",
@@ -9425,15 +9524,6 @@
       "published": null
     },
     {
-      "id": "032fd2b2bd304c6835a6",
-      "source": "3",
-      "title": "Finding the Tree of Life in Evo 2",
-      "url": "https://www.goodfire.ai/research/phylogeny-manifold",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
-      "published": null
-    },
-    {
       "id": "4c69c1879a2428333339",
       "source": "29",
       "title": "Finding Structure in Logographic Writing with Library Learning",
@@ -9458,15 +9548,6 @@
       "url": "https://arxiv.org/abs/2610.12102",
       "kind": "논문 · 기관 목록",
       "discovered": "2026-11-03T07:54:06+00:00",
-      "published": null
-    },
-    {
-      "id": "8a9ee4e183347e2fffc3",
-      "source": "3",
-      "title": "Features as Rewards: Using Interpretability to Reduce Hallucinations",
-      "url": "https://www.goodfire.ai/research/rlfr",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
       "published": null
     },
     {
@@ -9503,15 +9584,6 @@
       "url": "https://arxiv.org/abs/1608.01335",
       "kind": "논문 · 기관 목록",
       "discovered": "2026-11-03T07:54:06+00:00",
-      "published": null
-    },
-    {
-      "id": "d67477c713da4abdbeb2",
-      "source": "3",
-      "title": "Explaining 4.2 million genetic variants with state-of-the-art, interpretable predictions",
-      "url": "https://www.goodfire.ai/research/evee-explaining-genetic-variants",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
       "published": null
     },
     {
@@ -9686,15 +9758,6 @@
       "published": null
     },
     {
-      "id": "95c3e4d3fc2e46955437",
-      "source": "3",
-      "title": "Discovering Undesired Rare Behaviors via Model Diff Amplification",
-      "url": "https://www.goodfire.ai/research/model-diff-amplification",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
-      "published": null
-    },
-    {
       "id": "7b154d4d5344ac1224fc",
       "source": "29",
       "title": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
@@ -9737,15 +9800,6 @@
       "url": "https://ml.cmu.edu/research/phd-dissertation-pdfs/vchen2_ml_phd_thesis_2026.pdf",
       "kind": "논문 · 기관 목록",
       "discovered": "2026-11-03T07:54:06+00:00",
-      "published": null
-    },
-    {
-      "id": "b9bb2bd8eac75ebde5d5",
-      "source": "3",
-      "title": "Deploying Interpretability to Production with Rakuten: SAE Probes for PII Detection",
-      "url": "https://www.goodfire.ai/research/rakuten-sae-probes-for-pii-detection",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
       "published": null
     },
     {
@@ -9899,15 +9953,6 @@
       "url": "https://arxiv.org/abs/2505.10844",
       "kind": "논문 · 기관 목록",
       "discovered": "2026-11-03T07:54:06+00:00",
-      "published": null
-    },
-    {
-      "id": "d5d4e353e5fe809d9667",
-      "source": "3",
-      "title": "Covariance-based Sequence Pooling",
-      "url": "https://www.goodfire.ai/research/covariance-pooling",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
       "published": null
     },
     {
@@ -10154,15 +10199,6 @@
       "published": null
     },
     {
-      "id": "780b22f0abbb0af4b456",
-      "source": "3",
-      "title": "Can SAEs Capture Neural Geometry?",
-      "url": "https://www.goodfire.ai/research/can-saes-capture-neural-geometry",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
-      "published": null
-    },
-    {
       "id": "5b3c44987b8bf374d120",
       "source": "30",
       "title": "Calibrated Conditional Density Models and Predictive Inference via Local Diagnostics",
@@ -10271,24 +10307,6 @@
       "published": null
     },
     {
-      "id": "58bb13193cbfa8bd7f30",
-      "source": "3",
-      "title": "Better biosecurity monitors for AI agents via protein embeddings",
-      "url": "https://www.goodfire.ai/research/better-biosecurity-monitors",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
-      "published": null
-    },
-    {
-      "id": "99a05243f39a0b0c4783",
-      "source": "3",
-      "title": "Belief Dynamics Reveal the Dual Nature of In-Context Learning and Activation Steering",
-      "url": "https://www.goodfire.ai/research/belief-dynamics-icl-steering",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
-      "published": null
-    },
-    {
       "id": "d4594335f31d8701a9c0",
       "source": "25",
       "title": "BLOOM: A 176B-Parameter Open-Access Multilingual Language Model",
@@ -10394,15 +10412,6 @@
       "url": "https://arxiv.org/abs/2007.05033",
       "kind": "논문 · 기관 목록",
       "discovered": "2026-11-03T07:54:06+00:00",
-      "published": null
-    },
-    {
-      "id": "281b20074d8dca35b5be",
-      "source": "3",
-      "title": "Adversarial Examples Are Not Bugs, They Are Superposition",
-      "url": "https://www.goodfire.ai/research/adversarial-examples-are-not-bugs-they-are-superposition",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
       "published": null
     },
     {
@@ -10538,15 +10547,6 @@
       "url": "https://www.microsoft.com/en-us/research/publication/a-process-level-evaluation-of-llm-discovery-agents/",
       "kind": "논문 · 기관 목록",
       "discovered": "2026-11-03T07:54:06+00:00",
-      "published": null
-    },
-    {
-      "id": "63e4522d15d97defb640",
-      "source": "3",
-      "title": "A Geometric Calculator Inside a Neural Network",
-      "url": "https://www.goodfire.ai/research/a-geometric-calculator",
-      "kind": "연구 결과",
-      "discovered": "2026-11-03T07:47:32+00:00",
       "published": null
     },
     {
@@ -10724,33 +10724,33 @@
     },
     "27": {
       "ok": true,
-      "count": 56,
-      "partial": false,
-      "error": ""
+      "count": 48,
+      "partial": true,
+      "error": "indexed: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filter=raw_affiliation_strings.search%3A%22Center+for+Research+on+Foundatio"
     },
     "28": {
-      "ok": true,
-      "count": 30,
+      "ok": false,
+      "count": 0,
       "partial": false,
-      "error": ""
+      "error": "indexed: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filter=raw_affiliation_strings.search%3A%22Berkeley+Artificial+Intelligence"
     },
     "29": {
       "ok": true,
-      "count": 127,
-      "partial": false,
-      "error": ""
+      "count": 83,
+      "partial": true,
+      "error": "indexed: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filter=raw_affiliation_strings.search%3A%22Computer+Science+and+Artificial+"
     },
     "30": {
       "ok": true,
-      "count": 176,
-      "partial": false,
-      "error": ""
+      "count": 144,
+      "partial": true,
+      "error": "indexed: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filter=raw_affiliation_strings.search%3A%22Machine+Learning+Department%22%2"
     },
     "31": {
-      "ok": true,
-      "count": 41,
+      "ok": false,
+      "count": 0,
       "partial": false,
-      "error": ""
+      "error": "indexed: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filter=raw_affiliation_strings.search%3A%22Quebec+Artificial+Intelligence+I"
     }
   }
 }

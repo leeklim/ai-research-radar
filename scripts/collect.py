@@ -68,7 +68,15 @@ def catalog(source):
             continue
         if len(title) < 9 or len(title) > 350 or title.lower().startswith(("view all","see all","browse all")):
             continue
-        yield href, title, None, "연구 결과" if source["id"]=="3" else "논문 · 기관 목록"
+        published = None
+        if source["id"] == "3":
+            date_label = anchor.select_one(".index-meta span:last-child")
+            if date_label:
+                try:
+                    published = datetime.strptime(date_label.get_text(strip=True), "%B %d, %Y").date().isoformat()
+                except ValueError:
+                    pass
+        yield href, title, published, "연구 결과" if source["id"]=="3" else "논문 · 기관 목록"
 
 
 def collect(source):
@@ -102,7 +110,7 @@ def main():
                                   discovered=prev.get("discovered",NOW), published=date or prev.get("published"))
             status[source["id"]] = dict(ok=bool(seen), count=len(seen), partial=bool(seen and errors), error=" / ".join(errors))
             print(source["name"],len(seen),"/".join(errors)[:90],flush=True)
-    ordered = sorted(items.values(),key=lambda x:(x["discovered"][:10],x["published"] or "",x["title"]),reverse=True)
+    ordered = sorted(items.values(), key=lambda x: x["published"] or "", reverse=True)
     tmp = output.with_suffix(".tmp")
     tmp.write_text(json.dumps(dict(updated=NOW,items=ordered,status=status),ensure_ascii=False,indent=2),"utf8")
     tmp.replace(output)
