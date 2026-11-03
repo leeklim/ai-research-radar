@@ -2,6 +2,8 @@
 import hashlib
 import json
 import re
+from email.utils import parsedate_to_datetime
+from xml.etree import ElementTree
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from pathlib import Path
@@ -42,6 +44,19 @@ def catalog(s):
     if urlsplit(page.url).hostname.removeprefix("www.") != urlsplit(s["url"]).hostname.removeprefix("www."):
         raise ValueError("등록된 기관 도메인 밖으로 이동")
     soup = BeautifulSoup(page.content,"html.parser")
+    if s["id"]=="0":
+        # The official index also lists products. Use the publisher's feed to label
+        # only URLs actually present on that index and recover their publication dates.
+        feed = ElementTree.fromstring(fetch("https://openai.com/news/rss.xml").content)
+        research = {n.findtext("link","").rstrip("/"):n for n in feed.iter("item")
+                    if n.findtext("category") in ("Research","Publication")}
+        for anchor in soup.select(s["row"]):
+            href = urljoin(page.url,anchor["href"])
+            entry = research.get(href.rstrip("/"))
+            if entry is not None:
+                date = entry.findtext("pubDate")
+                yield href,entry.findtext("title"),parsedate_to_datetime(date).date().isoformat() if date else None
+        return
     for row in soup.select(s["row"]):
         link = row.select_one(s["link"]) if "link" in s else row
         if not link or not link.has_attr("href"):
@@ -87,7 +102,7 @@ def collect(s):
                 count += 1
             if not count:
                 errors.append("공식 목록에서 연구 링크를 확인하지 못함")
-        except (requests.RequestException, ValueError) as exc:
+        except (requests.RequestException, ValueError, ElementTree.ParseError) as exc:
             errors.append(str(exc)[:180])
     return s,rows," / ".join(errors)
 

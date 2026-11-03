@@ -5,7 +5,7 @@
       "id": "2fb62d7d86f90fc1b6c6",
       "source": "0",
       "url": "https://openai.com/index/lifeval/",
-      "title": "LifeVal Introducing LifeVal, a benchmark measuring how well AI helps people complete everyday tasks, from finding childcare to managing finances and government paperwork.",
+      "title": "LifeVal",
       "discovered": "2026-11-03T08:05:43+00:00",
       "published": "2026-11-02",
       "listed_on": "https://openai.com/research/index/",
@@ -35,7 +35,7 @@
       "id": "2f428e4aac31240ebf65",
       "source": "0",
       "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities/",
-      "title": "Working with academic communities to build scientific understanding OpenAI shares model results on the Kakeya conjecture, Exponential Time Hypothesis, and quantum chromodynamics—and how researchers can verify and build on them.",
+      "title": "Working with academic communities to build scientific understanding",
       "discovered": "2026-11-03T08:05:43+00:00",
       "published": "2026-10-26",
       "listed_on": "https://openai.com/research/index/",
@@ -62,6 +62,16 @@
       "kind": "공식 연구 목록"
     },
     {
+      "id": "7f7982fbb0e706e7b609",
+      "source": "0",
+      "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data/",
+      "title": "Using thousands of AI agents to uncover new leads in biological data",
+      "discovered": "2026-11-03T08:08:13+00:00",
+      "published": "2026-10-21",
+      "listed_on": "https://openai.com/research/index/",
+      "kind": "공식 연구 목록"
+    },
+    {
       "id": "e5d1fa3d2b22c6f87f39",
       "source": "20",
       "url": "https://sakana.ai/qd-rec/",
@@ -69,6 +79,16 @@
       "discovered": "2026-11-03T08:05:43+00:00",
       "published": "2026-10-20",
       "listed_on": "https://sakana.ai/blog/?label=research",
+      "kind": "공식 연구 목록"
+    },
+    {
+      "id": "a9d599f10cca63294fcf",
+      "source": "0",
+      "url": "https://openai.com/index/low-resource-programming-languages/",
+      "title": "Advancing coding in low‑resource programming languages",
+      "discovered": "2026-11-03T08:08:13+00:00",
+      "published": "2026-10-19",
+      "listed_on": "https://openai.com/research/index/",
       "kind": "공식 연구 목록"
     },
     {
@@ -23829,66 +23849,6 @@
       "discovered": "2026-11-03T08:07:06+00:00",
       "published": null,
       "listed_on": "https://x.ai/safety",
-      "kind": "공식 연구 목록"
-    },
-    {
-      "id": "5c25b427d597898605be",
-      "source": "0",
-      "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment/",
-      "title": "How we detect frontier model misalignment OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can intervene before incidents escalate.",
-      "discovered": "2026-11-03T08:08:13+00:00",
-      "published": null,
-      "listed_on": "https://openai.com/research/index/",
-      "kind": "공식 연구 목록"
-    },
-    {
-      "id": "2b516db878135bcf2d0f",
-      "source": "0",
-      "url": "https://openai.com/index/introducing-gpt-6-1-terra/",
-      "title": "Introducing GPT-6.1 Terra Bringing fast and capable computer use to everyone",
-      "discovered": "2026-11-03T08:08:13+00:00",
-      "published": null,
-      "listed_on": "https://openai.com/research/index/",
-      "kind": "공식 연구 목록"
-    },
-    {
-      "id": "9c3e5e296c5ff4dc2230",
-      "source": "0",
-      "url": "https://openai.com/index/securing-our-frontier-model-training-environment/",
-      "title": "Securing our frontier model training environment OpenAI explains how we strengthened containment for frontier model training and evaluation, including offline environments and high-compute red-teaming.",
-      "discovered": "2026-11-03T08:08:13+00:00",
-      "published": null,
-      "listed_on": "https://openai.com/research/index/",
-      "kind": "공식 연구 목록"
-    },
-    {
-      "id": "7f7982fbb0e706e7b609",
-      "source": "0",
-      "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data/",
-      "title": "Using thousands of AI agents to uncover new leads in biological data See how OpenAI, PerturbAI, and Scripps Research used distributed AI agents to uncover promising research leads in data from millions of brain cells.",
-      "discovered": "2026-11-03T08:08:13+00:00",
-      "published": null,
-      "listed_on": "https://openai.com/research/index/",
-      "kind": "공식 연구 목록"
-    },
-    {
-      "id": "a9d599f10cca63294fcf",
-      "source": "0",
-      "url": "https://openai.com/index/low-resource-programming-languages/",
-      "title": "Advancing coding in low‑resource programming languages Learn how OpenAI is improving ChatGPT across low-resource programming languages, with new evaluations for software engineering, SQLite, and COBOL migration.",
-      "discovered": "2026-11-03T08:08:13+00:00",
-      "published": null,
-      "listed_on": "https://openai.com/research/index/",
-      "kind": "공식 연구 목록"
-    },
-    {
-      "id": "d91a203d04bfb5e51ef4",
-      "source": "0",
-      "url": "https://openai.com/index/gpt-6-for-everyone/",
-      "title": "GPT-6 and Intelligent UI for everyone GPT‑6 is rolling out globally in ChatGPT with Intelligent UI, delivering faster responses with visuals and interactive experiences you can explore and use directly.",
-      "discovered": "2026-11-03T08:08:13+00:00",
-      "published": null,
-      "listed_on": "https://openai.com/research/index/",
       "kind": "공식 연구 목록"
     }
   ],
