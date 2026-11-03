@@ -14,14 +14,6 @@
         "row": "article.ap-post"
       },
       {
-        "team": "Alignment · Misalignment Reports",
-        "url": "https://alignment.openai.com/misalignment-reports/",
-        "link": "a.report-title",
-        "title": "a.report-title",
-        "date": "td[data-label='First posted']",
-        "row": "tr.entry-main:has(a.report-title)"
-      },
-      {
         "team": "Deployment Safety · System Cards",
         "url": "https://deploymentsafety.openai.com/",
         "title": "p.text-h4",
@@ -81,19 +73,8 @@
     "id": "2",
     "name": "Google DeepMind",
     "url": "https://deepmind.google/research/publications/",
-    "row": "a.list-group__link[href*='/research/publications/']",
-    "title": ".list-group__description",
-    "date": ".list-group__date",
-    "next_selector": "a[aria-label='Next page']",
-    "additional": [
-      {
-        "team": "Research projects",
-        "url": "https://deepmind.google/research/projects/",
-        "link": "a.card__overlay-link",
-        "title": ".card__title",
-        "row": "article.card:has(a.card__overlay-link[href^='/blog/']),article.card:has(a.card__overlay-link[href^='/research/'])"
-      }
-    ]
+    "adapter": "deepmind_publications",
+    "paper_section": "Publications"
   },
   {
     "id": "3",
@@ -944,7 +925,7 @@
     "id": "23",
     "name": "Apollo Research",
     "url": "https://www.apolloresearch.ai/science",
-    "row": ".hilight_card, .fidings_card-wrapper",
+    "row": ".fidings_card-wrapper",
     "link": "a[href^=\"/science/\"]",
     "title": ".text-size-large",
     "date": "p.text-color-blue, .fidings_card-right .text-size-small",
@@ -953,22 +934,25 @@
       {
         "team": "Monitoring",
         "url": "https://www.apolloresearch.ai/monitoring",
-        "row": ".hilight_card, .fidings_card-wrapper",
+        "row": ".fidings_card-wrapper",
         "link": "a[href^=\"/monitoring/\"]",
         "title": ".text-size-large",
         "date": "p.text-color-blue, .fidings_card-right .text-size-small",
-        "next_selector": "main a.w-pagination-next"
+        "next_selector": "main a.w-pagination-next",
+        "scope_key": "research_result_category_v1"
       },
       {
         "team": "Governance",
         "url": "https://www.apolloresearch.ai/governance",
-        "row": ".hilight_card, .fidings_card-wrapper",
+        "row": ".fidings_card-wrapper",
         "link": "a[href^=\"/governance/\"]",
         "title": ".text-size-large",
         "date": "p.text-color-blue, .fidings_card-right .text-size-small",
-        "next_selector": "main a.w-pagination-next"
+        "next_selector": "main a.w-pagination-next",
+        "scope_key": "research_result_category_v1"
       }
-    ]
+    ],
+    "scope_key": "research_result_category_v1"
   },
   {
     "id": "24",

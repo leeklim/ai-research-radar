@@ -10,8 +10,11 @@ from urllib.parse import parse_qs, parse_qsl, urlencode, urljoin, urlsplit
 
 import requests
 from bs4 import BeautifulSoup
+from editorial_quality import REVIEWED, PROMOTIONAL, GUIDE_OR_NEWS_SUMMARY, exclusion_reason
+from ibm_publication import ibm_evidence, ibm_research_paper
 
 ROOT = Path(__file__).resolve().parents[1]
+REVIEWED_URLS = json.loads((ROOT/"config/reviewed_nonresearch.json").read_text("utf8"))
 NOW = datetime.now(timezone.utc).isoformat(timespec="seconds")
 HEADERS = {"User-Agent": "AIResearchRadar/1.0 (https://github.com/leeklim/ai-research-radar)"}
 MILA_PUBLICATIONS = "https://mila.quebec/en/research/publications"
@@ -113,6 +116,10 @@ def lookup_date(item):
 def official_post(url, listing):
     dest = urlsplit(url)
     host = urlsplit(listing).hostname.removeprefix("www.")
+    if host=="research.ibm.com":
+        return (listing.rstrip("/")=="https://research.ibm.com/publications"
+                and dest.scheme=="https" and dest.netloc=="research.ibm.com"
+                and bool(re.fullmatch(r"/publications/[^/]+/?",dest.path)))
     return (dest.scheme in ("http","https") and dest.hostname in (host,"www."+host)
             and dest.path.strip("/") and not dest.path.lower().endswith((".pdf",".zip",".xml"))
             and (host!="huggingface.co" or dest.path.startswith("/blog/huggingface/")
@@ -140,6 +147,42 @@ def paper_target(url,listing):
 
 def eligible_link(url,listing):
     return paper_target(url,listing) or (not listing.get("papers_only") and official_post(url,listing["url"]))
+
+
+def keep_research(source,url,title,summary=""):
+    path=urlsplit(url).path.rstrip("/")
+    if url.rstrip("/") in REVIEWED_URLS or (source,path) in REVIEWED:
+        return False
+    if source not in ("0","1","10","17","20","21"):
+        return True
+    if not PROMOTIONAL.search(title) and not GUIDE_OR_NEWS_SUMMARY.search(summary.strip()):
+        return True
+    try:
+        response=fetch(url)
+        soup=BeautifulSoup(response.content,"html.parser")
+        article=soup.select_one("main article,article,main")
+        if not article:
+            return False
+        for tag in article.select("aside, footer, nav, script, style"):
+            tag.decompose()
+        body=article.get_text(" ",strip=True)
+    except requests.RequestException:
+        return False
+    # Use the same evidence threshold on additional mixed editorial feeds.
+    return exclusion_reason(dict(source=source,url=url,title=title),
+                            summary,body) is None
+
+
+def verify_ibm_item(item):
+    try:
+        response=fetch(item["url"])
+    except requests.RequestException:
+        return None
+    evidence=ibm_evidence(BeautifulSoup(response.content,"html.parser"),response.url)
+    if not ibm_research_paper(evidence):
+        return False
+    item.update(publication_type=evidence["kind"],venue=evidence["venue"],ibm_verified=True)
+    return True
 
 
 def verify_destination(url,listing):
@@ -175,6 +218,10 @@ def article_id(source_id,url):
 
 
 def catalog(s):
+    if s.get("adapter")=="deepmind_publications":
+        from deepmind_publications import publications
+        yield from publications(s,fetch,day)
+        return
     if s.get("adapter")=="strict_publications":
         from strict_publications import entries
         yield from entries(s)
@@ -232,11 +279,13 @@ def catalog(s):
             endpoint=f"https://www.anthropic.com/listing/{s['feed']}/default/{page}"
             data=fetch(endpoint).json()
             for post in data["posts"]:
+                if post.get("articleType")=="news":
+                    continue
                 path=post.get("linkedUrl")
                 slug=(post.get("slug") or {}).get("current")
-                if not path and slug and post.get("articleType") in ("research","engineering","institute","news"):
+                if not path and slug and post.get("articleType") in ("research","engineering","institute"):
                     path=f"/{post['articleType']}/{slug}"
-                if path and post.get("title"):
+                if path and post.get("title") and keep_research("1",urljoin(s["url"],path),post["title"],post.get("summary") or ""):
                     yield urljoin(s["url"],path),post["title"].strip(),day(post.get("publishedOn") or "")
             if not data["hasNextPage"]:
                 break
@@ -281,6 +330,13 @@ def catalog_page(s,page,soup):
         href = urljoin(page.url,link["href"])
         if urlsplit(href).scheme not in ("https","http") or href.rstrip("/")==page.url.rstrip("/"):
             continue
+        if s["id"]=="23":
+            labels={p.get_text(" ",strip=True) for p in row.select(".fidings_card-right p:not(.text-size-small)")}
+            section=urlsplit(href).path.strip("/").split("/")[0]
+            categories={"science":{"Evaluations","Interpretability","Science of Scheming"},
+                        "monitoring":{"Research"},"governance":{"Papers & Reports"}}
+            if not (labels & categories.get(section,set())):
+                continue
         label = row if s.get("title")=="self" else row.select_one(s["title"]) if s.get("title") else (link.select_one("h2,h3,h4") or link)
         if not label:
             continue
@@ -307,12 +363,13 @@ def collect(s, old, previous_status):
     memberships = {}
     listed_by_url = {l["url"]:l for l in listings(s)}
     origins = {}
+    reconciled = None
     for listing in listings(s):
         scan = dict(listing,id=s["id"],resume=previous_pages.get(listing["url"]))
         try:
             count = 0
             for url,title,published in catalog(scan):
-                if eligible_link(url,listing):
+                if eligible_link(url,listing) and keep_research(s["id"],url,title):
                     if listing.get("team"):
                         memberships.setdefault(url,{})[listing["team"]]=listing["url"]
                     if url not in rows or (published and not rows[url][1]):
@@ -326,6 +383,8 @@ def collect(s, old, previous_status):
             scan["continue_at"]=scan.get("continue_at") or scan.get("resume")
         if scan.get("continue_at"):
             next_pages[listing["url"]]=scan["continue_at"]
+        if scan.get("index_summary"):
+            reconciled=(scan["index_summary"],{article_id(s["id"],u) for u in rows})
     verified = {}
     queue = []
     for url,(title,published,listing) in rows.items():
@@ -344,7 +403,7 @@ def collect(s, old, previous_status):
     with ThreadPoolExecutor(max_workers=3) as checks:
         start = next((i for i,r in enumerate(queue) if r[0]==cursor),0)
         pending = queue[start:]+queue[:start]
-        batch = pending if s["id"]=="1" else pending[:120]
+        batch = pending if s["id"] in ("1","2") else pending[:120]
         for row,destination in zip(batch,checks.map(lambda r:verify_destination(r[0],listed_by_url[r[3]]),batch)):
             if destination:
                 url,title,published,listing=row
@@ -352,7 +411,7 @@ def collect(s, old, previous_status):
     more = len(batch)<len(queue)-start
     if more:
         next_pages=previous_pages
-    return s,verified," / ".join(errors),pending[len(batch)][0] if more else None,memberships,next_pages,origins
+    return s,verified," / ".join(errors),pending[len(batch)][0] if more else None,memberships,next_pages,origins,reconciled
 
 
 def listings(s):
@@ -361,6 +420,8 @@ def listings(s):
 
 def obsolete_url(item):
     url=urlsplit(item["url"])
+    if item["url"].rstrip("/") in REVIEWED_URLS or (item["source"],url.path.rstrip("/")) in REVIEWED:
+        return True
     return item.get("source")=="14" and (
         item.get("collection")!="research_archive"
         or url.hostname=="qwen.ai" and url.path.startswith("/research/"))
@@ -399,6 +460,8 @@ def main():
         listing=policies.get(item["source"],{}).get(item.get("listed_on"))
         if not listing or obsolete_url(item) or (listing.get("scope_key") and item.get("scope_key")!=listing["scope_key"]):
             continue
+        if not keep_research(item["source"],item["url"],item["title"]):
+            continue
         if ((item.get("academic_paper") or item.get("openreview")) and paper_target(item["url"],listing)
                 or item.get("official_html") and not listing.get("papers_only") and official_post(item["url"],listing["url"])):
             items[key]=item
@@ -409,7 +472,10 @@ def main():
                 del item["teams"]
     status = {}
     with ThreadPoolExecutor(max_workers=6) as pool:
-        for s, rows, error, cursor, memberships, pages, origins in pool.map(lambda s:collect(s,old,snapshot["status"].get(s["id"],{})),sources):
+        for s, rows, error, cursor, memberships, pages, origins, reconciled in pool.map(lambda s:collect(s,old,snapshot["status"].get(s["id"],{})),sources):
+            if reconciled:
+                for key in [k for k,x in items.items() if x["source"]==s["id"] and k not in reconciled[1]]:
+                    del items[key]
             for url,(title,published,listing,destination) in rows.items():
                 key = article_id(s["id"],url)
                 previous = old.get(key,{})
@@ -428,7 +494,19 @@ def main():
                     previous_teams={team:page for team,page in previous.get("teams",{}).items() if page in lists[s["id"]]}
                     items[key]["teams"]={**previous_teams,**memberships[url]}
             status[s["id"]] = dict(ok=bool(rows),count=len(rows),partial=bool(rows and error),error=error or "",next_url=cursor,page_cursors=pages)
+            if reconciled:
+                status[s["id"]]["index_summary"]=reconciled[0]
+            elif s["id"]=="2":
+                previous_status=snapshot["status"].get("2",{})
+                status["2"]["last_verified_summary"]=previous_status.get("index_summary") or previous_status.get("last_verified_summary")
             print(s["name"],len(rows),error or "",flush=True)
+    pending_ibm=[item for item in items.values() if item["source"]=="8" and not item.get("ibm_verified")]
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        for item,verified in zip(pending_ibm,pool.map(verify_ibm_item,pending_ibm)):
+            if not verified:
+                items.pop(item["id"],None)
+                if verified is None:
+                    status["8"].update(partial=True,error="일부 IBM 출판물의 상세 유형 확인 실패")
     articles=unique_destinations(items)
     retry_before=(datetime.fromisoformat(NOW)-timedelta(days=7)).date().isoformat()
     for item in articles:
