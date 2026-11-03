@@ -138,6 +138,9 @@ def openreview_id(url):
 
 def paper_target(url,listing):
     dest=urlsplit(url)
+    if listing.get("adapter")=="openai_publications" and dest.hostname not in ("openai.com","www.openai.com"):
+        # Only the exact Publication index component can emit an external card.
+        return dest.scheme=="https" and bool(dest.hostname)
     pattern=listing.get("paper_links",{}).get(dest.netloc)
     if not pattern or dest.scheme not in ("https","http") or not re.fullmatch(pattern,dest.path):
         return False
@@ -153,6 +156,7 @@ def eligible_link(url,listing):
 
 
 def keep_research(source,url,title,summary=""):
+    if source=="0":return True
     path=urlsplit(url).path.rstrip("/")
     if url.rstrip("/") in REVIEWED_URLS or (source,path) in REVIEWED:
         return False
@@ -224,9 +228,10 @@ def article_id(source_id,url):
 
 def catalog(s):
     if s.get("adapter")=="openai_publications":
-        from openai_publications import openai_publication_candidates,verified_openai_article
+        from openai_publications import openai_publication_candidates,verified_openai_article,visible_index
         with requests.Session() as session:
             session.headers.update(HEADERS)
+            yield from visible_index(s,session)
             candidates=list(openai_publication_candidates(session))
             start=int(s.get("resume") or 6)
             window=list(dict.fromkeys(candidates[:6]+candidates[start:start+12]))
@@ -339,36 +344,12 @@ def catalog_page(s,page,soup):
         from meta_publications import cards
         yield from cards(soup,page.url,day)
         return
-    if s.get("section")=="deployment_updates":
-        from openai_updates import deployment_cards
-        for url,title,stamp in deployment_cards(soup):
-            yield url,title,day(stamp or "")
-        return
     if s["id"]=="31" and s["url"]==MILA_PUBLICATIONS:
         from mila_catalog import parse_cards,pick
         for card in parse_cards(soup):
             selected=pick(card)
             if selected:
                 yield selected
-        return
-    if s.get("section")=="signals_reports":
-        for link in soup.select("main a[href]"):
-            parts=list(link.stripped_strings)
-            stamp=next((re.match(r"^([A-Za-z]+ \d{4})\s*\|",part) for part in parts if re.match(r"^[A-Za-z]+ \d{4}\s*\|",part)),None)
-            if stamp and len(parts)>1 and day(stamp[1]):
-                yield urljoin(page.url,link["href"]),parts[0],day(stamp[1])
-        return
-    if s["url"].rstrip("/") in ("https://openai.com/research/index","https://openai.com/research/index/publication"):
-        # The official index also lists products. Use the publisher's feed to label
-        # only URLs actually present on that index and recover their publication dates.
-        feed = ElementTree.fromstring(fetch("https://openai.com/news/rss.xml").content)
-        research = {n.findtext("link","").rstrip("/"):n for n in feed.iter("item")
-                    if n.findtext("category") in ("Research","Publication")}
-        for anchor in soup.select(s["row"]):
-            href = urljoin(page.url,anchor["href"])
-            entry = research.get(href.rstrip("/"))
-            if entry is not None:
-                yield href,entry.findtext("title"),next((date for text in anchor.stripped_strings if (date:=day(text))),None)
         return
     for row in soup.select(s["row"]):
         link = row.select_one(s["link"]) if "link" in s else row
@@ -415,6 +396,8 @@ def collect(s, old, previous_status):
     errors = []
     memberships = {}
     listed_by_url = {l["url"]:l for l in listings(s)}
+    aliases=(json.loads((ROOT/"config/nvidia_robotics_aliases.json").read_text("utf8"))
+             if s["id"]=="6" else {})
     origins = {}
     reconciled = None
     for listing in listings(s):
@@ -422,6 +405,15 @@ def collect(s, old, previous_status):
         try:
             count = 0
             for url,title,published in catalog(scan):
+                if url in aliases:
+                    ref=aliases[url]
+                    canonical=ref["url"]
+                    memberships.setdefault(canonical,{})[listing["team"]]=listing["url"]
+                    if canonical not in rows and ref["listed_on"] in listed_by_url:
+                        rows[canonical]=(title,published,ref["listed_on"])
+                        origins[canonical]=ref["found_on"]
+                    count+=1
+                    continue
                 if eligible_link(url,listing) and keep_research(s["id"],url,title):
                     if listing.get("team"):
                         memberships.setdefault(url,{})[listing["team"]]=listing["url"]
@@ -440,9 +432,17 @@ def collect(s, old, previous_status):
             reconciled=(scan["index_summary"],{article_id(s["id"],u) for u in rows})
         if scan.get("paper_metadata"):
             s["paper_metadata"]=scan["paper_metadata"]
+        if scan.get("labels"):
+            s["labels"]=scan["labels"]
+        if scan.get("publisher_total"):
+            s["publisher_total"]=scan["publisher_total"]
+        if scan.get("listing_order"):
+            s["listing_order"]=scan["listing_order"]
         if scan.get("nonpapers"):
             s["nonpapers"]=scan["nonpapers"]
     verified = {}
+    if s["id"] in ("13","15","24") and rows and not errors:
+        s["current_members"]={article_id(s["id"],url) for url in rows}
     queue = []
     for url,(title,published,listing) in rows.items():
         key = article_id(s["id"],url)
@@ -479,6 +479,7 @@ def listings(s):
 
 def obsolete_url(item):
     url=urlsplit(item["url"])
+    if item["source"]=="0":return False
     if item["url"].rstrip("/") in REVIEWED_URLS or (item["source"],url.path.rstrip("/")) in REVIEWED:
         return True
     return item.get("source")=="14" and (
@@ -550,8 +551,9 @@ def main():
     status = {}
     with ThreadPoolExecutor(max_workers=6) as pool:
         for s, rows, error, cursor, memberships, pages, origins, reconciled in pool.map(lambda s:collect(s,old,snapshot["status"].get(s["id"],{})),sources):
-            if reconciled:
-                for key in [k for k,x in items.items() if x["source"]==s["id"] and k not in reconciled[1]]:
+            current=reconciled[1] if reconciled else s.get("current_members")
+            if current is not None:
+                for key in [k for k,x in items.items() if x["source"]==s["id"] and k not in current]:
                     del items[key]
             for excluded in s.get("nonpapers",()):
                 items.pop(article_id(s["id"],excluded),None)
@@ -566,16 +568,24 @@ def main():
                     items[key]["scope_key"]=policies[s["id"]][listing]["scope_key"]
                 if s["id"]=="14":
                     items[key]["collection"]="research_archive"
+                if url in s.get("labels",{}):items[key]["index_label"]=s["labels"][url]
+                if url in s.get("listing_order",{}):
+                    items[key].update(catalog_order=s["listing_order"][url],published=published,
+                                      date_basis="공식 목록" if published else None)
                 if url in s.get("paper_metadata",{}):
                     kind,venue=s["paper_metadata"][url]
                     items[key].update(publication_type=kind,venue=venue,ibm_verified=True)
                 if paper_target(destination,policies[s["id"]][listing]):
                     items[key].update(academic_paper=True,openreview=bool(openreview_id(destination)),official_html=False,kind=policies[s["id"]][listing].get("paper_section","공식 논문 목록"),
                                       published=published,date_basis="공식 목록" if published else None)
+                    if urlsplit(destination).fragment.startswith(":~:text="):
+                        items[key]["kind"]="공식 목록 수록 연구"
                 if url in memberships:
                     previous_teams={team:page for team,page in previous.get("teams",{}).items() if page in lists[s["id"]]}
                     items[key]["teams"]={**previous_teams,**memberships[url]}
             status[s["id"]] = dict(ok=bool(rows),count=len(rows),partial=bool(rows and error),error=error or "",next_url=cursor,page_cursors=pages)
+            if s["id"]=="0":
+                status["0"]["publisher_total"]=s.get("publisher_total") or snapshot["status"].get("0",{}).get("publisher_total")
             if reconciled:
                 status[s["id"]]["index_summary"]=reconciled[0]
             elif s["id"]=="2":
@@ -594,7 +604,7 @@ def main():
     for item in articles:
         if item.get("date_basis")!="상세 글" and item.get("listing_date"):
             item.update(published=item["listing_date"],date_basis="공식 목록")
-    pending=[item for item in articles if not (item.get("catalog_audited") and item.get("published")) and item.get("date_basis")!="상세 글" and not item.get("openreview") and not item.get("academic_paper")
+    pending=[item for item in articles if item["source"]!="15" and not (item.get("catalog_audited") and item.get("published")) and item.get("date_basis")!="상세 글" and not item.get("openreview") and not item.get("academic_paper")
              and item.get("date_checked","")<=retry_before]
     pending=sorted(pending,key=lambda item:item.get("date_checked",""))[:240]
     with ThreadPoolExecutor(max_workers=6) as pool:

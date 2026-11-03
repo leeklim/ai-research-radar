@@ -1,0 +1,263 @@
+{
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=GraspGen%3A%20A%20Diffusion-based%20Framework%20for%206-DOF%20Grasping%20with%20On-Generator%20Training": {
+    "title": "GraspGen: A Diffusion-based Framework for 6-DOF Grasping with On-Generator Training",
+    "url": "https://arxiv.org/abs/2507.13097",
+    "listed_on": "https://research.nvidia.com/labs/lpr/publications/",
+    "found_on": "https://research.nvidia.com/labs/lpr/publications/",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=Open-World%20Task%20and%20Motion%20Planning%20via%20Vision-Language%20Model%20Inferred%20Constraints": {
+    "title": "Open-World Task and Motion Planning via Vision-Language Model Inferred Constraints",
+    "url": "https://research.nvidia.com/publication/2026-01_open-world-task-and-motion-planning-vision-language-model-inferred-constraints",
+    "listed_on": "https://research.nvidia.com/publications",
+    "found_on": "https://research.nvidia.com/publications?page=3",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=TWIN%3A%20Two-handed%20Intelligent%20Benchmark%20for%20Bimanual%20Manipulation": {
+    "title": "TWIN: Two-handed Intelligent Benchmark for Bimanual Manipulation",
+    "url": "https://research.nvidia.com/publication/2025-05_twin-two-handed-intelligent-benchmark-bimanual-manipulation",
+    "listed_on": "https://research.nvidia.com/publications",
+    "found_on": "https://research.nvidia.com/publications?page=5",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=Inference-Time%20Policy%20Steering%20through%20Human%20Interactions": {
+    "title": "Inference-Time Policy Steering through Human Interactions",
+    "url": "https://research.nvidia.com/publication/2025-05_inference-time-policy-steering-through-human-interactions",
+    "listed_on": "https://research.nvidia.com/publications",
+    "found_on": "https://research.nvidia.com/publications?page=5",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=DiffusionSeeder%3A%20Seeding%20Motion%20Optimization%20with%20Diffusion%20for%20Rapid%20Motion%20Planning": {
+    "title": "DiffusionSeeder: Seeding Motion Optimization with Diffusion for Rapid Motion Planning",
+    "url": "https://arxiv.org/abs/2410.16727",
+    "listed_on": "https://research.nvidia.com/labs/lpr/publications/",
+    "found_on": "https://research.nvidia.com/labs/lpr/publications/",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=Avoid%20Everything%3A%20Model-Free%20Collision%20Avoidance%20with%20Expert-Guided%20Fine-Tuning": {
+    "title": "Avoid Everything: Model-Free Collision Avoidance with Expert-Guided Fine-Tuning",
+    "url": "https://openreview.net/pdf/d04a076c1b1b0e51cf759c1e124928c58b22657e.pdf",
+    "listed_on": "https://research.nvidia.com/labs/lpr/publications/",
+    "found_on": "https://research.nvidia.com/labs/lpr/publications/",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=Fast%20Explicit-Input%20Assistance%20for%20Teleoperation%20in%20Clutter": {
+    "title": "Fast Explicit-Input Assistance for Teleoperation in Clutter",
+    "url": "https://research.nvidia.com/publication/2024-11_fast-explicit-input-assistance-teleoperation-clutter",
+    "listed_on": "https://research.nvidia.com/publications",
+    "found_on": "https://research.nvidia.com/publications?page=7",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=Signatures%20Meet%20Dynamic%20Programming%3A%20Generalizing%20Bellman%20Equations%20for%20Trajectory%20Following": {
+    "title": "Signatures Meet Dynamic Programming: Generalizing Bellman Equations for Trajectory Following",
+    "url": "https://research.nvidia.com/publication/2024-07_signatures-meet-dynamic-programming-generalizing-bellman-equations-trajectory",
+    "listed_on": "https://research.nvidia.com/publications",
+    "found_on": "https://research.nvidia.com/publications?page=9",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=RVT-2%3A%20Learning%20Precise%20Manipulation%20from%20Few%20Demonstrations": {
+    "title": "RVT-2: Learning Precise Manipulation from Few Demonstrations",
+    "url": "https://arxiv.org/abs/2406.08545",
+    "listed_on": "https://research.nvidia.com/labs/lpr/publications/",
+    "found_on": "https://research.nvidia.com/labs/lpr/publications/",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=AutoMate%3A%20Specialist%20and%20Generalist%20Assembly%20Policies%20over%20Diverse%20Geometries": {
+    "title": "AutoMate: Specialist and Generalist Assembly Policies over Diverse Geometries",
+    "url": "https://research.nvidia.com/publication/2024-07_automate-specialist-and-generalist-assembly-policies-over-diverse-geometries",
+    "listed_on": "https://research.nvidia.com/publications",
+    "found_on": "https://research.nvidia.com/publications?page=9",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=VaPr%3A%20Variable-Precision%20Tensors%20to%20Accelerate%20Robot%20Motion%20Planning": {
+    "title": "VaPr: Variable-Precision Tensors to Accelerate Robot Motion Planning",
+    "url": "https://research.nvidia.com/publication/2023-10_vapr-variable-precision-tensors-accelerate-robot-motion-planning",
+    "listed_on": "https://research.nvidia.com/publications",
+    "found_on": "https://research.nvidia.com/publications?page=12",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=StructDiffusion%3A%20Language-Guided%20Creation%20of%20Physically-Valid%20Structures%20using%20Unseen%20Objects": {
+    "title": "StructDiffusion: Language-Guided Creation of Physically-Valid Structures using Unseen Objects",
+    "url": "https://research.nvidia.com/publication/2023-07_structdiffusion-language-guided-creation-physically-valid-structures-using",
+    "listed_on": "https://research.nvidia.com/publications",
+    "found_on": "https://research.nvidia.com/publications?page=14",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=AnyTeleop%3A%20A%20General%20Vision-Based%20Dexterous%20Robot%20Arm-Hand%20Teleoperation%20System": {
+    "title": "AnyTeleop: A General Vision-Based Dexterous Robot Arm-Hand Teleoperation System",
+    "url": "https://research.nvidia.com/publication/2023-06_anyteleop-general-vision-based-dexterous-robot-arm-hand-teleoperation-system",
+    "listed_on": "https://research.nvidia.com/publications",
+    "found_on": "https://research.nvidia.com/publications?page=14",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=TTA-COPE%3A%20Test-Time%20Adaptation%20for%20Category-Level%20Object%20Pose%20Estimation": {
+    "title": "TTA-COPE: Test-Time Adaptation for Category-Level Object Pose Estimation",
+    "url": "https://research.nvidia.com/publication/2023-06_tta-cope-test-time-adaptation-category-level-object-pose-estimation",
+    "listed_on": "https://research.nvidia.com/publications",
+    "found_on": "https://research.nvidia.com/publications?page=14",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=RGB-Only%20Reconstruction%20of%20Tabletop%20Scenes%20for%20Collision-Free%20Manipulator%20Control": {
+    "title": "RGB-Only Reconstruction of Tabletop Scenes for Collision-Free Manipulator Control",
+    "url": "https://research.nvidia.com/publication/2023-05_rgb-only-reconstruction-tabletop-scenes-collision-free-manipulator-control",
+    "listed_on": "https://research.nvidia.com/publications",
+    "found_on": "https://research.nvidia.com/publications?page=15",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=Learning%20Human-to-Robot%20Handovers%20from%20Point%20Clouds": {
+    "title": "Learning Human-to-Robot Handovers from Point Clouds",
+    "url": "https://research.nvidia.com/publication/2023-06_learning-human-robot-handovers-point-clouds",
+    "listed_on": "https://research.nvidia.com/publications",
+    "found_on": "https://research.nvidia.com/publications?page=14",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=Global%20and%20Reactive%20Motion%20Generation%20with%20Geometric%20Fabric%20Command%20Sequences": {
+    "title": "Global and Reactive Motion Generation with Geometric Fabric Command Sequences",
+    "url": "https://research.nvidia.com/publication/2023-05_global-and-reactive-motion-generation-geometric-fabric-command-sequences",
+    "listed_on": "https://research.nvidia.com/publications",
+    "found_on": "https://research.nvidia.com/publications?page=15",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=CabiNet%3A%20Scaling%20Neural%20Collision%20Detection%20for%20Object%20Rearrangement%20with%20Procedural%20Scene%20Generation": {
+    "title": "CabiNet: Scaling Neural Collision Detection for Object Rearrangement with Procedural Scene Generation",
+    "url": "https://research.nvidia.com/publication/2023-05_cabinet-scaling-neural-collision-detection-object-rearrangement-procedural",
+    "listed_on": "https://research.nvidia.com/publications",
+    "found_on": "https://research.nvidia.com/publications?page=15",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=MineDojo%3A%20Building%20Open-Ended%20Embodied%20Agents%20with%20Internet-Scale%20Knowledge": {
+    "title": "MineDojo: Building Open-Ended Embodied Agents with Internet-Scale Knowledge",
+    "url": "https://arxiv.org/abs/2206.08853",
+    "listed_on": "https://research.nvidia.com/labs/gear/publications/",
+    "found_on": "https://research.nvidia.com/labs/gear/publications/",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=RGB-D%20Local%20Implicit%20Function%20for%20Depth%20Completion%20of%20Transparent%20Objects": {
+    "title": "RGB-D Local Implicit Function for Depth Completion of Transparent Objects",
+    "url": "https://research.nvidia.com/publication/2021-03_rgb-d-local-implicit-function-depth-completion-transparent-objects",
+    "listed_on": "https://research.nvidia.com/publications",
+    "found_on": "https://research.nvidia.com/publications?page=25",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=Object%20Rearrangement%20Using%20Learned%20Implicit%20Collision%20Functions": {
+    "title": "Object Rearrangement Using Learned Implicit Collision Functions",
+    "url": "https://research.nvidia.com/publication/2021-03_object-rearrangement-using-learned-implicit-collision-functions",
+    "listed_on": "https://research.nvidia.com/publications",
+    "found_on": "https://research.nvidia.com/publications?page=26",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=Fast%20Uncertainty%20Quantification%20for%20Deep%20Object%20Pose%20Estimation": {
+    "title": "Fast Uncertainty Quantification for Deep Object Pose Estimation",
+    "url": "https://research.nvidia.com/publication/2021-05_fast-uncertainty-quantification-deep-object-pose-estimation",
+    "listed_on": "https://research.nvidia.com/publications",
+    "found_on": "https://research.nvidia.com/publications?page=25",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=Contact-GraspNet%3A%20Efficient%206-DoF%20Grasp%20Generation%20in%20Cluttered%20Scenes": {
+    "title": "Contact-GraspNet: Efficient 6-DoF Grasp Generation in Cluttered Scenes",
+    "url": "https://research.nvidia.com/publication/2021-03_contact-graspnet-efficient-6-dof-grasp-generation-cluttered-scenes",
+    "listed_on": "https://research.nvidia.com/publications",
+    "found_on": "https://research.nvidia.com/publications?page=25",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=Alternative%20Paths%20Planner%20%28APP%29%20for%20Provably%20Fixed-time%20Manipulation%20Planning%20in%20Semi-structured%20Environments": {
+    "title": "Alternative Paths Planner (APP) for Provably Fixed-time Manipulation Planning in Semi-structured Environments",
+    "url": "https://research.nvidia.com/publication/2021-05_alternative-paths-planner-app-provably-fixed-time-manipulation-planning-semi",
+    "listed_on": "https://research.nvidia.com/publications",
+    "found_on": "https://research.nvidia.com/publications?page=24",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=Self-supervised%206D%20Object%20Pose%20Estimation%20for%20Robot%20Manipulation": {
+    "title": "Self-supervised 6D Object Pose Estimation for Robot Manipulation",
+    "url": "https://research.nvidia.com/publication/2020-05_self-supervised-6d-object-pose-estimation-robot-manipulation",
+    "listed_on": "https://research.nvidia.com/publications",
+    "found_on": "https://research.nvidia.com/publications?page=29",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=Online%20Replanning%20in%20Belief%20Space%20for%20Partially%20Observable%20Task%20and%20Motion%20Problems": {
+    "title": "Online Replanning in Belief Space for Partially Observable Task and Motion Problems",
+    "url": "https://research.nvidia.com/publication/2020-05_online-replanning-belief-space-partially-observable-task-and-motion-problems",
+    "listed_on": "https://research.nvidia.com/publications",
+    "found_on": "https://research.nvidia.com/publications?page=29",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=Motion%20Reasoning%20for%20Goal-Based%20Imitation%20Learning": {
+    "title": "Motion Reasoning for Goal-Based Imitation Learning",
+    "url": "https://research.nvidia.com/publication/2020-05_motion-reasoning-goal-based-imitation-learning",
+    "listed_on": "https://research.nvidia.com/publications",
+    "found_on": "https://research.nvidia.com/publications?page=29",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=Camera-to-Robot%20Pose%20Estimation%20from%20a%20Single%20Image": {
+    "title": "Camera-to-Robot Pose Estimation from a Single Image",
+    "url": "https://research.nvidia.com/publication/2020-05_camera-robot-pose-estimation-single-image",
+    "listed_on": "https://research.nvidia.com/publications",
+    "found_on": "https://research.nvidia.com/publications?page=30",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  },
+  "https://research.nvidia.com/labs/srl/publication/#:~:text=6-DOF%20Grasping%20for%20Target-driven%20Object%20Manipulation%20in%20Clutter": {
+    "title": "6-DOF Grasping for Target-driven Object Manipulation in Clutter",
+    "url": "https://research.nvidia.com/publication/2020-06_6-dof-grasping-target-driven-object-manipulation-clutter",
+    "listed_on": "https://research.nvidia.com/publications",
+    "found_on": "https://research.nvidia.com/publications?page=29",
+    "teams": {
+      "Robotics": "https://research.nvidia.com/labs/srl/publication/"
+    }
+  }
+}

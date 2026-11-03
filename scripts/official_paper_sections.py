@@ -84,7 +84,16 @@ def section_catalog(s):
     elif s["id"]=="13":
         soup=BeautifulSoup(get(url).content,"html.parser")
         # All cards revealed by the button are already in this component's DOM.
-        for a in soup.select("mistral-section-posts a.js-listing-item[href]"):
+        sections=[block for block in soup.select("mistral-section-posts")
+                  if (heading:=block.find_previous(["h1","h2","h3"]))
+                  and heading.get_text(" ",strip=True).rstrip(".").casefold()=="publications"]
+        if len(sections)!=1:
+            raise ValueError("Mistral Publications 섹션을 확인하지 못함")
+        cards=sections[0].select("a.js-listing-item[href]")
+        counter=re.search(r"\b(\d+) results?\b",sections[0].get_text(" ",strip=True),re.I)
+        if not cards or not counter or len(cards)!=int(counter[1]):
+            raise ValueError("Mistral Publications 표기 건수와 카드 수 불일치")
+        for a in cards:
             title=a.select_one("p.text-h5")
             if title:
                 yield urljoin(url,a["href"]),title.get_text(" ",strip=True),None

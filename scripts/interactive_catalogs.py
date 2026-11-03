@@ -65,9 +65,11 @@ def _seed(s):
 def entries(s):
     url = s["url"]
     if s["id"] == "15":
-        for post in _embedded_list(url,"papersList"):
+        for position,post in enumerate(_embedded_list(url,"papersList")):
             slug = (post.get("slug") or {}).get("current")
             if post.get("_type") == "researchPaper" and slug and post.get("heading"):
-                yield url.rstrip("/")+"/"+slug,post["heading"],post.get("dateOfPublication")
+                target=url.rstrip("/")+"/"+slug
+                s.setdefault("listing_order",{})[target]=position
+                yield target,post["heading"],post.get("dateOfPublication")
     elif s["id"] == "18":
         yield from _seed(s)

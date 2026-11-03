@@ -1,7 +1,7 @@
 """Explicit publication sections linked by NVIDIA's institutional lab directory."""
 import re
 from datetime import datetime
-from urllib.parse import urljoin,urlsplit
+from urllib.parse import quote,urljoin,urlsplit
 
 import requests
 from bs4 import BeautifulSoup
@@ -57,6 +57,35 @@ def original(card,page,primary,section):
     return urljoin(page,primary["href"]) if primary and primary.has_attr("href") else None
 
 
+def robotics_papers(soup,page):
+    grouped={}
+    for c in soup.select(".card-simple"):
+        title=text(c.select_one(".article-title"))
+        if title:grouped.setdefault(title.casefold(),[]).append(c)
+    for cards in grouped.values():
+        direct=[]
+        for c in cards:
+            href=original(c,page,c.select_one(".article-title a[href]"),"srl")
+            if href and useful(href):
+                direct.append((href,text(c.select_one(".article-title")),date(c.select_one(".article-date"))))
+        if direct:
+            yield from direct
+            continue
+        # Require an actual publication citation, not a standalone video/demo.
+        cited=[c for c in cards if text(c.select_one(".pub-publication")) and c.select_one(".article-metadata a")]
+        if not cited:continue
+        chosen=min(cited,key=lambda c:date(c.select_one(".article-date")) or "9999")
+        title=text(chosen.select_one(".article-title"))
+        fragment=quote(title,safe="")
+        if len(cards)>1:
+            # Use an adjacent, visibly unique venue prefix when a conference
+            # version and its later presentation share exactly the same title.
+            venue=text(chosen.select_one(".pub-publication"))
+            if sum(text(c.select_one(".pub-publication"))==venue for c in cards)!=1:continue
+            fragment=quote(venue,safe="")+"-,"+fragment
+        yield page+"#:~:text="+fragment,title,date(chosen.select_one(".article-date"))
+
+
 def entries(s):
     page=s["url"];kind=s["nv_section"]
     if kind=="digital-biology":
@@ -102,17 +131,18 @@ def entries(s):
                 match=re.fullmatch(r"publications-(\d{4})",heading)
                 yield urljoin(page,a["href"]),text(h),match[1] if match else None
         return
+    if kind=="srl":
+        yield from robotics_papers(soup,page)
+        return
     cards={
         "lpr":"article.lpr-paper","aie":"article.publication-card",
-        "srl":".card-simple","eai":".pub-list-item",
+        "eai":".pub-list-item",
     }
     for c in soup.select(cards[kind]):
         if kind=="lpr":
             title=c.select_one("h2");primary=c.select_one("a.lpr-paper-primary[href]")
         elif kind=="aie":
             title=c.select_one("h3");primary=c.select_one("h3 a[href]")
-        elif kind=="srl":
-            title=c.select_one(".article-title");primary=c.select_one(".article-title a[href]")
         else:
             title=c.select_one(":scope > a[href]");primary=title
         if not text(title):continue

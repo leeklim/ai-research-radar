@@ -28,12 +28,16 @@ function eligibleItem(x){
   if(x.source==='2'&&!/^https:\/\/deepmind\.google\/research\/publications\/\d+\/?$/.test(x.url))return false;
   if(!x.academic_paper&&!x.openreview)return !listing.papers_only&&x.official_html===true;
   const u=new URL(x.url);
-  return ['https:','http:'].includes(u.protocol)&&!!listing.paper_links?.[u.host];
+  return ['https:','http:'].includes(u.protocol)&&(!!listing.paper_links?.[u.host]||listing.adapter==='openai_publications'&&u.protocol==='https:');
 }
 function showIndexCount(org){
   const summary=status[org]?.index_summary||status[org]?.last_verified_summary;
   const note=$('index-summary');
   note.hidden=!org;
+  if(org==='0'&&status[org]?.publisher_total){
+    const official=status[org].publisher_total,confirmed=catalogs[org]?.count||0;
+    note.innerHTML=`공홈 Publication ${esc(official)}건 · 수록 확인 ${esc(confirmed)}건 · <a class="team-origin" href="./coverage.html#org-0">대조 근거</a>`;return
+  }
   if(!summary){note.innerHTML=org?`<a class="team-origin" href="./coverage.html#org-${encodeURIComponent(org)}">공식 목록 건수와 대조 결과</a>`:'';return}
   const links=summary.duplicates.map(d=>`<a class="team-origin" href="${esc(d.first_page)}" target="_blank" rel="noopener noreferrer">첫 수록 페이지</a> · <a class="team-origin" href="${esc(d.repeated_page)}" target="_blank" rel="noopener noreferrer">반복 수록 페이지</a>`).join(' / ');
   note.innerHTML=`공식 Publications ${esc(summary.reported)}행 · 고유 논문 ${esc(summary.unique)}건 · 중복 ${esc(summary.reported-summary.unique)}행 (${links||'중복 없음'})`;
@@ -52,7 +56,7 @@ $('dated').textContent='공홈 표기일 최신순 ('+nd+')';
 $('undated').textContent='공홈 날짜 미확인 ('+nu+')';
 for(const group of ['dated','undated'])$(group).setAttribute('aria-pressed',String(group===dateGroup));
 const shown=dateGroup==='dated'?dated:undated;
-$('results').textContent=(sources.find(s=>s.id===org)?.name||'전체 기관')+' · 연구 '+(dateGroup==='dated'?nd:nu)+'건';$('more').hidden=limit>=(dateGroup==='dated'?nd:nu);document.querySelectorAll('[data-org]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.org===org)));$('feed').innerHTML=shown.length?shown.slice(0,limit).map(x=>{let s=sources.find(s=>s.id===x.source),st=state[x.id]||{};return `<article class="entry"><div class="meta">${esc(s?.name||x.source)}${x.academic_paper||x.openreview?" · "+esc(x.kind):""} · ${origins(x)} · ${esc(x.publication_type?[x.publication_type,x.venue].filter(Boolean).join(' · ')+' · ':'')}${esc(x.published?'공홈 표기 '+x.published+(x.source==='5'?' (학회·출판 표기)':x.academic_paper||x.openreview?' (목록 표기)':'')+' · ':'공홈 날짜 미확인 · ')}발견 ${esc(x.discovered.slice(0,10))}</div><a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer" data-id="${esc(x.id)}">${esc(x.title)}</a><footer><span class="tag">${st.read?'읽음':'미확인'}</span><div><button data-action="read" data-id="${esc(x.id)}">${st.read?'미읽음으로':'읽음'}</button> <button data-action="saved" data-id="${esc(x.id)}">${st.saved?'★ 저장됨':'☆ 저장'}</button></div></footer></article>`}).join(''):'<div class="empty">표시할 게시물이 없습니다. 검색어나 필터를 바꿔 보세요.</div>'}
+$('results').textContent=(sources.find(s=>s.id===org)?.name||'전체 기관')+' · 연구 '+(dateGroup==='dated'?nd:nu)+'건';$('more').hidden=limit>=(dateGroup==='dated'?nd:nu);document.querySelectorAll('[data-org]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.org===org)));$('feed').innerHTML=shown.length?shown.slice(0,limit).map(x=>{let s=sources.find(s=>s.id===x.source),st=state[x.id]||{};return `<article class="entry"><div class="meta">${esc(s?.name||x.source)}${x.index_label?' · '+esc(x.index_label):''}${x.academic_paper||x.openreview?" · "+esc(x.kind):""} · ${origins(x)} · ${esc(x.publication_type?[x.publication_type,x.venue].filter(Boolean).join(' · ')+' · ':'')}${esc(x.published?'공홈 표기 '+x.published+(x.source==='5'?' (학회·출판 표기)':x.academic_paper||x.openreview?' (목록 표기)':'')+' · ':'공홈 날짜 미확인 · ')}발견 ${esc(x.discovered.slice(0,10))}</div><a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer" data-id="${esc(x.id)}">${esc(x.title)}</a><footer><span class="tag">${st.read?'읽음':'미확인'}</span><div><button data-action="read" data-id="${esc(x.id)}">${st.read?'미읽음으로':'읽음'}</button> <button data-action="saved" data-id="${esc(x.id)}">${st.saved?'★ 저장됨':'☆ 저장'}</button></div></footer></article>`}).join(''):'<div class="empty">표시할 게시물이 없습니다. 검색어나 필터를 바꿔 보세요.</div>'}
 $('feed').addEventListener('click',e=>{let el=e.target.closest('[data-id]');if(!el)return;let id=el.dataset.id,action=el.dataset.action||'read';state[id]??={};state[id][action]=el.tagName==="A"?true:!state[id][action];save();render()});['query','view'].forEach(id=>$(id).addEventListener('input',()=>{limit=40;if(previewOnly)selectInstitution();else render()}));
 $('sources').addEventListener('click',e=>{const b=e.target.closest('[data-org]');if(!b)return;$('org').value=b.dataset.org;limit=40;selectInstitution();$('results').scrollIntoView({block:'nearest'})});$('more').onclick=()=>{limit+=40;if(previewOnly)selectInstitution();else render()};
 
@@ -76,7 +80,8 @@ function normalize(rows){
   return rows.filter(eligibleItem).map(x=>({...x,published:publicationDay(x.published)}));
 }
 function sortItems(rows){
-  return rows.sort((a,b)=>b.published.localeCompare(a.published)||a.title.localeCompare(b.title));
+  return rows.sort((a,b)=>b.published.localeCompare(a.published)||a.source.localeCompare(b.source)
+                  ||(a.catalog_order??0)-(b.catalog_order??0)||a.title.localeCompare(b.title));
 }
 async function loadInstitution(id){
   if(cache.has(id))return cache.get(id);

@@ -46,7 +46,9 @@ scripts/collect.py        # RSS / HTML 수집, 기존 데이터 병합
 .github/workflows/update.yml  # 하루 2회 수집
  docs/index.html           # 대시보드
  docs/sources.json         # 공개 대시보드용 기관 목록
- docs/data.json            # 수집 데이터
+ docs/data.json            # 총계, 최근 연구 미리보기, 기관별 데이터 파일 목록
+ docs/catalog/             # 기관별 전체 연구 기록
+ docs/coverage.html        # 점검 시점의 공홈 건수와 대시보드 건수 비교
 ```
 
 사이트 목록을 바꿀 때 `config/sources.json`과 `docs/sources.json`을 함께 변경하세요.
