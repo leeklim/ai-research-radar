@@ -87,9 +87,36 @@ def lookup_date(item):
     try:
         response=fetch(item["url"])
         if official_post(response.url,item["listed_on"]):
-            return detail_date(BeautifulSoup(response.content,"html.parser"),response.url)
+            return record_dates(item,BeautifulSoup(response.content,"html.parser"))
     except requests.RequestException:
         pass
+    return None
+
+
+def record_dates(item,soup):
+    date=detail_date(soup,item["url"])
+    if item["source"]=="5":
+        venue=soup.select_one("time[datetime]")
+        if venue:
+            item["venue_date"]=day(venue.get_text(strip=True)) or day(venue["datetime"])
+    elif date and date>NOW[:10]:
+        item["venue_date"]=date
+    else:
+        return date
+    # Citation metadata describes the publication or venue. WebPage.datePublished
+    # describes the institutional article that visitors can already read.
+    for script in soup.select('script[type="application/ld+json"]'):
+        try:
+            data=json.loads(script.get_text())
+        except ValueError:
+            continue
+        nodes=data.get("@graph",[data]) if isinstance(data,dict) else data
+        for node in nodes if isinstance(nodes,list) else []:
+            if isinstance(node,dict) and node.get("@type")=="WebPage":
+                posted=day(node.get("datePublished") or "")
+                if posted and posted<=NOW[:10]:
+                    item["page_date"]=posted
+                    return posted
     return None
 
 
@@ -221,13 +248,16 @@ def main():
             for url,(title,published,listing,destination) in rows.items():
                 key = hashlib.sha256((s["id"]+"|"+url.rstrip("/")).encode()).hexdigest()[:20]
                 previous = old.get(key,{})
-                items[key] = dict(id=key,source=s["id"],url=destination,title=title,discovered=previous.get("discovered",NOW),
+                items[key] = dict(previous,id=key,source=s["id"],url=destination,title=title,discovered=previous.get("discovered",NOW),
                                   published=published or previous.get("published"),listed_on=listing,official_html=True,kind="공식 연구 게시글")
             status[s["id"]] = dict(ok=bool(rows),count=len(rows),partial=bool(rows and error),error=error or "",next_url=cursor)
             print(s["name"],len(rows),error or "",flush=True)
-    undated=[item for item in items.values() if not item["published"]]
+    undated=[item for item in items.values() if not item.get("published") or item["published"]>NOW[:10]
+             or (item["source"]=="5" and not item.get("page_date"))]
     with ThreadPoolExecutor(max_workers=6) as pool:
         for item,date in zip(undated,pool.map(lookup_date,undated)):
+            if not date and (item.get("published") or "")>NOW[:10]:
+                item.setdefault("venue_date",item["published"])
             item["published"]=date
     ordered = sorted(items.values(),key=lambda x:x["published"] or "",reverse=True)
     tmp=output.with_suffix(".tmp")
