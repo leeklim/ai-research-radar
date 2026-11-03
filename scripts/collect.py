@@ -77,6 +77,8 @@ def catalog(s):
                 yield href,entry.findtext("title"),parsedate_to_datetime(date).date().isoformat() if date else None
         return
     for row in soup.select(s["row"]):
+        if s["id"]=="16" and not re.match(r"^Research\s*·",row.get_text(" ",strip=True),re.I):
+            continue
         link = row.select_one(s["link"]) if "link" in s else row
         if not link or not link.has_attr("href"):
             continue

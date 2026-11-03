@@ -6184,28 +6184,6 @@
       "kind": "공식 연구 게시글"
     },
     {
-      "id": "6599d8ff631b192bb151",
-      "source": "16",
-      "url": "https://x.ai/news/grok-hermes",
-      "title": "Connect Grok to Hermes Agent",
-      "discovered": "2026-11-03T08:15:42+00:00",
-      "published": null,
-      "listed_on": "https://x.ai/news",
-      "official_html": true,
-      "kind": "공식 연구 게시글"
-    },
-    {
-      "id": "1cdad431b9c9a6cb6839",
-      "source": "16",
-      "url": "https://x.ai/news/series-c",
-      "title": "xAI raises $6B Series C",
-      "discovered": "2026-11-03T08:15:42+00:00",
-      "published": null,
-      "listed_on": "https://x.ai/news",
-      "official_html": true,
-      "kind": "공식 연구 게시글"
-    },
-    {
       "id": "ad8b2fc1face80148bc7",
       "source": "24",
       "url": "https://blog.eleuther.ai/historical-books-ocr-leaderboard/",
@@ -7178,10 +7156,10 @@
       "next_url": null
     },
     "16": {
-      "ok": true,
-      "count": 2,
+      "ok": false,
+      "count": 0,
       "partial": false,
-      "error": "",
+      "error": "공식 목록에서 연구 링크를 확인하지 못함",
       "next_url": null
     },
     "17": {
