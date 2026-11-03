@@ -227,6 +227,25 @@ def article_id(source_id,url):
 
 
 def catalog(s):
+    if s.get("adapter")=="ai2_research":
+        page=s["url"]
+        seen=set()
+        while page:
+            if page in seen or urlsplit(page).hostname!="allenai.org" or urlsplit(page).path!="/research":
+                raise ValueError("Ai2 Research 다음 페이지 주소 확인 실패")
+            seen.add(page)
+            soup=BeautifulSoup(fetch(page).content,"html.parser")
+            cards=soup.select("main a[href]:has(h2)")
+            if not cards:raise ValueError("Ai2 Research 카드 확인 실패")
+            s["found_on"]=page
+            for link in cards:
+                card=next((p for p in link.parents if len(p.select("h2"))==1 and
+                           any(day(t) for t in p.stripped_strings)),None)
+                if not card:raise ValueError("Ai2 Research 카드 날짜 확인 실패")
+                yield urljoin(page,link["href"]),link.h2.get_text(" ",strip=True),next(day(t) for t in card.stripped_strings if day(t))
+            following=next((a for a in soup.select("main a[href]") if a.get_text(strip=True)=="Next"),None)
+            page=urljoin(page,following["href"]) if following else None
+        return
     if s.get("adapter")=="openai_publications":
         from openai_publications import openai_publication_candidates,verified_openai_article,visible_index
         with requests.Session() as session:
@@ -441,7 +460,7 @@ def collect(s, old, previous_status):
         if scan.get("nonpapers"):
             s["nonpapers"]=scan["nonpapers"]
     verified = {}
-    if s["id"] in ("13","15","24") and rows and not errors:
+    if s["id"] in ("10","13","15","24") and rows and not errors:
         s["current_members"]={article_id(s["id"],url) for url in rows}
     queue = []
     for url,(title,published,listing) in rows.items():

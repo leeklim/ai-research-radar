@@ -1,6 +1,6 @@
 # AI Research Radar
 
-30개 AI 연구조직의 공개 연구 페이지를 정기 확인하고 GitHub Pages에서 보여주는 개인 연구 모니터링 대시보드입니다.
+25개 AI 연구조직의 공개 연구 페이지를 정기 확인하고 GitHub Pages에서 보여주는 개인 연구 모니터링 대시보드입니다.
 
 ## 빠른 시작
 
@@ -41,7 +41,7 @@ python -m http.server 8000
 ## 구조
 
 ```
-config/sources.json        # 추적할 30개 공식 사이트
+config/sources.json        # 추적할 25개 공식 사이트
 scripts/collect.py        # RSS / HTML 수집, 기존 데이터 병합
 .github/workflows/update.yml  # 하루 2회 수집
  docs/index.html           # 대시보드

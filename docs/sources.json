@@ -776,31 +776,8 @@
   {
     "id": "10",
     "name": "Ai2",
-    "url": "https://allenai.org/papers",
-    "row": "main div:has(> h2)",
-    "link": "h2 a[href]",
-    "title": "h2",
-    "date": "div.grid-tc_min-content_1fr > div:first-child",
-    "next_selector": "main a[href*='/papers?o=']:-soup-contains('Next')",
-    "papers_only": true,
-    "paper_section": "Ai2 Papers",
-    "paper_links": {
-      "www.semanticscholar.org": "(?:/paper/(?:[^/]+/)?[0-9a-fA-F]{40}/?)|(?:/(?:paper/(?:[^/]+/)?[a-fA-F0-9]{40}|reader/[a-fA-F0-9]{40})/?)",
-      "arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
-      "www.arxiv.org": "/(?:abs|pdf|html)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
-      "openreview.net": "/(?:forum|pdf)",
-      "doi.org": "/10\\.\\d{4,9}/[^\\s]+",
-      "api.semanticscholar.org": "/(?:(?i:arxiv):[\\w./-]+|(?i:corpusid):\\d+|[a-f0-9]{40}|10\\.\\d+/[^\\s]+)",
-      "chemrxiv.org": "/doi/(?:abs/)?10\\.\\d+/[^\\s]+",
-      "ascopubs.org": "/doi/(?:abs/)?10\\.\\d+/[^\\s]+",
-      "agupubs.onlinelibrary.wiley.com": "/doi/10\\.\\d+/[^\\s]+",
-      "dl.acm.org": "/doi/(?:pdf/)?10\\.\\d+/[^\\s]+",
-      "aclanthology.org": "/[\\w.-]+(?:\\.pdf|/)?",
-      "dx.doi.org": "/10\\.\\d+/[^\\s]+",
-      "maria-antoniak.github.io": "/resources/2023_riveter\\.pdf",
-      "openaccess.thecvf.com": "/content/[^\\s]+\\.(?:pdf|html)",
-      "raw.githubusercontent.com": "/DIUx-xView/xView3_fourth_place/main/whitepaper\\.pdf"
-    }
+    "url": "https://allenai.org/research",
+    "adapter": "ai2_research"
   },
   {
     "id": "11",
@@ -1027,70 +1004,6 @@
     "paper_links": {
       "arxiv.org": "/abs/\\d{4}\\.\\d{4,5}(?:v\\d+)?",
       "jina.ai": "/[^?#]+\\.pdf"
-    }
-  },
-  {
-    "id": "27",
-    "name": "Stanford CRFM",
-    "url": "https://crfm.stanford.edu/research.html",
-    "adapter": "strict_publications",
-    "paper_section": "Research · year-grouped papers",
-    "paper_links": {
-      "arxiv.org": "/(?:abs|pdf)/\\d{4}\\.\\d{4,5}(?:v\\d+)?(?:\\.pdf)?/?",
-      "www.roboticsproceedings.org": "/rss\\d+/p\\d+\\.pdf",
-      "stanford.edu": "/~eadeli/publication/MEDIA_LSSL\\.pdf",
-      "www.nature.com": "/articles/[\\w.-]+",
-      "jmlr.org": "/papers/volume\\d+/[\\w-]+/[\\w-]+\\.pdf"
-    },
-    "papers_only": true
-  },
-  {
-    "id": "28",
-    "name": "Berkeley BAIR",
-    "url": "https://bair.berkeley.edu/blog/archive/",
-    "adapter": "bair_archive",
-    "paper_section": "BAIR Archive"
-  },
-  {
-    "id": "29",
-    "name": "MIT CSAIL",
-    "url": "https://dspace.mit.edu/handle/1721.1/5458",
-    "adapter": "strict_publications",
-    "paper_section": "MIT CSAIL Publications → DSpace CSAIL community",
-    "paper_links": {
-      "dspace.mit.edu": "/handle/1721\\.1/\\d+(?:\\.\\d+)?"
-    },
-    "papers_only": true
-  },
-  {
-    "id": "30",
-    "name": "CMU ML",
-    "url": "https://ml.cmu.edu/research/phd-dissertations",
-    "adapter": "strict_publications",
-    "paper_section": "Machine Learning Department · Ph.D. Dissertations",
-    "paper_links": {
-      "ml.cmu.edu": "/research/(?:phd-dissertation-pdfs/|joint_phd_dissertations/)?[^/]+\\.[pP][dD][fF]",
-      "reports-archive.adm.cs.cmu.edu": "/anon/[^?#]+\\.[pP][dD][fF]"
-    },
-    "papers_only": true
-  },
-  {
-    "id": "31",
-    "name": "Mila",
-    "url": "https://mila.quebec/en/research/publications",
-    "next_selector": "li.pager__item--next a[rel=next]",
-    "paper_section": "Mila Publications",
-    "papers_only": true,
-    "paper_links": {
-      "mila.quebec": "/en/research/publications",
-      "openreview.net": "/(?:forum|pdf)",
-      "doi.org": "/10\\.\\d{4,9}/.+",
-      "arxiv.org": "/(?:abs|pdf)/(?:[\\w.-]+/)?[\\w.-]+/?",
-      "proceedings.mlr.press": "/v\\d+/[\\w.-]+(?:/[\\w.-]+)?",
-      "www.semanticscholar.org": "/paper/[\\w%.-]+(?:/[\\w.-]+)?/?",
-      "dblp.uni-trier.de": "/rec/[\\w./%+-]+",
-      "openalex.org": "/W\\d+/?",
-      "pubmed.ncbi.nlm.nih.gov": "/\\d+/?"
     }
   }
 ]
