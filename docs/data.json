@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03T07:56:28+00:00",
+  "updated": "2026-11-03T07:57:10+00:00",
   "items": [
     {
       "id": "7dc813e5436dd9d4353e",
@@ -10724,33 +10724,33 @@
     },
     "27": {
       "ok": true,
-      "count": 48,
-      "partial": true,
-      "error": "indexed: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filter=raw_affiliation_strings.search%3A%22Center+for+Research+on+Foundatio"
+      "count": 56,
+      "partial": false,
+      "error": ""
     },
     "28": {
-      "ok": false,
-      "count": 0,
+      "ok": true,
+      "count": 30,
       "partial": false,
-      "error": "indexed: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filter=raw_affiliation_strings.search%3A%22Berkeley+Artificial+Intelligence"
+      "error": ""
     },
     "29": {
       "ok": true,
-      "count": 83,
-      "partial": true,
-      "error": "indexed: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filter=raw_affiliation_strings.search%3A%22Computer+Science+and+Artificial+"
+      "count": 127,
+      "partial": false,
+      "error": ""
     },
     "30": {
       "ok": true,
-      "count": 144,
-      "partial": true,
-      "error": "indexed: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filter=raw_affiliation_strings.search%3A%22Machine+Learning+Department%22%2"
+      "count": 176,
+      "partial": false,
+      "error": ""
     },
     "31": {
-      "ok": false,
-      "count": 0,
+      "ok": true,
+      "count": 41,
       "partial": false,
-      "error": "indexed: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filter=raw_affiliation_strings.search%3A%22Quebec+Artificial+Intelligence+I"
+      "error": ""
     }
   }
 }
