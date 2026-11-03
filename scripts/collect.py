@@ -2,7 +2,6 @@
 import hashlib
 import json
 import re
-from email.utils import parsedate_to_datetime
 from xml.etree import ElementTree
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
@@ -28,7 +27,7 @@ def day(raw):
     raw = re.sub(r"(?<=\d)(st|nd|rd|th)\b","",raw,flags=re.I)
     if re.fullmatch(r"\d{4}-\d{2}-\d{2}[T ].*",raw):
         raw = raw[:10]
-    for fmt in ("%Y-%m-%d", "%Y/%m/%d", "%B %d, %Y", "%b %d, %Y", "%d %B %Y", "%d %b %Y", "%Y-%m", "%B %Y", "%b %Y", "%Y"):
+    for fmt in ("%Y-%m-%d", "%Y/%m/%d", "%B %d, %Y", "%b %d, %Y", "%d %B %Y", "%d %b %Y", "%B %d '%y", "%b %d '%y", "%m/%d/%Y", "%Y-%m", "%B %Y", "%b %Y", "%Y"):
         try:
             value = datetime.strptime(raw,fmt)
             if not 1900<=value.year<=2100:
@@ -44,38 +43,49 @@ def day(raw):
 
 
 def detail_date(soup,url):
-    for tag in soup.select('meta[property="article:published_time"], meta[name="citation_publication_date"], meta[itemprop="datePublished"]'):
-        date = day(tag.get("content",""))
-        if date:
-            return date
-    host = urlsplit(url).hostname
-    if host=="machinelearning.apple.com":
-        label = soup.find("span",string=lambda s:s and s.strip().lower()=="published")
-        if label:
-            return day(str(label.next_sibling or ""))
+    host = urlsplit(url).hostname.removeprefix("www.")
     selectors = {
-        "research.nvidia.com":".field--name-field-publication-date time[datetime]",
-        "mistral.ai":"p.text-body-small.text-current",
-        "www.csail.mit.edu":".news-top .field--name-field-publication-date time",
-        "blog.eleuther.ai":".article-header .article-meta span:first-child",
-        "mila.quebec":".group-blog-article-header .field-name-node-post-date",
+        "openai.com": "main .text-meta",
+        "anthropic.com": "article time,main time",
+        "deepmind.google": ".section-title__date",
+        "goodfire.com": ".article-kicker time,article header time",
+        "microsoft.com": "time[datetime]",
+        "research.nvidia.com": ".field--name-field-publication-date time",
+        "research.ibm.com": "main time",
+        "salesforce.com": ".hero-byline__date",
+        "amazon.science": ".PublicationDetailPage-publicationDate",
+        "deepseek.com": "p.ds-text-caption .text-ds-description",
+        "mistral.ai": "p.text-body-small.text-current",
+        "cohere.com": "main p[class*=eyebrow]",
+        "ai21.com": ".post-date",
+        "liquid.ai": "main time",
+        "sakana.ai": "article header time,header time",
+        "thinkingmachines.ai": ".publish-metadata span",
+        "redwoodresearch.org": ".hf-report-byline p,.hf-report-meta",
+        "apolloresearch.ai": ".paper-right_published p",
+        "blog.eleuther.ai": ".article-header .article-meta span:first-child",
+        "jina.ai": ".q-item__label--caption.text-center",
+        "bair.berkeley.edu": ".post-header .post-meta",
+        "csail.mit.edu": ".news-top .field--name-field-publication-date time",
+        "blog.ml.cmu.edu": ".date",
+        "mila.quebec": ".group-blog-article-header .field-name-node-post-date",
     }
-    if host in selectors:
-        node=soup.select_one(selectors[host])
-        if node:
-            return day(node.get("datetime") or node.get_text(" ",strip=True))
+    if host=="machinelearning.apple.com":
+        tag=soup.find("span",string=lambda t:t and t.strip().lower()=="published")
+        if tag:
+            return day(str(tag.next_sibling or ""))
     if host=="huggingface.co":
-        node=soup.find(string=lambda t:t and t.strip().startswith("Published"))
-        if node:
-            return day(node.strip().removeprefix("Published"))
-    if host=="crfm.stanford.edu":
-        match=re.search(r"/(\d{4}/\d{2}/\d{2})/",urlsplit(url).path)
-        if match:
-            return day(match[1])
-    # These sites put the publication date in the same header block as the title.
-    if host in ("ai.meta.com","allenai.org","mistral.ai"):
-        title=soup.find("h1")
-        for parent in list(title.parents)[:3] if title else []:
+        label=soup.find(string=lambda t:t and t.strip().startswith("Published"))
+        return day(label.strip().removeprefix("Published")) if label else None
+    for node in soup.select(selectors[host]) if host in selectors else []:
+        for text in node.stripped_strings:
+            text = re.sub(r"^(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),\s*", "",text,flags=re.I)
+            date = day(text.split(" · ")[0])
+            if date:
+                return date
+    if host in ("ai.meta.com","allenai.org","seed.bytedance.com"):
+        heading=soup.find("h1")
+        for parent in list(heading.parents)[:3] if heading else []:
             for text in parent.stripped_strings:
                 date=day(text)
                 if date and len(date)==10:
@@ -87,36 +97,9 @@ def lookup_date(item):
     try:
         response=fetch(item["url"])
         if official_post(response.url,item["listed_on"]):
-            return record_dates(item,BeautifulSoup(response.content,"html.parser"))
+            return detail_date(BeautifulSoup(response.content,"html.parser"),response.url)
     except requests.RequestException:
         pass
-    return None
-
-
-def record_dates(item,soup):
-    date=detail_date(soup,item["url"])
-    if item["source"]=="5":
-        venue=soup.select_one("time[datetime]")
-        if venue:
-            item["venue_date"]=day(venue.get_text(strip=True)) or day(venue["datetime"])
-    elif date and date>NOW[:10]:
-        item["venue_date"]=date
-    else:
-        return date
-    # Citation metadata describes the publication or venue. WebPage.datePublished
-    # describes the institutional article that visitors can already read.
-    for script in soup.select('script[type="application/ld+json"]'):
-        try:
-            data=json.loads(script.get_text())
-        except ValueError:
-            continue
-        nodes=data.get("@graph",[data]) if isinstance(data,dict) else data
-        for node in nodes if isinstance(nodes,list) else []:
-            if isinstance(node,dict) and node.get("@type")=="WebPage":
-                posted=day(node.get("datePublished") or "")
-                if posted and posted<=NOW[:10]:
-                    item["page_date"]=posted
-                    return posted
     return None
 
 
@@ -160,8 +143,7 @@ def catalog(s):
             href = urljoin(page.url,anchor["href"])
             entry = research.get(href.rstrip("/"))
             if entry is not None:
-                date = entry.findtext("pubDate")
-                yield href,entry.findtext("title"),parsedate_to_datetime(date).date().isoformat() if date else None
+                yield href,entry.findtext("title"),next((date for text in anchor.stripped_strings if (date:=day(text))),None)
         return
     for row in soup.select(s["row"]):
         if s["id"]=="16" and not re.match(r"^Research\s*·",row.get_text(" ",strip=True),re.I):
@@ -181,11 +163,13 @@ def catalog(s):
         if len(title)<5 or len(title)>400 or re.fullmatch(r"[\W\d]*(?:authors?|comments?|paper|pdf|read more|view all|publication|research|publications)[\W\d]*",title,re.I):
             continue
         date_tag = row.select_one(s["date"]) if s.get("date") else None
-        published = day(date_tag.get("datetime") or date_tag.get_text(strip=True)) if date_tag else None
+        published = day(date_tag.get_text(" ",strip=True)) if date_tag else None
         if s["id"]=="13":
             published = next((date for t in row.select("footer *") if (date:=day(t.get_text(" ",strip=True)))),None)
-        if s["id"]=="15":
-            published = day(href.rstrip("/")[-10:])
+        if s["id"]=="27":
+            card=row.find_parent("div",class_="item")
+            if card:
+                published=next((date for text in card.stripped_strings if (date:=day(text))),None)
         if s["id"]=="28":
             # The BAIR Blog also carries events. Require a paper link in the post itself.
             body = BeautifulSoup(fetch(href).content,"html.parser")
@@ -194,8 +178,7 @@ def catalog(s):
                                       and re.search(r"arxiv\.org|openreview\.net|aclanthology\.org|proceedings\.mlr\.press",a["href"])
                                       for a in article.select("a[href]")):
                 continue
-            m = re.search(r"/blog/(\d{4})/(\d\d)/(\d\d)/",href)
-            published = "-".join(m.groups()) if m else None
+
         yield href,title,published
 
 
@@ -249,16 +232,14 @@ def main():
                 key = hashlib.sha256((s["id"]+"|"+url.rstrip("/")).encode()).hexdigest()[:20]
                 previous = old.get(key,{})
                 items[key] = dict(previous,id=key,source=s["id"],url=destination,title=title,discovered=previous.get("discovered",NOW),
-                                  published=published or previous.get("published"),listed_on=listing,official_html=True,kind="공식 연구 게시글")
+                                  listing_date=published or previous.get("listing_date"),published=previous.get("published"),listed_on=listing,official_html=True,kind="공식 연구 게시글")
             status[s["id"]] = dict(ok=bool(rows),count=len(rows),partial=bool(rows and error),error=error or "",next_url=cursor)
             print(s["name"],len(rows),error or "",flush=True)
-    undated=[item for item in items.values() if not item.get("published") or item["published"]>NOW[:10]
-             or (item["source"]=="5" and not item.get("page_date"))]
+    pending=[item for item in items.values() if item.get("date_basis")!="상세 글"]
     with ThreadPoolExecutor(max_workers=6) as pool:
-        for item,date in zip(undated,pool.map(lookup_date,undated)):
-            if not date and (item.get("published") or "")>NOW[:10]:
-                item.setdefault("venue_date",item["published"])
-            item["published"]=date
+        for item,date in zip(pending,pool.map(lookup_date,pending)):
+            item["published"]=date or item.get("listing_date")
+            item["date_basis"]="상세 글" if date else "공식 목록" if item["published"] else None
     ordered = sorted(items.values(),key=lambda x:x["published"] or "",reverse=True)
     tmp=output.with_suffix(".tmp")
     tmp.write_text(json.dumps(dict(updated=NOW,items=ordered,status=status),indent=2,ensure_ascii=False),"utf8")
