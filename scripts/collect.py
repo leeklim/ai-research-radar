@@ -247,25 +247,10 @@ def catalog(s):
             page=urljoin(page,following["href"]) if following else None
         return
     if s.get("adapter")=="openai_publications":
-        from openai_publications import openai_publication_candidates,verified_openai_article,visible_index
+        from openai_publications import visible_index
         with requests.Session() as session:
             session.headers.update(HEADERS)
             yield from visible_index(s,session)
-            candidates=list(openai_publication_candidates(session))
-            start=int(s.get("resume") or 6)
-            window=list(dict.fromkeys(candidates[:6]+candidates[start:start+12]))
-            s["continue_at"]=start+12 if start+12<len(candidates) else 6
-            failures=0
-            for url in window:
-                try:record=verified_openai_article(session,url)
-                except requests.RequestException:
-                    failures+=1
-                    continue
-                if record:
-                    s["found_on"]=record["found_on"]
-                    yield record["url"],record["title"],record["published"]
-            if failures:
-                raise ValueError(f"Publication 분류 확인을 위한 상세 페이지 {failures}건 접근 제한")
         return
     if s.get("adapter")=="sakana_research":
         from sakana_research import entries
@@ -468,7 +453,8 @@ def collect(s, old, previous_status):
         previous = old.get(key,{})
         if url in s.get("paper_metadata",{}):
             verified[url]=(title,published,listing,url)
-        elif paper_target(url,listed_by_url[listing]):
+        elif (listed_by_url[listing].get("adapter")=="openai_publications"
+              or paper_target(url,listed_by_url[listing])):
             # The publisher's own paper card is the evidence for the outbound link.
             verified[url]=(title,published,listing,url)
         elif previous.get("listed_on")==listing and not obsolete_url(previous) and (

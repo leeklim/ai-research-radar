@@ -62,11 +62,13 @@ def verified_openai_article(session,url):
 
 def visible_index(s,session):
     """Read the Publication component itself, including cards with external URLs."""
+    failures=[]
     for url in (s["url"],"https://openai.com/ko-KR/research/index/publication/","https://openai.com/ja-JP/research/index/publication/"):
         try:
             response=session.get(url,timeout=15)
             response.raise_for_status()
-        except requests.RequestException:
+        except requests.RequestException as exc:
+            failures.append(str(exc))
             continue
         soup=BeautifulSoup(response.content,"html.parser")
         stream=component_data(soup)
@@ -82,3 +84,5 @@ def visible_index(s,session):
                     if labels:s.setdefault("labels",{})[target]=labels[0]["slug"].capitalize()
                     yield target,card["title"],(card.get("publicationDate") or "")[:10] or None
                 return
+    detail=failures[0] if failures else "Publication 목록 구성 요소를 찾지 못함"
+    raise ValueError("최신 Publication 목록 확인 실패 · "+detail)
