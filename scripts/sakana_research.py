@@ -67,7 +67,6 @@ def entries(s):
         if stamp:
             # The date is visibly rendered as "October 20, 2026" from this
             # element; retain the visibly displayed date, not the UTC instant.
-            from datetime import datetimetime
             try:published=datetime.strptime(stamp.get_text(" ",strip=True),"%B %d, %Y").date().isoformat()
             except ValueError:pass
         yield url,a.get_text(" ",strip=True),published
